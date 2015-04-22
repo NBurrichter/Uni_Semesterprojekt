@@ -10,9 +10,14 @@
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_second_player</sprite>
     <sprite>sprites\spr_second_player_block</sprite>
+    <sprite>sprites\spr_cannon</sprite>
+    <sprite>sprites\spr_projectile</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_circling.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_wall_block</object>
@@ -22,6 +27,14 @@
     <objects name="second_player">
       <object>objects\obj_second_player</object>
       <object>objects\obj_second_player_block</object>
+    </objects>
+    <objects name="cannon">
+      <object>objects\obj_cannon</object>
+      <object>objects\obj_projectile</object>
+    </objects>
+    <objects name="group_parent_objects">
+      <object>objects\obj_parent_block</object>
+      <object>objects\obj_parent_projectile</object>
     </objects>
   </objects>
   <rooms name="rooms">

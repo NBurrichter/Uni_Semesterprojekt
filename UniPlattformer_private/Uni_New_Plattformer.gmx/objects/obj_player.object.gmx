@@ -50,6 +50,7 @@ dir = 1;
 grav = 0;
 amount_of_gravity = 1;
 
+
 dashing = 0;
 </string>
           </argument>
@@ -83,7 +84,7 @@ var right_key = keyboard_check(ord('D'))
 var jump_key_just_pressed = keyboard_check_pressed(ord('W')) 
 var jump_key_not_pressed = !keyboard_check(ord('W')) 
 
-var dash_key_just_pressed = keyboard_check_pressed(ord('S')) 
+var dash_key_just_pressed = keyboard_check_pressed(ord('F')) 
 
 //cancel each if left right pressed
 
@@ -95,7 +96,7 @@ if (left_key) &amp;&amp; (right_key)
     
 //on_ground &amp;&amp; reactivating double_jump
 
-if place_free(x,y+1)
+if !place_meeting(x,y+1,obj_parent_block)
     then
     {
     on_ground = false;
@@ -134,7 +135,7 @@ if (jump_key_just_pressed)      // jumping
         }
     else                                        // wall_jumping
     {
-    if !place_free(x+dir,y)                    
+    if place_meeting(x+dir,y,obj_parent_block)             
         then
         {
         v_speed = -normal_jump_height;
@@ -287,7 +288,7 @@ if dash_key_just_pressed
         if place_free(x+dir,y)
             then
             {
-            dashing = 2;
+            dashing = 3;
             }
         }
     }  
@@ -297,7 +298,7 @@ if dashing &gt; 0
     {
     dashing -= 1;
     v_speed = 0;
-    h_speed += 10*(dir); 
+    h_speed += 6*(dir); 
     }
        
 //actual horizontal movement with collision
@@ -394,6 +395,29 @@ repeat abs(v_speed)   //falling down
             <string>///Changing sprite
 
 image_xscale = dir; 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_parent_projectile">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_restart ();
 </string>
           </argument>
         </arguments>
