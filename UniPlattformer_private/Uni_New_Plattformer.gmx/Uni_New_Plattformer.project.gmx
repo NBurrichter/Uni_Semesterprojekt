@@ -20,26 +20,27 @@
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
-    <object>objects\obj_wall_block</object>
-    <objects name="group_game_objects">
-      <object>objects\obj_game_controller</object>
-    </objects>
     <objects name="second_player">
       <object>objects\obj_second_player</object>
       <object>objects\obj_second_player_block</object>
+    </objects>
+    <object>objects\obj_wall_block</object>
+    <objects name="group_game_objects">
+      <object>objects\obj_game_controller</object>
+      <object>objects\obj_camera</object>
     </objects>
     <objects name="cannon">
       <object>objects\obj_cannon</object>
       <object>objects\obj_projectile</object>
     </objects>
     <objects name="group_parent_objects">
+      <object>objects\obj_parent_collision</object>
       <object>objects\obj_parent_block</object>
       <object>objects\obj_parent_projectile</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_test</room>
-    <room>rooms\room_level1</room>
   </rooms>
   <constants number="2">
     <constant name="screen_width">display_get_width ()</constant>

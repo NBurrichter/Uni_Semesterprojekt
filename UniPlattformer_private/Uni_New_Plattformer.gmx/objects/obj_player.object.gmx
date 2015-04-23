@@ -196,7 +196,7 @@ if (jump_key_not_pressed) and v_speed &lt; 0
 
 //bumping your head on ceiling
     
-if !place_free (x,y-1) and v_speed &lt; 0
+if place_meeting(x,y-1,obj_parent_block) and v_speed &lt; 0
     then
     {
     v_speed = 0;                                
@@ -207,7 +207,7 @@ if !place_free (x,y-1) and v_speed &lt; 0
 if on_ground = false
     then
     {
-    if !place_free (x+(dir),y)
+    if place_meeting(x+(dir),y,obj_parent_block)
         then
         {
         double_jump = 0;
@@ -285,7 +285,7 @@ if dash_key_just_pressed
     if dashing = 0
         then
         {
-        if place_free(x+dir,y)
+        if !place_meeting(x+dir,y,obj_parent_block)
             then
             {
             dashing = 3;
@@ -308,7 +308,7 @@ repeat abs(h_speed)
     if h_speed &gt; 0              
         then
         {
-        if place_free(x+1,y) 
+        if !place_meeting(x+1,y,obj_parent_block)
             then
             {
             x += 1;            
@@ -321,7 +321,7 @@ repeat abs(h_speed)
     if h_speed &lt; 0               
         then
         {
-        if place_free(x-1,y)
+        if !place_meeting(x-1,y,obj_parent_block)
             then
             {
             x -= 1;
@@ -340,7 +340,7 @@ repeat abs(v_speed)   //falling down
     if v_speed &gt; 0 
         then
         {
-        if place_free(x,y+1) 
+        if !place_meeting(x,y+1,obj_parent_block)
             then
             {
             y += 1;   
@@ -350,7 +350,7 @@ repeat abs(v_speed)   //falling down
     if v_speed &lt; 0  // jumping up           
         then
         {
-        if place_free(x,y-1) 
+        if !place_meeting(x,y-1,obj_parent_block)
             then
             {
             y -= 1;          

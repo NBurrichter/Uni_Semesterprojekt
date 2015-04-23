@@ -25,19 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///set up view
-
-window_set_fullscreen (true);
-
-view_wview [0] = screen_width;
-view_hview [0] = screen_height;
-
-view_wport [0]= screen_width;
-view_hport [0]= screen_height;
-
-surface_resize(application_surface,screen_width,screen_height);
-
-//////////////
+            <string>//////////////
 
 show_debug_overlay(true);
 </string>
