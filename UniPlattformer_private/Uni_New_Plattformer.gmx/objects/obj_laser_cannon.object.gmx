@@ -83,7 +83,6 @@ with (laser_shot)
         <arguments>
           <argument>
             <kind>1</kind>
-<<<<<<< HEAD
             <string>///Behaviour
 
 switch (behaviour_first)
@@ -111,9 +110,6 @@ switch (behaviour_second)
    scr_staring_straight ();
    default: break;
    }  
-=======
-            <string>image_angle = direction;
->>>>>>> 3adcfe2f8c2767fff027392bf12dd2b8129d3864
 </string>
           </argument>
         </arguments>

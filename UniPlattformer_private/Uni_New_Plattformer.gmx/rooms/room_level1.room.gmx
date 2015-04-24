@@ -51,12 +51,9 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-<<<<<<< HEAD
     <instance objName="obj_player" x="48" y="848" name="inst_308B056D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-=======
     <instance objName="obj_game_controller" x="16" y="16" name="inst_A6313B2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_camera" x="48" y="16" name="inst_A36B1097" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
->>>>>>> 3adcfe2f8c2767fff027392bf12dd2b8129d3864
     <instance objName="obj_wall_block" x="0" y="880" name="inst_AAB5B8A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="16" y="880" name="inst_9C8D399D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="32" y="880" name="inst_62D1F31D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -376,9 +373,6 @@
     <instance objName="obj_wall_block" x="2208" y="512" name="inst_0228C67C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="2224" y="512" name="inst_8EC72713" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="2144" y="528" name="inst_644B7EA0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-<<<<<<< HEAD
-    <instance objName="obj_camera" x="64" y="112" name="inst_57485033" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-=======
     <instance objName="obj_laser_cannon" x="2160" y="648" name="inst_6992854A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_laser_cannon" x="2160" y="664" name="inst_963F80F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_laser_cannon" x="2160" y="632" name="inst_AB88DC3D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -684,8 +678,6 @@
     <instance objName="obj_laser_cannon" x="2792" y="720" name="inst_AF7570D9" locked="0" code="direction = 90;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_laser_cannon" x="2792" y="400" name="inst_5D3F0EB7" locked="0" code="direction = 270;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_laser_cannon" x="2664" y="400" name="inst_B68AD755" locked="0" code="direction = 270;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player" x="2384" y="352" name="inst_4F070287" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
->>>>>>> 3adcfe2f8c2767fff027392bf12dd2b8129d3864
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
