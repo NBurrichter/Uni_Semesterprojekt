@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>///Set up variables
 
+global.player_id = id;
+
 on_ground = false;
 double_jump = 0;
 
@@ -400,7 +402,7 @@ image_xscale = dir;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_parent_projectile">
+    <event eventtype="4" ename="obj_parent_player_damage">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -417,7 +419,9 @@ image_xscale = dir;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_restart ();
+            <string>///Death
+
+room_restart ();
 </string>
           </argument>
         </arguments>

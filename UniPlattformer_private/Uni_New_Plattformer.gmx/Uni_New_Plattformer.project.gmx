@@ -11,12 +11,15 @@
     <sprite>sprites\spr_second_player</sprite>
     <sprite>sprites\spr_second_player_block</sprite>
     <sprite>sprites\spr_cannon</sprite>
+    <sprite>sprites\spr_laser_cannon</sprite>
+    <sprite>sprites\spr_laser</sprite>
     <sprite>sprites\spr_projectile</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_circling.gml</script>
+    <script>scripts\scr_distance_find.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
@@ -32,11 +35,15 @@
     <objects name="cannon">
       <object>objects\obj_cannon</object>
       <object>objects\obj_projectile</object>
+      <object>objects\obj_laser_cannon</object>
+      <object>objects\obj_laser</object>
     </objects>
     <objects name="group_parent_objects">
-      <object>objects\obj_parent_collision</object>
-      <object>objects\obj_parent_block</object>
+      <object>objects\obj_parent_player_damage</object>
+      <object>objects\obj_parent_laser</object>
       <object>objects\obj_parent_projectile</object>
+      <object>objects\obj_parent_block</object>
+      <object>objects\obj_parent_collision</object>
     </objects>
   </objects>
   <rooms name="rooms">
