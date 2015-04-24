@@ -14,31 +14,30 @@
     <sprite>sprites\spr_laser_cannon</sprite>
     <sprite>sprites\spr_laser</sprite>
     <sprite>sprites\spr_projectile</sprite>
-    <sprite>sprites\sprite6</sprite>
+    <sprite>sprites\spr_flapping_enemy</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_circling.gml</script>
     <script>scripts\scr_distance_find.gml</script>
-    <script>scripts\lose.gml</script>
+    <script>scripts\scr_lose.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_player</object>
-    <objects name="second_player">
-      <object>objects\obj_second_player</object>
-      <object>objects\obj_second_player_block</object>
+    <objects name="group_players">
+      <objects name="first_player">
+        <object>objects\obj_player</object>
+      </objects>
+      <objects name="second_player">
+        <object>objects\obj_second_player</object>
+        <objects name="player_created_blocks">
+          <object>objects\obj_second_player_block</object>
+        </objects>
+      </objects>
     </objects>
-    <object>objects\obj_wall_block</object>
-    <objects name="group_game_objects">
+    <objects name="group_game_controller">
       <object>objects\obj_game_controller</object>
       <object>objects\obj_camera</object>
-    </objects>
-    <objects name="cannon">
-      <object>objects\obj_cannon</object>
-      <object>objects\obj_projectile</object>
-      <object>objects\obj_laser_cannon</object>
-      <object>objects\obj_laser</object>
     </objects>
     <objects name="group_parent_objects">
       <object>objects\obj_parent_player_damage</object>
@@ -47,8 +46,19 @@
       <object>objects\obj_parent_block</object>
       <object>objects\obj_parent_collision</object>
     </objects>
-    <objects name="Enemys">
-      <object>objects\obj_enemy</object>
+    <objects name="enemies">
+      <objects name="static_enemies">
+        <object>objects\obj_cannon</object>
+        <object>objects\obj_projectile</object>
+        <object>objects\obj_laser_cannon</object>
+        <object>objects\obj_laser</object>
+      </objects>
+      <objects name="moving_enemies">
+        <object>objects\obj_flapping_enemy</object>
+      </objects>
+    </objects>
+    <objects name="group_blocks">
+      <object>objects\obj_wall_block</object>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -32,6 +32,8 @@ global.player_id = id;
 on_ground = false;
 double_jump = 0;
 
+running_jump_height = 0.0;
+
 normal_jump_height = 13;
 wall_jump_distance = 8;
 
@@ -52,8 +54,12 @@ dir = 1;
 grav = 0;
 amount_of_gravity = 1;
 
+//ability switches
 
-dashing = 0;
+can_double_jump = false;
+can_wall_jump = false;
+
+
 </string>
           </argument>
         </arguments>
@@ -133,27 +139,35 @@ if (jump_key_just_pressed)      // jumping
     if on_ground = true
         then
         {
-        v_speed = -(normal_jump_height + 0.7*abs(h_speed));  //Add upward movement + move_speed;
+        v_speed = -(normal_jump_height + running_jump_height*abs(h_speed));  //Add upward movement + move_speed;      
         }
     else                                        // wall_jumping
-    {
-    if place_meeting(x+dir,y,obj_parent_block)             
-        then
         {
-        v_speed = -normal_jump_height;
-        h_speed = wall_jump_distance*(-dir);
-        dir = dir*(-1);
-        }
-    else                                    // double_jump
-    {
-    if double_jump = 0 
-        then
-        {
-        double_jump = 1;
-        v_speed = -normal_jump_height;
-        }
-    }
-    }    
+        if can_wall_jump = true //////////////////////////////////////////switch
+            then
+            {
+            if place_meeting(x+dir,y,obj_parent_block)             
+                then
+                {
+                v_speed = -normal_jump_height;
+                h_speed = wall_jump_distance*(-dir);
+                dir = dir*(-1);
+                }
+            }
+        else                                    // double_jump
+            {
+            if can_double_jump = true ////////////////////////////////switch
+                then
+                {
+                if double_jump = 0 
+                    then
+                    {
+                    double_jump = 1;
+                    v_speed = -normal_jump_height;
+                    }
+                }
+            }
+        }    
     }
     
 //only when not max_speed
@@ -178,15 +192,15 @@ if on_ground = false
     grav = amount_of_gravity;
     v_speed += grav; 
     }
-else
-{
-grav = 0;
-if v_speed &gt; 0
-    then
-    {
-    v_speed = 0;
-    } 
-}
+    else
+        {
+        grav = 0;
+        if v_speed &gt; 0
+            then
+            {
+            v_speed = 0;
+            } 
+        }
 
 //not pressing jump key results in smaller jumps
 
@@ -222,10 +236,10 @@ if on_ground = false
         max_drop_speed = 3;
         }
     else
-    {
-    stuck_to_the_wall = false;
-    max_drop_speed = 20;
-    }
+        {
+        stuck_to_the_wall = false;
+        max_drop_speed = 20;
+        }
     } 
     
 if sticking_to_the_wall_timer &gt; 0
@@ -255,9 +269,9 @@ if !(left_key)
             h_speed = 0;       
             }
         else
-        {
-        h_speed += fric
-        }
+            {
+            h_speed += fric
+            }
         }
     } 
     
@@ -273,36 +287,12 @@ if !(right_key)
             h_speed = 0;       
             }
         else
-        {
-        h_speed -= fric;
-        }
-        }
-    }   
-    
-//dash
-
-if dash_key_just_pressed
-    then
-    {
-    if dashing = 0
-        then
-        {
-        if !place_meeting(x+dir,y,obj_parent_block)
-            then
             {
-            dashing = 3;
+            h_speed -= fric;
             }
         }
-    }  
-
-if dashing &gt; 0
-    then
-    {
-    dashing -= 1;
-    v_speed = 0;
-    h_speed += 6*(dir); 
-    }
-       
+    }   
+      
 //actual horizontal movement with collision
 
 repeat abs(h_speed)           
@@ -316,9 +306,9 @@ repeat abs(h_speed)
             x += 1;            
             }
         else
-        {
-        h_speed = 0;
-        }
+            {
+            h_speed = 0;
+            }
         }                
     if h_speed &lt; 0               
         then
@@ -329,9 +319,9 @@ repeat abs(h_speed)
             x -= 1;
             }
         else
-        {
-        h_speed = 0;
-        }
+            {
+            h_speed = 0;
+            }
         }
     }   
 

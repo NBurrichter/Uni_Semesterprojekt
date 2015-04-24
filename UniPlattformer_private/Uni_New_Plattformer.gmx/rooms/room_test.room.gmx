@@ -582,6 +582,8 @@
     <instance objName="obj_laser_cannon" x="560" y="320" name="inst_46C9EF96" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_laser_cannon" x="400" y="416" name="inst_3E559149" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_laser_cannon" x="320" y="336" name="inst_6322EA11" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_flapping_enemy" x="208" y="656" name="inst_2BB4585D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_flapping_enemy" x="272" y="656" name="inst_AFBEE0E2" locked="0" code="highesty = y - 100;&#xA;lowesty = y + 100;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
