@@ -14,12 +14,17 @@
     <sprite>sprites\spr_laser_cannon</sprite>
     <sprite>sprites\spr_laser</sprite>
     <sprite>sprites\spr_projectile</sprite>
+    <sprite>sprites\sprite6</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_circling.gml</script>
+<<<<<<< HEAD
     <script>scripts\scr_distance_find.gml</script>
+=======
+    <script>scripts\lose.gml</script>
+>>>>>>> 9033b832d856b81e1e0236ef8ace4b97a69450cf
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
@@ -45,9 +50,13 @@
       <object>objects\obj_parent_block</object>
       <object>objects\obj_parent_collision</object>
     </objects>
+    <objects name="Enemys">
+      <object>objects\obj_enemy</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_test</room>
+    <room>rooms\room_level1</room>
   </rooms>
   <constants number="2">
     <constant name="screen_width">display_get_width ()</constant>
