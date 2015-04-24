@@ -28,6 +28,10 @@
             <string>///Defining variables
 
 shooting_range = 900;
+
+behaviour_first = 1;
+behaviour_second = 4;
+
 </string>
           </argument>
         </arguments>
@@ -79,11 +83,33 @@ with (laser_shot)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>direction += 1;
+            <string>///Behaviour
 
-image_angle = direction;
-
-
+switch (behaviour_first)
+   {
+   case 1:
+   scr_circling_behaviour(3,obj_player); break;
+   case 2:
+   scr_staring_at_behaviour (obj_player); break;
+   case 3:
+   scr_rotating_self (2,-1); break;
+   case 4:
+   scr_staring_straight ();
+   default: break;
+   }
+   
+switch (behaviour_second)
+   {
+   case 1:
+   scr_circling_behaviour(3,obj_player); break;
+   case 2:
+   scr_staring_at_behaviour (obj_player); break;
+   case 3:
+   scr_rotating_self (2,-1); break;
+   case 4:
+   scr_staring_straight ();
+   default: break;
+   }  
 </string>
           </argument>
         </arguments>

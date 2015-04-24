@@ -28,6 +28,7 @@
             <string>///initialize variables
 
 crumbling = false;
+decay_time = 0.1;
 transparency = 1;
 </string>
           </argument>
@@ -64,7 +65,7 @@ or place_meeting(x,y-1,obj_player)
 if crumbling = true
     then
     {
-    transparency -= 0.1;
+    transparency -= decay_time;
     }
     
 if transparency = 0

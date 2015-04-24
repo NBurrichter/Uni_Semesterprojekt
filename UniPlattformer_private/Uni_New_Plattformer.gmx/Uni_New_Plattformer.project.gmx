@@ -14,6 +14,7 @@
     <sprite>sprites\spr_laser_cannon</sprite>
     <sprite>sprites\spr_laser</sprite>
     <sprite>sprites\spr_projectile</sprite>
+    <sprite>sprites\spr_heat_seeking_missle</sprite>
     <sprite>sprites\spr_flapping_enemy</sprite>
   </sprites>
   <backgrounds name="background"/>
@@ -21,6 +22,12 @@
   <scripts name="scripts">
     <script>scripts\scr_distance_find.gml</script>
     <script>scripts\scr_lose.gml</script>
+    <scripts name="enemy_behaviours">
+      <script>scripts\scr_circling_behaviour.gml</script>
+      <script>scripts\scr_staring_at_behaviour.gml</script>
+      <script>scripts\scr_rotating_self.gml</script>
+      <script>scripts\scr_staring_straight.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="group_players">
@@ -42,6 +49,7 @@
       <object>objects\obj_parent_player_damage</object>
       <object>objects\obj_parent_laser</object>
       <object>objects\obj_parent_projectile</object>
+      <object>objects\obj_parent_player</object>
       <object>objects\obj_parent_block</object>
       <object>objects\obj_parent_collision</object>
     </objects>
@@ -49,6 +57,7 @@
       <objects name="static_enemies">
         <object>objects\obj_cannon</object>
         <object>objects\obj_projectile</object>
+        <object>objects\obj_heat_seeking_missle</object>
         <object>objects\obj_laser_cannon</object>
         <object>objects\obj_laser</object>
       </objects>
