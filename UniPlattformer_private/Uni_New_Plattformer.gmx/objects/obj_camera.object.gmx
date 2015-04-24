@@ -83,15 +83,19 @@ global.selected = obj_player.id;
             <kind>1</kind>
             <string>///update camera position
 
-if instance_exists(global.selected)
+/*if instance_exists(global.selected)
     then
     {
     x = global.selected.x;
     y = global.selected.y;
     }
+*/
 
-view_xview [0] = x - (view_wview[0]/2);
-view_yview [0] = y - (view_hview[0]/2);
+view_object = obj_player;
+view_hspeed[0] = 8;
+view_vspeed[0] = 8;
+view_hborder[0] = view_wview[0] / 4;
+view_vborder[0] = view_hview[0] / 3;   
 </string>
           </argument>
         </arguments>

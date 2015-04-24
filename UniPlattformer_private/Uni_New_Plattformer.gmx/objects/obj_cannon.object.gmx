@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -35,7 +35,7 @@ projectile_speed = 8;
 direction = 270;
 image_angle = 45;
 
-spinning_speed = 2;
+speed = 2;
 </string>
           </argument>
         </arguments>
@@ -69,7 +69,11 @@ if reload_timer &gt; 0
 if reload_timer = 0
     then
     {
-    var projectile = instance_create (x,y,obj_projectile);
+    var projectile = instance_create    (  
+                                        x + lengthdir_x(sprite_get_width(sprite_index),direction),
+                                        y + lengthdir_y(sprite_get_width(sprite_index),direction),
+                                        obj_projectile
+                                        );
     reload_timer = reload_time;
     
     with (projectile)
@@ -102,7 +106,8 @@ if reload_timer = 0
             <kind>1</kind>
             <string>///Movement
 
-scr_circling(obj_player,2);
+direction = point_direction (x,y,obj_second_player.x,obj_player.y)-90;
+
 </string>
           </argument>
         </arguments>

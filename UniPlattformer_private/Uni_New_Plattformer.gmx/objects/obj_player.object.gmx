@@ -153,21 +153,21 @@ if (jump_key_just_pressed)      // jumping
                 h_speed = wall_jump_distance*(-dir);
                 dir = dir*(-1);
                 }
-            }
-        else                                    // double_jump
-            {
-            if can_double_jump = true ////////////////////////////////switch
-                then
+            else                                    // double_jump
                 {
-                if double_jump = 0 
+                if can_double_jump = true ////////////////////////////////switch
                     then
                     {
-                    double_jump = 1;
-                    v_speed = -normal_jump_height;
+                    if double_jump = 0 
+                        then
+                        {
+                        double_jump = 1;
+                        v_speed = -normal_jump_height;
+                        }
                     }
                 }
-            }
-        }    
+            }   
+        }
     }
     
 //only when not max_speed
@@ -417,6 +417,29 @@ room_restart ();
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scr_lose ();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -467,6 +490,8 @@ draw_text (x,y+25,"h_speed: "+string(obj_player.h_speed));
 
 draw_text (x,y+40,"grav: "+string(obj_player.grav));
 draw_text (x,y-5,"v_speed: "+string(obj_player.v_speed));
+
+draw_text (x,y+55,"double_jump: "+string(obj_player.double_jump));
 
 
 </string>

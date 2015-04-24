@@ -19,7 +19,6 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_circling.gml</script>
     <script>scripts\scr_distance_find.gml</script>
     <script>scripts\scr_lose.gml</script>
   </scripts>

@@ -27,7 +27,9 @@
             <kind>1</kind>
             <string>///defining variables
 
-distance_to_check         = 900;
+shot_by = 0;
+
+shooting_range = 0
 </string>
           </argument>
         </arguments>
@@ -52,14 +54,19 @@ distance_to_check         = 900;
             <kind>1</kind>
             <string>///Checking for laser range
 
-dist = scr_distance_find(x,y,direction,distance_to_check,obj_parent_block,false,false);
+direction = shot_by.direction;
+
+x = shot_by.x + lengthdir_x(sprite_get_width(shot_by.sprite_index),shot_by.direction);
+y = shot_by.y + lengthdir_y(sprite_get_width(shot_by.sprite_index),shot_by.direction);
+
+
+dist = scr_distance_find(x,y,direction,shooting_range,obj_parent_block,false,false);
 
 if collision_line(x, y, x+lengthdir_x(dist,direction), y+lengthdir_y(dist,direction), obj_player, false, false) &gt; 0
     then
     {
     scr_lose ();
     }
-    
 </string>
           </argument>
         </arguments>
