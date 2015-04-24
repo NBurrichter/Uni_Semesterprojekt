@@ -79,11 +79,7 @@ with (laser_shot)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>direction += 1;
-
-image_angle = direction;
-
-
+            <string>image_angle = direction;
 </string>
           </argument>
         </arguments>
