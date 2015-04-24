@@ -20,11 +20,8 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_circling.gml</script>
-<<<<<<< HEAD
     <script>scripts\scr_distance_find.gml</script>
-=======
     <script>scripts\lose.gml</script>
->>>>>>> 9033b832d856b81e1e0236ef8ace4b97a69450cf
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
