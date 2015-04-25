@@ -77,7 +77,7 @@ y = floor(mouse_y/16)*16;
             <string>///collision with scrap
 //radius_collecting_scrap needs to be initialized
 //only drawing scrap in a radius to the ship
-
+/*
 var list_of_all_scrap_nearby = noone;
        
 scrap = collision_circle(x,y,radius_collecting_scrap,obj_enemy_scrap,false,true);
