@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>self</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -29,38 +29,6 @@
 
 shooting_range = 900;
 
-behaviour_first = 1;
-behaviour_second = 4;
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Creating laser 
-
-var laser_shot = instance_create (x,y,obj_laser);
-
-with (laser_shot)
-    {
-    shot_by = other.id;
-    shooting_range = other.shooting_range;
-    }
 </string>
           </argument>
         </arguments>
@@ -83,33 +51,45 @@ with (laser_shot)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Behaviour
+            <string>///Laser Collision
 
-switch (behaviour_first)
-   {
-   case 1:
-   scr_circling_behaviour(3,obj_player); break;
-   case 2:
-   scr_staring_at_behaviour (obj_player); break;
-   case 3:
-   scr_rotating_self (2,-1); break;
-   case 4:
-   scr_staring_straight ();
-   default: break;
-   }
-   
-switch (behaviour_second)
-   {
-   case 1:
-   scr_circling_behaviour(3,obj_player); break;
-   case 2:
-   scr_staring_at_behaviour (obj_player); break;
-   case 3:
-   scr_rotating_self (2,-1); break;
-   case 4:
-   scr_staring_straight ();
-   default: break;
-   }  
+dist = scr_distance_find(x,y,image_angle,shooting_range,obj_parent_block,false,false);
+
+if collision_line(x, y, x+lengthdir_x(dist,image_angle), y+lengthdir_y(dist,image_angle), obj_player, false, false) &gt; 0
+    then
+    {
+    scr_lose ();
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw laser
+
+draw_sprite_ext (spr_laser,-1,x,y,dist,1,image_angle,c_white,0.7);
+
+//draw
+
+draw_self ();
+
 </string>
           </argument>
         </arguments>

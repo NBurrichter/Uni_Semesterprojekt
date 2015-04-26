@@ -8,6 +8,32 @@
   <parentName>obj_parent_projectile</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Initializing variables
+
+locked_on = true;
+sensitivity = 100;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -25,16 +51,40 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-scr_staring_at_behaviour (obj_parent_player);
+            <string>///Choosing targets &amp;&amp; fizzling
 
-direction = image_angle;
+if distance_to_object (obj_second_player) &gt; sensitivity
+    then
+    {
+    if locked_on = true
+        then
+        {
+        if place_meeting (x, y, obj_parent_block)
+            then
+            {
+            instance_destroy (); exit;
+            }
+        direction = point_direction(x, y, obj_player.x, obj_player.y);    
+        image_angle = direction;
+        }
+    else
+        {
+        gravity = 1;
+        }
+    }
+else
+    {
+    locked_on = false;
+    motion_add (point_direction(x, y, obj_second_player.x, obj_second_player.y),1);
+    image_angle = direction;
+    }
+
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_parent_block">
+    <event eventtype="7" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>

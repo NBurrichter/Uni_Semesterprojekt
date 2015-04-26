@@ -144,7 +144,7 @@
     <instance objName="obj_second_player" x="128" y="656" name="inst_03C88704" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_camera" x="32" y="464" name="inst_81AB81F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_game_controller" x="96" y="432" name="inst_EA1D0246" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_flapping_enemy" x="632" y="792" name="inst_C1A5EB5E" locked="0" code="dir = -1;&#xA;lowesty = y ;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_flapping_enemy" x="632" y="776" name="inst_C1A5EB5E" locked="0" code="dir = -1;&#xA;lowesty = y ;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flapping_enemy" x="920" y="712" name="inst_527EB87F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flapping_enemy" x="1128" y="872" name="inst_ED3E19CB" locked="0" code="highesty = y - 128;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flapping_enemy" x="1304" y="696" name="inst_D0C93157" locked="0" code="highesty = y -80&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -305,7 +305,6 @@
     <instance objName="obj_wall_block" x="2368" y="336" name="inst_A79D67A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="2384" y="336" name="inst_7651657F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="2400" y="336" name="inst_C82E0ABA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_block" x="2416" y="336" name="inst_CBE106C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flapping_enemy" x="2136" y="904" name="inst_092BF9D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="2384" y="832" name="inst_96E887D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="2400" y="832" name="inst_8F3E02CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

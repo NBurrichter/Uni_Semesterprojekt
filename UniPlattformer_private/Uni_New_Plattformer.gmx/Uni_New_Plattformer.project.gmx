@@ -20,13 +20,14 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\scr_with_all_in_radius_do_something.gml</script>
     <script>scripts\scr_distance_find.gml</script>
+    <script>scripts\scr_sleep.gml</script>
     <script>scripts\scr_lose.gml</script>
     <scripts name="enemy_behaviours">
-      <script>scripts\scr_circling_behaviour.gml</script>
-      <script>scripts\scr_staring_at_behaviour.gml</script>
+      <script>scripts\scr_rotating_around.gml</script>
+      <script>scripts\scr_staring_at.gml</script>
       <script>scripts\scr_rotating_self.gml</script>
-      <script>scripts\scr_staring_straight.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -56,10 +57,11 @@
     <objects name="enemies">
       <objects name="static_enemies">
         <object>objects\obj_cannon</object>
-        <object>objects\obj_projectile</object>
-        <object>objects\obj_heat_seeking_missle</object>
         <object>objects\obj_laser_cannon</object>
-        <object>objects\obj_laser</object>
+        <objects name="cannon_munition">
+          <object>objects\obj_heat_seeking_missle</object>
+          <object>objects\obj_projectile</object>
+        </objects>
       </objects>
       <objects name="moving_enemies">
         <object>objects\obj_flapping_enemy</object>
@@ -73,6 +75,8 @@
     <room>rooms\room_test</room>
     <room>rooms\room_level1</room>
     <room>rooms\room_level2</room>
+    <room>rooms\room_level_3</room>
+    <room>rooms\room_level_4</room>
   </rooms>
   <constants number="2">
     <constant name="screen_width">display_get_width ()</constant>

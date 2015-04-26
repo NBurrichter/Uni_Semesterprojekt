@@ -59,9 +59,14 @@ direction = shot_by.image_angle;
 x = shot_by.x + lengthdir_x(shot_by.sprite_width/2, shot_by.image_angle)
 y = shot_by.y + lengthdir_y(shot_by.sprite_width/2, shot_by.image_angle)
 
-dist = scr_distance_find(x,y,direction,shooting_range,obj_parent_block,false,false);
+//dist = scr_distance_find(x,y,direction,shooting_range,obj_parent_block,false,false);
 
-if collision_line(x, y, x+lengthdir_x(dist,direction), y+lengthdir_y(dist,direction), obj_player, false, false) &gt; 0
+/*while (collision_line(x, y, x+lengthdir_x(shooting_range,direction), y+lengthdir_y(shooting_range,direction), obj_parent_block, false, false));
+
+dist = distance_to_object (obj);
+instance_nearest
+
+/*if collision_line(x, y, x+lengthdir_x(dist,direction), y+lengthdir_y(dist,direction), obj_player, false, false) &gt; 0
     then
     {
     scr_lose ();

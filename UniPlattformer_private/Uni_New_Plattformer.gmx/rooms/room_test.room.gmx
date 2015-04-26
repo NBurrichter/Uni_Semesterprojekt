@@ -565,8 +565,8 @@ obj_player.running_jump_height = 1;</code>
     <instance objName="obj_cannon" x="432" y="336" name="inst_C1B4BF36" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cannon" x="288" y="448" name="inst_4F284DE3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_camera" x="224" y="192" name="inst_D7FEDC01" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_laser_cannon" x="112" y="320" name="inst_22FD48F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_laser_cannon" x="144" y="96" name="inst_94DB190D" locked="0" code="direction = 270;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_laser_cannon" x="128" y="288" name="inst_22FD48F2" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="23"/>
+    <instance objName="obj_laser_cannon" x="144" y="96" name="inst_94DB190D" locked="0" code="direction = 270;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_laser_cannon" x="192" y="416" name="inst_0F03C7B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_laser_cannon" x="416" y="112" name="inst_BBDFAF2D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_laser_cannon" x="512" y="208" name="inst_B998465E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -718,6 +718,9 @@ obj_player.running_jump_height = 1;</code>
     <instance objName="obj_wall_block" x="2016" y="832" name="inst_5BDAA51E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="2016" y="848" name="inst_51A50BE6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="2000" y="848" name="inst_3B13B683" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_flapping_enemy" x="464" y="432" name="inst_05C29278" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_flapping_enemy" x="560" y="432" name="inst_526BCF8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_flapping_enemy" x="624" y="416" name="inst_2133701E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

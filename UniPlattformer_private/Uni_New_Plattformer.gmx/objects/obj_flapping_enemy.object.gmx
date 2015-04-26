@@ -28,7 +28,7 @@
             <string>///defining variables
 
 maxspeed = 4;
-dir = 1;
+
 highesty = y - 64;
 lowesty = y + 64;
 
@@ -58,11 +58,10 @@ vspeed = maxspeed;
             <kind>1</kind>
             <string>///Up Down Movement
 
-if (place_meeting(x,y+dir,obj_parent_block) or y &lt; highesty or y &gt; lowesty)
+if (place_meeting(x,y+(sign(vspeed)*1),obj_parent_block) or y &lt; highesty or y &gt; lowesty)
     then
     {
-    vspeed = -vspeed;
-    dir = -dir;
+    vspeed *= -1;
     }
 </string>
           </argument>

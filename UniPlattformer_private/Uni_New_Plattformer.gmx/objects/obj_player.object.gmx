@@ -38,8 +38,9 @@ normal_jump_height = 13;
 wall_jump_distance = 8;
 
 max_drop_speed = 20;
+
 stuck_to_the_wall = false;
-frames_stuck_to_wall= 3;
+frames_stuck_to_wall = 3;
 sticking_to_the_wall_timer = frames_stuck_to_wall;
 
 acceleration = 1;
@@ -411,7 +412,7 @@ image_xscale = dir;
             <kind>1</kind>
             <string>///Death
 
-room_restart ();
+scr_lose ();
 </string>
           </argument>
         </arguments>
@@ -434,7 +435,9 @@ room_restart ();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_lose ();
+            <string>///Death
+
+scr_lose ();
 </string>
           </argument>
         </arguments>
@@ -457,7 +460,9 @@ room_restart ();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self ();
+            <string>///Draw self
+
+draw_self ();
 
 
 
