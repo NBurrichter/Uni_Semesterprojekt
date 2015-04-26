@@ -48,7 +48,6 @@
     </objects>
     <objects name="group_parent_objects">
       <object>objects\obj_parent_player_damage</object>
-      <object>objects\obj_parent_laser</object>
       <object>objects\obj_parent_projectile</object>
       <object>objects\obj_parent_player</object>
       <object>objects\obj_parent_block</object>
