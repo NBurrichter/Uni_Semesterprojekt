@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_parent_player_damage</parentName>
+  <parentName>obj_parent_damage</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -29,10 +29,17 @@
 
 maxspeed = 4;
 
-highesty = y - 64;
-lowesty = y + 64;
+direction = 45;
+distance = 64;
 
-vspeed = maxspeed;
+highest_x = x + lengthdir_x(distance,direction);
+highest_y = y + lengthdir_y(distance,direction);
+
+lowest_x = x - lengthdir_x(distance,direction);
+lowest_y = y - lengthdir_y(distance,direction);
+
+
+speed = maxspeed;
 
 </string>
           </argument>
@@ -56,12 +63,12 @@ vspeed = maxspeed;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Up Down Movement
+            <string>///Movement
 
-if (place_meeting(x,y+(sign(vspeed)*1),obj_parent_block) or y &lt; highesty or y &gt; lowesty)
+if (place_meeting(x+hspeed, y+vspeed, obj_parent_collision) or y &lt; highest_y or y &gt; lowest_y)
     then
     {
-    vspeed *= -1;
+    speed *= -1;
     }
 </string>
           </argument>

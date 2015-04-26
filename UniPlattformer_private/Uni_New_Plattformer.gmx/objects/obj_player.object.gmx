@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-1000000</depth>
   <persistent>0</persistent>
-  <parentName>obj_parent_player</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -105,7 +105,7 @@ if (left_key) &amp;&amp; (right_key)
     
 //on_ground &amp;&amp; reactivating double_jump
 
-if !place_meeting(x,y+1,obj_parent_block)
+if !place_meeting(x,y+1,obj_parent_collision)
     then
     {
     on_ground = false;
@@ -147,7 +147,7 @@ if (jump_key_just_pressed)      // jumping
         if can_wall_jump = true //////////////////////////////////////////switch
             then
             {
-            if place_meeting(x+dir,y,obj_parent_block)             
+            if place_meeting(x+dir,y,obj_parent_collision)             
                 then
                 {
                 v_speed = -normal_jump_height;
@@ -213,7 +213,7 @@ if (jump_key_not_pressed) and v_speed &lt; 0
 
 //bumping your head on ceiling
     
-if place_meeting(x,y-1,obj_parent_block) and v_speed &lt; 0
+if place_meeting(x,y-1,obj_parent_collision) and v_speed &lt; 0
     then
     {
     v_speed = 0;                                
@@ -224,7 +224,7 @@ if place_meeting(x,y-1,obj_parent_block) and v_speed &lt; 0
 if on_ground = false
     then
     {
-    if place_meeting(x+(dir),y,obj_parent_block)
+    if place_meeting(x+(dir),y,obj_parent_collision)
         then
         {
         double_jump = 0;
@@ -301,7 +301,7 @@ repeat abs(h_speed)
     if h_speed &gt; 0              
         then
         {
-        if !place_meeting(x+1,y,obj_parent_block)
+        if !place_meeting(x+1,y,obj_parent_collision)
             then
             {
             x += 1;            
@@ -314,7 +314,7 @@ repeat abs(h_speed)
     if h_speed &lt; 0               
         then
         {
-        if !place_meeting(x-1,y,obj_parent_block)
+        if !place_meeting(x-1,y,obj_parent_collision)
             then
             {
             x -= 1;
@@ -333,7 +333,7 @@ repeat abs(v_speed)   //falling down
     if v_speed &gt; 0 
         then
         {
-        if !place_meeting(x,y+1,obj_parent_block)
+        if !place_meeting(x,y+1,obj_parent_collision)
             then
             {
             y += 1;   
@@ -343,7 +343,7 @@ repeat abs(v_speed)   //falling down
     if v_speed &lt; 0  // jumping up           
         then
         {
-        if !place_meeting(x,y-1,obj_parent_block)
+        if !place_meeting(x,y-1,obj_parent_collision)
             then
             {
             y -= 1;          
@@ -393,7 +393,7 @@ image_xscale = dir;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_parent_player_damage">
+    <event eventtype="4" ename="obj_parent_damage">
       <action>
         <libid>1</libid>
         <id>603</id>
