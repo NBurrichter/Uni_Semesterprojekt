@@ -90,8 +90,8 @@ can_wall_jump = false;
 var left_key = keyboard_check(ord('A'))          
 var right_key = keyboard_check(ord('D'))        
 
-var jump_key_just_pressed = keyboard_check_pressed(ord('W')) 
-var jump_key_not_pressed = !keyboard_check(ord('W')) 
+var jump_key_just_pressed = keyboard_check_pressed(vk_space)
+var jump_key_not_pressed = !keyboard_check(vk_space) 
 
 var dash_key_just_pressed = keyboard_check_pressed(ord('F')) 
 
@@ -487,7 +487,7 @@ draw_self ();
           <argument>
             <kind>1</kind>
             <string>///debugging
-
+/*
 draw_set_colour (c_black);
 
 draw_text (x,y+10,"on_ground: "+string(obj_player.on_ground));

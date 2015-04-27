@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>16776960</colour>
   <showcolour>-1</showcolour>
-  <code>obj_player.can_wall_jump = true;</code>
+  <code>obj_player.can_wall_jump = true;
+obj_player.can_double_jump = true;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>
   <clearDisplayBuffer>0</clearDisplayBuffer>
