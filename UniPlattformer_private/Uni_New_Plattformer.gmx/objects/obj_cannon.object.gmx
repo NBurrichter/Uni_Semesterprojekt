@@ -32,7 +32,7 @@ reload_timer = 0;
 
 projectile_speed = 8; 
 
-munition = obj_projectile;
+munition = obj_heat_seeking_missle;
 
 </string>
           </argument>

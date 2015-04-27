@@ -78,7 +78,7 @@ if transparency = 0
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_parent_damage">
+    <event eventtype="4" ename="obj_parent_damage_block">
       <action>
         <libid>1</libid>
         <id>603</id>

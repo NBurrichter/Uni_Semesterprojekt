@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_parent_collision</parentName>
+  <parentName>obj_parent_block</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -53,7 +53,7 @@ shooting_range = 900;
             <kind>1</kind>
             <string>///Laser Collision
 
-dist = scr_distance_find(x,y,image_angle,shooting_range,obj_parent_block,false,false);
+dist = scr_distance_find(x,y,image_angle,shooting_range,obj_parent_block,false,true);
 
 if collision_line(x, y, x+lengthdir_x(dist,image_angle), y+lengthdir_y(dist,image_angle), obj_player, false, false) &gt; 0
     then

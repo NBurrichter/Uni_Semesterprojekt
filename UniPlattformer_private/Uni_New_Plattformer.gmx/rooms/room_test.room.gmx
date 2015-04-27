@@ -720,7 +720,6 @@ obj_player.running_jump_height = 1;</code>
     <instance objName="obj_flapping_enemy" x="560" y="432" name="inst_526BCF8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flapping_enemy" x="624" y="416" name="inst_2133701E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="448" y="464" name="inst_0C1B4610" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_block" x="608" y="448" name="inst_9092D63D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

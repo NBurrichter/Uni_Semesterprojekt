@@ -393,7 +393,7 @@ image_xscale = dir;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_parent_damage">
+    <event eventtype="4" ename="obj_parent_damage_player">
       <action>
         <libid>1</libid>
         <id>603</id>
