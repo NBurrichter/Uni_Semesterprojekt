@@ -212,8 +212,7 @@ obj_player.can_double_jump = true;</code>
     <instance objName="obj_cannon" x="1088" y="592" name="inst_1E94A3CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="-87"/>
     <instance objName="obj_cannon" x="1216" y="480" name="inst_38608A74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="-93"/>
     <instance objName="obj_second_player" x="608" y="1376" name="inst_2CF59C3E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_game_controller" x="144" y="992" name="inst_D497D4EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_camera" x="192" y="992" name="inst_F639DB0F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_game_controller" x="80" y="1248" name="inst_D497D4EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="96" y="416" name="inst_9D78B57F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="80" y="416" name="inst_E4E09991" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="48" y="416" name="inst_060DC1CC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -237,7 +236,7 @@ obj_player.can_double_jump = true;</code>
     <instance objName="obj_wall_block" x="336" y="560" name="inst_9590B3C2" locked="0" code="" scaleX="4" scaleY="13" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="912" y="768" name="inst_48E44610" locked="0" code="" scaleX="12" scaleY="32" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="320" y="672" name="inst_EA0A80DC" locked="0" code="" scaleX="13" scaleY="26" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_block" x="176" y="960" name="inst_CBA46AFD" locked="0" code="" scaleX="23" scaleY="18" colour="4294967295" rotation="1"/>
+    <instance objName="obj_wall_block" x="176" y="976" name="inst_CBA46AFD" locked="0" code="" scaleX="23" scaleY="18" colour="4294967295" rotation="1"/>
     <instance objName="obj_wall_block" x="448" y="1120" name="inst_285B0A7F" locked="0" code="" scaleX="20" scaleY="10" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="400" y="432" name="inst_09C61805" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="448" y="432" name="inst_943B8FBD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -395,6 +394,7 @@ obj_player.can_double_jump = true;</code>
     <instance objName="obj_wall_block" x="560" y="704" name="inst_020C4913" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="688" y="736" name="inst_FF78EA95" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_level_exit" x="432" y="1392" name="inst_B6609286" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_boot" x="48" y="176" name="inst_93ECA42F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

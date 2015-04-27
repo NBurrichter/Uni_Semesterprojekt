@@ -36,19 +36,19 @@ ini_close();
 set = 1;
 width = 1280;
 height = 720;
-full = 1;
+full = 0;
 
 // Declare the maximum resolution you want to allow.
-max_width = 1280;
-max_height = 720;
+max_width = 1920;
+max_height = 1080;
 
 // Check if the player has already picked a resolution.
 if (set == 1)
 {
-    view_wview = width;
-    view_hview = height;
-    view_wport = width;
-    view_hport = height;
+    view_wview[0] = width;
+    view_hview[0] = height;
+    view_wport[0] = width;
+    view_hport[0] = height;
     surface_resize(application_surface,width,height);
     window_set_size(width,height);
     display_set_gui_size(width,height);
@@ -56,6 +56,33 @@ if (set == 1)
     // then continue with game
 }
 // Else, run some code or execute a script that allows the user to select their screen resolution.
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>view_object = obj_player;
+view_hspeed[0] = 8;
+view_vspeed[0] = 8;
+view_hborder[0] = view_wview[0] / 4;
+view_vborder[0] = view_hview[0] / 3;   
 </string>
           </argument>
         </arguments>
