@@ -16,6 +16,7 @@
     <sprite>sprites\spr_projectile</sprite>
     <sprite>sprites\spr_heat_seeking_missle</sprite>
     <sprite>sprites\spr_flapping_enemy</sprite>
+    <sprite>sprites\spr_level_exit</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -45,6 +46,7 @@
     <objects name="group_game_controller">
       <object>objects\obj_game_controller</object>
       <object>objects\obj_camera</object>
+      <object>objects\obj_level_exit</object>
     </objects>
     <objects name="group_parent_objects">
       <object>objects\obj_parent_damage_all</object>
@@ -71,11 +73,11 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_test</room>
     <room>rooms\room_level1</room>
     <room>rooms\room_level2</room>
     <room>rooms\room_level_3</room>
     <room>rooms\room_level_4</room>
+    <room>rooms\room_test</room>
   </rooms>
   <constants number="2">
     <constant name="screen_width">display_get_width ()</constant>
