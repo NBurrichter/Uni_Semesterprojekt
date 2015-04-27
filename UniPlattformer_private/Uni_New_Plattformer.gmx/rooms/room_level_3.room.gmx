@@ -12,7 +12,7 @@
   <showcolour>-1</showcolour>
   <code>obj_player.can_wall_jump = true;
 obj_player.can_double_jump = true;</code>
-  <enableViews>-1</enableViews>
+  <enableViews>0</enableViews>
   <clearViewBackground>0</clearViewBackground>
   <clearDisplayBuffer>0</clearDisplayBuffer>
   <makerSettings>
@@ -286,9 +286,9 @@ obj_player.can_double_jump = true;</code>
     <instance objName="obj_laser_cannon" x="768" y="304" name="inst_59C120B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
     <instance objName="obj_player" x="336" y="688" name="inst_2006C986" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_game_controller" x="64" y="64" name="inst_FCAB0627" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_camera" x="96" y="64" name="inst_754645AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_second_player" x="128" y="64" name="inst_7F5BB91B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_level_exit" x="688" y="48" name="inst_64F81759" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_boot" x="96" y="64" name="inst_B5675C06" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
