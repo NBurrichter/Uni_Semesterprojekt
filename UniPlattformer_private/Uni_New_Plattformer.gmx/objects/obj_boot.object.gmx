@@ -26,17 +26,18 @@
           <argument>
             <kind>1</kind>
             <string>// This reads the variables stored in the config file.
-ini_open("config.ini");
+/*ini_open("config.ini");
 set = ini_read_real("resolution","set",0);
 width = ini_read_real("resolution","width",1280);
 height = ini_read_real("resolution","height",720);
 full = ini_read_real("resolution","full",0);
 ini_close();
+*/
 
 set = 1;
-width = 1280;
-height = 720;
-full = 0;
+width = 1920; //1280
+height = 1080; //720
+full = 1;
 
 // Declare the maximum resolution you want to allow.
 max_width = 1920;
@@ -49,7 +50,7 @@ if (set == 1)
     view_hview[0] = height;
     view_wport[0] = width;
     view_hport[0] = height;
-    surface_resize(application_surface,width,height);
+    surface_resize(application_surface,screen_width,screen_height);
     window_set_size(width,height);
     display_set_gui_size(width,height);
     if full == 1 window_set_fullscreen(true); else window_set_fullscreen(false);
