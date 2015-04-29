@@ -25,19 +25,24 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///defining variables
+            <string>//defining variables
 
 speed = 4;
 
-direction = 90;
-distance = 111;
+direction = image_angle;
 
+distance = 128;
+
+startx = x;
+starty = y;
+
+/*
 highest_x = x + lengthdir_x(distance,direction);
 highest_y = y + lengthdir_y(distance,direction);
 
 lowest_x = x - lengthdir_x(distance,direction);
 lowest_y = y - lengthdir_y(distance,direction);
-
+*/
 
 </string>
           </argument>
@@ -63,11 +68,15 @@ lowest_y = y - lengthdir_y(distance,direction);
             <kind>1</kind>
             <string>///Movement
 
-if (place_meeting(x+hspeed, y+vspeed, obj_parent_block) or y &lt; highest_y or y &gt; lowest_y)
+if (place_meeting(x+hspeed, y+vspeed, obj_parent_block))
     then
     {
     speed *= -1;
     }
+    
+if distance_to_point(startx,starty) &gt; distance {
+  speed *= -1;
+}
 </string>
           </argument>
         </arguments>
