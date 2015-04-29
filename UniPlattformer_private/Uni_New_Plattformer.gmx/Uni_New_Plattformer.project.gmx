@@ -7,7 +7,6 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_second_player</sprite>
     <sprite>sprites\spr_second_player_block</sprite>
@@ -18,7 +17,12 @@
     <sprite>sprites\spr_heat_seeking_missle</sprite>
     <sprite>sprites\spr_flapping_enemy</sprite>
     <sprite>sprites\spr_level_exit</sprite>
-    <sprite>sprites\spr_button</sprite>
+    <sprites name="group_first_player">
+      <sprite>sprites\spr_player</sprite>
+    </sprites>
+    <sprites name="group_buttons">
+      <sprite>sprites\spr_button</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
