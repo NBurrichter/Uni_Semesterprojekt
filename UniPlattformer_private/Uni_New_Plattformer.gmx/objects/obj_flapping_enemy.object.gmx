@@ -29,7 +29,7 @@
 
 speed = 4;
 
-direction = 111;
+direction = 90;
 distance = 111;
 
 highest_x = x + lengthdir_x(distance,direction);
