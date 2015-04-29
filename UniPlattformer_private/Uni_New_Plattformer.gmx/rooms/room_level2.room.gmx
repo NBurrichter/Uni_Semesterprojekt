@@ -11,7 +11,7 @@
   <colour>16744448</colour>
   <showcolour>-1</showcolour>
   <code>obj_player.can_wall_jump = true;
-obj_player.can_double_jump = true;</code>
+//obj_player.can_double_jump = true;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>
   <clearDisplayBuffer>0</clearDisplayBuffer>
@@ -198,7 +198,7 @@ obj_player.can_double_jump = true;</code>
     <instance objName="obj_wall_block" x="2112" y="832" name="inst_0B594E32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="2112" y="848" name="inst_9892FE08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="2112" y="928" name="inst_A1BC532D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_block" x="2128" y="928" name="inst_DF2D1326" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_block" x="2112" y="944" name="inst_DF2D1326" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="2144" y="928" name="inst_BFC15772" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="2144" y="912" name="inst_5C846234" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="2144" y="896" name="inst_E6BF4652" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -316,6 +316,12 @@ obj_player.can_double_jump = true;</code>
     <instance objName="obj_wall_block" x="448" y="848" name="inst_A30F6DC1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="448" y="832" name="inst_0A7A031E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="448" y="816" name="inst_19E198EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_block" x="2112" y="944" name="inst_EFA9010C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_block" x="2112" y="960" name="inst_26A7028F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_block" x="2112" y="960" name="inst_08F9EB13" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_block" x="2128" y="960" name="inst_2EB1F1D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_block" x="2144" y="960" name="inst_3DD69D7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_block" x="2144" y="944" name="inst_47F12245" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
