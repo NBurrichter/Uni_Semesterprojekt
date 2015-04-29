@@ -36,6 +36,7 @@
     <sprite>sprites\spr_heat_seeking_missle</sprite>
     <sprite>sprites\spr_flapping_enemy</sprite>
     <sprite>sprites\spr_level_exit</sprite>
+    <sprite>sprites\spr_button</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -67,6 +68,9 @@
       <object>objects\obj_camera</object>
       <object>objects\obj_level_exit</object>
       <object>objects\obj_boot</object>
+      <objects name="group_buttons">
+        <object>objects\obj_back_button</object>
+      </objects>
     </objects>
     <objects name="group_parent_objects">
       <object>objects\obj_parent_damage_all</object>
@@ -99,6 +103,12 @@
     <room>rooms\room_level_4</room>
     <room>rooms\room_test</room>
     <room>rooms\room5</room>
+    <room>rooms\room_start_screen</room>
+    <room>rooms\room_loading</room>
+    <room>rooms\room_main_menu</room>
+    <room>rooms\room_option_menu</room>
+    <room>rooms\room_level_select</room>
+    <room>rooms\room_pause_menu</room>
   </rooms>
   <constants number="2">
     <constant name="screen_width">display_get_width ()</constant>
