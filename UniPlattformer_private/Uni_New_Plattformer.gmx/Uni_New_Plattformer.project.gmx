@@ -22,6 +22,7 @@
     </sprites>
     <sprites name="group_buttons">
       <sprite>sprites\spr_button</sprite>
+      <sprite>sprites\spr_levelbutton</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -55,6 +56,7 @@
       <object>objects\obj_level_exit</object>
       <objects name="group_buttons">
         <object>objects\obj_back_button</object>
+        <object>objects\obj_level_button</object>
       </objects>
     </objects>
     <objects name="group_parent_objects">
@@ -82,17 +84,17 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room_level_select</room>
     <room>rooms\room_level1</room>
     <room>rooms\room_level2</room>
-    <room>rooms\room_level_3</room>
-    <room>rooms\room_level_4</room>
+    <room>rooms\room_level3</room>
+    <room>rooms\room_level4</room>
     <room>rooms\room_test</room>
     <room>rooms\room5</room>
     <room>rooms\room_start_screen</room>
     <room>rooms\room_loading</room>
     <room>rooms\room_main_menu</room>
     <room>rooms\room_option_menu</room>
-    <room>rooms\room_level_select</room>
     <room>rooms\room_pause_menu</room>
   </rooms>
   <constants number="2">
