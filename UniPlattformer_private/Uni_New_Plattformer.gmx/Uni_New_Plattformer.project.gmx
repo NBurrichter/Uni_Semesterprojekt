@@ -48,11 +48,15 @@
         <objects name="player_created_blocks">
           <object>objects\obj_second_player_block</object>
         </objects>
+        <objects name="gui_player">
+          <object>objects\obj_second_player_gui</object>
+        </objects>
       </objects>
     </objects>
     <objects name="group_game_controller">
       <object>objects\obj_game_controller</object>
       <object>objects\obj_camera</object>
+      <object>objects\obj_gui_camera</object>
       <object>objects\obj_level_exit</object>
       <objects name="group_buttons">
         <object>objects\obj_back_button</object>
