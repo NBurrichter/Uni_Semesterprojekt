@@ -52,7 +52,11 @@ mouse_over = false;
             <kind>1</kind>
             <string>///Go back
 
-room_goto_previous ();
+if mouse_over = true
+    then
+    {
+    room_goto_previous ();
+    }
 </string>
           </argument>
         </arguments>

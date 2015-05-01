@@ -26,9 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>//defining variables
-
-movespeed = 4
-speed = movespeed;
+ 
+speed = 4;
 
 direction = image_angle;
 
@@ -62,14 +61,14 @@ starty = y;
             <string>///Movement
 
 //Kollision mit Block
-if (place_meeting(x+hspeed, y+vspeed, obj_parent_block))
+if (place_meeting(x+hspeed, y+vspeed, obj_parent_block)) or distance_to_point(startx,starty) &gt; distance 
     then
     {
     speed *= -1;
     }
     
 //Erreichen des maximalen Punktes
-if distance_to_point(startx,starty) &gt; distance 
+/*if distance_to_point(startx,starty) &gt; distance 
     {
     move_towards_point(startx,starty,movespeed) 
     }
