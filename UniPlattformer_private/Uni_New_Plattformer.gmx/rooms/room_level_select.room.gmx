@@ -51,10 +51,10 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_level_button" x="160" y="160" name="inst_5166E94E" locked="0" code="level = room_level1;&#xA;" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_level_button" x="320" y="160" name="inst_776C5AFA" locked="0" code="level = room_level2;&#xA;" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_level_button" x="480" y="160" name="inst_9A669565" locked="0" code="level = room_level3;&#xA;" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_level_button" x="640" y="160" name="inst_2DF9FDAA" locked="0" code="level = room_level4;&#xA;" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_level_button" x="160" y="160" name="inst_5166E94E" locked="0" code="level = room_level1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_level_button" x="320" y="160" name="inst_776C5AFA" locked="0" code="level = room_level2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_level_button" x="480" y="160" name="inst_9A669565" locked="0" code="level = room_level3;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_level_button" x="640" y="160" name="inst_2DF9FDAA" locked="0" code="level = room_level4;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_level_button" x="352" y="288" name="inst_6B3B423A" locked="0" code="level = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_game_controller" x="704" y="224" name="inst_1390AD07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_gui_camera" x="768" y="224" name="inst_3CDFDF2D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
