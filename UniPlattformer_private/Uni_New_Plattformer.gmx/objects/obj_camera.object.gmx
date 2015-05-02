@@ -38,29 +38,15 @@ view_hport [0]= screen_height;
 display_set_gui_size (screen_width,screen_height);
 
 surface_resize(application_surface,screen_width,screen_height);
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///am anfang den player anschaun
 
-global.selected = obj_player.id;
+//////////////////////////////////
+
+view_object = obj_player;
+
+view_hspeed[0] = 8;
+view_vspeed[0] = 8;
+view_hborder[0] = view_wview[0] / 4;
+view_vborder[0] = view_hview[0] / 3; 
 </string>
           </argument>
         </arguments>
@@ -83,21 +69,18 @@ global.selected = obj_player.id;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///update camera position
+            <string>///other try
+/*
 
-/*if instance_exists(global.selected)
+global.selected = obj_player.id;
+
+if instance_exists(global.selected)
     then
     {
     x = global.selected.x;
     y = global.selected.y;
     }
-*/
-
-view_object = obj_player;
-view_hspeed[0] = 8;
-view_vspeed[0] = 8;
-view_hborder[0] = view_wview[0] / 4;
-view_vborder[0] = view_hview[0] / 3;   
+*/  
 </string>
           </argument>
         </arguments>

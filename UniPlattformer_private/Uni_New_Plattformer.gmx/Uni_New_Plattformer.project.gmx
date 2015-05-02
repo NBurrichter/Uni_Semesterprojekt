@@ -71,6 +71,7 @@
     </objects>
     <objects name="group_game_controller">
       <object>objects\obj_game_controller</object>
+      <object>objects\obj_pause</object>
       <object>objects\obj_camera</object>
       <object>objects\obj_gui_camera</object>
       <object>objects\obj_level_exit</object>
@@ -115,7 +116,6 @@
     <room>rooms\room_loading</room>
     <room>rooms\room_main_menu</room>
     <room>rooms\room_option_menu</room>
-    <room>rooms\room_pause_menu</room>
   </rooms>
   <constants number="2">
     <constant name="screen_width">display_get_width ()</constant>
