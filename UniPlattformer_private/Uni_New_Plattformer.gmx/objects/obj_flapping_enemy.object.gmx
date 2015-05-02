@@ -66,12 +66,6 @@ if (place_meeting(x+hspeed, y+vspeed, obj_parent_block)) or distance_to_point(st
     {
     speed *= -1;
     }
-    
-//Erreichen des maximalen Punktes
-/*if distance_to_point(startx,starty) &gt; distance 
-    {
-    move_towards_point(startx,starty,movespeed) 
-    }
 </string>
           </argument>
         </arguments>
