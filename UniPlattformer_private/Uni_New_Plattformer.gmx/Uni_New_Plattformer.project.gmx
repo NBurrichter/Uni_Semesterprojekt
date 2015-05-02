@@ -71,13 +71,20 @@
     </objects>
     <objects name="group_game_controller">
       <object>objects\obj_game_controller</object>
-      <object>objects\obj_pause</object>
       <object>objects\obj_camera</object>
       <object>objects\obj_gui_camera</object>
       <object>objects\obj_level_exit</object>
       <objects name="group_buttons">
         <object>objects\obj_back_button</object>
         <object>objects\obj_level_button</object>
+      </objects>
+      <objects name="group_pause_menu">
+        <object>objects\obj_pause</object>
+        <objects name="group_pause_menu_buttons">
+          <object>objects\obj_button_resume</object>
+          <object>objects\obj_button_restart</object>
+          <object>objects\obj_button_exit</object>
+        </objects>
       </objects>
     </objects>
     <objects name="group_parent_objects">
@@ -106,11 +113,11 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_level_select</room>
+    <room>rooms\room_test</room>
     <room>rooms\room_level1</room>
     <room>rooms\room_level2</room>
     <room>rooms\room_level3</room>
     <room>rooms\room_level4</room>
-    <room>rooms\room_test</room>
     <room>rooms\room5</room>
     <room>rooms\room_start_screen</room>
     <room>rooms\room_loading</room>
