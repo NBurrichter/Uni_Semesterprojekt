@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>999999999</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -28,24 +28,34 @@
             <string>///Create pause menu background
 
 global.pause = true;
-surf_pause = surface_create(screen_width, screen_height);
-gui_width = screen_width;
-gui_height = screen_height;
+surf_pause = surface_create(screen_width, screen_height);//Create surface
 
 surface_set_target(surf_pause);
-draw_clear_alpha(c_black,0);
+draw_clear_alpha(c_black,0); // Clears surface.
 draw_enable_alphablend(false);
 draw_surface(application_surface,0,0);
 draw_enable_alphablend(true);
+
+var c_last = draw_get_color();;
+//Draw semitransparent square
+draw_set_color(c_black);
+draw_set_alpha(0.5);
+draw_rectangle(0,0,screen_width, screen_height,0);
+draw_set_alpha(1);
+draw_set_color(c_last);
+
 surface_reset_target();
 
-instance_deactivate_all(true); //pauses the game
+instance_deactivate_all(true); //deactivate all other instances
 
 //create menu buttons
-/*
-resume_button = instance_create (x,y,obj_back_button);
-restart_button = instance_create 
-exit_button = instance_create 
+
+
+mouse_cursor = instance_create (x,y,obj_mouse_cursor);
+
+resume_button = instance_create (view_xview + view_wview/2, view_yview + (view_hview/3), obj_button_resume);
+restart_button = instance_create (view_xview + view_wview/2, view_yview + (view_hview/2), obj_button_restart);
+exit_button = instance_create (view_xview + view_wview/2, view_yview + 2*(view_hview/3), obj_button_exit);
 </string>
           </argument>
         </arguments>
@@ -137,7 +147,7 @@ var pause_button = keyboard_check_pressed(ord('P'));
 if pause_button
     then
     {
-    surface_free(surf_pause); //Clear surface
+    surface_free (surf_pause);
     draw_enable_alphablend(true);
     global.pause = false;
     instance_activate_all(); //Activate all the objects
@@ -196,7 +206,7 @@ if(surface_exists(surf_pause))
     then
     {
     draw_enable_alphablend(false);
-    draw_surface(surf_pause,0,0);
+    draw_surface(surf_pause, 0, 0);
     draw_enable_alphablend(true);
     } 
 else 
@@ -205,19 +215,10 @@ else
     alarm[0] = 1;
     }
 
-///Creates grey overlay
 
-display_set_gui_size(gui_width,gui_height);
 
-var c_last = draw_get_color(); // saves draw color
+    
 
-draw_set_color(c_black); // creating the overlay
-draw_set_alpha(0.5);
-
-draw_rectangle(0,0,surface_get_width(application_surface),screen_height,0);
-
-draw_set_alpha(1); // resets draw color
-draw_set_color(c_last);  
 
 </string>
           </argument>
