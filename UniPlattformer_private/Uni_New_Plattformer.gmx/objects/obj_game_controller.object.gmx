@@ -151,7 +151,18 @@ if pause_button
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(0, 30, "Red - The update speed of the step event#Yellow - The time required for the draw event")
+            <string>draw_set_halign(fa_left);
+//draw_text(0, 30, "Red - The update speed of the step event#Yellow - The time required for the draw event")
+
+///Debugging
+
+draw_set_halign(fa_left);
+draw_text (30,30,"view_wview: " +string(view_wview));
+draw_text (30,45,"screen_width: " +string(screen_width));
+draw_text (30,60,"view_wport: " +string(view_wport));
+draw_text (30,75,"application_surface: " +string(surface_get_width(application_surface)));
+draw_text (30,105,"view_xview: " +string(view_xview));
+draw_text (30,120,"gui_width: " +string(display_get_gui_width()));
 </string>
           </argument>
         </arguments>

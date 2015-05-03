@@ -12,7 +12,7 @@
   <showcolour>-1</showcolour>
   <code>obj_player.can_wall_jump = true;
 //obj_player.can_double_jump = true;</code>
-  <enableViews>0</enableViews>
+  <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>
   <clearDisplayBuffer>0</clearDisplayBuffer>
   <makerSettings>

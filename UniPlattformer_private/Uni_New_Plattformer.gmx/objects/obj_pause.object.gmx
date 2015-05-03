@@ -28,7 +28,7 @@
             <string>///Create pause menu background
 
 global.pause = true;
-surf_pause = surface_create(screen_width, screen_height);//Create surface
+surf_pause = surface_create(view_wview[0], view_hview[0]);//Create surface
 
 surface_set_target(surf_pause);
 draw_clear_alpha(c_black,0); // Clears surface.
@@ -40,7 +40,7 @@ var c_last = draw_get_color();;
 //Draw semitransparent square
 draw_set_color(c_black);
 draw_set_alpha(0.5);
-draw_rectangle(0,0,screen_width, screen_height,0);
+draw_rectangle(0,0,view_wview[0], view_hview[0],0);
 draw_set_alpha(1);
 draw_set_color(c_last);
 
@@ -183,7 +183,7 @@ surface_free(surf_pause);
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="64">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -214,12 +214,49 @@ else
     surf_pause = surface_create(screen_width, screen_height);
     alarm[0] = 1;
     }
+    
+///
+draw_sprite (spr_second_player, -1, window_view_mouse_get_x(view_current), window_view_mouse_get_y(view_current));
 
 
 
     
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Debugging
+
+draw_set_halign(fa_left);
+draw_text (30,30,"view_wview: " +string(view_wview));
+draw_text (30,45,"screen_width: " +string(screen_width));
+draw_text (30,60,"view_wport: " +string(view_wport));
+draw_text (30,75,"application_surface: " +string(surface_get_width(application_surface)));
+
+if surface_exists (surf_pause)
+    then
+draw_text (30,90,"surf_pause: " +string(surface_get_width(surf_pause)));
+
+draw_text (30,105,"view_xview: " +string(view_xview));
+draw_text (30,120,"gui_width: " +string(display_get_gui_width()));
 </string>
           </argument>
         </arguments>
