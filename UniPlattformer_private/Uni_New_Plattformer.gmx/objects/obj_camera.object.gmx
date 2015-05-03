@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///set up view
-/*
+
 window_set_fullscreen (true);
 
 view_wview [0] = 1920;
@@ -41,8 +41,8 @@ surface_resize(application_surface,view_wview [0],view_hview [0]);
 
 view_object = obj_player;
 
-view_hspeed[0] = 8;
-view_vspeed[0] = 8;
+view_hspeed[0] = 30;
+view_vspeed[0] = 30;
 view_hborder[0] = view_wview[0] / 4;
 view_vborder[0] = view_hview[0] / 3; 
 </string>
