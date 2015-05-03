@@ -82,21 +82,6 @@ if pause_button
     {
     instance_create (x,y,obj_pause);
     }
-    
-    
-    /*if global.pause = false
-        then
-        {
-        global.pause = true;
-        instance_deactivate_all (true);
-        instance_create (view_xview + view_wview/2, view_yview + (view_hview/3), obj_button_resume);
-        }
-    else
-        {
-        global.pause = false;
-        instance_activate_all ();
-        }
-    }
 </string>
           </argument>
         </arguments>

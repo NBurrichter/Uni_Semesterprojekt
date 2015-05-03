@@ -78,12 +78,6 @@
       </objects>
       <objects name="group_pause_menu">
         <object>objects\obj_pause</object>
-        <object>objects\obj_mouse_cursor</object>
-        <objects name="group_pause_menu_buttons">
-          <object>objects\obj_button_resume</object>
-          <object>objects\obj_button_restart</object>
-          <object>objects\obj_button_exit</object>
-        </objects>
       </objects>
     </objects>
     <objects name="group_parent_objects">

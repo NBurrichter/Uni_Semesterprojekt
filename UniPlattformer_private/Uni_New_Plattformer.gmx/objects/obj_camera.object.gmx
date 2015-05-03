@@ -35,7 +35,7 @@ view_hview [0] = 1080;
 view_wport [0]= screen_width;
 view_hport [0]= screen_height;
 
-surface_resize(application_surface,view_wview [0],view_hview [0]);
+surface_resize(application_surface, view_wview[0], view_hview[0]);
 
 //////////////////////////////////
 
@@ -45,40 +45,6 @@ view_hspeed[0] = 30;
 view_vspeed[0] = 30;
 view_hborder[0] = view_wview[0] / 4;
 view_vborder[0] = view_hview[0] / 3; 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="2">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///other try
-/*
-
-global.selected = obj_player.id;
-
-if instance_exists(global.selected)
-    then
-    {
-    x = global.selected.x;
-    y = global.selected.y;
-    }
-*/  
 </string>
           </argument>
         </arguments>

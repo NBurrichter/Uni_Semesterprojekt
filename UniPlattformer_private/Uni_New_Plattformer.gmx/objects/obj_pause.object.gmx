@@ -47,15 +47,29 @@ draw_set_color(c_last);
 surface_reset_target();
 
 instance_deactivate_all(true); //deactivate all other instances
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///initialize variables for pause_menu
 
-//create menu buttons
-
-
-mouse_cursor = instance_create (x,y,obj_mouse_cursor);
-
-resume_button = instance_create (view_xview + view_wview/2, view_yview + (view_hview/3), obj_button_resume);
-restart_button = instance_create (view_xview + view_wview/2, view_yview + (view_hview/2), obj_button_restart);
-exit_button = instance_create (view_xview + view_wview/2, view_yview + 2*(view_hview/3), obj_button_exit);
+pause_menu_selected = 1;
 </string>
           </argument>
         </arguments>
@@ -78,7 +92,7 @@ exit_button = instance_create (view_xview + view_wview/2, view_yview + 2*(view_h
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///if surface gets lost
+            <string>///if background surface gets lost
 
 surface_set_target(surf_pause);
 draw_enable_alphablend(false);
@@ -110,7 +124,7 @@ instance_deactivate_all(true);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///if surface gets lost
+            <string>///if background surface gets lost
 
 if !(surface_exists(surf_pause))
     then
@@ -140,11 +154,49 @@ if !(surface_exists(surf_pause))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///unpause
+            <string>///Pause menu
 
 var pause_button = keyboard_check_pressed(ord('P')); 
 
-if pause_button
+var left_key = keyboard_check_pressed(ord('A'))          
+var right_key = keyboard_check_pressed(ord('D'))        
+
+var jump_key_just_pressed = keyboard_check_pressed(vk_space)
+
+//control pause_menu_selected via mouse
+/*
+if point_in_rectangle(mouse_x, mouse_y, x1, y1, x2, y2)
+    then
+    {
+    pause_menu_selected = 1;
+    }
+else
+    {
+    if point_in_rectangle(mouse_x, mouse_y, x1, y1, x2, y2)
+        then
+        {
+        pause_menu_selected = 2;
+        }
+    else
+        {
+        if point_in_rectangle(mouse_x, mouse_y, x1, y1, x2, y2)
+            then
+            {
+            pause_menu_selected = 3;
+            }
+        }
+    }*/
+
+//control pause_menu_selected via buttons
+
+if left_key &amp;&amp; pause_menu_selected &gt; 1 then pause_menu_selected -= 1;
+if right_key &amp;&amp; pause_menu_selected &lt; 3 then pause_menu_selected += 1;
+    
+//unpause
+
+if pause_menu_selected = 1 &amp;&amp; jump_key_just_pressed 
+or pause_menu_selected = 1 &amp;&amp; mouse_check_button_pressed(mb_left)
+or pause_button
     then
     {
     surface_free (surf_pause);
@@ -153,6 +205,7 @@ if pause_button
     instance_activate_all(); //Activate all the objects
     instance_destroy();
     }
+
 </string>
           </argument>
         </arguments>
@@ -175,7 +228,7 @@ if pause_button
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Clear surface
+            <string>///Clear background surface
 
 surface_free(surf_pause);
 </string>
@@ -200,7 +253,7 @@ surface_free(surf_pause);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw the surface
+            <string>///Draw the background surface
 
 if(surface_exists(surf_pause))
     then
@@ -254,6 +307,86 @@ draw_text (30,90,"surf_pause: " +string(surface_get_width(surf_pause)));
 
 draw_text (30,105,"view_xview: " +string(view_xview));
 draw_text (30,120,"gui_width: " +string(display_get_gui_width()));
+
+draw_text (30,135,"pause_menu_selected: " +string(pause_menu_selected));
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw pause menu buttons
+
+// resume button
+if pause_menu_selected = 1
+    then
+    {
+    draw_sprite (spr_button, 0, view_xview[0] + view_wview[0]/2, view_yview[0] + view_hview[0]/3);
+    }
+else
+    {
+    draw_sprite (spr_button, 1, view_xview[0] + view_wview[0]/2, view_yview[0] + view_hview[0]/3);
+    }
+    
+// restart button    
+if pause_menu_selected = 2
+    then
+    {
+    draw_sprite (spr_button, 0, view_xview[0] + view_wview[0]/2, view_yview[0] + view_hview[0]/2);
+    }
+else
+    {
+    draw_sprite (spr_button, 1, view_xview[0] + view_wview[0]/2, view_yview[0] + view_hview[0]/2);
+    }
+
+// exit button    
+if pause_menu_selected = 3
+    then
+    {
+    draw_sprite (spr_button, 0, view_xview[0] + view_wview[0]/2, view_yview[0] + (view_hview[0]/3)*2);
+    }
+else
+    {
+    draw_sprite (spr_button, 1, view_xview[0] + view_wview[0]/2, view_yview[0] + (view_hview[0]/3)*2);
+    }
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw mouse cursor
+
+draw_sprite (spr_playertwo, -1, mouse_x, mouse_y);
 </string>
           </argument>
         </arguments>

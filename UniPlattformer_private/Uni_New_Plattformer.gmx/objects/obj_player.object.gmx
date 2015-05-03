@@ -93,8 +93,6 @@ var right_key = keyboard_check(ord('D'))
 var jump_key_just_pressed = keyboard_check_pressed(vk_space)
 var jump_key_not_pressed = !keyboard_check(vk_space) 
 
-var dash_key_just_pressed = keyboard_check_pressed(ord('F')) 
-
 //cancel each if left right pressed
 
 if (left_key) &amp;&amp; (right_key)                  

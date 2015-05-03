@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///Initialize variables
 
-mouse_over = false;
+global.selected = false;
 </string>
           </argument>
         </arguments>
@@ -52,7 +52,7 @@ mouse_over = false;
             <kind>1</kind>
             <string>///Go back
 
-if mouse_over = true
+if global.selected = 1
     then
     {
     room_goto_previous ();
@@ -81,7 +81,7 @@ if mouse_over = true
             <kind>1</kind>
             <string>///Mouse not over
 
-mouse_over = false;
+global.selected = false;
 </string>
           </argument>
         </arguments>
@@ -106,7 +106,7 @@ mouse_over = false;
             <kind>1</kind>
             <string>///Mouse over
 
-mouse_over = true;
+global.menu_selected = 1;
 </string>
           </argument>
         </arguments>
@@ -131,7 +131,7 @@ mouse_over = true;
             <kind>1</kind>
             <string>///Draw lit up sprite
 
-if mouse_over = true
+if global.selected = true
     then
     {
     draw_sprite (sprite_index,0,x,y);
