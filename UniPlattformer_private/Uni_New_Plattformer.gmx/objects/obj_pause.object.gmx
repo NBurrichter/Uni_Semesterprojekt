@@ -350,22 +350,29 @@ if pause_menu_selected = 1
     then
     {
     draw_sprite (spr_button, 0, view_xview[0] + view_wview[0]/2, view_yview[0] + view_hview[0]/3);
+    draw_text (view_xview[0] + view_wview[0]/2, view_yview[0] + view_hview[0]/3, "RESUME")
     }
 else
     {
     draw_sprite (spr_button, 1, view_xview[0] + view_wview[0]/2, view_yview[0] + view_hview[0]/3);
+    draw_text (view_xview[0] + view_wview[0]/2, view_yview[0] + view_hview[0]/3, "RESUME")
     }
+    
+
     
 // restart button    
 if pause_menu_selected = 2
     then
     {
     draw_sprite (spr_button, 0, view_xview[0] + view_wview[0]/2, view_yview[0] + view_hview[0]/2);
+    draw_text (view_xview[0] + view_wview[0]/2, view_yview[0] + view_hview[0]/2, "RESTART")
     }
 else
     {
     draw_sprite (spr_button, 1, view_xview[0] + view_wview[0]/2, view_yview[0] + view_hview[0]/2);
     }
+    
+
 
 // exit button    
 if pause_menu_selected = 3
