@@ -351,21 +351,22 @@ repeat abs(v_speed)   //falling down
         }
     }
 
+    
 //Sprites 
 //wechsel zwischen stehen und laufen
-if h_speed = 0
+if on_ground = true
     then
     {
-    sprite_index = spr_player_standing;
-    }
+    if left_key or right_key
+        then
+        {
+        sprite_index = spr_player;
+        }
     else
-    {
-    sprite_index = spr_player;
+        {
+        sprite_index = spr_player_standing;
+        }
     }
-
-
-
-
 
 
 

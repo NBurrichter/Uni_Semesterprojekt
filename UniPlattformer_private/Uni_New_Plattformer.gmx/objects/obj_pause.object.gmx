@@ -344,6 +344,11 @@ draw_text (30,135,"pause_menu_selected: " +string(pause_menu_selected));
             <string>///Draw pause menu buttons
 
 draw_set_halign(fa_center);
+draw_set_valign(fa_center);
+
+// draw headline
+
+draw_text (view_xview[0] + view_wview[0]/2, view_yview[0] + view_hview[0]/4, "PAUSE MENU")
 
 // resume button
 if pause_menu_selected = 1
@@ -358,8 +363,6 @@ else
     draw_text (view_xview[0] + view_wview[0]/2, view_yview[0] + view_hview[0]/3, "RESUME")
     }
     
-
-    
 // restart button    
 if pause_menu_selected = 2
     then
@@ -370,19 +373,20 @@ if pause_menu_selected = 2
 else
     {
     draw_sprite (spr_button, 1, view_xview[0] + view_wview[0]/2, view_yview[0] + view_hview[0]/2);
+    draw_text (view_xview[0] + view_wview[0]/2, view_yview[0] + view_hview[0]/2, "RESTART")
     }
     
-
-
 // exit button    
 if pause_menu_selected = 3
     then
     {
     draw_sprite (spr_button, 0, view_xview[0] + view_wview[0]/2, view_yview[0] + (view_hview[0]/3)*2);
+    draw_text (view_xview[0] + view_wview[0]/2, view_yview[0] + (view_hview[0]/3)*2, "EXIT")
     }
 else
     {
     draw_sprite (spr_button, 1, view_xview[0] + view_wview[0]/2, view_yview[0] + (view_hview[0]/3)*2);
+    draw_text (view_xview[0] + view_wview[0]/2, view_yview[0] + (view_hview[0]/3)*2, "EXIT")
     }
 
 </string>
