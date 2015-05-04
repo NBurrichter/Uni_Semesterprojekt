@@ -9,6 +9,8 @@
   <sprites name="sprites">
     <sprites name="group_first_player">
       <sprite>sprites\spr_player</sprite>
+      <sprite>sprites\spr_player_standing</sprite>
+      <sprite>sprites\spr_player_gui</sprite>
     </sprites>
     <sprites name="group_second_player">
       <sprite>sprites\spr_playertwo</sprite>
