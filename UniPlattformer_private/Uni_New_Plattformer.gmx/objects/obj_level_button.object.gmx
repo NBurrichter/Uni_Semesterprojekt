@@ -147,7 +147,7 @@ else
     }
 
 draw_set_halign(fa_center);    
-draw_text(x,y,string(level));
+draw_text(x,y,string(levelnumber));
 </string>
           </argument>
         </arguments>

@@ -25,14 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Speichert die X und Y pos der einzelnen Level
+            <string>//Speed mit der er sich bewegt
+movespeed = 4;
+speed = movespeed;
+
+//Speichert die X und Y pos der einzelnen Level
 movex[0] = 0;
 movey[0] = 0;
+
 
 //Das level zu dem man sich bewegen soll
 moveto = 1;
 //Das LEvel zu dem er sich grad bewegt
 onthemoveto = 1;
+
+
 </string>
           </argument>
         </arguments>
@@ -55,8 +62,35 @@ onthemoveto = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_towards_point(movex[onthemoveto],movey[onthemoveto],5);
+            <string>//bewegung zum Punkt wenn nicht aufm punkt
+if (x != movex[onthemoveto] &amp;&amp; y != movey[onthemoveto])
+   then
+   {
+   move_towards_point(movex[onthemoveto],movey[onthemoveto],4);
+   }
 
+//snapen zum Punkt
+if point_distance(x,y,movex[onthemoveto],movey[onthemoveto]) &lt; speed
+   then
+   {
+   x = movex[onthemoveto];
+   y = movey[onthemoveto];
+   speed = 0;
+   }
+
+if (x = movex[onthemoveto] &amp;&amp; y = movey[onthemoveto])
+   then
+   {
+   if onthemoveto &gt; moveto then
+     {
+     onthemoveto--;
+     }
+
+   if onthemoveto &lt; moveto then
+     {
+     onthemoveto++;
+     }
+   }
 </string>
           </argument>
         </arguments>
@@ -79,7 +113,7 @@ onthemoveto = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if onthemoveto &gt; moveto then
+            <string>/*if onthemoveto &gt; moveto then
    {
    onthemoveto--;
    }
@@ -87,7 +121,7 @@ onthemoveto = 1;
 if onthemoveto &lt; moveto then
    {
    onthemoveto++;
-   }
+   }*/
 </string>
           </argument>
         </arguments>
