@@ -60,8 +60,7 @@ amount_of_gravity = 1;
 can_double_jump = false;
 can_wall_jump = false;
 
-
-
+//Sprite speed
 image_speed = 0.75;
 
 </string>
@@ -352,6 +351,8 @@ repeat abs(v_speed)   //falling down
         }
     }
 
+//Sprites 
+//wechsel zwischen stehen und laufen
 if h_speed = 0
     then
     {

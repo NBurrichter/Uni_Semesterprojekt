@@ -29,7 +29,7 @@
 movespeed = 4;
 speed = movespeed;
 
-//Speichert die X und Y pos der einzelnen Level
+//Speichert die X und Y pos der einzelnen Level in diesem Array
 movex[0] = 0;
 movey[0] = 0;
 
@@ -38,8 +38,6 @@ movey[0] = 0;
 moveto = 1;
 //Das LEvel zu dem er sich grad bewegt
 onthemoveto = 1;
-
-
 </string>
           </argument>
         </arguments>
@@ -78,50 +76,20 @@ if point_distance(x,y,movex[onthemoveto],movey[onthemoveto]) &lt; (speed / 0.99)
    speed = 0;
    }
 
+//Zähler fürs nächste/letzte level erhöhen bzw erniedrigen
 if (x = movex[onthemoveto]) and (y = movey[onthemoveto])
-   then
-   {
-   if onthemoveto &gt; moveto then
-     {
-     onthemoveto--;
-     }
-
-   if onthemoveto &lt; moveto then
-     {
-     onthemoveto++;
-     }
-   }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_level_button">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/*if onthemoveto &gt; moveto then
-   {
-   onthemoveto--;
-   }
-
-if onthemoveto &lt; moveto then
-   {
-   onthemoveto++;
-   }*/
+    then
+    {
+    if onthemoveto &gt; moveto then
+        {
+        onthemoveto--;
+        }
+    if onthemoveto &lt; moveto then
+        {
+        onthemoveto++;
+        }
+      
+    }
 </string>
           </argument>
         </arguments>
