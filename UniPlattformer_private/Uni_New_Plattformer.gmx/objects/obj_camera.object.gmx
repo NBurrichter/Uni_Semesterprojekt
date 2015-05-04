@@ -29,8 +29,8 @@
 
 window_set_fullscreen (true);
 
-view_wview [0] = 1920;
-view_hview [0] = 1080;
+view_wview [0] = screen_width;
+view_hview [0] = screen_height;
 
 view_wport [0]= screen_width;
 view_hport [0]= screen_height;
