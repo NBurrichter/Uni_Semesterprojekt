@@ -27,9 +27,7 @@
             <kind>1</kind>
             <string>///Create pause menu background
 
-global.pause = true;
-surf_pause = surface_create(view_wview[0], view_hview[0]);//Create surface
-
+surf_pause = surface_create (view_wview[0], view_hview[0]);
 surface_set_target(surf_pause);
 draw_clear_alpha(c_black,0); // Clears surface.
 draw_enable_alphablend(false);
@@ -69,7 +67,16 @@ instance_deactivate_all(true); //deactivate all other instances
             <kind>1</kind>
             <string>///initialize variables for pause_menu
 
+global.pause = true;
 pause_menu_selected = 1;
+
+// position Pause menu heading
+
+// position Resume button
+
+// position Restart button
+
+// position Exit button 
 </string>
           </argument>
         </arguments>
@@ -95,13 +102,22 @@ pause_menu_selected = 1;
             <string>///if background surface got lost
 
 surface_set_target(surf_pause);
+draw_clear_alpha(c_black,0); // Clears surface.
 draw_enable_alphablend(false);
-draw_clear_alpha(c_black, 0);
 draw_surface(application_surface,0,0);
 draw_enable_alphablend(true);
+
+var c_last = draw_get_color();;
+//Draw semitransparent square
+draw_set_color(c_black);
+draw_set_alpha(0.5);
+draw_rectangle(0,0,view_wview[0], view_hview[0],0);
+draw_set_alpha(1);
+draw_set_color(c_last);
+
 surface_reset_target();
 
-instance_deactivate_all(true);
+instance_deactivate_all(true); //deactivate all other instances
 </string>
           </argument>
         </arguments>

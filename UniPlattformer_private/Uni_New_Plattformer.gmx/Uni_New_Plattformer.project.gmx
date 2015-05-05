@@ -73,13 +73,11 @@
     <objects name="group_game_controller">
       <object>objects\obj_game_controller</object>
       <object>objects\obj_camera</object>
+      <object>objects\obj_pause</object>
       <object>objects\obj_level_exit</object>
       <objects name="group_buttons">
         <object>objects\obj_back_button</object>
         <object>objects\obj_level_button</object>
-      </objects>
-      <objects name="group_pause_menu">
-        <object>objects\obj_pause</object>
       </objects>
     </objects>
     <objects name="group_parent_objects">
