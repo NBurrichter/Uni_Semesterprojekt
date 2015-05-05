@@ -16,6 +16,7 @@
       <sprite>sprites\spr_playertwo</sprite>
       <sprite>sprites\spr_second_player</sprite>
       <sprite>sprites\spr_second_player_block</sprite>
+      <sprite>sprites\spr_block_select</sprite>
     </sprites>
     <sprites name="group_enemies">
       <sprites name="group_static_enemies">
@@ -68,6 +69,7 @@
       <objects name="gui_player">
         <object>objects\obj_second_player_gui</object>
         <object>objects\obj_first_player_gui</object>
+        <object>objects\obj_second_player_select_gui</object>
       </objects>
     </objects>
     <objects name="group_game_controller">

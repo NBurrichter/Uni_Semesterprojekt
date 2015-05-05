@@ -28,6 +28,11 @@
             <string>///Initialize variables
 
 depth = -10000000;
+
+selectMode = false;
+
+mousePointer = 0;
+mouseArea = 0;
 </string>
           </argument>
         </arguments>
@@ -52,8 +57,50 @@ depth = -10000000;
             <kind>1</kind>
             <string>///mouse_position in grid
 
-x = floor(mouse_x/16)*16;
-y = floor(mouse_y/16)*16;
+if mouse_check_button_pressed(mb_right)
+    then
+    {
+    selectMode = true;
+    }
+
+mousePointer = point_direction(x, y, mouse_x, mouse_y);
+//up
+if mousePointer &gt; 45 and mousePointer &lt; 135
+    then
+    {
+    mouseArea = 0;
+    }
+//right
+if (mousePointer &gt; 0 and mousePointer &lt; 45) or (mousePointer &gt; 315 and mousePointer &lt; 360)
+    then
+    {
+    mouseArea = 1;
+    }
+//down
+if mousePointer &gt; 255 and mousePointer &lt; 315
+    then
+    {
+    mouseArea = 2;
+    }
+//left
+if mousePointer &gt; 135 and mousePointer &lt; 255
+    then
+    {
+    mouseArea = 3;
+    }    
+  
+if mouse_check_button_released(mb_right)
+    then
+    {     
+    selectMode = false;
+    }
+         
+    
+if !selectMode then
+    {
+    x = floor(mouse_x/16)*16;
+    y = floor(mouse_y/16)*16;
+    }
 </string>
           </argument>
         </arguments>
@@ -81,7 +128,8 @@ y = floor(mouse_y/16)*16;
 if !place_meeting (x,y,obj_parent_block)
     then
     {
-    instance_create (x,y,obj_second_player_block);
+    block = instance_create (x,y,obj_second_player_block);
+    block.type = mouseArea;
     }
 
 if instance_number (obj_second_player_block) &gt; 9
@@ -92,6 +140,48 @@ if instance_number (obj_second_player_block) &gt; 9
         instance_destroy();
         }
     }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
+
+if selectMode
+    then
+    {
+    for (i = 0; i &lt; 4; i += 1)
+       {
+       draw_sprite_ext(spr_block_select,0,x,y,1,1,i*90,-1,1);
+       }    
+    switch (mouseArea)
+       {
+       case 0: draw_sprite_ext(spr_block_select,1,x,y,1,1,0,-1,1) break;
+       case 1: draw_sprite_ext(spr_block_select,1,x,y,1,1,270,-1,1) break;
+       case 2: draw_sprite_ext(spr_block_select,1,x,y,1,1,180,-1,1) break;
+       case 3: draw_sprite_ext(spr_block_select,1,x,y,1,1,90,-1,1) break;
+       }
+    }
+
+draw_text (x,y+20,"Pointer: "+string(mousePointer));
+draw_text (x,y+30,"Mouse Area: "+string(mouseArea));
 </string>
           </argument>
         </arguments>
