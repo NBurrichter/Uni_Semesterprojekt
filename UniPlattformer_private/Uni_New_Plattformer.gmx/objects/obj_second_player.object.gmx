@@ -30,7 +30,6 @@
 depth = -10000000;
 
 selectMode = false;
-
 mousePointer = 0;
 mouseArea = 0;
 </string>
@@ -55,15 +54,16 @@ mouseArea = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///mouse_position in grid
-
+            <string>//Selectmode: Wechsel zwische Auswahlrad und normaler bewegung
 if mouse_check_button_pressed(mb_right)
     then
     {
     selectMode = true;
     }
 
-mousePointer = point_direction(x, y, mouse_x, mouse_y);
+//Bestimmen der Position der Mouse in relation zum zweiten Spieler sprite
+if selectMode{
+mousePointer = point_direction(x, y, mouse_x, mouse_y);//Bestimmt per Gradzahl, in welchem quadranten sich die maus befindet
 //up
 if mousePointer &gt; 45 and mousePointer &lt; 135
     then
@@ -88,14 +88,16 @@ if mousePointer &gt; 135 and mousePointer &lt; 255
     {
     mouseArea = 3;
     }    
-  
+}
+ 
+//Beenden des select Modes 
 if mouse_check_button_released(mb_right)
     then
     {     
     selectMode = false;
     }
          
-    
+///mouse_position in grid - moves only if not in select mode    
 if !selectMode then
     {
     x = floor(mouse_x/16)*16;
@@ -164,6 +166,7 @@ if instance_number (obj_second_player_block) &gt; 9
             <kind>1</kind>
             <string>draw_self();
 
+//Drawing des select HUDs
 if selectMode
     then
     {
@@ -171,7 +174,8 @@ if selectMode
        {
        draw_sprite_ext(spr_block_select,0,x,y,1,1,i*90,-1,1);
        }    
-    switch (mouseArea)
+//Drawing des ausgewählten blockes   
+     switch (mouseArea)
        {
        case 0: draw_sprite_ext(spr_block_select,1,x,y,1,1,0,-1,1) break;
        case 1: draw_sprite_ext(spr_block_select,1,x,y,1,1,270,-1,1) break;
@@ -180,8 +184,11 @@ if selectMode
        }
     }
 
+//Debug
+/*
 draw_text (x,y+20,"Pointer: "+string(mousePointer));
 draw_text (x,y+30,"Mouse Area: "+string(mouseArea));
+*/
 </string>
           </argument>
         </arguments>

@@ -69,7 +69,6 @@
       <objects name="gui_player">
         <object>objects\obj_second_player_gui</object>
         <object>objects\obj_first_player_gui</object>
-        <object>objects\obj_second_player_select_gui</object>
       </objects>
     </objects>
     <objects name="group_game_controller">

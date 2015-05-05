@@ -26,11 +26,22 @@
           <argument>
             <kind>1</kind>
             <string>///initialize variables
-
+type = 0;
 crumbling = false;
 decay_time = 0.1;
+
+//Changeable variables
+
+//---Blocks---
+//0 Crumbling
 transparency = 1;
-type = 0;
+
+//1 Staying
+
+//2 Bumper
+upAcceleration = 50;
+
+//3 Klebbe block
 </string>
           </argument>
         </arguments>
