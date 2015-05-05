@@ -44,6 +44,11 @@
       <sprite>sprites\spr_block_2</sprite>
       <sprite>sprites\spr_block_3</sprite>
       <sprite>sprites\spr_block_4</sprite>
+      <sprites name="group_block_unlocks">
+        <sprite>sprites\spr_unlock_2</sprite>
+        <sprite>sprites\spr_unlock_3</sprite>
+        <sprite>sprites\spr_unlock_4</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -107,6 +112,11 @@
     </objects>
     <objects name="group_blocks">
       <object>objects\obj_wall_block</object>
+      <objects name="group_block_unlockers">
+        <object>objects\obj_unlock_2</object>
+        <object>objects\obj_unlock_3</object>
+        <object>objects\obj_unlock_4</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
