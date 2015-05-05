@@ -5,7 +5,9 @@
   </Configs>
   <datafiles number="1" name="datafiles"/>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_hoplaaaa</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="group_first_player">
       <sprite>sprites\spr_player</sprite>
