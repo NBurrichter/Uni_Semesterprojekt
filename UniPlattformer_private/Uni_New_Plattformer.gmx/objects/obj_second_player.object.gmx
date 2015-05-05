@@ -34,6 +34,8 @@ mousePointer = 0;
 mouseArea = 0;
 hudTimer = 0;
 hudTimerInc = 0.2;
+margin = 72;
+maxTimer = 2;
 </string>
           </argument>
         </arguments>
@@ -103,8 +105,8 @@ if mouse_check_button_released(mb_right)
 ///mouse_position in grid - moves only if not in select mode    
 if !selectMode then
     {
-    x = floor(mouse_x/16)*16;
-    y = floor(mouse_y/16)*16;
+    x = floor(mouse_x/32)*32;
+    y = floor(mouse_y/32)*32;
     }
 </string>
           </argument>
@@ -170,20 +172,20 @@ if instance_number (obj_second_player_block) &gt; 9
             <string>draw_self();
 
 //Hud creation Timer
-if hudTimer &lt; 1
+if hudTimer &lt; maxTimer
     then
     {
     hudTimer += hudTimerInc;
     }
 
 //Max Hud cretion time
-if hudTimer &gt; 1
+if hudTimer &gt; maxTimer
     then   
     {
-    hudTimer = 1;
+    hudTimer = maxTimer;
     }
 
-//Drawing des select HUDs
+//---Drawing des select HUDs---
 if selectMode
     then
     {
@@ -191,6 +193,7 @@ if selectMode
        {
        draw_sprite_ext(spr_block_select,0,x,y,1*hudTimer,1*hudTimer,i*90,-1,1);
        }    
+
 //Drawing des ausgewählten blockes   
      switch (mouseArea)
        {
@@ -199,6 +202,11 @@ if selectMode
        case 2: draw_sprite_ext(spr_block_select,1,x,y,1*hudTimer,1*hudTimer,180,-1,1) break;
        case 3: draw_sprite_ext(spr_block_select,1,x,y,1*hudTimer,1*hudTimer,90,-1,1) break;
        }
+//Drawing der Blöcke
+    draw_sprite_ext(spr_block_1,0,x,y-margin*(hudTimer/maxTimer),1*(hudTimer/maxTimer),1*(hudTimer/maxTimer),0,-1,1);
+    draw_sprite_ext(spr_block_2,0,x+margin*(hudTimer/maxTimer),y,1*(hudTimer/maxTimer),1*(hudTimer/maxTimer),0,-1,1);
+    draw_sprite_ext(spr_block_3,0,x,y+margin*(hudTimer/maxTimer),1*(hudTimer/maxTimer),1*(hudTimer/maxTimer),0,-1,1);
+    draw_sprite_ext(spr_block_4,0,x-margin*(hudTimer/maxTimer),y,1*(hudTimer/maxTimer),1*(hudTimer/maxTimer),0,-1,1);
     }
 
 //Debug

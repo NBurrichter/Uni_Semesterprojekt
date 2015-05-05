@@ -40,6 +40,10 @@
     </sprites>
     <sprites name="group_blocks">
       <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_block_1</sprite>
+      <sprite>sprites\spr_block_2</sprite>
+      <sprite>sprites\spr_block_3</sprite>
+      <sprite>sprites\spr_block_4</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
