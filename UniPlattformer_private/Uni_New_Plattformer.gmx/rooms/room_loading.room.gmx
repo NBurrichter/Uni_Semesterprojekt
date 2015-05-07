@@ -12,6 +12,7 @@
   <showcolour>-1</showcolour>
   <code>//Load ini files
 
+global.menuRoom = true;
 room_goto_next ();</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>
