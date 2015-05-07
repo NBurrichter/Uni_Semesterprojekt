@@ -10,7 +10,7 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>global.menuRoom = true;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>
   <clearDisplayBuffer>0</clearDisplayBuffer>
@@ -57,8 +57,10 @@
     <instance objName="obj_level_button" x="736" y="416" name="inst_2DF9FDAA" locked="0" code="level = room_level4;&#xA;levelnumber = 4;&#xA;&#xA;obj_first_player_gui.movex[levelnumber] = x;&#xA;obj_first_player_gui.movey[levelnumber] = y;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_game_controller" x="32" y="32" name="inst_1390AD07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_second_player_gui" x="800" y="512" name="inst_D7097626" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_first_player_gui" x="160" y="64" name="inst_DC7960D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_first_player_gui" x="224" y="288" name="inst_DC7960D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_camera" x="64" y="32" name="inst_18BCC3F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_level_button" x="928" y="480" name="inst_83E8763B" locked="0" code="level = room_test;&#xA;levelnumber = 5;&#xA;&#xA;obj_first_player_gui.movex[levelnumber] = x;&#xA;obj_first_player_gui.movey[levelnumber] = y;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_menu_button" x="128" y="640" name="inst_F2B3529B" locked="0" code="button_description = &quot;back&quot;;&#xA;next_menu_room = room_main_menu;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
