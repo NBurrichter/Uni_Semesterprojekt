@@ -53,7 +53,11 @@
       </sprites>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\back_map</background>
+    <background>background\back_level</background>
+    <background>background\background2</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_with_all_in_radius_do_something.gml</script>
