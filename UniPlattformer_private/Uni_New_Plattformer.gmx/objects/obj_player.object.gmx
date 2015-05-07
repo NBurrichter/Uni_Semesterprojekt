@@ -228,11 +228,15 @@ if on_ground = false
         then
         {
         double_jump = 0;
-        if stuck_to_the_wall = false
+        if v_speed &gt; 0 
             then
             {
-            stuck_to_the_wall = true;
-            sticking_to_the_wall_timer = frames_stuck_to_wall;
+            if stuck_to_the_wall = false
+                then
+                {
+                stuck_to_the_wall = true;
+                sticking_to_the_wall_timer = frames_stuck_to_wall;
+                }
             }
         max_drop_speed = 3;
         }
@@ -567,7 +571,7 @@ draw_self ();
           <argument>
             <kind>1</kind>
             <string>///debugging
-/*
+
 draw_set_colour (c_black);
 
 draw_text (x,y+10,"on_ground: "+string(obj_player.on_ground));
@@ -576,9 +580,9 @@ draw_text (x,y+25,"h_speed: "+string(obj_player.h_speed));
 draw_text (x,y+40,"grav: "+string(obj_player.grav));
 draw_text (x,y-5,"v_speed: "+string(obj_player.v_speed));
 
-draw_text (x,y+55,"double_jump: "+string(obj_player.double_jump));
-
-
+draw_text (x,y+55,"stuck_to_the_wall: "+string(stuck_to_the_wall));
+draw_text (x,y+70,"sticking_to_the_wall_timer: "+string(sticking_to_the_wall_timer));
+draw_text (x,y+85,"max_drop_speed: "+string(max_drop_speed));
 </string>
           </argument>
         </arguments>
