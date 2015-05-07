@@ -61,7 +61,7 @@ can_double_jump = false;
 can_wall_jump = false;
 
 //Sprite speed
-image_speed = 0.75;
+image_speed = 0.6;
 
 </string>
           </argument>
@@ -426,6 +426,10 @@ image_xscale = dir;
           <argument>
             <kind>1</kind>
             <string>obj_second_player.unlocked4 = true;
+with (other)
+    {
+    instance_destroy();
+    }
 </string>
           </argument>
         </arguments>
@@ -449,6 +453,10 @@ image_xscale = dir;
           <argument>
             <kind>1</kind>
             <string>obj_second_player.unlocked3 = true;
+with (other)
+    {
+    instance_destroy();
+    }
 </string>
           </argument>
         </arguments>
@@ -472,6 +480,10 @@ image_xscale = dir;
           <argument>
             <kind>1</kind>
             <string>obj_second_player.unlocked2 = true;
+with (other)
+    {
+    instance_destroy();
+    }
 </string>
           </argument>
         </arguments>
@@ -571,9 +583,9 @@ draw_self ();
           <argument>
             <kind>1</kind>
             <string>///debugging
-
 draw_set_colour (c_black);
 
+/*
 draw_text (x,y+10,"on_ground: "+string(obj_player.on_ground));
 draw_text (x,y+25,"h_speed: "+string(obj_player.h_speed));
 
@@ -583,6 +595,7 @@ draw_text (x,y-5,"v_speed: "+string(obj_player.v_speed));
 draw_text (x,y+55,"stuck_to_the_wall: "+string(stuck_to_the_wall));
 draw_text (x,y+70,"sticking_to_the_wall_timer: "+string(sticking_to_the_wall_timer));
 draw_text (x,y+85,"max_drop_speed: "+string(max_drop_speed));
+*/
 </string>
           </argument>
         </arguments>
