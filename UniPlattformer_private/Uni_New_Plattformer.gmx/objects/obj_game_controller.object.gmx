@@ -80,10 +80,6 @@ var pause_button = keyboard_check_pressed(ord('P'));
 if pause_button
     then
     {
-    with(obj_second_player)
-        {
-        instance_destroy ();
-        }
     instance_create (x,y,obj_pause);
     }
 </string>
