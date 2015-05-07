@@ -191,28 +191,31 @@ var right_key = keyboard_check_pressed(ord('D'))
 var jump_key_just_pressed = keyboard_check_pressed(vk_space)
 
 //control pause_menu_selected via mouse
-/*
-if point_in_rectangle(mouse_x, mouse_y, x1, y1, x2, y2)
+
+if point_in_rectangle(mouse_x, mouse_y, resume_x_position-(sprite_get_width(spr_button)/2), resume_y_position-(sprite_get_height(spr_button)/2),
+                                        resume_x_position+(sprite_get_width(spr_button)/2), resume_y_position+(sprite_get_height(spr_button)/2))
     then
     {
     pause_menu_selected = 1;
     }
 else
     {
-    if point_in_rectangle(mouse_x, mouse_y, x1, y1, x2, y2)
+    if point_in_rectangle(mouse_x, mouse_y,     restart_x_position-(sprite_get_width(spr_button)/2), restart_y_position-(sprite_get_height(spr_button)/2),
+                                                restart_x_position+(sprite_get_width(spr_button)/2), restart_y_position+(sprite_get_height(spr_button)/2))
         then
         {
         pause_menu_selected = 2;
         }
     else
         {
-        if point_in_rectangle(mouse_x, mouse_y, x1, y1, x2, y2)
+        if point_in_rectangle(mouse_x, mouse_y, exit_x_position-(sprite_get_width(spr_button)/2), exit_y_position-(sprite_get_height(spr_button)/2),
+                                                exit_x_position+(sprite_get_width(spr_button)/2), exit_y_position+(sprite_get_height(spr_button)/2))
             then
             {
             pause_menu_selected = 3;
             }
         }
-    }*/
+    }
 
 //control pause_menu_selected via buttons
 
@@ -230,18 +233,21 @@ if jump_key_just_pressed or mouse_check_button_pressed(mb_left)
             surface_free (surf_pause);
             draw_enable_alphablend(true);
             global.pause = false;
+            scr_sleep (100);
             instance_activate_all(); //Activate all the objects
             audio_resume_all ();
-            instance_create ( mouse_x, mouse_y, obj_second_player,)
+            instance_create (mouse_x, mouse_y, obj_second_player,)
             instance_destroy();
             break;
             
         case 2:
+            audio_stop_all();
             room_restart();
             break;
   
         case 3:
-            //room_goto ();
+            audio_stop_all();
+            room_goto (room_level_select);
             break;
         }
     }
