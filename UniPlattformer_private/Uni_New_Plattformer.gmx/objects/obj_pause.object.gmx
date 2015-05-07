@@ -45,6 +45,7 @@ draw_set_color(c_last);
 surface_reset_target();
 
 instance_deactivate_all(true); //deactivate all other instances
+audio_pause_all ();
 </string>
           </argument>
         </arguments>
@@ -220,6 +221,7 @@ if jump_key_just_pressed or mouse_check_button_pressed(mb_left)
             draw_enable_alphablend(true);
             global.pause = false;
             instance_activate_all(); //Activate all the objects
+            audio_resume_all ();
             instance_destroy();
             break;
             

@@ -28,7 +28,7 @@
             <string>///initialize variables
 type = 0;
 crumbling = false;
-decay_time = 0.1;
+decay_time = 0.001;
 
 //Changeable variables
 
