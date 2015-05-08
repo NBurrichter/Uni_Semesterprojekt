@@ -38,6 +38,7 @@
       <sprite>sprites\spr_level_exit</sprite>
       <sprites name="group_buttons">
         <sprite>sprites\spr_button</sprite>
+        <sprite>sprites\spr_menu_button</sprite>
       </sprites>
     </sprites>
     <sprites name="group_blocks">
@@ -56,7 +57,8 @@
   <backgrounds name="background">
     <background>background\back_map</background>
     <background>background\back_level</background>
-    <background>background\background2</background>
+    <background>background\back_splash</background>
+    <background>background\back_main_menu</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
