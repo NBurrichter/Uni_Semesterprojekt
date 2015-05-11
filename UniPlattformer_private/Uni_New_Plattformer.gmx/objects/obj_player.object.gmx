@@ -67,6 +67,7 @@ downStill = false;
 
 //invincible frames
 invincible = false;
+flicker = 1;
 </string>
           </argument>
         </arguments>
@@ -593,7 +594,7 @@ if !invincible
     alarm[0] = 10;
     scr_lose ();
     invincible = true;
-    h_speed *= -1;
+    h_speed *= -1.5;
     v_speed *= -1;
     instance_create(x,y,obj_damage_unlock);
     }
@@ -680,7 +681,8 @@ if !invincible
     }
     else
     {
-    draw_sprite_ext(sprite_index,image_index,x,y,dir,1,0,-1,0.5);
+    draw_sprite_ext(sprite_index,image_index,x,y,dir,1,0,-1,flicker);
+    flicker *= -1;
     }
 
 
