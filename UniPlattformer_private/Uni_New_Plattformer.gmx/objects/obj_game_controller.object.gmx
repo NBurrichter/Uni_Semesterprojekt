@@ -77,10 +77,14 @@ global.pause = false;
 
 var pause_button = keyboard_check_pressed(ord('P')); 
 
-if pause_button
+if global.menuRoom = false
     then
     {
-    instance_create (x,y,obj_pause);
+    if pause_button
+        then
+        {
+        instance_create (x,y,obj_pause);
+        }
     }
 </string>
           </argument>
@@ -145,18 +149,18 @@ audio_stop_all();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_halign(fa_left);
-//draw_text(0, 30, "Red - The update speed of the step event#Yellow - The time required for the draw event")
-
-///Debugging
+            <string>///Debugging
 
 draw_set_halign(fa_left);
-draw_text (30,30,"view_wview: " +string(view_wview));
-draw_text (30,45,"screen_width: " +string(screen_width));
-draw_text (30,60,"view_wport: " +string(view_wport));
-draw_text (30,75,"application_surface: " +string(surface_get_width(application_surface)));
-draw_text (30,105,"view_xview: " +string(view_xview));
-draw_text (30,120,"gui_width: " +string(display_get_gui_width()));
+
+draw_text(50, 100, "Up: " + string(chr(global.key_up)));/*
+draw_text(50, 150, "Down: " + string(chr(global.key_down)));
+draw_text(50, 200, "Left: " + string(chr(global.key_left)));
+draw_text(50, 250, "Right: " + string(chr(global.key_right)));
+draw_text(50, 300, "Sounds");
+draw_text(50, 350, "Music: " + string(global.musicSound));
+draw_text(50, 400, "Ambient: " + string(global.ambientSound));
+draw_text(50, 450, "Effect: " + string(global.effectSound));
 </string>
           </argument>
         </arguments>

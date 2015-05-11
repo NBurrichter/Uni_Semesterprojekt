@@ -114,15 +114,15 @@ if mouse_check_button_released(mb_right)
 ///mouse_position in grid - moves only if not in select mode    
 if !selectMode then
     {
-    x = floor(mouse_x/32)*32;
-    y = floor(mouse_y/32)*32;
+    x = mouse_x//floor(mouse_x/32)*32;
+    y = mouse_y//floor(mouse_y/32)*32;
     }
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="50">
+    <event eventtype="6" enumb="53">
       <action>
         <libid>1</libid>
         <id>603</id>
