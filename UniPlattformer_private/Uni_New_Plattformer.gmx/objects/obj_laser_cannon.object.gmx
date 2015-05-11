@@ -58,7 +58,15 @@ dist = scr_distance_find(x,y,image_angle,shooting_range,obj_parent_block,false,t
 if collision_line(x, y, x+lengthdir_x(dist,image_angle), y+lengthdir_y(dist,image_angle), obj_player, false, false) &gt; 0
     then
     {
-    scr_lose ();
+    if !obj_player.invincible
+        then
+        {
+        obj_player.alarm[0] = 10;
+        scr_lose ();
+        obj_player.invincible = true;
+        obj_player.h_speed *= -1;
+        obj_player.v_speed *= -1;
+        }
     }
 </string>
           </argument>
