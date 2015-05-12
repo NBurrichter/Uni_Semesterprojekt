@@ -38,7 +38,11 @@ with (obj_second_player)
     {
     instance_destroy ();
     }
-
+    
+with (obj_game_controller)
+    {
+    instance_destroy ();
+    }
 </string>
           </argument>
         </arguments>
@@ -120,8 +124,6 @@ draw_set_alpha (1);
 //draw_rectangle (view_xview [0], view_yview [0], view_xview[0] + view_wview[0], view_yview + view_hview [0], 0);
 
 surface_reset_target();
-
-// pause the game 
 
 instance_deactivate_all(true); //deactivate all other instances
 audio_pause_all ();
@@ -233,10 +235,10 @@ if jump_key_just_pressed or mouse_check_button_pressed(mb_left)
             surface_free (surf_pause);
             draw_enable_alphablend(true);
             global.pause = false;
-            scr_sleep (100);
             instance_activate_all(); //Activate all the objects
             audio_resume_all ();
-            instance_create (mouse_x, mouse_y, obj_second_player,)
+            instance_create (mouse_x, mouse_y, obj_second_player);
+            instance_create (mouse_x, mouse_y, obj_game_controller);
             instance_destroy();
             break;
             

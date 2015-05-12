@@ -41,6 +41,7 @@
       <sprites name="group_buttons">
         <sprite>sprites\spr_button</sprite>
         <sprite>sprites\spr_menu_button</sprite>
+        <sprite>sprites\spr_key_button</sprite>
       </sprites>
     </sprites>
     <sprites name="group_blocks">
@@ -92,13 +93,19 @@
     </objects>
     <objects name="group_game_controller">
       <object>objects\obj_game_controller</object>
-      <object>objects\obj_camera</object>
       <object>objects\obj_pause</object>
-      <object>objects\obj_key_controller</object>
       <object>objects\obj_level_exit</object>
-      <objects name="group_buttons">
-        <object>objects\obj_level_button</object>
-        <object>objects\obj_menu_button</object>
+      <object>objects\obj_camera</object>
+      <objects name="group_menu_objects">
+        <objects name="group_buttons">
+          <object>objects\obj_level_navigation_button</object>
+          <object>objects\obj_menu_navigation_button</object>
+          <object>objects\obj_save_back_button</object>
+          <object>objects\obj_key_up</object>
+          <object>objects\obj_key_down</object>
+          <object>objects\obj_key_left</object>
+          <object>objects\obj_key_right</object>
+        </objects>
       </objects>
     </objects>
     <objects name="group_parent_objects">
