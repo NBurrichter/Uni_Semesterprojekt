@@ -321,6 +321,9 @@ obj_player.can_wall_jump = true;
     <instance objName="obj_wall_block" x="512" y="1056" name="inst_2F23089E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="512" y="1072" name="inst_B847F61C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="512" y="928" name="inst_6094AAAB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_unlock_2" x="240" y="736" name="inst_0953FF17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_unlock_2" x="320" y="736" name="inst_33374D26" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_unlock_2" x="464" y="736" name="inst_65D8AA53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

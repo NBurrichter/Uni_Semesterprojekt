@@ -62,7 +62,36 @@ can_wall_jump = false;
 
 //Sprite speed
 image_speed = 0.6;
+upStill = false;
+downStill = false;
 
+//invincible frames
+invincible = false;
+flicker = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///invincibility frames
+invincible = false;
 </string>
           </argument>
         </arguments>
@@ -92,8 +121,13 @@ image_speed = 0.6;
 var left_key = keyboard_check(ord('A'))          
 var right_key = keyboard_check(ord('D'))        
 
+<<<<<<< HEAD
 var jump_key_just_pressed = keyboard_check_pressed(vk_space);
 var jump_key_not_pressed = !keyboard_check(vk_space);
+=======
+var jump_key_just_pressed = keyboard_check_pressed(vk_space)
+var jump_key_not_pressed = !keyboard_check(vk_space)
+>>>>>>> 579d334453babce6d23dd85d24c8cddabe319b25
 
 //cancel each if left right pressed
 
@@ -140,6 +174,9 @@ if (jump_key_just_pressed)      // jumping
     if on_ground = true
         then
         {
+        
+        //sprite_index = spr_player_jump_up;
+        
         v_speed = -(normal_jump_height + running_jump_height*abs(h_speed));  //Add upward movement + move_speed;      
         }
     else                                        // wall_jumping
@@ -357,7 +394,61 @@ repeat abs(v_speed)   //falling down
 
     
 //Sprites 
-//wechsel zwischen stehen und laufen
+//Fallen
+if (v_speed &gt; 0) 
+    then
+    {
+    upStill = false;
+    if stuck_to_the_wall
+        then
+        {
+        sprite_index = spr_player_standing; //Filler
+        }
+        else
+        {
+        if !downStill
+            then
+            {
+            sprite_index = spr_player_fall_down; 
+            }
+         
+        if image_index &gt; image_number -1
+            then
+            {
+            sprite_index = spr_player_fall_down_still;
+            downStill = true;
+            }
+        } 
+   }
+
+//Springen   
+if v_speed &lt; 0
+    then
+    {
+    downStill = false;
+    if stuck_to_the_wall
+        then
+        {
+        sprite_index = spr_player_standing; //Filler
+        }  
+        else
+        {
+        if !upStill
+            then
+            {
+            sprite_index = spr_player_jump_up;
+            }
+        
+        if image_index &gt; image_number -1
+            then
+            {
+            sprite_index = spr_player_jump_up_still;
+            upStill = true;
+            }
+        }
+    }     
+
+//laufen
 if on_ground = true
     then
     {
@@ -370,39 +461,12 @@ if on_ground = true
         {
         sprite_index = spr_player_standing;
         }
-    }
+    }  
+    
 
 
 
 
-
-
-
-
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Changing sprite
-
-image_xscale = dir; 
 </string>
           </argument>
         </arguments>
@@ -479,7 +543,28 @@ with (other)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_second_player.unlocked2 = true;
+            <string>if obj_second_player.unlocked2 = false
+    then
+    {
+    obj_second_player.unlocked2 = true;
+    }
+    else
+    {
+    if obj_second_player.unlocked3 = false
+        then
+        {
+        obj_second_player.unlocked3 = true;
+        }
+        else
+        {
+        if obj_second_player.unlocked4 = false
+            then
+            {
+            obj_second_player.unlocked4 = true;
+            }
+        }
+    }
+
 with (other)
     {
     instance_destroy();
@@ -508,8 +593,39 @@ with (other)
             <kind>1</kind>
             <string>///Death
 
-scr_lose ();
+if !invincible
+    then
+    {
+    alarm[0] = 10;
+    scr_lose ();
+    invincible = true;
+    h_speed *= -1.5;
+    v_speed *= -1;
+    instance_create(x,y,obj_damage_unlock);
+    }
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -532,6 +648,10 @@ scr_lose ();
           <argument>
             <kind>1</kind>
             <string>///Death
+
+obj_second_player.unlocked4 = false;
+obj_second_player.unlocked3 = false;
+obj_second_player.unlocked2 = false;
 
 scr_lose ();
 </string>
@@ -558,8 +678,17 @@ scr_lose ();
             <kind>1</kind>
             <string>///Draw self
 
-draw_self ();
-
+//draw_self ();
+if !invincible
+    then
+    {
+    draw_sprite_ext(sprite_index,image_index,x,y,dir,1,0,-1,1);
+    }
+    else
+    {
+    draw_sprite_ext(sprite_index,image_index,x,y,dir,1,0,-1,flicker);
+    flicker *= -1;
+    }
 
 
 </string>

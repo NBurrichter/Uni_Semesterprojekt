@@ -14,7 +14,9 @@
       <sprite>sprites\spr_player_standing</sprite>
       <sprite>sprites\spr_player_gui</sprite>
       <sprite>sprites\spr_player_jump_up</sprite>
+      <sprite>sprites\spr_player_jump_up_still</sprite>
       <sprite>sprites\spr_player_fall_down</sprite>
+      <sprite>sprites\spr_player_fall_down_still</sprite>
     </sprites>
     <sprites name="group_second_player">
       <sprite>sprites\spr_playertwo</sprite>
@@ -89,6 +91,7 @@
       <objects name="gui_player">
         <object>objects\obj_second_player_gui</object>
         <object>objects\obj_first_player_gui</object>
+        <object>objects\obj_damage_unlock</object>
       </objects>
     </objects>
     <objects name="group_game_controller">
