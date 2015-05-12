@@ -118,16 +118,11 @@ invincible = false;
 
 //key_variables
 
-var left_key = keyboard_check(ord('A'))          
-var right_key = keyboard_check(ord('D'))        
+var left_key = keyboard_check(ord('A'));          
+var right_key = keyboard_check(ord('D'));        
 
-<<<<<<< HEAD
 var jump_key_just_pressed = keyboard_check_pressed(vk_space);
 var jump_key_not_pressed = !keyboard_check(vk_space);
-=======
-var jump_key_just_pressed = keyboard_check_pressed(vk_space)
-var jump_key_not_pressed = !keyboard_check(vk_space)
->>>>>>> 579d334453babce6d23dd85d24c8cddabe319b25
 
 //cancel each if left right pressed
 
