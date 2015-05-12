@@ -17,6 +17,8 @@
       <sprite>sprites\spr_player_jump_up_still</sprite>
       <sprite>sprites\spr_player_fall_down</sprite>
       <sprite>sprites\spr_player_fall_down_still</sprite>
+      <sprite>sprites\spr_player_wall_up</sprite>
+      <sprite>sprites\spr_player_wall_down</sprite>
     </sprites>
     <sprites name="group_second_player">
       <sprite>sprites\spr_playertwo</sprite>

@@ -64,6 +64,7 @@ can_wall_jump = false;
 image_speed = 0.6;
 upStill = false;
 downStill = false;
+slideStill = false;
 
 //invincible frames
 invincible = false;
@@ -142,6 +143,7 @@ if !place_meeting(x,y+1,obj_parent_collision)
 else
 {
 on_ground = true;
+stuck_to_the_wall = 0;
 double_jump = 0;
 }   
 
@@ -394,10 +396,11 @@ if (v_speed &gt; 0)
     then
     {
     upStill = false;
+    slideStill = false;
     if stuck_to_the_wall
         then
         {
-        sprite_index = spr_player_standing; //Filler
+        sprite_index = spr_player_wall_down; 
         }
         else
         {
@@ -421,11 +424,25 @@ if v_speed &lt; 0
     then
     {
     downStill = false;
-    if stuck_to_the_wall
+    
+    if place_meeting(x+(dir),y,obj_parent_collision)
         then
         {
-        sprite_index = spr_player_standing; //Filler
-        }  
+        if !slideStill
+            then 
+            {
+            sprite_index = spr_player_wall_up;;
+            }
+        
+        
+        if image_index &gt; image_number -1
+            then
+            {
+            sprite_index = spr_player_wall_down;
+            slideStill = true;
+            }
+           
+        }
         else
         {
         if !upStill
@@ -443,10 +460,18 @@ if v_speed &lt; 0
         }
     }     
 
+if v_speed = 0
+    if stuck_to_the_wall
+    then
+    {
+    sprite_index = spr_player_wall_down;
+    }    
+    
 //laufen
 if on_ground = true
     then
     {
+    image_speed = 0.6
     if left_key or right_key
         then
         {

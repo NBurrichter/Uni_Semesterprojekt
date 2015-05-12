@@ -28,6 +28,7 @@
             <string>hspeed = random(20)-10;
 vspeed = random(10) *-1;
 dspeed = random(2)-1;
+image_speed = 0;
 
 if dspeed &gt; 0
     then
