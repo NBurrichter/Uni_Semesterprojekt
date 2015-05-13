@@ -85,7 +85,10 @@
       <objects name="second_player">
         <object>objects\obj_second_player</object>
         <objects name="player_created_blocks">
-          <object>objects\obj_second_player_block</object>
+          <object>objects\obj_second_player_block1</object>
+          <object>objects\obj_second_player_block2</object>
+          <object>objects\obj_second_player_block3</object>
+          <object>objects\obj_second_player_block4</object>
         </objects>
       </objects>
       <objects name="gui_player">

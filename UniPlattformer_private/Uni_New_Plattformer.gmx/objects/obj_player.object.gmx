@@ -69,6 +69,10 @@ slideStill = false;
 //invincible frames
 invincible = false;
 flicker = 1;
+
+//Turning maxspeed on and off
+bumped = false;
+jumpBlock = false;
 </string>
           </argument>
         </arguments>
@@ -165,7 +169,7 @@ if right_key
     
 //jumping //double_jumping //wall_jumping
 
-if (jump_key_just_pressed)      // jumping
+if (jump_key_just_pressed) or jumpBlock     // jumping and jumping if on Jumpblock
     then
     {
     if on_ground = true
@@ -207,17 +211,19 @@ if (jump_key_just_pressed)      // jumping
     
 //only when not max_speed
     
-if h_speed &gt; max_speed
-    then
-    {
-    h_speed = max_speed;
-    }
+if h_speed &gt; max_speed 
+    if !bumped
+        then
+        {
+        h_speed = max_speed;
+        }
     
-if h_speed &lt; -max_speed
-    then
-    {
-    h_speed = -max_speed;
-    }
+if h_speed &lt; -max_speed 
+    if !bumped
+        then
+        {
+        h_speed = -max_speed;
+        }
             
 //turning gravitiy on and off
 
@@ -389,6 +395,19 @@ repeat abs(v_speed)   //falling down
         }
     }
 
+//bumper set back
+if h_speed &lt; max_speed and h_speed &gt; -max_speed
+    then
+    {
+    bumped = false;
+    }
+
+//JumpBlock set back
+if jumpBlock 
+    then
+    {
+    jumpBlock = false;
+    }
     
 //Sprites 
 //Fallen
@@ -472,7 +491,8 @@ if on_ground = true
     then
     {
     image_speed = 0.6
-    if left_key or right_key
+    //if left_key or right_key
+    if h_speed != 0
         then
         {
         sprite_index = spr_player;
@@ -482,11 +502,6 @@ if on_ground = true
         sprite_index = spr_player_standing;
         }
     }  
-    
-
-
-
-
 </string>
           </argument>
         </arguments>
@@ -565,7 +580,16 @@ if !invincible
     alarm[0] = 10;
     scr_lose ();
     invincible = true;
-    h_speed *= -1.5;
+    if h_speed &lt; 0
+        then
+        {
+        h_speed = max_speed;
+        }
+    if h_speed &gt; 0
+        then
+        {
+        h_speed = -max_speed;
+        }
     v_speed *= -1;
     instance_create(x,y,obj_damage_unlock);
     }

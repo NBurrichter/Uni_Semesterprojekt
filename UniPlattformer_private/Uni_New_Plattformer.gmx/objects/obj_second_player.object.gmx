@@ -139,19 +139,67 @@ if !selectMode then
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///create up to 9 blocks
+            <string>///create the different blocks
 
-if !place_meeting (x,y,obj_parent_block)
+//0 fadeing 9
+if !place_meeting (x,y,obj_parent_block) and mouseArea = 0
     then
     {
-    block = instance_create (x,y,obj_second_player_block);
-    block.type = mouseArea;
+    block = instance_create (x,y,obj_second_player_block1);
     }
 
-if instance_number (obj_second_player_block) &gt; 9
+if instance_number (obj_second_player_block1) &gt; 9
     then
     {
-    with (instance_find(obj_second_player_block, 0))
+    with (instance_find(obj_second_player_block1, 0))
+        {
+        instance_destroy();
+        }
+    }
+    
+//1 jumping 3
+if !place_meeting (x,y,obj_parent_block) and mouseArea = 1
+    then
+    {
+    block = instance_create (x,y,obj_second_player_block2);
+    }
+
+if instance_number (obj_second_player_block2) &gt; 3
+    then
+    {
+    with (instance_find(obj_second_player_block2, 0))
+        {
+        instance_destroy();
+        }
+    }
+    
+//3
+if !place_meeting (x,y,obj_parent_block) and mouseArea = 2
+    then
+    {
+    block = instance_create (x,y,obj_second_player_block3);
+    }
+
+if instance_number (obj_second_player_block3) &gt; 3
+    then
+    {
+    with (instance_find(obj_second_player_block3, 0))
+        {
+        instance_destroy();
+        }
+    }
+    
+//4 
+if !place_meeting (x,y,obj_parent_block) and mouseArea = 3
+    then
+    {
+    block = instance_create (x,y,obj_second_player_block4);
+    }
+
+if instance_number (obj_second_player_block4) &gt; 3
+    then
+    {
+    with (instance_find(obj_second_player_block4, 0))
         {
         instance_destroy();
         }

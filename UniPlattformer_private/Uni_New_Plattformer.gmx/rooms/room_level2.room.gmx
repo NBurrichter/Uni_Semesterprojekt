@@ -324,6 +324,16 @@ obj_player.can_wall_jump = true;
     <instance objName="obj_unlock_2" x="240" y="736" name="inst_0953FF17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_unlock_2" x="320" y="736" name="inst_33374D26" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_unlock_2" x="464" y="736" name="inst_65D8AA53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_laser_cannon" x="864" y="944" name="inst_F3A51E45" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_laser_cannon" x="512" y="368" name="inst_E262B80A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_flapping_enemy" x="656" y="464" name="inst_C39DD7EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_flapping_enemy" x="1328" y="464" name="inst_B8B9E51F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_flapping_enemy" x="752" y="224" name="inst_E54A2C64" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_flapping_enemy" x="1424" y="176" name="inst_99B1AAF0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_flapping_enemy" x="1072" y="464" name="inst_6EE93BCE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_flapping_enemy" x="1664" y="544" name="inst_98349332" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
+    <instance objName="obj_flapping_enemy" x="944" y="192" name="inst_BB9B8871" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_flapping_enemy" x="208" y="224" name="inst_8CF8C482" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
