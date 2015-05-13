@@ -17,6 +17,8 @@ global.menuRoom = true;
 ini_open("settings.ini");
 global.key_up = ini_read_real("controls", "up", keyboard_get_map("W"));
 
+window_set_fullscreen (ini_read_real("video", "fullscreen", 1));
+
 ini_close();
 
 room_goto_next ();</code>
