@@ -73,6 +73,8 @@ flicker = 1;
 //Turning maxspeed on and off
 bumped = false;
 jumpBlock = false;
+
+nearBlock = 0;
 </string>
           </argument>
         </arguments>
@@ -395,6 +397,24 @@ repeat abs(v_speed)   //falling down
         }
     }
 
+if instance_exists(obj_second_player_block3)
+    then
+    {
+    if point_distance(x,y,obj_second_player_block3.x,obj_second_player_block3.y) &lt; 100
+        then
+        {
+        //nearBlock = point_distance(x,y,obj_second_player_block3.x,obj_second_player_block3.y);
+        motion_add(point_direction(x,y,obj_second_player_block3.x,obj_second_player_block3.y),1);
+        //move_towards_point(obj_second_player_block3.x,obj_second_player_block3.y,1);
+        //gravity_direction = point_direction(x,y,obj_second_player_block3.x,obj_second_player_block3.y);
+        //gravity = 0.1;
+        }
+        else
+        {
+        //gravity = 0
+        }
+    }   
+    
 //bumper set back
 if h_speed &lt; max_speed and h_speed &gt; -max_speed
     then
@@ -704,7 +724,6 @@ if !invincible
             <string>///debugging
 draw_set_colour (c_black);
 
-/*
 draw_text (x,y+10,"on_ground: "+string(obj_player.on_ground));
 draw_text (x,y+25,"h_speed: "+string(obj_player.h_speed));
 
@@ -714,7 +733,8 @@ draw_text (x,y-5,"v_speed: "+string(obj_player.v_speed));
 draw_text (x,y+55,"stuck_to_the_wall: "+string(stuck_to_the_wall));
 draw_text (x,y+70,"sticking_to_the_wall_timer: "+string(sticking_to_the_wall_timer));
 draw_text (x,y+85,"max_drop_speed: "+string(max_drop_speed));
-*/
+draw_text (x,y+110,"near block: "+string(obj_player.nearBlock));
+
 </string>
           </argument>
         </arguments>
