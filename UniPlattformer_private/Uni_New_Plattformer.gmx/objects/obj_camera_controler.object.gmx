@@ -25,28 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///set up view
-/*
-window_set_fullscreen (false);
+            <string>//control camera behaviour
 
-view_wview [0] = 800;
-view_hview [0] = 450;
+view_hspeed = 30;
+view_vspeed = 30;
 
-view_wport [0]= view_wview [0];
-view_hport [0]= view_hview [0];
-
-window_set_size (view_wview [0], view_hview [0]);
-
-surface_resize(application_surface, view_wview[0], view_hview[0]);
-
-//////////////////////////////////
-
-view_object = obj_player;
-
-view_hspeed[0] = 30;
-view_vspeed[0] = 30;
-view_hborder[0] = view_wview[0] / 4;
-view_vborder[0] = view_hview[0] / 3; 
+if instance_exists(obj_player)
+   {
+   view_object[0] = obj_player;
+   }
+   
+view_hborder[0] = view_wview/ 4;
+view_vborder[0] = view_hview/ 3;
 </string>
           </argument>
         </arguments>

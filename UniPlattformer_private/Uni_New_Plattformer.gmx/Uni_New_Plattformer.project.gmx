@@ -96,9 +96,9 @@
     </objects>
     <objects name="group_game_controller">
       <object>objects\obj_game_controller</object>
+      <object>objects\obj_camera_controler</object>
       <object>objects\obj_pause</object>
       <object>objects\obj_level_exit</object>
-      <object>objects\obj_camera</object>
       <objects name="group_menu_objects">
         <objects name="group_buttons">
           <object>objects\obj_level_navigation_button</object>
@@ -108,6 +108,7 @@
           <object>objects\obj_key_down</object>
           <object>objects\obj_key_left</object>
           <object>objects\obj_key_right</object>
+          <object>objects\obj_key_fullscreen</object>
         </objects>
       </objects>
     </objects>
