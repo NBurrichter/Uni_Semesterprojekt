@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_parent_block</parentName>
+  <parentName>obj_parent_collision</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -56,13 +56,29 @@ transparency = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///
-if (place_meeting(x+1,y,obj_player) 
-or place_meeting(x-1,y,obj_player) 
-or place_meeting(x,y-1,obj_player)) 
+            <string>///Magnet
+if place_meeting(x,y-1,obj_player)
     then
     {
+    
+    }
 
+if place_meeting(x,y+1,obj_player)
+    then
+    {
+    
+    }    
+    
+if place_meeting(x+1,y,obj_player) 
+    then
+    {
+    
+    }
+    
+if place_meeting(x-1,y,obj_player) 
+    then
+    {
+    
     }
 </string>
           </argument>
