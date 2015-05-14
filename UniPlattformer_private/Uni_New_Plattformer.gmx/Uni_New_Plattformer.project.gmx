@@ -69,6 +69,7 @@
   <scripts name="scripts">
     <script>scripts\scr_with_all_in_radius_do_something.gml</script>
     <script>scripts\scr_distance_find.gml</script>
+    <script>scripts\scr_get_connected_gamepads.gml</script>
     <script>scripts\scr_sleep.gml</script>
     <script>scripts\scr_lose.gml</script>
     <scripts name="enemy_behaviours">
