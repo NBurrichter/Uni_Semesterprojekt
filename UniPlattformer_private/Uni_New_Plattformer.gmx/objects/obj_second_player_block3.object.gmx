@@ -33,7 +33,9 @@ transparency = 1;
 //Changeable variables
 
 //---Blocks---
-//3
+//3 Magnet
+attractionPower = 0.025
+radius = 200;
 </string>
           </argument>
         </arguments>
@@ -128,6 +130,7 @@ instance_destroy ();
           <argument>
             <kind>1</kind>
             <string>draw_sprite_ext(spr_block_3,-1,x,y,1,1,0,c_white,transparency);
+draw_circle(x,y,radius,true);
 </string>
           </argument>
         </arguments>
