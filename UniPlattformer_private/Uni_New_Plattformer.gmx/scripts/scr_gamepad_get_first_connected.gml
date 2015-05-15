@@ -12,4 +12,3 @@ for(var i = 0; i < gp_connected_count; i++)
         return i;
         }
     }
-
