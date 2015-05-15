@@ -404,18 +404,40 @@ repeat abs(v_speed)   //falling down
 if instance_exists(obj_second_player_block3)
     then
     {
-    if point_distance(x,y,obj_second_player_block3.x,obj_second_player_block3.y) &lt; 100
+    if point_distance(x,y,obj_second_player_block3.x,obj_second_player_block3.y) &lt; obj_second_player_block3.radius
         then
         {
-        //nearBlock = point_distance(x,y,obj_second_player_block3.x,obj_second_player_block3.y);
-        motion_add(point_direction(x,y,obj_second_player_block3.x,obj_second_player_block3.y),1);
-        //move_towards_point(obj_second_player_block3.x,obj_second_player_block3.y,1);
-        //gravity_direction = point_direction(x,y,obj_second_player_block3.x,obj_second_player_block3.y);
-        //gravity = 0.1;
+        bumped = true;
+        on_ground = false;
+        nearBlock = point_distance(x,y,obj_second_player_block3.x,obj_second_player_block3.y)
+        h_dist = obj_second_player_block3.x-x;
+        v_dist = obj_second_player_block3.y-y;
+        
+        if v_dist &gt; 0
+            then
+            {
+            v_speed += (obj_second_player_block3.radius-v_dist)*obj_second_player_block3.attractionPower;
+            }
+        if v_dist &lt; 0
+            then
+            {
+            v_speed -= (obj_second_player_block3.radius+v_dist)*obj_second_player_block3.attractionPower;
+            }
+        
+        if h_dist &gt; 0
+            then
+            {
+            h_speed += (obj_second_player_block3.radius-h_dist)*obj_second_player_block3.attractionPower;
+            }
+        if h_dist &lt; 0
+            then
+            {
+            h_speed -= (obj_second_player_block3.radius+h_dist)*obj_second_player_block3.attractionPower;
+            }       
         }
         else
         {
-        //gravity = 0
+
         }
     }   
     
@@ -726,6 +748,8 @@ if !invincible
           <argument>
             <kind>1</kind>
             <string>///debugging
+
+/*
 draw_set_colour (c_black);
 
 scr_gamepad_debug_message();
@@ -740,6 +764,7 @@ draw_text (x,y+55,"stuck_to_the_wall: "+string(stuck_to_the_wall));
 draw_text (x,y+70,"sticking_to_the_wall_timer: "+string(sticking_to_the_wall_timer));
 draw_text (x,y+85,"max_drop_speed: "+string(max_drop_speed));
 draw_text (x,y+110,"near block: "+string(obj_player.nearBlock));
+*/
 
 </string>
           </argument>
