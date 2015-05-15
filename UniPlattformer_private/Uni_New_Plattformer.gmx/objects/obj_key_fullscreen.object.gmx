@@ -61,10 +61,12 @@ if mouse_over = true
         then
         {
         fullscreen_enabled = false;
+        window_set_fullscreen (fullscreen_enabled);
         }
     else    
     {
     fullscreen_enabled = true;
+    window_set_fullscreen (fullscreen_enabled);
     }
     }
     

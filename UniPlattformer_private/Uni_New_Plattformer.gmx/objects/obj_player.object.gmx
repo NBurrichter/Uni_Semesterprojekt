@@ -29,6 +29,8 @@
 
 global.player_id = id;
 
+///player behaviour variables
+
 on_ground = false;
 double_jump = 0;
 
@@ -130,6 +132,8 @@ var right_key = keyboard_check(ord('D'));
 
 var jump_key_just_pressed = keyboard_check_pressed(vk_space);
 var jump_key_not_pressed = !keyboard_check(vk_space);
+
+// var jump_key_just_pressed = gamepad_button_check_pressed(scr_gamepad_get_first_connected(),gp_face1);
 
 //cancel each if left right pressed
 
@@ -724,6 +728,8 @@ if !invincible
             <string>///debugging
 draw_set_colour (c_black);
 
+scr_gamepad_debug_message();
+/*
 draw_text (x,y+10,"on_ground: "+string(obj_player.on_ground));
 draw_text (x,y+25,"h_speed: "+string(obj_player.h_speed));
 

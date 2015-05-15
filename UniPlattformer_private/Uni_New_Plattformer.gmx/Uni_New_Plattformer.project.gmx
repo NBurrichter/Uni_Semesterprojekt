@@ -69,7 +69,6 @@
   <scripts name="scripts">
     <script>scripts\scr_with_all_in_radius_do_something.gml</script>
     <script>scripts\scr_distance_find.gml</script>
-    <script>scripts\scr_get_connected_gamepads.gml</script>
     <script>scripts\scr_sleep.gml</script>
     <script>scripts\scr_lose.gml</script>
     <scripts name="enemy_behaviours">
@@ -77,6 +76,12 @@
       <script>scripts\scr_staring_at.gml</script>
       <script>scripts\scr_rotating_self.gml</script>
     </scripts>
+    <script>scripts\scr_gamepad_get_first_connected.gml</script>
+    <script>scripts\scr_gamepad_key_id_converter.gml</script>
+    <script>scripts\scr_gamepad_key_listener.gml</script>
+    <script>scripts\scr_gamepad_debug_message.gml</script>
+    <script>scripts\scr_gamepad_move_mouse.gml</script>
+    <script>scripts\scr_get_connected_gamepads.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="group_players">
@@ -105,14 +110,38 @@
       <object>objects\obj_level_exit</object>
       <objects name="group_menu_objects">
         <objects name="group_buttons">
-          <object>objects\obj_level_navigation_button</object>
-          <object>objects\obj_menu_navigation_button</object>
-          <object>objects\obj_save_back_button</object>
-          <object>objects\obj_key_up</object>
-          <object>objects\obj_key_down</object>
-          <object>objects\obj_key_left</object>
-          <object>objects\obj_key_right</object>
-          <object>objects\obj_key_fullscreen</object>
+          <objects name="group_start_screen_buttons">
+            <object>objects\obj_start_button</object>
+            <objects name="group_start_menu_buttons">
+              <object>objects\obj_level_select_button</object>
+              <object>objects\obj_option_menu_button</object>
+              <object>objects\obj_exit_main_menu_button</object>
+              <objects name="group_option_menu_buttons">
+                <object>objects\obj_option_video_button</object>
+                <object>objects\obj_option_audio_button</object>
+                <object>objects\obj_option_controls_button</object>
+                <object>objects\obj_exit_option_menu_button</object>
+                <object>objects\obj_save_back_button</object>
+                <object>objects\obj_back_button</object>
+                <objects name="group_video_buttons">
+                  <object>objects\obj_key_fullscreen</object>
+                </objects>
+                <objects name="group_audio_buttons">
+                  <object>objects\obj_key_mute</object>
+                </objects>
+                <objects name="group_control_buttons">
+                  <object>objects\obj_key_up</object>
+                  <object>objects\obj_key_left</object>
+                  <object>objects\obj_key_down</object>
+                  <object>objects\obj_key_right</object>
+                </objects>
+              </objects>
+              <objects name="group_level_select_buttons">
+                <object>objects\obj_exit_level_select_button</object>
+                <object>objects\obj_level_navigation_button</object>
+              </objects>
+            </objects>
+          </objects>
         </objects>
       </objects>
     </objects>

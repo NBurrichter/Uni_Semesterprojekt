@@ -77,14 +77,25 @@ if mouse_over = true
         then
         {
         global.fullscreen = obj_key_fullscreen.fullscreen_enabled;
-        window_set_fullscreen (global.fullscreen);
         
         ini_open("settings.ini");
         ini_write_real("video", "fullscreen", global.fullscreen);
         ini_close();   
         }
+    else
+    if room == room_option_audio
+        then
+        {
+        global.mute = obj_key_mute.is_muted;
+        
+        ini_open("settings.ini");
+        ini_write_real("audio", "mute", global.mute);   
+        ini_close();
+        }
     room_goto(room_option_menu);
     }
+
+    
 </string>
           </argument>
         </arguments>

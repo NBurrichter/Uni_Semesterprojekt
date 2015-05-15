@@ -15,7 +15,15 @@
 global.menuRoom = true;
 
 ini_open("settings.ini");
+
 global.key_up = ini_read_real("controls", "up", keyboard_get_map("W"));
+global.key_down = ini_read_real("controls", "down", keyboard_get_map("S"));
+global.key_left = ini_read_real("controls", "left", keyboard_get_map("A"));
+global.key_right = ini_read_real("controls", "right", keyboard_get_map("D"));
+
+global.volume = ini_read_real("audio", "volume", 1);
+global.mute = ini_read_real("audio", "mute", 1);
+audio_master_gain (global.volume*global.mute);
 
 window_set_fullscreen (ini_read_real("video", "fullscreen", 1));
 

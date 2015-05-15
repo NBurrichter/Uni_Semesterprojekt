@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -154,8 +154,8 @@ audio_stop_all();
 
 draw_set_halign(fa_left);
 
-draw_text(50, 100, "Up: " + string(chr(global.key_up)));/*
-draw_text(50, 150, "Down: " + string(chr(global.key_down)));
+draw_text(50, 100, "Up: " + string(chr(global.key_up)));
+draw_text(50, 150, "GamePadCount: " + string(scr_gamepad_get_first_connected()));/*
 draw_text(50, 200, "Left: " + string(chr(global.key_left)));
 draw_text(50, 250, "Right: " + string(chr(global.key_right)));
 draw_text(50, 300, "Sounds");
