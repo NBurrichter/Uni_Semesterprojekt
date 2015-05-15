@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_parent_collision</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -35,7 +35,7 @@ transparency = 1;
 //---Blocks---
 //3 Magnet
 attractionPower = 0.025
-radius = 200;
+radius = 160;
 </string>
           </argument>
         </arguments>
@@ -106,7 +106,7 @@ if place_meeting(x-1,y,obj_player)
             <kind>1</kind>
             <string>///Destroy instance
 
-instance_destroy ();
+//instance_destroy ();
 </string>
           </argument>
         </arguments>

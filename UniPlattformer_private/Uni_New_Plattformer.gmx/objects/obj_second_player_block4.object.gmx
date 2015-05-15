@@ -33,7 +33,10 @@ transparency = 1;
 //Changeable variables
 
 //---Blocks---
-//4
+//4sideways moveing
+started = false;
+time = 100;
+timer = -1;
 </string>
           </argument>
         </arguments>
@@ -56,7 +59,78 @@ transparency = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///destroy after collision
+            <string>///moving block
+if place_meeting(x,y-1,obj_player) and !started
+    then
+    {
+    if obj_player.dir = 1
+        then
+        {
+        hspeed = 5;
+        started = true;
+        timer = time;
+        }
+    if obj_player.dir = -1
+        then
+        {
+        hspeed = -5;
+        started = true;
+        timer = time;
+        }
+    }
+
+if timer &gt; 0 
+    then
+    {
+    timer--;
+    }    
+    
+if timer = 0
+    then
+    {
+    instance_destroy();
+    }    
+    
+if place_meeting(x+hspeed,y,obj_parent_block) or place_meeting(x+hspeed,y,obj_player)
+    then
+    {
+    hspeed = -hspeed;
+    }    
+    
+var collision1 = instance_place(x,y-1,obj_player);
+
+with (collision1) 
+    {
+    if !hit
+        then
+        {
+        hspeed = other.hspeed
+        }
+    }
+
+var collision2 = instance_place(x+1,y,obj_player);      
+
+with (collision2) 
+    {
+    if !hit
+        then
+        {
+        hspeed = other.hspeed
+        }
+    }
+    
+var collision3 = instance_place(x-1,y,obj_player);      
+
+with (collision3) 
+    {
+    if !hit
+        then
+        {
+        hspeed = other.hspeed
+        }
+    }
+
+
 </string>
           </argument>
         </arguments>
@@ -104,8 +178,15 @@ instance_destroy ();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(spr_block_4,-1,x,y,1,1,0,c_white,transparency);
-
+            <string>if !started
+    then
+    {
+    draw_sprite_ext(spr_block_4,-1,x,y,1,1,0,c_white,1);
+    }
+    else
+    {
+    draw_sprite_ext(spr_block_4,-1,x,y,1,1,0,c_white,timer/time);
+    }
 </string>
           </argument>
         </arguments>

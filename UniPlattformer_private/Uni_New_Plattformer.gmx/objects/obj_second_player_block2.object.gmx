@@ -61,14 +61,14 @@ if place_meeting(x,y-1,obj_player)
     then
     {
     obj_player.v_speed = -v_jump;
-    obj_player.bumped = true;
+    //obj_player.bumped = true;
     }
 
 if place_meeting(x,y+1,obj_player)
     then
     {
     obj_player.v_speed = v_jump;
-    obj_player.bumped = true;
+    //obj_player.bumped = true;
     }    
     
 if place_meeting(x+1,y,obj_player) 

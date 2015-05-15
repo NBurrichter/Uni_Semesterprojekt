@@ -77,6 +77,8 @@ bumped = false;
 jumpBlock = false;
 
 nearBlock = 0;
+
+hit = false;
 </string>
           </argument>
         </arguments>
@@ -101,6 +103,29 @@ nearBlock = 0;
             <kind>1</kind>
             <string>///invincibility frames
 invincible = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hspeed = 0
 </string>
           </argument>
         </arguments>
@@ -155,6 +180,7 @@ else
 on_ground = true;
 stuck_to_the_wall = 0;
 double_jump = 0;
+//bumped = false;
 }   
 
 //acceleration...
@@ -230,6 +256,21 @@ if h_speed &lt; -max_speed
         {
         h_speed = -max_speed;
         }
+        
+if instance_exists(obj_second_player_block2)
+    then
+    {
+    if h_speed &gt; obj_second_player_block2.h_jump
+        then
+        {
+        h_speed = obj_second_player_block2.h_jump;
+        }
+    if h_speed &lt; -obj_second_player_block2.h_jump
+        then
+        {
+        h_speed = -obj_second_player_block2.h_jump;
+        }
+    }
             
 //turning gravitiy on and off
 
@@ -401,6 +442,7 @@ repeat abs(v_speed)   //falling down
         }
     }
 
+//Magnet
 if instance_exists(obj_second_player_block3)
     then
     {
@@ -408,7 +450,7 @@ if instance_exists(obj_second_player_block3)
         then
         {
         bumped = true;
-        on_ground = false;
+        //on_ground = false;
         nearBlock = point_distance(x,y,obj_second_player_block3.x,obj_second_player_block3.y)
         h_dist = obj_second_player_block3.x-x;
         v_dist = obj_second_player_block3.y-y;
@@ -440,7 +482,84 @@ if instance_exists(obj_second_player_block3)
 
         }
     }   
-    
+
+//magnet second player    
+/*
+if instance_exists(obj_second_player_block3)
+    then
+    {
+    if point_distance(x,y,obj_second_player.x,obj_second_player.y) &lt; obj_second_player_block3.radius
+        then
+        {
+        bumped = true;
+        on_ground = false;
+        nearBlock = point_distance(x,y,obj_second_player.x,obj_second_player.y)
+        h_dist = obj_second_player.x-x;
+        v_dist = obj_second_player.y-y;
+        
+        if v_dist &gt; 0
+            then
+            {
+            v_speed += (obj_second_player_block3.radius-v_dist)*obj_second_player_block3.attractionPower;
+            }
+        if v_dist &lt; 0
+            then
+            {
+            v_speed -= (obj_second_player_block3.radius+v_dist)*obj_second_player_block3.attractionPower;
+            }
+        
+        if h_dist &gt; 0
+            then
+            {
+            h_speed += (obj_second_player_block3.radius-h_dist)*obj_second_player_block3.attractionPower;
+            }
+        if h_dist &lt; 0
+            then
+            {
+            h_speed -= (obj_second_player_block3.radius+h_dist)*obj_second_player_block3.attractionPower;
+            }       
+        }
+        else
+        {
+
+        }
+    }
+*/
+ 
+//left right collision with blocks
+if place_meeting(x+1+hspeed,y,obj_parent_block)
+    then
+    {
+    hit = true;
+    hspeed = 0;
+    }
+    else
+    if place_meeting(x-1-hspeed,y,obj_parent_block)
+        then
+        {
+        hit = true;
+        hspeed = 0;
+        }
+        else
+        {
+        hit = false;
+        }
+
+if instance_exists(obj_second_player_block4)
+    then
+    {
+    if place_meeting(x+1,y,obj_second_player_block4)
+        then
+        {
+        hspeed = 0;
+        }
+    if place_meeting(x-1,y,obj_second_player_block4)
+        then
+        {
+        hspeed = 0;
+        }
+    }
+       
 //bumper set back
 if h_speed &lt; max_speed and h_speed &gt; -max_speed
     then
@@ -496,7 +615,7 @@ if v_speed &lt; 0
         if !slideStill
             then 
             {
-            sprite_index = spr_player_wall_up;;
+            sprite_index = spr_player_wall_up;
             }
         
         
@@ -548,6 +667,22 @@ if on_ground = true
         sprite_index = spr_player_standing;
         }
     }  
+
+//magnet
+if instance_exists(obj_second_player_block3)
+    then
+    {   
+    if point_distance(x,y,obj_second_player_block3.x,obj_second_player_block3.y) &lt; obj_second_player_block3.radius and !on_ground
+        then
+        {
+        sprite_index = spr_player_fall_down_still
+        }
+    if point_distance(x,y,obj_second_player_block3.x,obj_second_player_block3.y) &lt; obj_second_player_block3.radius and on_ground
+        then
+        {
+        sprite_index = spr_player_standing
+        }
+    }
 </string>
           </argument>
         </arguments>
@@ -752,8 +887,8 @@ if !invincible
 /*
 draw_set_colour (c_black);
 
-scr_gamepad_debug_message();
-/*
+//scr_gamepad_debug_message();
+
 draw_text (x,y+10,"on_ground: "+string(obj_player.on_ground));
 draw_text (x,y+25,"h_speed: "+string(obj_player.h_speed));
 
@@ -763,7 +898,7 @@ draw_text (x,y-5,"v_speed: "+string(obj_player.v_speed));
 draw_text (x,y+55,"stuck_to_the_wall: "+string(stuck_to_the_wall));
 draw_text (x,y+70,"sticking_to_the_wall_timer: "+string(sticking_to_the_wall_timer));
 draw_text (x,y+85,"max_drop_speed: "+string(max_drop_speed));
-draw_text (x,y+110,"near block: "+string(obj_player.nearBlock));
+draw_text (x,y+110,"dir: "+string(obj_player.dir));
 */
 
 </string>
