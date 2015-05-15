@@ -333,7 +333,8 @@ obj_player.can_wall_jump = true;
     <instance objName="obj_flapping_enemy" x="1664" y="544" name="inst_98349332" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
     <instance objName="obj_flapping_enemy" x="944" y="192" name="inst_BB9B8871" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_flapping_enemy" x="208" y="224" name="inst_8CF8C482" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_camera_controler" x="64" y="48" name="inst_DF70AC22" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_camera_controller" x="64" y="48" name="inst_DF70AC22" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_particle_controller" x="96" y="48" name="inst_D8BB0988" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

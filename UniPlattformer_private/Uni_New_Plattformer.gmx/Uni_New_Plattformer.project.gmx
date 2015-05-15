@@ -76,12 +76,17 @@
       <script>scripts\scr_staring_at.gml</script>
       <script>scripts\scr_rotating_self.gml</script>
     </scripts>
-    <script>scripts\scr_gamepad_get_first_connected.gml</script>
-    <script>scripts\scr_gamepad_key_id_converter.gml</script>
-    <script>scripts\scr_gamepad_key_listener.gml</script>
-    <script>scripts\scr_gamepad_debug_message.gml</script>
-    <script>scripts\scr_gamepad_move_mouse.gml</script>
-    <script>scripts\scr_get_connected_gamepads.gml</script>
+    <scripts name="group_gamepad">
+      <script>scripts\scr_gamepad_key_id_converter.gml</script>
+      <script>scripts\scr_gamepad_get_first_connected.gml</script>
+      <script>scripts\scr_get_connected_gamepads.gml</script>
+      <script>scripts\scr_gamepad_move_mouse.gml</script>
+      <script>scripts\scr_gamepad_debug_message.gml</script>
+      <script>scripts\scr_gamepad_key_listener.gml</script>
+    </scripts>
+    <scripts name="group_particles">
+      <script>scripts\scr_particle_laser_initialize.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="group_players">
@@ -105,7 +110,8 @@
     </objects>
     <objects name="group_game_controller">
       <object>objects\obj_game_controller</object>
-      <object>objects\obj_camera_controler</object>
+      <object>objects\obj_camera_controller</object>
+      <object>objects\obj_particle_controller</object>
       <object>objects\obj_pause</object>
       <object>objects\obj_level_exit</object>
       <objects name="group_menu_objects">
@@ -185,6 +191,7 @@
     <room>rooms\room_level2</room>
     <room>rooms\room_level3</room>
     <room>rooms\room_level4</room>
+    <room>rooms\room_level5</room>
     <room>rooms\room_test</room>
   </rooms>
   <constants number="2">
