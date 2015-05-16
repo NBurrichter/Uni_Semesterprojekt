@@ -709,6 +709,37 @@ if place_meeting(x,y+1,obj_second_player_block4) and h_speed = obj_second_player
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///whirl up dust when walking
+
+if sprite_index = spr_player
+    then
+    {
+    if abs(h_speed) = max_speed
+        then
+        {
+        part_particles_create(global.particle_system, x + (sprite_width/2)*(-dir), y + sprite_height/2, global.particle_dust, 1);
+        }
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="4" ename="obj_unlock_2">
       <action>

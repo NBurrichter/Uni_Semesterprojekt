@@ -55,7 +55,7 @@ shooting_range = 900;
 
 dist = scr_distance_find(x,y,image_angle,shooting_range,obj_parent_block,false,true);
 
-part_particles_create(global.particle_laser_system, x+lengthdir_x(dist,image_angle), y+lengthdir_y(dist,image_angle), global.particle_laser, 1);
+part_particles_create(global.particle_system, x+lengthdir_x(dist,image_angle), y+lengthdir_y(dist,image_angle), global.particle_laser, 1);
 
 if collision_line(x, y, x+lengthdir_x(dist,image_angle), y+lengthdir_y(dist,image_angle), obj_player, false, false) &gt; 0
     then

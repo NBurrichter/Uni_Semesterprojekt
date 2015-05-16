@@ -27,9 +27,10 @@
             <kind>1</kind>
             <string>///initializing particle system
 
-global.particle_laser_system = part_system_create();
+global.particle_system = part_system_create();
 
 scr_particle_laser_initialize ();
+scr_particle_dust_initialize ();
 </string>
           </argument>
         </arguments>
@@ -55,7 +56,9 @@ scr_particle_laser_initialize ();
             <string>///destroy particle system
 
 part_type_destroy (global.particle_laser);
-part_system_destroy (global.particle_laser_system);
+part_type_destroy (global.particle_dust);
+
+part_system_destroy (global.particle_system);
 </string>
           </argument>
         </arguments>

@@ -86,6 +86,7 @@
     </scripts>
     <scripts name="group_particles">
       <script>scripts\scr_particle_laser_initialize.gml</script>
+      <script>scripts\scr_particle_dust_initialize.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
