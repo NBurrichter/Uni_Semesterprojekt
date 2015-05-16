@@ -79,6 +79,8 @@ jumpBlock = false;
 nearBlock = 0;
 
 hit = false;
+
+on_block4 = false;
 </string>
           </argument>
         </arguments>
@@ -125,7 +127,7 @@ invincible = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hspeed = 0
+            <string>//hspeed = 0
 </string>
           </argument>
         </arguments>
@@ -347,6 +349,17 @@ if v_speed &gt; max_drop_speed
     v_speed = max_drop_speed;
     }          
 
+//if on block4    
+if place_meeting(x,y+1,obj_second_player_block4)
+    then
+    {
+    on_block4 = true;
+    }
+    else
+    {
+    on_block4 = false;
+    }
+    
 //deceleration
 
 if !(left_key)
@@ -358,7 +371,8 @@ if !(left_key)
         if on_ground = true
             then
             {
-            h_speed = 0;       
+            if !on_block4
+                h_speed = 0;       
             }
         else
             {
@@ -376,7 +390,8 @@ if !(right_key)
         if on_ground = true
             then
             {
-            h_speed = 0;       
+            if !on_block4
+                h_speed = 0;       
             }
         else
             {
@@ -682,6 +697,13 @@ if instance_exists(obj_second_player_block3)
         {
         sprite_index = spr_player_standing
         }
+    }
+    
+//standing on Block4
+if place_meeting(x,y+1,obj_second_player_block4) and h_speed = obj_second_player_block4.hspeed
+    then
+    {
+    sprite_index = spr_player_standing;
     }
 </string>
           </argument>

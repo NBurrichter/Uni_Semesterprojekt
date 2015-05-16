@@ -35,6 +35,7 @@ transparency = 1;
 //---Blocks---
 //4sideways moveing
 started = false;
+move_speed = 5;
 time = 100;
 timer = -1;
 </string>
@@ -66,14 +67,14 @@ if place_meeting(x,y-1,obj_player) and !started
     if obj_player.dir = 1
         then
         {
-        hspeed = 5;
+        hspeed = move_speed;
         started = true;
         timer = time;
         }
     if obj_player.dir = -1
         then
         {
-        hspeed = -5;
+        hspeed = -move_speed;
         started = true;
         timer = time;
         }
@@ -101,10 +102,10 @@ var collision1 = instance_place(x,y-1,obj_player);
 
 with (collision1) 
     {
-    if !hit
+    if !keyboard_check(ord('A')) and !keyboard_check(ord('D'))
         then
         {
-        hspeed = other.hspeed
+        h_speed = other.hspeed
         }
     }
 
@@ -115,7 +116,7 @@ with (collision2)
     if !hit
         then
         {
-        hspeed = other.hspeed
+        h_speed = other.hspeed
         }
     }
     
@@ -126,7 +127,7 @@ with (collision3)
     if !hit
         then
         {
-        hspeed = other.hspeed
+        h_speed = other.hspeed
         }
     }
 
