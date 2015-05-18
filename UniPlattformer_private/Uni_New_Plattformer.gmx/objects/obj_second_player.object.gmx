@@ -245,8 +245,23 @@ if instance_number (obj_second_player_block1) &gt; 9
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_draw_trail(8,sprite_width,c_aqua,-1,true,0.3);
-scr_draw_trail(8,sprite_width/2,c_blue,-1,true,0.5);
+            <string>//draw trail according to chosen block
+
+switch (mouseArea)
+    {
+    case 0:
+    scr_draw_trail(8,sprite_width,c_aqua,-1,true,0.3);
+    scr_draw_trail(8,sprite_width/2,c_blue,-1,true,0.5); break;
+    case 1:
+    scr_draw_trail(8,sprite_width,c_fuchsia,-1,true,0.3);
+    scr_draw_trail(8,sprite_width/2,c_purple,-1,true,0.5); break;
+    case 2:
+    scr_draw_trail(8,sprite_width,c_yellow,-1,true,0.3);
+    scr_draw_trail(8,sprite_width/2,c_orange,-1,true,0.5); break;
+    case 3:
+    scr_draw_trail(8,sprite_width,c_lime,-1,true,0.3);
+    scr_draw_trail(8,sprite_width/2,c_green,-1,true,0.5); break;
+    }
 
 draw_self();
 
