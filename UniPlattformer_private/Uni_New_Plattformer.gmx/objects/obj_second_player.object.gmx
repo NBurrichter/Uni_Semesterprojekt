@@ -245,7 +245,10 @@ if instance_number (obj_second_player_block1) &gt; 9
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>scr_draw_trail(8,sprite_width,c_aqua,-1,true,0.3);
+scr_draw_trail(8,sprite_width/2,c_blue,-1,true,0.5);
+
+draw_self();
 
 //Hud creation Timer
 if hudTimer &lt; maxTimer

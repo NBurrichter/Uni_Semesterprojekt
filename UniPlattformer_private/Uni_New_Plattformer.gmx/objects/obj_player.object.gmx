@@ -36,7 +36,7 @@ double_jump = 0;
 
 running_jump_height = 0.0;
 
-normal_jump_height = 13;
+normal_jump_height = 14;
 wall_jump_distance = 8;
 
 max_drop_speed = 20;
@@ -60,10 +60,10 @@ amount_of_gravity = 1;
 //ability switches
 
 can_double_jump = false;
-can_wall_jump = false;
+can_wall_jump = true;
 
 //Sprite speed
-image_speed = 0.6;
+image_speed = 0.000001;
 upStill = false;
 downStill = false;
 slideStill = false;

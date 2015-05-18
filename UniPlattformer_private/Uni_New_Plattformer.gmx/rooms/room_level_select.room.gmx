@@ -58,7 +58,6 @@
     <instance objName="obj_game_controller" x="32" y="32" name="inst_1390AD07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_second_player_gui" x="800" y="512" name="inst_D7097626" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_first_player_gui" x="224" y="288" name="inst_DC7960D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_level_navigation_button" x="640" y="320" name="inst_83E8763B" locked="0" code="level = room_test;&#xA;levelnumber = 5;&#xA;&#xA;obj_first_player_gui.movex[levelnumber] = x;&#xA;obj_first_player_gui.movey[levelnumber] = y;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_exit_level_select_button" x="1440" y="800" name="inst_E8B75E7B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

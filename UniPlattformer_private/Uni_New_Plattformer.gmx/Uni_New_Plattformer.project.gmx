@@ -84,9 +84,12 @@
       <script>scripts\scr_gamepad_debug_message.gml</script>
       <script>scripts\scr_gamepad_key_listener.gml</script>
     </scripts>
-    <scripts name="group_particles">
-      <script>scripts\scr_particle_laser_initialize.gml</script>
-      <script>scripts\scr_particle_dust_initialize.gml</script>
+    <scripts name="graphical_stuff">
+      <scripts name="group_particles">
+        <script>scripts\scr_particle_laser_initialize.gml</script>
+        <script>scripts\scr_particle_dust_initialize.gml</script>
+      </scripts>
+      <script>scripts\scr_draw_trail.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -193,7 +196,6 @@
     <room>rooms\room_level3</room>
     <room>rooms\room_level4</room>
     <room>rooms\room_level5</room>
-    <room>rooms\room_test</room>
   </rooms>
   <constants number="2">
     <constant name="screen_width">display_get_width ()</constant>

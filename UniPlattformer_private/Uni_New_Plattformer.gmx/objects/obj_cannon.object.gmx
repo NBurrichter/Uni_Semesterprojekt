@@ -28,7 +28,7 @@
             <string>///Set up variables
 
 reload_time = 30;
-reload_timer = 0;
+reload_timer = irandom(reload_time);
 
 projectile_speed = 8; 
 
