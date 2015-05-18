@@ -463,7 +463,7 @@ obj_player.running_jump_height = 1;</code>
     <instance objName="obj_second_player" x="240" y="336" name="inst_78D93E6A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cannon" x="352" y="144" name="inst_D3CAE072" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cannon" x="432" y="336" name="inst_C1B4BF36" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_laser_cannon" x="128" y="288" name="inst_22FD48F2" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="23"/>
+    <instance objName="obj_laser_cannon" x="128" y="288" name="inst_22FD48F2" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="170"/>
     <instance objName="obj_laser_cannon" x="144" y="96" name="inst_94DB190D" locked="0" code="direction = 270;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_laser_cannon" x="192" y="416" name="inst_0F03C7B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_laser_cannon" x="560" y="320" name="inst_46C9EF96" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
