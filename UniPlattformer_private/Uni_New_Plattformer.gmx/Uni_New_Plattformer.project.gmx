@@ -196,6 +196,7 @@
     <room>rooms\room_level3</room>
     <room>rooms\room_level4</room>
     <room>rooms\room_level5</room>
+    <room>rooms\room_greenlight</room>
   </rooms>
   <constants number="2">
     <constant name="screen_width">display_get_width ()</constant>
