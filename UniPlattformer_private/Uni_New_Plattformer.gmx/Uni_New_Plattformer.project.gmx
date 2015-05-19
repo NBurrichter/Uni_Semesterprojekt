@@ -64,6 +64,14 @@
     <background>background\back_level</background>
     <background>background\back_splash</background>
     <background>background\back_main_menu</background>
+    <background>background\background_city_sky</background>
+    <background>background\background_city_layer_one</background>
+    <background>background\background_city_layer_two</background>
+    <background>background\background_city_layer_three</background>
+    <background>background\background_city_layer_four</background>
+    <background>background\background_city_layer_five</background>
+    <background>background\background_city_layer_six</background>
+    <background>background\background_city_layer_seven</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -86,6 +94,7 @@
     </scripts>
     <scripts name="graphical_stuff">
       <scripts name="group_particles">
+        <script>scripts\scr_particle_rocketsmoke_initialize.gml</script>
         <script>scripts\scr_particle_laser_initialize.gml</script>
         <script>scripts\scr_particle_dust_initialize.gml</script>
       </scripts>
@@ -166,6 +175,7 @@
       <objects name="static_enemies">
         <object>objects\obj_cannon</object>
         <object>objects\obj_laser_cannon</object>
+        <object>objects\obj_laser_rotating_four</object>
         <objects name="cannon_munition">
           <object>objects\obj_heat_seeking_missle</object>
           <object>objects\obj_projectile</object>

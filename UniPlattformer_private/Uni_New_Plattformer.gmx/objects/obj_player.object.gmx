@@ -63,7 +63,7 @@ can_double_jump = false;
 can_wall_jump = true;
 
 //Sprite speed
-image_speed = 0.000001;
+image_speed = 0.6;
 upStill = false;
 downStill = false;
 slideStill = false;
@@ -670,7 +670,6 @@ if v_speed = 0
 if on_ground = true
     then
     {
-    image_speed = 0.6
     //if left_key or right_key
     if h_speed != 0
         then
@@ -811,7 +810,7 @@ with (other)
 if !invincible
     then
     {
-    alarm[0] = 10;
+    alarm[0] = 20;
     scr_lose ();
     invincible = true;
     if h_speed &lt; 0
