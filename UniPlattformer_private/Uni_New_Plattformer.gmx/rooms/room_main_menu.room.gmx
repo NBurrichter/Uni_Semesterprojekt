@@ -55,6 +55,7 @@
     <instance objName="obj_level_select_button" x="736" y="416" name="inst_5014F00E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_option_menu_button" x="736" y="544" name="inst_A1654390" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_exit_main_menu_button" x="736" y="672" name="inst_879460B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_second_player_gui" x="96" y="192" name="inst_B65FC7F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

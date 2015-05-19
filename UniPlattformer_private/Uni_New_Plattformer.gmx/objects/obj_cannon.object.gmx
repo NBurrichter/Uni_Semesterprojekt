@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///Set up variables
 
-reload_time = 50;
+reload_time = 100;
 reload_timer = irandom(reload_time);
 
 projectile_speed = 8; 

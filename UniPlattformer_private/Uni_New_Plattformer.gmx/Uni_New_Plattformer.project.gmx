@@ -61,7 +61,6 @@
   </sprites>
   <backgrounds name="background">
     <background>background\back_map</background>
-    <background>background\back_level</background>
     <background>background\back_splash</background>
     <background>background\back_main_menu</background>
     <background>background\background_city_sky</background>
