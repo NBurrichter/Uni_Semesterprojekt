@@ -47,7 +47,7 @@ wall_jump_distance = 8;
 max_drop_speed = 20;
 
 stuck_to_the_wall = false;
-frames_stuck_to_wall = 3;
+frames_stuck_to_wall = 66;
 sticking_to_the_wall_timer = frames_stuck_to_wall;
 
 acceleration = 1;

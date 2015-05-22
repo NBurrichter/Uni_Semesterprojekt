@@ -51,6 +51,8 @@ show_debug_overlay(true);
             <string>///Initialize variables
 
 global.pause = false;
+
+global.screen_shake = 0;
 </string>
           </argument>
         </arguments>
@@ -87,6 +89,37 @@ if global.menuRoom = false
         }
     }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///screen_shake
+
+
+if global.screen_shake &gt; 0
+    then
+    {
+    view_xview += (choose (1,-1))* irandom(5);
+    view_yview += (choose (1,-1))* irandom(5);
+
+    global.screen_shake -= 1;
+    }
 </string>
           </argument>
         </arguments>

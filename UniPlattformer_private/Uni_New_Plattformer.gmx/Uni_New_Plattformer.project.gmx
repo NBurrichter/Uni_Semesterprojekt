@@ -99,6 +99,7 @@
       </scripts>
       <script>scripts\scr_draw_trail.gml</script>
     </scripts>
+    <script>scripts\scr_screen_shake.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="group_players">
