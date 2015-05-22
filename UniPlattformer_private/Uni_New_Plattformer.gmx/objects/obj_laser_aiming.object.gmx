@@ -29,6 +29,8 @@
 
 shooting_range = 700;
 
+aiming_speed = 0.5;
+
 sub_image = irandom(sprite_get_number(spr_laser));
 
 </string>
@@ -55,6 +57,15 @@ sub_image = irandom(sprite_get_number(spr_laser));
             <kind>1</kind>
             <string>///Laser Collision
 
+if instance_exists (obj_player)
+    then
+    {
+    //image_angle = lerp(image_angle, point_direction(x, y, obj_player.x, obj_player.y), 0.03); ///slows down the nearer it gets to the player
+    
+    var dd = angle_difference(image_angle, point_direction(x, y, obj_player.x, obj_player.y)); //stays the same speed
+    image_angle -= min(abs(dd), aiming_speed) * sign(dd);
+    }
+    
 dist = scr_distance_find(x,y,image_angle,shooting_range,obj_parent_collision,false,true);
 
 if dist != shooting_range

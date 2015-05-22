@@ -75,15 +75,15 @@
     <instance objName="obj_unlock_2" x="1488" y="881" name="inst_464A5626" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_unlock_2" x="1552" y="879" name="inst_57E8FE87" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="1600" y="928" name="inst_E38ACD46" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_flapping_enemy" x="1824" y="640" name="inst_BD020AF1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_flapping_enemy" x="1824" y="960" name="inst_31E33B38" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_patrolling_enemy" x="1824" y="640" name="inst_BD020AF1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_patrolling_enemy" x="1824" y="960" name="inst_31E33B38" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="2784" y="960" name="inst_E63956DB" locked="0" code="" scaleX="13.8800001144409" scaleY="3.4375" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="2784" y="1504" name="inst_F42500EC" locked="0" code="" scaleX="2.44000005722046" scaleY="31.125" colour="4294967295" rotation="0"/>
-    <instance objName="obj_flapping_enemy" x="2432" y="800" name="inst_A8290376" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_flapping_enemy" x="1952" y="800" name="inst_8CBC0096" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="obj_flapping_enemy" x="2240" y="800" name="inst_C3855BFF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
-    <instance objName="obj_flapping_enemy" x="2368" y="640" name="inst_806326B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_flapping_enemy" x="2368" y="992" name="inst_497838AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_patrolling_enemy" x="2432" y="800" name="inst_A8290376" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_patrolling_enemy" x="1952" y="800" name="inst_8CBC0096" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_patrolling_enemy" x="2240" y="800" name="inst_C3855BFF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="obj_patrolling_enemy" x="2368" y="640" name="inst_806326B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_patrolling_enemy" x="2368" y="992" name="inst_497838AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_laser_rotating_four" x="832" y="1152" name="inst_D6170292" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

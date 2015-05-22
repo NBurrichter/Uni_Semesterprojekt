@@ -174,6 +174,7 @@
       <objects name="static_enemies">
         <object>objects\obj_cannon</object>
         <object>objects\obj_laser_cannon</object>
+        <object>objects\obj_laser_aiming</object>
         <object>objects\obj_laser_rotating_four</object>
         <objects name="cannon_munition">
           <object>objects\obj_heat_seeking_missle</object>
@@ -181,7 +182,8 @@
         </objects>
       </objects>
       <objects name="moving_enemies">
-        <object>objects\obj_flapping_enemy</object>
+        <object>objects\obj_patrolling_enemy</object>
+        <object>objects\obj_bouncing_enemy</object>
       </objects>
     </objects>
     <objects name="group_blocks">
