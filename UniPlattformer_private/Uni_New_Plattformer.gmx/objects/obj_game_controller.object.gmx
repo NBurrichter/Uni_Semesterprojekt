@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//////////////Debug
-/*
+
 show_debug_overlay(true);
 </string>
           </argument>
@@ -151,13 +151,14 @@ audio_stop_all();
           <argument>
             <kind>1</kind>
             <string>///Debugging
-/*
+
 draw_set_halign(fa_left);
 
 draw_text(50, 100, "Up: " + string(chr(global.key_up)));
 draw_text(50, 150, "GamePadCount: " + string(scr_gamepad_get_first_connected()));
 draw_text(50, 200, "Left: " + string(chr(global.key_left)));
 draw_text(50, 250, "Right: " + string(chr(global.key_right)));
+/*
 draw_text(50, 300, "Sounds");
 draw_text(50, 350, "Music: " + string(global.musicSound));
 draw_text(50, 400, "Ambient: " + string(global.ambientSound));
