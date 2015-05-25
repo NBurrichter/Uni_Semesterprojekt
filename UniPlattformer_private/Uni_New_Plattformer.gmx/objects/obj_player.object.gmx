@@ -202,6 +202,11 @@ if !place_meeting(x,y+1,obj_parent_collision)
     }
 else
 {
+if v_speed &gt; 10
+            then
+            {
+            global.screen_shake = v_speed;
+            }
 on_ground = true;
 stuck_to_the_wall = 0;
 double_jump = 0;
@@ -341,6 +346,11 @@ if on_ground = false
     if place_meeting(x+(dir),y,obj_parent_collision)
         then
         {
+        if abs(h_speed) &gt; 6
+            then
+            {
+            global.screen_shake = abs(h_speed);
+            }
         double_jump = 0;
         if v_speed &gt; 0 
             then
@@ -961,12 +971,12 @@ if !invincible
             <kind>1</kind>
             <string>///debugging
 
-/*
+
 draw_set_colour (c_black);
 
 //scr_gamepad_debug_message();
 
-draw_text (x,y+10,"on_ground: "+string(obj_player.on_ground));
+draw_text (x,y+10,"camera_direction: "+string(obj_camera_controller.camera_direction));
 draw_text (x,y+25,"h_speed: "+string(obj_player.h_speed));
 
 draw_text (x,y+40,"grav: "+string(obj_player.grav));
@@ -976,7 +986,7 @@ draw_text (x,y+55,"stuck_to_the_wall: "+string(stuck_to_the_wall));
 draw_text (x,y+70,"sticking_to_the_wall_timer: "+string(sticking_to_the_wall_timer));
 draw_text (x,y+85,"max_drop_speed: "+string(max_drop_speed));
 draw_text (x,y+110,"dir: "+string(obj_player.dir));
-*/
+
 
 </string>
           </argument>

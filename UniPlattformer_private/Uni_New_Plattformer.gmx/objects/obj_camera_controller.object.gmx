@@ -25,18 +25,74 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//control camera behaviour
+            <string>///control camera behaviour
 
 view_hspeed = 30;
 view_vspeed = 30;
 
-if instance_exists(obj_player)
+if instance_exists(obj_camera_controller)
    {
-   view_object[0] = obj_player;
+   view_object[0] = obj_camera_controller;
    }
    
 view_hborder[0] = view_wview/ 4;
 view_vborder[0] = view_hview/ 3;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///initialze variables
+
+global.screen_shake = 0;
+
+camera_direction = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///camera follows the player
+
+if instance_exists (obj_player)
+    then
+    {
+    x = obj_player.x;
+    y = obj_player.y;
+    }
+
 </string>
           </argument>
         </arguments>
@@ -84,6 +140,45 @@ background_y[6] = view_yview[0]/7;
 
 background_x[7] = view_xview[0]/8;
 background_y[7] = view_yview[0]/8;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///screen_shake
+
+if obj_player.x != obj_player.xprevious or obj_player.y != obj_player.yprevious
+        then
+        {
+        camera_direction =  point_direction(obj_player.xprevious, obj_player.yprevious, obj_player.x, obj_player.y);
+        }
+
+if global.screen_shake &gt; -1
+    then
+    {
+    var added_direction = irandom(15)*choose(1,-1);
+    var shake_distance = irandom_range (0,global.screen_shake);
+    
+    view_xview += lengthdir_x(shake_distance, camera_direction + added_direction);
+    view_yview += lengthdir_y(shake_distance, camera_direction + added_direction);
+    
+    global.screen_shake -= 1;
+    }
 </string>
           </argument>
         </arguments>
