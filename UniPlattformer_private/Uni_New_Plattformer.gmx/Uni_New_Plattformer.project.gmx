@@ -33,6 +33,7 @@
         <sprites name="group_munition">
           <sprite>sprites\spr_laser</sprite>
           <sprite>sprites\spr_projectile</sprite>
+          <sprite>sprites\spr_projectile2</sprite>
           <sprite>sprites\spr_heat_seeking_missle</sprite>
         </sprites>
       </sprites>

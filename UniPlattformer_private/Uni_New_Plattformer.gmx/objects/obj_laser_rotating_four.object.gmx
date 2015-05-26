@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///Defining variables
 
-shooting_range = 700;
+shooting_range = 3000;
 
 //distance array for 4 lasers
 

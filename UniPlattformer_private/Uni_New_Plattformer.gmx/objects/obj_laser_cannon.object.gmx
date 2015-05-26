@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///Defining variables
 
-shooting_range = 700;
+shooting_range = 3000;
 
 sub_image = irandom(sprite_get_number(spr_laser));
 
