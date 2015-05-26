@@ -62,7 +62,7 @@ dir = 1;
 grav = 0;
 amount_of_gravity = 1;
 
-screen_shake_intensity = 12;
+screen_shake_intensity = 6;
 
 //ability switches
 
