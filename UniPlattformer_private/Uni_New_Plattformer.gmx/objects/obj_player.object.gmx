@@ -39,7 +39,7 @@ running_jump_height = 0.0;
 
 ///jumping
 jump_frames = 0;
-jump_frames_duration = 33;
+jump_frames_duration = 4;
 
 normal_jump_height = 14;
 wall_jump_distance = 8;
@@ -47,7 +47,7 @@ wall_jump_distance = 8;
 max_drop_speed = 20;
 
 stuck_to_the_wall = false;
-frames_stuck_to_wall = 66;
+frames_stuck_to_wall = 3;
 sticking_to_the_wall_timer = frames_stuck_to_wall;
 
 acceleration = 1;
@@ -61,6 +61,8 @@ dir = 1;
 
 grav = 0;
 amount_of_gravity = 1;
+
+screen_shake_intensity = 12;
 
 //ability switches
 
@@ -202,12 +204,12 @@ if !place_meeting(x,y+1,obj_parent_collision)
     }
 else
 {
-if v_speed &gt; 10
-            then
-            {
-            global.screen_shake = v_speed;
-            }
-on_ground = true;
+if on_ground = false
+    then
+    {
+    global.screen_shake = screen_shake_intensity;
+    on_ground = true;
+    }
 stuck_to_the_wall = 0;
 double_jump = 0;
 //bumped = false;
@@ -346,11 +348,6 @@ if on_ground = false
     if place_meeting(x+(dir),y,obj_parent_collision)
         then
         {
-        if abs(h_speed) &gt; 6
-            then
-            {
-            global.screen_shake = abs(h_speed);
-            }
         double_jump = 0;
         if v_speed &gt; 0 
             then
@@ -984,7 +981,7 @@ draw_text (x,y-5,"v_speed: "+string(obj_player.v_speed));
 
 draw_text (x,y+55,"stuck_to_the_wall: "+string(stuck_to_the_wall));
 draw_text (x,y+70,"sticking_to_the_wall_timer: "+string(sticking_to_the_wall_timer));
-draw_text (x,y+85,"max_drop_speed: "+string(max_drop_speed));
+draw_text (x,y+85,"screen_shake: "+string(global.screen_shake));
 draw_text (x,y+110,"dir: "+string(obj_player.dir));
 
 

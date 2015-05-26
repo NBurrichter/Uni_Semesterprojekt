@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>///control camera behaviour
 
+/*
 view_hspeed = 30;
 view_vspeed = 30;
 
@@ -168,17 +169,27 @@ if obj_player.x != obj_player.xprevious or obj_player.y != obj_player.yprevious
         camera_direction =  point_direction(obj_player.xprevious, obj_player.yprevious, obj_player.x, obj_player.y);
         }
 
+        
+        
+
 if global.screen_shake &gt; -1
     then
-    {
-    var added_direction = irandom(15)*choose(1,-1);
-    var shake_distance = irandom_range (0,global.screen_shake);
-    
-    view_xview += lengthdir_x(shake_distance, camera_direction + added_direction);
-    view_yview += lengthdir_y(shake_distance, camera_direction + added_direction);
+    { 
+    view_object[0] = noone;
+    view_yview += choose(random(global.screen_shake), random(-global.screen_shake))
     
     global.screen_shake -= 1;
     }
+    else
+    {
+    view_hspeed = 30;
+view_vspeed = 30;
+   view_object[0] = obj_camera_controller;
+   
+view_hborder[0] = view_wview/ 4;
+view_vborder[0] = view_hview/ 3;
+}
+
 </string>
           </argument>
         </arguments>
