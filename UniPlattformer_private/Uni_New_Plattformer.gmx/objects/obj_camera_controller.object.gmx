@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-20000000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,44 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///control camera behaviour
-
-/*
-view_hspeed = 30;
-view_vspeed = 30;
-
-if instance_exists(obj_camera_controller)
-   {
-   view_object[0] = obj_camera_controller;
-   }
-   
-view_hborder[0] = view_wview/ 4;
-view_vborder[0] = view_hview/ 3;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>///initialze variables
 
 global.screen_shake = 0;
 
-camera_direction = 0;
+point_of_interest = obj_player;
+
+x = point_of_interest.x;
+y = point_of_interest.y;
+
+horizontal_border = 300;
+vertical_border = 200;
 </string>
           </argument>
         </arguments>
@@ -87,13 +60,55 @@ camera_direction = 0;
             <kind>1</kind>
             <string>///camera follows the player
 
-if instance_exists (obj_player)
+if instance_exists (point_of_interest)
     then
     {
-    x = obj_player.x;
-    y = obj_player.y;
+    if point_of_interest.x &gt; horizontal_border and point_of_interest.x &lt; room_width-horizontal_border ///if player is within room border
+        then
+        {
+        if !(x-horizontal_border &lt; point_of_interest.x and point_of_interest.x &gt; x+horizontal_border) ///if player is not within the view border field
+            then
+            {
+            x += point_of_interest.h_speed;
+            }
+        }
+    
+    if vertical_border &lt; point_of_interest.y and point_of_interest.y &lt; room_height-vertical_border ///checks the border to the room edge
+        then
+        {
+        if point_of_interest.y &gt; y-vertical_border or y+vertical_border &lt; point_of_interest.y ///checks the border of the area of unmoving camera
+            then
+            {
+            y += point_of_interest.v_speed;
+            }
+        }
     }
+    
+    
+   /* if !point_in_rectangle(point_of_interest.x, point_of_interest.y, x-horizontal_border, y-vertical_border, x+horizontal_border, y+vertical_border)
+        then
+        {
+        if point_in_rectangle(point_of_interest.x, point_of_interest.y, horizontal_border, vertical_border, room_width-horizontal_border, room_height-vertical_border)
+            then
+            {
+            x += point_of_interest.h_speed;
+            y += point_of_interest.v_speed;
+            }*/
 
+
+view_xview = x - view_wview/2;
+view_yview = y - view_hview/2;
+
+
+///screen_shake
+
+if global.screen_shake &gt; -1
+    then
+    { 
+    view_yview += choose(random_range(global.screen_shake/2, global.screen_shake), random_range(-global.screen_shake/2,-global.screen_shake))
+    
+    global.screen_shake -= 1;
+    }
 </string>
           </argument>
         </arguments>
@@ -145,6 +160,8 @@ background_y[7] = view_yview[0]/8;
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -161,34 +178,30 @@ background_y[7] = view_yview[0]/8;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///screen_shake
+            <string>///debugging
 
-if obj_player.x != obj_player.xprevious or obj_player.y != obj_player.yprevious
-        then
-        {
-        camera_direction =  point_direction(obj_player.xprevious, obj_player.yprevious, obj_player.x, obj_player.y);
-        }
+draw_text (x,y+0,"h_speed: "+string(point_of_interest.h_speed));
+draw_text (x,y+15,"v_speed: "+string(point_of_interest.v_speed));
 
-        
-        
+draw_text (x,y+30,"left_side: "+string(max(horizontal_border, x-horizontal_border)));
+draw_text (x,y+45,"top_side: "+string(max(vertical_border, y-vertical_border)));
 
-if global.screen_shake &gt; -1
-    then
-    { 
-    view_object[0] = noone;
-    view_yview += choose(random(global.screen_shake), random(-global.screen_shake))
-    
-    global.screen_shake -= 1;
-    }
-    else
-    {
-    view_hspeed = 30;
-view_vspeed = 30;
-   view_object[0] = obj_camera_controller;
-   
-view_hborder[0] = view_wview/ 4;
-view_vborder[0] = view_hview/ 3;
-}
+draw_text (x,y+60,"camera.x: "+string(x));
+draw_text (x,y+75,"camera.y: "+string(y));
+
+draw_text (x,y+95,"screen_shake: "+string(global.screen_shake));
+
+draw_set_color (c_white);
+draw_rectangle (horizontal_border, vertical_border, room_width-horizontal_border, room_height-vertical_border, true );
+
+draw_set_colour(c_red);
+
+var left_side = max(horizontal_border, x-horizontal_border);
+    var top_side = max(vertical_border, y-vertical_border);
+    var right_side = min(room_width-horizontal_border, x+horizontal_border);
+    var bottom_side = min (room_height-vertical_border, y+vertical_border);   
+
+draw_rectangle ( x-horizontal_border, y-vertical_border, x+horizontal_border, y+vertical_border, true);
 
 </string>
           </argument>
