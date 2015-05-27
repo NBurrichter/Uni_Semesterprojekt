@@ -136,7 +136,8 @@ invincible = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//hspeed = 0
+            <string>x = floor(x);
+y = floor(y);
 </string>
           </argument>
         </arguments>
@@ -968,7 +969,7 @@ if !invincible
             <kind>1</kind>
             <string>///debugging
 
-
+/*
 draw_set_colour (c_black);
 
 //scr_gamepad_debug_message();
