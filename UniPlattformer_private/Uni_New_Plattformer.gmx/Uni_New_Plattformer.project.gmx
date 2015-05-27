@@ -112,12 +112,17 @@
       </objects>
       <objects name="second_player">
         <object>objects\obj_second_player</object>
-        <objects name="player_created_blocks">
-          <object>objects\obj_second_player_block1</object>
-          <object>objects\obj_second_player_block2</object>
-          <object>objects\obj_block2_persistent</object>
-          <object>objects\obj_second_player_block3</object>
-          <object>objects\obj_second_player_block4</object>
+        <objects name="blocks">
+          <objects name="player_blocks">
+            <object>objects\obj_second_player_block1</object>
+            <object>objects\obj_second_player_block4</object>
+            <object>objects\obj_second_player_block3</object>
+            <object>objects\obj_second_player_block2</object>
+          </objects>
+          <objects name="level_blocks">
+            <object>objects\obj_disappearing_block</object>
+            <object>objects\obj_block2_persistent</object>
+          </objects>
         </objects>
         <object>objects\obj_second_player_unlock</object>
       </objects>
