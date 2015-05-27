@@ -128,8 +128,20 @@ draw_sprite_ext (spr_laser,floor(sub_image),x,y,dist,1,image_angle,c_white,0.7);
 
 //draw
 
-draw_sprite (spr_laser_cannon,-1,x,y);
 
+
+switch image_angle {
+    case 0:
+    case 360: draw_sprite_ext(spr_laser_cannon,0,x,y,1,1,0,-1,1); break; 
+    
+    case 90:  draw_sprite_ext(spr_laser_cannon_up,0,x,y,1,1,0,-1,1); break;
+    
+    case 180:  draw_sprite_ext(spr_laser_cannon,0,x,y,-1,1,0,-1,1); break;
+    
+    case 270:  draw_sprite_ext(spr_laser_cannon_down,0,x,y,1,1,0,-1,1); break;
+    
+    default : draw_sprite (spr_laser_cannon,-1,x,y); break;
+}
 </string>
           </argument>
         </arguments>

@@ -29,12 +29,16 @@
     <sprites name="group_enemies">
       <sprites name="group_static_enemies">
         <sprite>sprites\spr_cannon</sprite>
-        <sprite>sprites\spr_laser_cannon</sprite>
         <sprites name="group_munition">
           <sprite>sprites\spr_laser</sprite>
           <sprite>sprites\spr_projectile</sprite>
           <sprite>sprites\spr_projectile2</sprite>
           <sprite>sprites\spr_heat_seeking_missle</sprite>
+        </sprites>
+        <sprites name="lasers">
+          <sprite>sprites\spr_laser_cannon</sprite>
+          <sprite>sprites\spr_laser_cannon_down</sprite>
+          <sprite>sprites\spr_laser_cannon_up</sprite>
         </sprites>
       </sprites>
       <sprites name="group_moving_enemies">
@@ -76,6 +80,8 @@
     <background>background\background_city_layer_six</background>
     <background>background\background_city_layer_seven</background>
     <background>background\background_arrow</background>
+    <background>background\background_tutorial_1</background>
+    <background>background\background_tutorial_jump</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
