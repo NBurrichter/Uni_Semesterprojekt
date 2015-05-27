@@ -34,8 +34,31 @@ point_of_interest = obj_player;
 x = point_of_interest.x;
 y = point_of_interest.y;
 
+view_object = obj_camera_controller;
+
+view_hborder = view_wview/4;
+view_vborder = view_hview/3;
+
+//////////////
+/*
+h_dist = 300;
+v_dist = 64;
+
+move_to_x = point_of_interest.x + h_dist;
+move_to_y = point_of_interest.y + v_dist;
+
+camera_speed = 15;
+
+/*
+point_of_interest = obj_player;
+
+x = point_of_interest.x;
+y = point_of_interest.y;
+
 horizontal_border = 300;
 vertical_border = 200;
+
+view_object = obj_camera_controller;
 </string>
           </argument>
         </arguments>
@@ -58,57 +81,41 @@ vertical_border = 200;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///camera follows the player
-
+            <string>/*
 if instance_exists (point_of_interest)
     then
     {
-    if point_of_interest.x &gt; horizontal_border and point_of_interest.x &lt; room_width-horizontal_border ///if player is within room border
-        then
-        {
-        if !(x-horizontal_border &lt; point_of_interest.x and point_of_interest.x &gt; x+horizontal_border) ///if player is not within the view border field
-            then
-            {
-            x += point_of_interest.h_speed;
-            }
-        }
-    
-    if vertical_border &lt; point_of_interest.y and point_of_interest.y &lt; room_height-vertical_border ///checks the border to the room edge
-        then
-        {
-        if point_of_interest.y &gt; y-vertical_border or y+vertical_border &lt; point_of_interest.y ///checks the border of the area of unmoving camera
-            then
-            {
-            y += point_of_interest.v_speed;
-            }
-        }
+    x = point_of_interest.x;
+    y = point_of_interest.y;
     }
     
-    
-   /* if !point_in_rectangle(point_of_interest.x, point_of_interest.y, x-horizontal_border, y-vertical_border, x+horizontal_border, y+vertical_border)
-        then
-        {
-        if point_in_rectangle(point_of_interest.x, point_of_interest.y, horizontal_border, vertical_border, room_width-horizontal_border, room_height-vertical_border)
-            then
-            {
-            x += point_of_interest.h_speed;
-            y += point_of_interest.v_speed;
-            }*/
-
-
 view_xview = x - view_wview/2;
 view_yview = y - view_hview/2;
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///moving camera
 
-///screen_shake
-
-if global.screen_shake &gt; -1
-    then
-    { 
-    view_yview += choose(random_range(global.screen_shake/2, global.screen_shake), random_range(-global.screen_shake/2,-global.screen_shake))
-    
-    global.screen_shake -= 1;
-    }
+x = point_of_interest.x;
+y = point_of_interest.y;
 </string>
           </argument>
         </arguments>
@@ -179,7 +186,7 @@ background_y[7] = view_yview[0]/8;
           <argument>
             <kind>1</kind>
             <string>///debugging
-
+/*
 draw_text (x,y+0,"h_speed: "+string(point_of_interest.h_speed));
 draw_text (x,y+15,"v_speed: "+string(point_of_interest.v_speed));
 
