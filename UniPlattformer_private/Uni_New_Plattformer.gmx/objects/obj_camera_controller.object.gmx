@@ -44,8 +44,8 @@ view_vborder = view_hview/3;
 h_dist = 300;
 v_dist = 64;
 
-move_to_x = point_of_interest.x + h_dist;
-move_to_y = point_of_interest.y + v_dist;
+x = point_of_interest.x + h_dist;
+y = point_of_interest.y + v_dist;
 
 camera_speed = 15;
 
@@ -82,15 +82,37 @@ view_object = obj_camera_controller;
           <argument>
             <kind>1</kind>
             <string>/*
+///Move Camera
+
+//by default, look far in the direction the player is facing and slightly upward
+
 if instance_exists (point_of_interest)
     then
     {
-    x = point_of_interest.x;
-    y = point_of_interest.y;
+    move_to_x = point_of_interest.x + h_dist * point_of_interest.dir;
+    move_to_y = point_of_interest.y + v_dist;
     }
-    
-view_xview = x - view_wview/2;
-view_yview = y - view_hview/2;
+
+//*
+
+//if we're standing in front of a tall wall, only look forward a bit and up much higher
+if place_meeting(x+face,y-peek,par_solid) 
+    {
+    cam.xTo = x + face*peek;
+    cam.yTo = y - v_dist*3;
+    }
+
+
+//if we're standing on a ledge, look forward only a bit and far down
+if !place_meeting(x+(face*peek),y+1,par_solid) &amp;&amp; !place_meeting(x+(face*peek),y+peek,par_solid) &amp;&amp; (grd) 
+    {
+    cam.xTo = x + face*peek;
+    cam.yTo = y + v_dist*2;
+    }   
+
+//move the camera
+x += (move_to_x - x)/camera_speed;
+y += (move_to_y - y)/camera_speed;
 
 </string>
           </argument>
