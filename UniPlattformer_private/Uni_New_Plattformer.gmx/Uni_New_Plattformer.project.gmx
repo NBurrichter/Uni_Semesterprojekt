@@ -43,11 +43,14 @@
     </sprites>
     <sprites name="group_game_objects">
       <sprite>sprites\spr_level_exit</sprite>
+      <sprite>sprites\spr_level_exit_front</sprite>
       <sprites name="group_buttons">
         <sprite>sprites\spr_button</sprite>
         <sprite>sprites\spr_menu_button</sprite>
         <sprite>sprites\spr_key_button</sprite>
       </sprites>
+      <sprite>sprites\spr_level_mask</sprite>
+      <sprite>sprites\spr_level_mask_front</sprite>
     </sprites>
     <sprites name="group_blocks">
       <sprite>sprites\spr_wall</sprite>
@@ -72,6 +75,7 @@
     <background>background\background_city_layer_five</background>
     <background>background\background_city_layer_six</background>
     <background>background\background_city_layer_seven</background>
+    <background>background\background_arrow</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -129,6 +133,7 @@
       <object>objects\obj_particle_controller</object>
       <object>objects\obj_pause</object>
       <object>objects\obj_level_exit</object>
+      <object>objects\obj_level_exit_front</object>
       <objects name="group_menu_objects">
         <objects name="group_buttons">
           <objects name="group_start_screen_buttons">

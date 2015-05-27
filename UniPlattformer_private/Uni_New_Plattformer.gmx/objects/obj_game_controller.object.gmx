@@ -152,7 +152,7 @@ audio_stop_all();
           <argument>
             <kind>1</kind>
             <string>///Debugging
-
+/*
 draw_set_halign(fa_left);
 
 draw_text(50, 100, "Up: " + string(chr(global.key_up)));
