@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_parent_damage_player</parentName>
+  <parentName>obj_parent_enemies</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -26,7 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>//defining variables
- 
+
+direction = image_angle;
+
 speed = 4;
 
 </string>
@@ -54,17 +56,19 @@ speed = 4;
             <string>///Movement
 
 //Kollision mit Block
-if place_meeting (x+hspeed, y, obj_parent_collision)
-    then
-    {
-    hspeed *= -1;
-    }
 
-if place_meeting (x, y+vspeed, obj_parent_collision)
-    then
-    {
-    vspeed *= -1;
-    }
+if place_meeting (x + hspeed, y, obj_parent_collision)
+        then
+        {
+        hspeed = -hspeed;
+        }
+        
+if place_meeting (x, y + vspeed, obj_parent_collision)
+        then
+        {
+        vspeed = -vspeed;
+        }
+
 </string>
           </argument>
         </arguments>
@@ -87,9 +91,8 @@ if place_meeting (x, y+vspeed, obj_parent_collision)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//instance_destroy ();
-vspeed = -vspeed;
-hspeed = -hspeed;
+            <string>instance_destroy ();
+
 </string>
           </argument>
         </arguments>

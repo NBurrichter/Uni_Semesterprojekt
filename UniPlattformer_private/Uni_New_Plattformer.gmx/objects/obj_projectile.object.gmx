@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_parent_damage_player</parentName>
+  <parentName>obj_parent_projectile</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -98,9 +98,16 @@ part_particles_create(global.particle_system, x, y, global.particle_rocketsmoke,
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Destroy projectile
+            <string>///Destroy projectile &amp; block
+
+with(other)
+    {
+    instance_destroy ();
+    }
 
 instance_destroy();
+
+
 </string>
           </argument>
         </arguments>

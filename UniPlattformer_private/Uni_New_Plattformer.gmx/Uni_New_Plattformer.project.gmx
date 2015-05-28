@@ -183,11 +183,11 @@
       </objects>
     </objects>
     <objects name="group_parent_objects">
-      <object>objects\obj_parent_damage_all</object>
-      <object>objects\obj_parent_damage_block</object>
-      <object>objects\obj_parent_damage_player</object>
       <object>objects\obj_parent_collision</object>
       <object>objects\obj_parent_block</object>
+      <object>objects\obj_parent_damage_player</object>
+      <object>objects\obj_parent_projectile</object>
+      <object>objects\obj_parent_enemies</object>
     </objects>
     <objects name="enemies">
       <objects name="static_enemies">

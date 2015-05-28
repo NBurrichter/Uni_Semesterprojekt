@@ -165,7 +165,7 @@ if !selectMode then
             <kind>1</kind>
             <string>///create the different blocks  
 //1 jumping 3
-if !place_meeting (x,y,obj_parent_block) and mouseArea = 1 and !place_meeting(x,y,obj_player)
+if !place_meeting (x,y,all) and mouseArea = 1
     then
     {
     block = instance_create (x,y,obj_second_player_block2);
@@ -181,7 +181,7 @@ if instance_number (obj_second_player_block2) &gt; 3
     }
     
 //3
-if !place_meeting (x,y,obj_parent_block) and mouseArea = 2 and !place_meeting(x,y,obj_player)
+if !place_meeting (x,y,all) and mouseArea = 2
     then
     {
     block = instance_create (x,y,obj_second_player_block3);
@@ -197,7 +197,7 @@ if instance_number (obj_second_player_block3) &gt; 1
     }
     
 //4 
-if !place_meeting (x,y,obj_parent_block) and mouseArea = 3 and !place_meeting(x,y,obj_player)
+if !place_meeting (x,y,all) and mouseArea = 3
     then
     {
     block = instance_create (x,y,obj_second_player_block4);
@@ -234,7 +234,7 @@ if instance_number (obj_second_player_block4) &gt; 3
           <argument>
             <kind>1</kind>
             <string>//0 fadeing 9
-if !place_meeting (x,y,obj_parent_block) and mouseArea = 0 and !place_meeting(x,y,obj_player)
+if !place_meeting (x,y,all) and mouseArea = 0
     then
     {
     block = instance_create (x,y,obj_second_player_block1);

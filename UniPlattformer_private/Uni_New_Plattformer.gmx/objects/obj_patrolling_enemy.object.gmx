@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_parent_damage_player</parentName>
+  <parentName>obj_parent_enemies</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -26,10 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>//defining variables
- 
-speed = 4;
 
 direction = image_angle;
+movement_speed = 4;
 
 distance = 128;
 
@@ -60,69 +59,21 @@ starty = y;
             <kind>1</kind>
             <string>///Movement
 
-///Movement
-
-//reset speed each step
-
-h_speed = real_speed;
-v_speed = real_speed;
-
-//actual horizontal movement with collision
-     
-for(i = 1; i&lt;abs(v_spd); i++) 
+for(i = 1; i &lt; movement_speed ; i++) 
     {
-    move_check = i*sign(v_spd)
-    if place_meeting(x,y + move_check,obj_parent_collision) 
+    if (place_meeting(x + lengthdir_x(1,direction), y + lengthdir_y(1,direction), obj_parent_collision)) 
+    or (point_distance (x + lengthdir_x(1,direction), y + lengthdir_y(1,direction), startx, starty) &gt; distance)
+        then
         {
-        v_spd = -v_spd/2;
+        direction -= 180;
         } 
     else 
-    {
-    with (obj_parent_movement)
         {
-        y -= other.move_check;      
+        x += lengthdir_x(1,direction);
+        y += lengthdir_y(1,direction);     
         }
-    }
-    }             
-     
-     
-     
-     /*
-for (i = 0; i &lt; h_speed; i += 1)
-    {
-    
-        
-repeat abs(real_speed) 
-    {
-    if !place_meeting(x + i*(sign(h_speed)), y, obj_parent_collision)
-        {
-        h_speed += 1;            
-        }
-    else
-        {
-        h_speed
-        }
-         
-    
+    }        
 
-//actual vertical movement with collision
-
-repeat abs(v_speed)  
-    {
-    if place_meeting(x, y + v_speed, obj_parent_collision)
-            then
-            {
-            v_speed -= 1*(sign(v_speed));  
-            }
-        }
-
-//turn 180° when end of path is reached
-
-if distance_to_point(startx,starty) &gt; distance 
-    then
-    {
-    speed *= -1;
-    }
 </string>
           </argument>
         </arguments>
