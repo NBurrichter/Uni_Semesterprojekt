@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>counter = 0;
+
 </string>
           </argument>
         </arguments>
@@ -48,11 +49,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-counter += 0.4;
+            <string>/// movement
 
-direction += cos(counter);
-image_angle = direction;
+    counter += 0.4;
+    
+    direction += cos(counter);
+    image_angle = direction;
+
+    
 </string>
           </argument>
         </arguments>
@@ -81,6 +85,32 @@ part_particles_create(global.particle_system, x, y, global.particle_rocketsmoke,
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_parent_stopping_rockets">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Destroy projectile
+
+instance_destroy();
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_parent_block">
       <action>
         <libid>1</libid>
@@ -104,9 +134,9 @@ with(other)
     {
     instance_destroy ();
     }
-
+                
 instance_destroy();
-
+            
 
 </string>
           </argument>
@@ -157,8 +187,8 @@ instance_destroy();
             <kind>1</kind>
             <string>///graphical stuff
 
-scr_draw_trail (4,7,c_red,-1,true,0.5);
-scr_draw_trail (4,3,c_yellow,-1,true,0.9);
+scr_draw_trail (8,7,c_red,-1,true,0.5);
+scr_draw_trail (8,3,c_yellow,-1,true,0.9);
 
 draw_self ();
 </string>

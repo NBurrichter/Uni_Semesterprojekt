@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_parent_collision</parentName>
+  <parentName>obj_parent_stopping_rockets</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -31,8 +31,6 @@ reload_time = 100;
 reload_timer = irandom(reload_time);
 
 projectile_speed = 8; 
-
-munition = obj_projectile;
 
 </string>
           </argument>
@@ -67,7 +65,7 @@ else
     if reload_timer = 0
         then
         {
-        var projectile = instance_create (x, y, munition);
+        var projectile = instance_create (x + lengthdir_x(sprite_width/2,image_angle), y + lengthdir_y(sprite_width/2,image_angle), obj_projectile);
         reload_timer = reload_time;  
         with (projectile)
             {
