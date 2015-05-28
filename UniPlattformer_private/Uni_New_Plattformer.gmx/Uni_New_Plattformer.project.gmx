@@ -34,6 +34,7 @@
           <sprite>sprites\spr_projectile</sprite>
           <sprite>sprites\spr_projectile2</sprite>
           <sprite>sprites\spr_heat_seeking_missle</sprite>
+          <sprite>sprites\spr_lazorss</sprite>
         </sprites>
         <sprites name="lasers">
           <sprite>sprites\spr_laser_cannon</sprite>
@@ -47,6 +48,8 @@
     </sprites>
     <sprites name="group_game_objects">
       <sprite>sprites\spr_level_exit</sprite>
+      <sprite>sprites\spr_level_exit_actecs</sprite>
+      <sprite>sprites\spr_level_exit_front_actecs</sprite>
       <sprite>sprites\spr_level_exit_front</sprite>
       <sprites name="group_buttons">
         <sprite>sprites\spr_button</sprite>
@@ -81,6 +84,7 @@
     <background>background\background_city_layer_seven</background>
     <background>background\background_arrow</background>
     <background>background\background_tutorial_1</background>
+    <background>background\background_tutorial_2</background>
     <background>background\background_tutorial_jump</background>
   </backgrounds>
   <paths name="paths"/>
@@ -145,6 +149,8 @@
       <object>objects\obj_pause</object>
       <object>objects\obj_level_exit</object>
       <object>objects\obj_level_exit_front</object>
+      <object>objects\obj_level_exit_actecs</object>
+      <object>objects\obj_level_exit_front_actecs</object>
       <objects name="group_menu_objects">
         <objects name="group_buttons">
           <objects name="group_start_screen_buttons">

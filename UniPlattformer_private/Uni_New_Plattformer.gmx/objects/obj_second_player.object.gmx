@@ -43,6 +43,8 @@ unlocked1 = true;
 unlocked2 = false;
 unlocked3 = false;
 unlocked4 = false;
+
+color = c_white;
 </string>
           </argument>
         </arguments>
@@ -96,12 +98,12 @@ if mouse_check_button_pressed(mb_right)
     selectMode = true;
     hudTimer = 0;
     mouseArea = 0;
+    y++;
     }
 
 //Bestimmen der Position der Mouse in relation zum zweiten Spieler sprite
 if selectMode{
 mousePointer = point_direction(x, y, mouse_x, mouse_y);//Bestimmt per Gradzahl, in welchem quadranten sich die maus befindet
-mouseArea = 0;
 //up
 if mousePointer &gt;= 45 and mousePointer &lt; 135 and unlocked1
     then
@@ -320,6 +322,7 @@ if selectMode
        if unlocked4 then draw_sprite_ext(spr_block_4,0,x-margin*(hudTimer/maxTimer),y,1*(hudTimer/maxTimer),1*(hudTimer/maxTimer),0,-1,1);
        
        //Drawing des ausgewählten blockes   
+       /*
        switch (mouseArea)
            {
            case 0: if unlocked1 then draw_sprite_ext(spr_block_select,1,x,y,1*hudTimer,1*hudTimer,0,-1,1) break;
@@ -327,6 +330,19 @@ if selectMode
            case 2: if unlocked3 then draw_sprite_ext(spr_block_select,1,x,y,1*hudTimer,1*hudTimer,180,-1,1) break;
            case 3: if unlocked4 then draw_sprite_ext(spr_block_select,1,x,y,1*hudTimer,1*hudTimer,90,-1,1) break;
            } 
+       */
+       
+       switch (mouseArea)
+           {
+           case 0: if unlocked1 then color = make_color_rgb(0,255,255); break;
+           case 1: if unlocked2 then color = make_color_rgb(255,100,100) break;
+           case 2: if unlocked3 then color = make_color_rgb(255,255,100) break;
+           case 3: if unlocked4 then color = make_color_rgb(61,255,77) break;
+           default : color = c_white;
+           }
+       
+       mousedir = point_direction(x, y, mouse_x, mouse_y);
+       draw_sprite_ext(spr_block_select,2,x,y,1*hudTimer,1*hudTimer,mousedir,color,1);
     }
 
 //Debug

@@ -61,7 +61,7 @@ timer = -1;
           <argument>
             <kind>1</kind>
             <string>///moving block
-if place_meeting(x,y-1,obj_player) and !started
+if (place_meeting(x,y-1,obj_player) /*or place_meeting(x+1,y,obj_player) or place_meeting(x-1,y,obj_player)*/) and !started
     then
     {
     if obj_player.dir = 1
@@ -161,8 +161,10 @@ with (collision3)
     }
     else
     {
-    draw_sprite_ext(spr_block_4,-1,x,y,1,1,0,c_white,timer/time);
+    draw_sprite_ext(spr_block_4,-1,x,y,1,1,0,c_white,timer/time);  
     }
+    
+    
 </string>
           </argument>
         </arguments>

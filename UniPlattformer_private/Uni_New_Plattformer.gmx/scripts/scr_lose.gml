@@ -1,3 +1,5 @@
+if instance_exists(obj_second_player){
+
 if obj_second_player.unlocked4 = true
     then
     {
@@ -39,3 +41,8 @@ if obj_second_player.unlocked4 = true
             }
         }
     }
+    }
+else
+{
+room_restart();
+}
