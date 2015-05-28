@@ -115,16 +115,9 @@ if place_meeting (x, y + vspeed, obj_parent_collision)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if direction &lt; 90 or direction &gt; 270
-    then
-    {
-    draw_sprite_ext(spr_flapping_enemy,-1,x,y,-1,1,0,-1,1);
-    }
-if direction &gt; 90 and direction &lt; 270
-    then
-    {
-    draw_sprite_ext(spr_flapping_enemy,-1,x,y,1,1,0,-1,1);
-    }
+            <string>
+draw_sprite_ext(spr_flapping_enemy,-1,x,y,-1*(sign(hspeed)),1,0,-1,1);
+
 </string>
           </argument>
         </arguments>

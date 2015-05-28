@@ -72,6 +72,18 @@ for(i = 1; i &lt; movement_speed ; i++)
         x += lengthdir_x(1,direction);
         y += lengthdir_y(1,direction);     
         }
+    }
+    
+///dir
+
+if x &gt; xprevious
+    then
+    {
+    dir = 1;
+    }
+else
+    {
+    dir = -1;
     }        
 
 </string>
@@ -96,16 +108,7 @@ for(i = 1; i &lt; movement_speed ; i++)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if direction &lt; 90 or direction &gt; 270
-    then
-    {
-    draw_sprite_ext(spr_flapping_enemy,-1,x,y,-1,1,0,-1,1);
-    }
-if direction &gt; 90 and direction &lt; 270
-    then
-    {
-    draw_sprite_ext(spr_flapping_enemy,-1,x,y,1,1,0,-1,1);
-    }
+            <string>draw_sprite_ext(spr_flapping_enemy,-1,x,y,-1*dir,1,0,-1,1);
 </string>
           </argument>
         </arguments>
