@@ -60,8 +60,65 @@ starty = y;
             <kind>1</kind>
             <string>///Movement
 
-//Kollision mit Block
-if (place_meeting(x+hspeed, y+vspeed, obj_parent_block)) or distance_to_point(startx,starty) &gt; distance 
+///Movement
+
+//reset speed each step
+
+h_speed = real_speed;
+v_speed = real_speed;
+
+//actual horizontal movement with collision
+     
+for(i = 1; i&lt;abs(v_spd); i++) 
+    {
+    move_check = i*sign(v_spd)
+    if place_meeting(x,y + move_check,obj_parent_collision) 
+        {
+        v_spd = -v_spd/2;
+        } 
+    else 
+    {
+    with (obj_parent_movement)
+        {
+        y -= other.move_check;      
+        }
+    }
+    }             
+     
+     
+     
+     /*
+for (i = 0; i &lt; h_speed; i += 1)
+    {
+    
+        
+repeat abs(real_speed) 
+    {
+    if !place_meeting(x + i*(sign(h_speed)), y, obj_parent_collision)
+        {
+        h_speed += 1;            
+        }
+    else
+        {
+        h_speed
+        }
+         
+    
+
+//actual vertical movement with collision
+
+repeat abs(v_speed)  
+    {
+    if place_meeting(x, y + v_speed, obj_parent_collision)
+            then
+            {
+            v_speed -= 1*(sign(v_speed));  
+            }
+        }
+
+//turn 180° when end of path is reached
+
+if distance_to_point(startx,starty) &gt; distance 
     then
     {
     speed *= -1;
