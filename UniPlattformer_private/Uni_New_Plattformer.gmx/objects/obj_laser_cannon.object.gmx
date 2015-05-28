@@ -29,7 +29,7 @@
 
 shooting_range = 3000;
 
-sub_image = irandom(sprite_get_number(spr_laser));
+sub_image = irandom(sprite_get_number(spr_lazorss));
 
 </string>
           </argument>
@@ -124,7 +124,7 @@ sub_image += 0.4;
             <kind>1</kind>
             <string>///Draw laser
 
-draw_sprite_ext (spr_laser,floor(sub_image),x,y,dist,1,image_angle,c_white,0.7);
+draw_sprite_ext (spr_lazorss,floor(sub_image),x,y,dist,1,image_angle,c_white,0.7);
 
 //draw
 

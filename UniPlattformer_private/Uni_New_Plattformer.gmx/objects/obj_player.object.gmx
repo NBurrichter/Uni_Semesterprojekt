@@ -138,6 +138,27 @@ invincible = false;
             <kind>1</kind>
             <string>x = floor(x);
 y = floor(y);
+
+if x &lt; 0{
+    x = 0;
+    h_speed = 0;
+    }
+if x &gt; room_width{
+    x = room_width
+    h_speed = 0;
+    }
+    
+if y &gt; room_height{
+    if instance_exists(obj_second_player)
+        then
+        {
+        obj_second_player.unlocked4 = false;
+        obj_second_player.unlocked3 = false;
+        obj_second_player.unlocked2 = false;
+        }
+    
+    scr_lose ();
+    }
 </string>
           </argument>
         </arguments>
@@ -904,7 +925,7 @@ if !invincible
           <argument>
             <kind>1</kind>
             <string>///Death
-
+/*
 obj_second_player.unlocked4 = false;
 obj_second_player.unlocked3 = false;
 obj_second_player.unlocked2 = false;

@@ -34,6 +34,12 @@ transparency = 1;
 //Jumping 
 h_jump = 15;
 v_jump = 20;
+jigglex = false;
+jiggley = false;
+maxtime = 10;
+jiggletimer = maxtime;
+bumpmax = 10;
+bumplimit = bumpmax;
 </string>
           </argument>
         </arguments>
@@ -62,6 +68,9 @@ if place_meeting(x,y-1,obj_player)
     {
     obj_player.v_speed = -v_jump;
     //obj_player.bumped = true;
+    jiggley = true;
+    jiggletimer = maxtime;
+    bumplimit--;
     }
 
 if place_meeting(x,y+1,obj_player)
@@ -69,6 +78,9 @@ if place_meeting(x,y+1,obj_player)
     {
     obj_player.v_speed = v_jump;
     //obj_player.bumped = true;
+    jiggley = true;
+    jiggletimer = maxtime;
+    bumplimit--;
     }    
     
 if place_meeting(x+1,y,obj_player) 
@@ -77,6 +89,9 @@ if place_meeting(x+1,y,obj_player)
     obj_player.h_speed = h_jump;
     obj_player.bumped = true;
     obj_player.x++;
+    jigglex = true;
+    jiggletimer = maxtime;
+    bumplimit--;
     }
     
 if place_meeting(x-1,y,obj_player) 
@@ -85,6 +100,23 @@ if place_meeting(x-1,y,obj_player)
     obj_player.h_speed = -h_jump;
     obj_player.bumped = true;
     obj_player.x--;
+    jigglex = true;
+    jiggletimer = maxtime;
+    bumplimit--;
+    }
+    
+jiggletimer--;
+if jiggletimer = 0
+    then
+    {
+    jigglex = false;
+    jiggley = false;
+    }
+
+if bumplimit = 0
+    then
+    {
+    instance_destroy();
     }
 </string>
           </argument>
@@ -133,7 +165,23 @@ instance_destroy ();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(spr_block_2,-1,x,y,1,1,0,c_white,transparency);
+            <string>if jigglex
+    then
+    {
+    draw_sprite_ext(spr_block_2,-1,x+random(2*jiggletimer)-1*jiggletimer,y,1,1,0,c_white,bumplimit/bumpmax);
+    }
+    else
+    {
+    if jiggley
+        then
+        {
+        draw_sprite_ext(spr_block_2,-1,x,y+random(2*jiggletimer)-1*jiggletimer,1,1,0,c_white,bumplimit/bumpmax);
+        }
+        else
+        {
+        draw_sprite_ext(spr_block_2,-1,x,y,1,1,0,c_white,bumplimit/bumpmax);
+        }
+    }
 </string>
           </argument>
         </arguments>
