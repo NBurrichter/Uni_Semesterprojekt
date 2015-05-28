@@ -233,6 +233,7 @@
     <room>rooms\room_level4</room>
     <room>rooms\room_level5</room>
     <room>rooms\room_level7</room>
+    <room>rooms\room_level8</room>
     <room>rooms\room_greenlight</room>
   </rooms>
   <constants number="2">

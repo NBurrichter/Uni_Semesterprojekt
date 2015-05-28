@@ -145,7 +145,12 @@ else
     {
     draw_sprite (sprite_index,1,x,y);
     }
-
+if obj_first_player_gui.moveto = levelnumber
+    then
+    {
+    draw_sprite (sprite_index,0,x,y);
+    }
+    
 draw_set_halign(fa_center);    
 draw_text(x,y,string(levelnumber));
 </string>
