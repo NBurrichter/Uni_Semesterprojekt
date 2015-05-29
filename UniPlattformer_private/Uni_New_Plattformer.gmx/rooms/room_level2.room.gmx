@@ -256,7 +256,6 @@
     <instance objName="obj_wall_block" x="2048" y="384" name="inst_BA7C43D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="2080" y="384" name="inst_28FB8C8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="1376" y="672" name="inst_C9308A90" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_patrolling_enemy" x="1408" y="773" name="inst_6D6E3DA6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_patrolling_enemy" x="1459" y="781" name="inst_52014CFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_patrolling_enemy" x="1503" y="788" name="inst_65B09EB1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_patrolling_enemy" x="1547" y="795" name="inst_7CC542F1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
@@ -270,7 +269,6 @@
     <instance objName="obj_patrolling_enemy" x="1890" y="859" name="inst_7C236B19" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_patrolling_enemy" x="1933" y="849" name="inst_B5A398A8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_patrolling_enemy" x="1975" y="838" name="inst_DC02442A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
-    <instance objName="obj_patrolling_enemy" x="2016" y="828" name="inst_1EB52E95" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_second_player" x="192" y="96" name="inst_04BB14C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="1408" y="704" name="inst_F3A67BCC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="1440" y="704" name="inst_AC44A047" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
