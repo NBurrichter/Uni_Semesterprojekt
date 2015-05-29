@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>8454143</colour>
   <showcolour>-1</showcolour>
-  <code>global.menuRoom = false;</code>
+  <code>global.menuRoom = false;
+//LAser - Hard</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>
   <clearDisplayBuffer>0</clearDisplayBuffer>
