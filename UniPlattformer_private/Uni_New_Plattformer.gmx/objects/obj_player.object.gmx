@@ -794,6 +794,49 @@ if sprite_index = spr_player
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_parent_damage_player">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Death
+
+if !invincible
+    then
+    {
+    alarm[0] = 20;
+    scr_lose ();
+    invincible = true;
+    if h_speed &lt; 0
+        then
+        {
+        h_speed = max_speed;
+        }
+    if h_speed &gt; 0
+        then
+        {
+        h_speed = -max_speed;
+        }
+    v_speed *= -1;
+    instance_create(x,y,obj_damage_unlock);
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_unlock_2">
       <action>
         <libid>1</libid>
@@ -836,49 +879,6 @@ if sprite_index = spr_player
 with (other)
     {
     instance_destroy();
-    }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_parent_damage_player">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Death
-
-if !invincible
-    then
-    {
-    alarm[0] = 20;
-    scr_lose ();
-    invincible = true;
-    if h_speed &lt; 0
-        then
-        {
-        h_speed = max_speed;
-        }
-    if h_speed &gt; 0
-        then
-        {
-        h_speed = -max_speed;
-        }
-    v_speed *= -1;
-    instance_create(x,y,obj_damage_unlock);
     }
 </string>
           </argument>
