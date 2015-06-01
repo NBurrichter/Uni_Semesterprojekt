@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///Defining variables
 
-shooting_range = 700;
+shooting_range = 3000;
 
 aiming_speed = 0.5;
 
@@ -110,7 +110,7 @@ if collision_line(x, y, x+lengthdir_x(dist,image_angle), y+lengthdir_y(dist,imag
             <kind>1</kind>
             <string>///Draw laser
 
-draw_sprite_ext (spr_laser,-1,x,y,dist,1,image_angle,c_white,0.7);
+draw_sprite_ext (spr_lazorss,-1,x,y,dist,1,image_angle,c_white,0.7);
 
 //draw
 
