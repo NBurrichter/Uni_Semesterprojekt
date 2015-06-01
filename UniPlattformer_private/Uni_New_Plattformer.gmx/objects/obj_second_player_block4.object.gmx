@@ -92,7 +92,7 @@ if timer = 0
     instance_destroy();
     }    
     
-if place_meeting(x+hspeed,y,obj_parent_block) or place_meeting(x+hspeed,y,obj_player)
+if place_meeting(x+hspeed,y,obj_parent_collision) or place_meeting(x+hspeed,y,obj_player)
     then
     {
     hspeed = -hspeed;
