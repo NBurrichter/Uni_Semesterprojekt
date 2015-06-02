@@ -31,6 +31,8 @@ direction = image_angle;
 
 speed = 4;
 
+dir = -1;
+
 </string>
           </argument>
         </arguments>
@@ -61,6 +63,7 @@ if place_meeting (x + hspeed, y, obj_parent_collision)
         then
         {
         hspeed = -hspeed;
+        dir *= -1;
         }
         
 if place_meeting (x, y + vspeed, obj_parent_collision)
@@ -116,7 +119,7 @@ if place_meeting (x, y + vspeed, obj_parent_collision)
           <argument>
             <kind>1</kind>
             <string>
-draw_sprite_ext(spr_flapping_enemy,-1,x,y,-1*(sign(hspeed)),1,0,-1,1);
+draw_sprite_ext(spr_flapping_enemy,-1,x,y,dir,1,0,-1,1);
 
 </string>
           </argument>

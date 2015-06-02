@@ -34,7 +34,6 @@ distance = 128;
 
 startx = x;
 starty = y;
-
 </string>
           </argument>
         </arguments>
@@ -79,11 +78,11 @@ for(i = 1; i &lt; movement_speed ; i++)
 if x &gt; xprevious
     then
     {
-    dir = 1;
+    dir = -1;
     }
 else
     {
-    dir = -1;
+    dir = 1;
     }        
 
 </string>
@@ -108,7 +107,7 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(spr_flapping_enemy,-1,x,y,-1*dir,1,0,-1,1);
+            <string>draw_sprite_ext(spr_flapping_enemy,-1,x,y,dir,1,0,-1,1);
 </string>
           </argument>
         </arguments>

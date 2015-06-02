@@ -36,8 +36,10 @@ y = point_of_interest.y;
 
 view_object = obj_camera_controller;
 
-view_hborder = view_wview/4;
+view_hborder = view_wview/3;
 view_vborder = view_hview/3;
+
+scrolling_border = 300;
 
 //////////////
 /*
@@ -54,11 +56,9 @@ point_of_interest = obj_player;
 
 x = point_of_interest.x;
 y = point_of_interest.y;
+*/
 
-horizontal_border = 300;
-vertical_border = 200;
-
-view_object = obj_camera_controller;
+//view_object = obj_camera_controller;
 </string>
           </argument>
         </arguments>
@@ -81,9 +81,8 @@ view_object = obj_camera_controller;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*
-///Move Camera
-
+            <string>///Move Camera
+/*
 //by default, look far in the direction the player is facing and slightly upward
 
 if instance_exists (point_of_interest)
@@ -134,10 +133,24 @@ y += (move_to_y - y)/camera_speed;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///moving camera
+            <string>///moving camera with mouse
 
 x = point_of_interest.x;
 y = point_of_interest.y;
+
+if view_xview+scrolling_border &gt; mouse_x 
+or mouse_x &gt; view_xview+view_wview-scrolling_border
+    then
+    {
+    view_xview += lerp(0,lengthdir_x (min(point_distance(x,y,mouse_x,mouse_y),200),point_direction(x, y, mouse_x, mouse_y)),0.1);
+    }
+
+if view_yview+scrolling_border &gt; mouse_y
+or mouse_y &gt; view_yview+view_hview-scrolling_border
+    then
+    {
+    view_yview += lerp(0,lengthdir_y (min(point_distance(x,y,mouse_x,mouse_y),200),point_direction(x, y, mouse_x, mouse_y)),0.1);
+    }
 </string>
           </argument>
         </arguments>
@@ -162,8 +175,8 @@ y = point_of_interest.y;
             <kind>1</kind>
             <string>///Parallax scrolling
 
-background_x[0] = view_xview[0];
-background_y[0] = view_yview[0];
+//background_x[0] = view_xview[0];
+//background_y[0] = view_yview[0];
 
 background_x[1] = view_xview[0]/2;
 background_y[1] = view_yview[0]/2;
@@ -219,18 +232,13 @@ draw_text (x,y+60,"camera.x: "+string(x));
 draw_text (x,y+75,"camera.y: "+string(y));
 
 draw_text (x,y+95,"screen_shake: "+string(global.screen_shake));
-
+*/
 draw_set_color (c_white);
-draw_rectangle (horizontal_border, vertical_border, room_width-horizontal_border, room_height-vertical_border, true );
+draw_rectangle ( view_xview+view_hborder, view_yview+view_vborder, view_xview+view_wview-view_hborder, view_yview+view_hview-view_vborder, true);
 
 draw_set_colour(c_red);
-
-var left_side = max(horizontal_border, x-horizontal_border);
-    var top_side = max(vertical_border, y-vertical_border);
-    var right_side = min(room_width-horizontal_border, x+horizontal_border);
-    var bottom_side = min (room_height-vertical_border, y+vertical_border);   
-
-draw_rectangle ( x-horizontal_border, y-vertical_border, x+horizontal_border, y+vertical_border, true);
+   
+draw_rectangle ( view_xview+scrolling_border, view_yview+scrolling_border, view_xview+view_wview-scrolling_border, view_yview+view_hview-scrolling_border, true);
 
 </string>
           </argument>
