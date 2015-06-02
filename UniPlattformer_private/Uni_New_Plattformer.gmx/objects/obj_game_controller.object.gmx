@@ -128,7 +128,7 @@ if global.menuRoom = false
             <kind>1</kind>
             <string>///Stop all sound
 
-audio_stop_all();
+//audio_stop_all();
 </string>
           </argument>
         </arguments>

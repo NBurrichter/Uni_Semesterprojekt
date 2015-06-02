@@ -57,6 +57,7 @@ if mouse_over = true
     then
     {
     room_goto(room_option_menu);
+    audio_play_sound (snd_select,1,false);
     }
 
 </string>

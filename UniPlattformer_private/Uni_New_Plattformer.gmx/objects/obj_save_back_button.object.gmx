@@ -70,7 +70,7 @@ if mouse_over = true
         ini_write_real("controls", "down", keyboard_get_map(global.key_down));
         ini_write_real("controls", "left", keyboard_get_map(global.key_left));
         ini_write_real("controls", "right", keyboard_get_map(global.key_right));
-        ini_close();
+        ini_close();     
         }
     else
     if room == room_option_video
@@ -93,6 +93,7 @@ if mouse_over = true
         ini_close();
         }
     room_goto(room_option_menu);
+    audio_play_sound (snd_select,1,false);
     }
 
     

@@ -7,6 +7,11 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\snd_hoplaaaa</sound>
+    <sound>sound\snd_level_song</sound>
+    <sound>sound\snd_select</sound>
+    <sound>sound\snd_jump</sound>
+    <sound>sound\snd_noise</sound>
+    <sound>sound\snd_build_blocks</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="group_first_player">
@@ -153,6 +158,7 @@
     <objects name="group_game_controller">
       <object>objects\obj_game_controller</object>
       <object>objects\obj_camera_controller</object>
+      <object>objects\obj_music_controller</object>
       <object>objects\obj_particle_controller</object>
       <object>objects\obj_pause</object>
       <object>objects\obj_level_exit</object>
