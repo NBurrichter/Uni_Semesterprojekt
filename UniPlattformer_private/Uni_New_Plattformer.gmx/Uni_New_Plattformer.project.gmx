@@ -213,6 +213,7 @@
         </objects>
       </objects>
       <objects name="moving_enemies">
+        <object>objects\obj_bouncing_enemy_mother</object>
         <object>objects\obj_patrolling_enemy</object>
         <object>objects\obj_bouncing_enemy</object>
       </objects>
