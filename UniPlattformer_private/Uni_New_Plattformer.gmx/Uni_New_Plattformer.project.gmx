@@ -19,6 +19,7 @@
       <sprite>sprites\spr_player_wall_up</sprite>
       <sprite>sprites\spr_player_wall_down</sprite>
       <sprite>sprites\spr_player_gui</sprite>
+      <sprite>sprites\spr_player_gui_back</sprite>
     </sprites>
     <sprites name="group_second_player">
       <sprite>sprites\spr_playertwo</sprite>
@@ -51,6 +52,7 @@
         <sprite>sprites\spr_button</sprite>
         <sprite>sprites\spr_menu_button</sprite>
         <sprite>sprites\spr_key_button</sprite>
+        <sprite>sprites\spr_level_button</sprite>
       </sprites>
       <sprites name="group_level_exits">
         <sprite>sprites\spr_level_exit_actecs</sprite>
@@ -88,6 +90,7 @@
     <background>background\background_tutorial_1</background>
     <background>background\background_tutorial_2</background>
     <background>background\background_tutorial_jump</background>
+    <background>background\background_title</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">

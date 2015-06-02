@@ -112,7 +112,7 @@ for (var i = 0; i &lt; 4; i ++)
             <string>///Draw laser
 for (var i = 0; i &lt; 4; i ++)
     {
-    draw_sprite_ext (spr_laser,0,x,y,dist[i],1,image_angle+(90*i),c_white,1);
+    draw_sprite_ext (spr_lazorss,0,x,y,dist[i],1,image_angle+(90*i),c_white,1);
     }
 
 //draw

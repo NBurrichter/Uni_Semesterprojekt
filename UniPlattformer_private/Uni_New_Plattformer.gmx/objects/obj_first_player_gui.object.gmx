@@ -38,6 +38,10 @@ movey[0] = 0;
 moveto = 1;
 //Das LEvel zu dem er sich grad bewegt
 onthemoveto = 1;
+
+image_speed = 0.25
+
+mouse_over = false;
 </string>
           </argument>
         </arguments>
@@ -91,18 +95,24 @@ if (x = movex[onthemoveto]) and (y = movey[onthemoveto])
       
     }
     
-if keyboard_check_pressed(global.key_left)
+if keyboard_check_pressed(global.key_left) and !mouse_over
     then
     {
     if moveto &gt; 1
         moveto--;
     }
     
-if keyboard_check_pressed(global.key_right)
+if keyboard_check_pressed(global.key_right) and !mouse_over
     then
     {
     if moveto &lt; 10
     moveto++;
+    }
+    
+if vspeed &lt; 0{
+    sprite_index = spr_player_gui_back;
+    }else{
+    sprite_index = spr_player_gui;
     }
 </string>
           </argument>
