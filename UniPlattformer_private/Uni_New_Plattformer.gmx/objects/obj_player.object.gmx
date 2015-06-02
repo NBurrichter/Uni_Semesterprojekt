@@ -961,7 +961,7 @@ if !invincible
     {
     draw_sprite_ext(sprite_index,image_index,x,y,dir,1,0,-1,1);
     }
-    else
+else
     {
     draw_sprite_ext(sprite_index,image_index,x,y,dir,1,0,-1,flicker);
     flicker *= -1;

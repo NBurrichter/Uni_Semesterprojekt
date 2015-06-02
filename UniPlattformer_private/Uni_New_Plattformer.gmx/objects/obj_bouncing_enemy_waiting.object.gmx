@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>//defining variables
 
-wake_up_radius = 500;
+wake_up_radius = 300;
 
 sleeping = true;
 
@@ -60,7 +60,7 @@ dir = -1;
 if sleeping = true
     then
     {
-    if point_distance(x, y, obj_player.x, obj_player.y) &lt; wake_up_radius
+    if obj_player.x &gt; x-wake_up_radius
         then
         {
         sleeping = false;
@@ -136,10 +136,11 @@ instance_destroy ();
             <kind>1</kind>
             <string>///draw with correct image_angle
 
+scr_draw_trail(8,sprite_width,c_white,-1,true,0.3);
 draw_sprite_ext(spr_flapping_enemy,-1,x,y,dir,1,0,-1,1);
 
-
-draw_circle (x,y,wake_up_radius,true);
+draw_set_color (c_red);
+draw_line (x-wake_up_radius,y,x-wake_up_radius,y+30);
 
 </string>
           </argument>
