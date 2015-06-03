@@ -6,19 +6,16 @@
   <datafiles number="1" name="datafiles"/>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\snd_hoplaaaa</sound>
     <sounds name="group_menu_sounds">
       <sounds name="group_button">
         <sound>sound\snd_select</sound>
-        <sound>sound\snd_confirm</sound>
       </sounds>
-    </sounds>
-    <sounds name="group_level_music">
-      <sound>sound\snd_level_song</sound>
+      <sound>sound\snd_level_select_music</sound>
     </sounds>
     <sounds name="group_level_sounds">
-      <sound>sound\snd_jump</sound>
       <sound>sound\snd_build_blocks</sound>
+      <sound>sound\snd_jump_blocks</sound>
+      <sound>sound\snd_jump</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">

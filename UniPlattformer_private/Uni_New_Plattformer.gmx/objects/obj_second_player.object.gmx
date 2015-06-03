@@ -54,8 +54,25 @@ decay = 0.2;
 time = 0;
 
 un_maxtime = 1;
-un_decay = 0.2;
+un_decay = 1;
 un_time = 0;
+
+/// select mode
+xfactor = screen_width/1600;
+yfactor = screen_height/900;
+select_mode_x = x;
+select_mode_y = y;
+
+// custom speed variables
+/*
+v_speed = 0;
+h_speed = 0;
+
+rotation_force = 0;
+rotation_decay = 0;
+rotation = 0;
+rotation_decay_time = 10;
+*/
 </string>
           </argument>
         </arguments>
@@ -78,8 +95,33 @@ un_time = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = floor(x);
-y = floor(y);
+            <string>///angle etc: for drawing
+
+own_speed = point_distance (xprevious, yprevious, x, y);
+
+if own_speed &gt; 6
+    then
+    {
+    direction = point_direction(xprevious, yprevious, x, y);
+    }
+
+
+///rolling in the direction hes moving in and then fading out
+/*
+rotation_force += floor(h_speed);
+
+rotation_decay = ceil(abs(rotation_force/rotation_decay_time));
+
+if abs(rotation_force) &gt; 0
+    then
+    {
+    rotation_force -= rotation_decay*sign(rotation_force);
+    }
+
+rotation += rotation_force;
+*/
+
+image_angle = direction;
 </string>
           </argument>
         </arguments>
@@ -102,7 +144,7 @@ y = floor(y);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Selectmode: Wechsel zwische Auswahlrad und normaler bewegung
+            <string>///Selectmode: Wechsel zwische Auswahlrad und normaler bewegung
 if mouse_check_button_pressed(mb_right)
     then
     {
@@ -110,6 +152,8 @@ if mouse_check_button_pressed(mb_right)
     hudTimer = 0;
     mouseArea = 0;
     y++;
+    select_mode_x = x;
+    select_mode_y = y;
     }
 
 //Bestimmen der Position der Mouse in relation zum zweiten Spieler sprite
@@ -141,13 +185,6 @@ if mousePointer &gt;= 135 and mousePointer &lt; 255 and unlocked4
     }    
 }
  
-//Beenden des select Modes 
-if mouse_check_button_released(mb_right)
-    then
-    {     
-    selectMode = false;
-    }
-         
 ///mouse_position in grid - moves only if not in select mode    
 if !selectMode then
     {
@@ -168,6 +205,16 @@ if un_time &gt; 0
     }else{
     un_left_pressed = false;
     }
+
+//Beenden des select Modes 
+if mouse_check_button_released(mb_right)
+    then
+    {    
+    window_mouse_set((select_mode_x-view_xview[0])*xfactor,(select_mode_y-view_yview[0])*yfactor);
+    selectMode = false;
+    }
+         
+
 </string>
           </argument>
         </arguments>
@@ -250,7 +297,7 @@ if instance_number (obj_second_player_block4) &gt; 3
         instance_destroy();
         }
     }
-
+//play sound
 audio_play_sound (snd_build_blocks,1,false);
 </string>
           </argument>
@@ -332,7 +379,7 @@ switch (mouseArea)
 
 if !left_pressed and !un_left_pressed
     {
-    draw_self();
+    draw_sprite_ext(spr_playertwo, 0 ,x ,y ,1 + own_speed/100 ,max(0, 1-own_speed/100) ,image_angle ,c_white, 1);
     }
     
 if un_left_pressed{
@@ -341,7 +388,7 @@ if un_left_pressed{
     
 if left_pressed
     {
-    draw_sprite_ext(spr_playertwo,0,x,y,1+time,1+time,0,-1,1);
+    draw_sprite_ext(spr_playertwo,0,x,y,1+(time/1.5),1+(time/1.5),0,-1,1);
     }
     
 //Hud creation Timer
@@ -397,12 +444,6 @@ if selectMode
        mousedir = point_direction(x, y, mouse_x, mouse_y);
        draw_sprite_ext(spr_block_select,2,x,y,1*hudTimer,1*hudTimer,mousedir,color,1);
     }
-
-//Debug
-/*
-draw_text (x,y+20,"Pointer: "+string(mousePointer));
-draw_text (x,y+30,"Mouse Area: "+string(mouseArea));
-*/
 </string>
           </argument>
         </arguments>

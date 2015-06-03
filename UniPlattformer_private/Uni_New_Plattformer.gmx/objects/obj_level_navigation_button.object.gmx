@@ -88,7 +88,7 @@ if mouse_over = true
     then
     {
     room_goto(level);
-    audio_play_sound (snd_confirm,1,false);
+    //audio_play_sound (snd_confirm,1,false);
     }
 </string>
           </argument>
