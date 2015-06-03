@@ -88,24 +88,37 @@
     </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\back_map</background>
-    <background>background\back_splash</background>
-    <background>background\back_main_menu</background>
-    <background>background\background_city_sky</background>
-    <background>background\background_city_layer_one</background>
-    <background>background\background_city_layer_two</background>
-    <background>background\background_city_layer_three</background>
-    <background>background\background_city_layer_four</background>
-    <background>background\background_city_layer_five</background>
-    <background>background\background_city_layer_six</background>
-    <background>background\background_city_layer_seven</background>
     <background>background\background_arrow</background>
     <background>background\background_tutorial_1</background>
     <background>background\background_tutorial_2</background>
     <background>background\background_tutorial_jump</background>
-    <background>background\background_title</background>
-    <background>background\background_tileset</background>
-    <background>background\bg_mountains_tiles</background>
+    <backgrounds name="group_tiles">
+      <background>background\bg_temple_tiles</background>
+      <background>background\bg_temple_pillar</background>
+      <background>background\background_tileset</background>
+      <background>background\bg_grass_tile</background>
+    </backgrounds>
+    <backgrounds name="group_backgrounds">
+      <backgrounds name="city">
+        <background>background\background_city_sky</background>
+        <background>background\background_city_layer_two</background>
+        <background>background\background_city_layer_one</background>
+        <background>background\background_city_layer_three</background>
+        <background>background\background_city_layer_five</background>
+        <background>background\background_city_layer_six</background>
+        <background>background\background_city_layer_seven</background>
+        <background>background\background_city_layer_four</background>
+      </backgrounds>
+      <backgrounds name="mountain">
+        <background>background\bg_mountain_1</background>
+      </backgrounds>
+    </backgrounds>
+    <backgrounds name="menu">
+      <background>background\back_splash</background>
+      <background>background\back_main_menu</background>
+      <background>background\back_map</background>
+      <background>background\background_title</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
