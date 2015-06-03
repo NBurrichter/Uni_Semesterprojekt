@@ -29,7 +29,7 @@
 
 switch (room)
     {
-    case room_level_2: audio_stop_sound (snd_level_song);
+    case room_level_select: audio_stop_sound (snd_level_select_music);
     default: 
     }
 
@@ -59,7 +59,7 @@ switch (room)
 
 switch (room)
     {
-    case room_level_2: audio_play_sound (snd_level_song,1,true);
+    case room_level_select: audio_play_sound (snd_level_select_music,1,true);
     default: 
     }
 </string>

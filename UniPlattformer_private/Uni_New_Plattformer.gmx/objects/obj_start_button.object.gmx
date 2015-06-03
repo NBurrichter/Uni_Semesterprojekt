@@ -57,7 +57,7 @@ on_off = 1;
 if keyboard_check_pressed (vk_anykey) or mouse_check_button_pressed (mb_any) or gamepad_button_check_pressed(scr_gamepad_get_first_connected(),gp_start)
     then
     {
-    audio_play_sound (snd_confirm,1,false);
+    //audio_play_sound (snd_confirm,1,false);
     room_goto(room_main_menu);
     }
 
