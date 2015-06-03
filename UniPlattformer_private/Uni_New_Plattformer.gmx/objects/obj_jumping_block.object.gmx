@@ -65,6 +65,7 @@ if place_meeting(x,y-1,obj_player)
     then
     {
     obj_player.v_speed = -v_jump;
+    audio_play_sound (snd_jump,1,false);
     //obj_player.bumped = true;
     jiggley = true;
     jiggletimer = maxtime;
@@ -74,6 +75,7 @@ if place_meeting(x,y+1,obj_player)
     then
     {
     obj_player.v_speed = v_jump;
+    audio_play_sound (snd_jump,1,false);
     //obj_player.bumped = true;
     jiggley = true;
     jiggletimer = maxtime;
@@ -83,6 +85,7 @@ if place_meeting(x+1,y,obj_player)
     then
     {
     obj_player.h_speed = h_jump;
+    audio_play_sound (snd_jump,1,false);
     obj_player.bumped = true;
     obj_player.x++;
     jigglex = true;
@@ -93,6 +96,7 @@ if place_meeting(x-1,y,obj_player)
     then
     {
     obj_player.h_speed = -h_jump;
+    audio_play_sound (snd_jump,1,false);
     obj_player.bumped = true;
     obj_player.x--;
     jigglex = true;

@@ -19,7 +19,6 @@
     <sounds name="group_level_sounds">
       <sound>sound\snd_jump</sound>
       <sound>sound\snd_build_blocks</sound>
-      <sound>sound\snd_noise</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
