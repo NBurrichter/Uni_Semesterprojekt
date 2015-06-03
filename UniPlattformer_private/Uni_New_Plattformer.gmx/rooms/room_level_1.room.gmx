@@ -396,11 +396,10 @@
     <tile bgName="background_tutorial_jump" x="2880" y="544" w="32" h="32" xo="32" yo="0" id="10000048" name="inst_0E88CCCC" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background_tutorial_jump" x="2880" y="512" w="32" h="32" xo="32" yo="0" id="10000049" name="inst_1917141F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background_tutorial_jump" x="2880" y="480" w="32" h="32" xo="32" yo="0" id="10000050" name="inst_57A5F98D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="background_tutorial_jump" x="2912" y="576" w="64" h="64" xo="32" yo="128" id="10000054" name="inst_E9DC8C6D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background_tutorial_jump" x="2912" y="640" w="32" h="32" xo="96" yo="128" id="10000055" name="inst_1F309C1F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="background_tutorial_jump" x="2976" y="576" w="32" h="32" xo="96" yo="128" id="10000056" name="inst_5E1261C0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background_tutorial_jump" x="2912" y="608" w="32" h="32" xo="96" yo="128" id="10000056" name="inst_5E1261C0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background_tutorial_jump" x="2944" y="640" w="32" h="32" xo="96" yo="128" id="10000057" name="inst_80940A6F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="background_tutorial_jump" x="2976" y="608" w="32" h="32" xo="96" yo="128" id="10000058" name="inst_8A5B9669" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background_tutorial_jump" x="2912" y="576" w="32" h="32" xo="96" yo="128" id="10000058" name="inst_8A5B9669" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background_tutorial_jump" x="2976" y="640" w="32" h="32" xo="96" yo="128" id="10000059" name="inst_83F42CE3" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background_tutorial_jump" x="2784" y="608" w="32" h="32" xo="96" yo="224" id="10000060" name="inst_653CBFA0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background_tutorial_jump" x="2752" y="608" w="32" h="32" xo="96" yo="224" id="10000061" name="inst_51ECD3A5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -453,6 +452,7 @@
     <tile bgName="background_tutorial_jump" x="2720" y="640" w="32" h="32" xo="96" yo="160" id="10000115" name="inst_0083ACAD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background_tutorial_jump" x="2752" y="640" w="32" h="32" xo="96" yo="160" id="10000116" name="inst_D74FC064" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background_tutorial_jump" x="2784" y="640" w="32" h="32" xo="96" yo="160" id="10000117" name="inst_FA893292" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background_tutorial_jump" x="2944" y="576" w="64" h="64" xo="32" yo="32" id="10000218" name="inst_762CD590" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

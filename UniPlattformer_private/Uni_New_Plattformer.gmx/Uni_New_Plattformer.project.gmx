@@ -105,6 +105,8 @@
     <background>background\background_tutorial_2</background>
     <background>background\background_tutorial_jump</background>
     <background>background\background_title</background>
+    <background>background\background_tileset</background>
+    <background>background\bg_mountains_tiles</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">

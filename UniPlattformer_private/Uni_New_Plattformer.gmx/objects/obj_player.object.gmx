@@ -228,7 +228,9 @@ else
 if on_ground = false
     then
     {
+    /*
     global.screen_shake = 1*(round(v_speed-13)); // depending on height
+    */
     part_particles_create(global.particle_system, x + (sprite_width/2)*(-dir), y + sprite_height/2, global.particle_dust, irandom_range(1,3));
     part_particles_create(global.particle_system, x + (sprite_width/2)*(dir), y + sprite_height/2, global.particle_dust, irandom_range(1,3));
     on_ground = true;
@@ -996,14 +998,14 @@ draw_set_colour (c_black);
 
 //scr_gamepad_debug_message();
 
-
+/*
 draw_text (x,y+25,"h_speed: "+string(obj_player.h_speed));
 
 draw_text (x,y+40,"grav: "+string(obj_player.grav));
 draw_text (x,y-5,"v_speed: "+string(obj_player.v_speed));
 
 draw_text (x,y+85,"screen_shake: "+string(global.screen_shake));
-
+*/
 
 
 </string>

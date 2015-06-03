@@ -45,6 +45,17 @@ unlocked3 = false;
 unlocked4 = false;
 
 color = c_white;
+
+left_pressed = false;
+un_left_pressed = false;
+
+maxtime = 1;
+decay = 0.2;
+time = 0;
+
+un_maxtime = 1;
+un_decay = 0.2;
+un_time = 0;
 </string>
           </argument>
         </arguments>
@@ -143,6 +154,20 @@ if !selectMode then
     x = mouse_x//floor(mouse_x/32)*32;
     y = mouse_y//floor(mouse_y/32)*32;
     }
+
+if time &gt; 0
+    {
+    time -= decay;
+    }else{
+    left_pressed = false;
+    }
+    
+if un_time &gt; 0
+    {
+    un_time -= un_decay;
+    }else{
+    un_left_pressed = false;
+    }
 </string>
           </argument>
         </arguments>
@@ -167,10 +192,18 @@ if !selectMode then
             <kind>1</kind>
             <string>///create the different blocks  
 //1 jumping 3
+
+if place_meeting(x,y,all){
+    un_left_pressed = true;
+    un_time = un_maxtime;
+    }
+
 if !place_meeting (x,y,all) and mouseArea = 1
     then
     {
     block = instance_create (x,y,obj_second_player_block2);
+    left_pressed = true;
+    time = maxtime;
     }
 
 if instance_number (obj_second_player_block2) &gt; 3
@@ -187,6 +220,8 @@ if !place_meeting (x,y,all) and mouseArea = 2
     then
     {
     block = instance_create (x,y,obj_second_player_block3);
+    left_pressed = true;
+    time = maxtime;
     }
 
 if instance_number (obj_second_player_block3) &gt; 1
@@ -203,6 +238,8 @@ if !place_meeting (x,y,all) and mouseArea = 3
     then
     {
     block = instance_create (x,y,obj_second_player_block4);
+    left_pressed = true;
+    time = maxtime;
     }
 
 if instance_number (obj_second_player_block4) &gt; 3
@@ -240,6 +277,8 @@ if !place_meeting (x,y,all) and mouseArea = 0
     then
     {
     block = instance_create (x,y,obj_second_player_block1);
+    left_pressed = true;
+    time = maxtime;
     }
 if instance_number (obj_second_player_block1) &gt; 9
     then
@@ -289,8 +328,20 @@ switch (mouseArea)
     scr_draw_trail(8,sprite_width/2,c_green,-1,true,0.5); break;
     }
 
-draw_self();
-
+if !left_pressed and !un_left_pressed
+    {
+    draw_self();
+    }
+    
+if un_left_pressed{
+    draw_sprite_ext(spr_playertwo,0,x+random(8)-4,y+random(2)-1,1,1,0,-1,1);
+    }    
+    
+if left_pressed
+    {
+    draw_sprite_ext(spr_playertwo,0,x,y,1+time,1+time,0,-1,1);
+    }
+    
 //Hud creation Timer
 if hudTimer &lt; maxTimer
     then
