@@ -139,6 +139,7 @@ instance_destroy ();
 scr_draw_trail(8,sprite_width,c_white,-1,true,0.3);
 draw_sprite_ext(spr_flapping_enemy,-1,x,y,dir,1,0,-1,1);
 
+/*
 draw_set_color (c_red);
 draw_line (x-wake_up_radius,y,x-wake_up_radius,y+30);
 

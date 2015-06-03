@@ -213,6 +213,8 @@ if instance_number (obj_second_player_block4) &gt; 3
         instance_destroy();
         }
     }
+
+audio_play_sound (snd_build_blocks,1,false);
 </string>
           </argument>
         </arguments>
