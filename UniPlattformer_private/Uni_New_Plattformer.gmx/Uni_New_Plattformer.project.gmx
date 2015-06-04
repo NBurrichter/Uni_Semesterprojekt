@@ -141,6 +141,7 @@
         <script>scripts\scr_particle_rocketsmoke_initialize.gml</script>
         <script>scripts\scr_particle_laser_initialize.gml</script>
         <script>scripts\scr_particle_dust_initialize.gml</script>
+        <script>scripts\scr_particle_block_initialize.gml</script>
       </scripts>
       <script>scripts\scr_draw_trail.gml</script>
     </scripts>
@@ -181,10 +182,6 @@
       <object>objects\obj_music_controller</object>
       <object>objects\obj_particle_controller</object>
       <object>objects\obj_pause</object>
-      <object>objects\obj_level_exit</object>
-      <object>objects\obj_level_exit_front</object>
-      <object>objects\obj_level_exit_actecs</object>
-      <object>objects\obj_level_exit_front_actecs</object>
       <objects name="group_menu_objects">
         <objects name="group_buttons">
           <objects name="group_start_screen_buttons">
@@ -220,6 +217,12 @@
             </objects>
           </objects>
         </objects>
+      </objects>
+      <objects name="group_level_exit">
+        <object>objects\obj_level_exit_actecs</object>
+        <object>objects\obj_level_exit_front_actecs</object>
+        <object>objects\obj_level_exit_front</object>
+        <object>objects\obj_level_exit</object>
       </objects>
     </objects>
     <objects name="group_parent_objects">

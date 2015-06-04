@@ -32,6 +32,7 @@ global.particle_system = part_system_create ();
 scr_particle_laser_initialize ();
 scr_particle_dust_initialize ();
 scr_particle_rocketsmoke_initialize ();
+scr_particle_block_initialize ();
 </string>
           </argument>
         </arguments>
@@ -59,6 +60,7 @@ scr_particle_rocketsmoke_initialize ();
 part_type_destroy (global.particle_laser);
 part_type_destroy (global.particle_dust);
 part_type_destroy (global.particle_rocketsmoke);
+part_type_destroy (global.particle_block);
 
 part_system_destroy (global.particle_system);
 </string>

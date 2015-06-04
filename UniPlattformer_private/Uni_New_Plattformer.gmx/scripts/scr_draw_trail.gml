@@ -6,6 +6,7 @@ from.*/
 var Length, Width, Color, Sprite, Slim, Alpha, AlphaT, Texture, Dir, Min, Height;
 
 //Preparing variables
+
 Length = argument0; //How many previous coordinates will use the trail
 Width = argument1; //How wide will the trail be
 Color = argument2; //Which color will be used to tint the trail
@@ -13,7 +14,7 @@ Sprite = argument3; //Which sprite's texture must be used for the trail. Must ha
 Slim = argument4; //Whether the trail will slim down at the end
 Alpha = argument5; //The alpha to draw the trail with (0-1), optional
 
-ArrayTrail[0,0] = x;
+ArrayTrail[0,0] = x;//+ lengthdir_x
 ArrayTrail[0,1] = y;
 
 Height = array_height_2d(ArrayTrail); //number of entries in the array
