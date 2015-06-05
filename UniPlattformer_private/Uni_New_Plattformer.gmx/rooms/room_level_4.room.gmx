@@ -746,6 +746,14 @@
     <instance objName="obj_wall_block" x="1568" y="1856" name="inst_FA19FB9F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="1568" y="1888" name="inst_4C090BE3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_jumping_block" x="1568" y="1792" name="inst_0B2DF5F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_block" x="576" y="1920" name="inst_CC162E74" locked="0" code="" scaleX="62" scaleY="8" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_block" x="1760" y="1952" name="inst_C3A3C589" locked="0" code="" scaleX="22" scaleY="4" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_block" x="2368" y="1920" name="inst_4775FFE3" locked="0" code="" scaleX="16" scaleY="8" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_block" x="3040" y="1600" name="inst_654B7DA8" locked="0" code="" scaleX="26" scaleY="24" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_block" x="3168" y="1984" name="inst_E7BC38F9" locked="0" code="" scaleX="36" scaleY="8" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_block" x="3872" y="1600" name="inst_6FFE2F8D" locked="0" code="" scaleX="52" scaleY="24" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_block" x="4096" y="2016" name="inst_1279F869" locked="0" code="" scaleX="36" scaleY="10" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_block" x="4320" y="1088" name="inst_5F4F91E4" locked="0" code="" scaleX="22" scaleY="10" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background_tutorial_2" x="3040" y="1024" w="256" h="192" xo="0" yo="0" id="10000118" name="inst_CFA22B3E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

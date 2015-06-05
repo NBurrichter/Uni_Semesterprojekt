@@ -71,8 +71,8 @@ if collision_line(x, y, x+lengthdir_x(dist,image_angle), y+lengthdir_y(dist,imag
         obj_player.alarm[0] = 20;
         scr_lose ();
         obj_player.invincible = true;
-        obj_player.h_speed *= -1;
-        obj_player.v_speed *= -1;
+        //obj_player.h_speed *= -1;
+        //obj_player.v_speed *= -1;
         instance_create(obj_player.x,obj_player.y,obj_damage_unlock)
         }
     }

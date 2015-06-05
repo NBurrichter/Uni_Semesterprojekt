@@ -52,7 +52,7 @@ decay = 0.2;
 time = 0;
 
 un_maxtime = 1;
-un_decay = 1;
+un_decay = 0.1;
 un_time = 0;
 
 /// select mode
@@ -433,7 +433,7 @@ if !left_pressed and !un_left_pressed
     
 if un_left_pressed
     {
-    draw_sprite_ext(spr_playertwo,0,x+random(8)-4,y+random(2)-1, 1 + max(0,(own_speed-6)/100), max(0.3, 1 - (own_speed-6)/100), image_angle, c_white,1);
+    draw_sprite_ext(spr_playertwo,0,x+random(10)-5,y+random(2)-1, 1 + max(0,(own_speed-6)/100), max(0.3, 1 - (own_speed-6)/100), image_angle, c_white,1);
     } 
 
          
