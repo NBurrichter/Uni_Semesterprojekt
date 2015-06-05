@@ -197,40 +197,6 @@ if mouse_check_button_released(mb_right)
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///stumble when space is occupied
-
-
-    if place_meeting(x,y,all)
-        then
-        {
-        if mouse_check_button_pressed (mb_left)
-            {
-            un_left_pressed = true;
-            un_time = un_maxtime;
-            }
-        }
-    
-
-</string>
-          </argument>
-        </arguments>
-      </action>
     </event>
     <event eventtype="6" enumb="53">
       <action>
@@ -250,8 +216,15 @@ if mouse_check_button_released(mb_right)
           <argument>
             <kind>1</kind>
             <string>///create the different blocks  
+ if place_meeting(x,y,all)
+        then
+        {
+        if !place_meeting(x,y,obj_second_player_block1){
+            un_left_pressed = true;
+            un_time = un_maxtime;
+            }
+        }
 //1 jumping 3
-
 if mouseArea = 1
     {
 if !place_meeting (x,y,all)
@@ -329,6 +302,15 @@ if instance_number (obj_second_player_block4) &gt; 3
         instance_destroy();
         }
     }
+    
+///stumble when space is occupied
+
+
+
+        
+    
+
+    
 //play sound
 audio_play_sound (snd_build_blocks,1,false);
 </string>
@@ -430,20 +412,16 @@ if !left_pressed and !un_left_pressed
     draw_sprite_ext(spr_playertwo, 0 ,x ,y ,1 + max(0,(own_speed-6)/100), max(0.3, 1 - (own_speed-6)/100), image_angle, c_white, 1);
     }
 
-    
-if un_left_pressed
-    {
-    draw_sprite_ext(spr_playertwo,0,x+random(10)-5,y+random(2)-1, 1 + max(0,(own_speed-6)/100), max(0.3, 1 - (own_speed-6)/100), image_angle, c_white,1);
-    } 
-
-         
 if left_pressed
     {
     draw_sprite_ext(spr_playertwo,0,x,y, (1+(time/1.5)) + max(0,(own_speed-6)/100), max((1+(time/1.5))*0.1, (1+(time/1.5)) - (own_speed-6)/100) , image_angle, c_white, 1);  
     }
-        
-   
     
+if un_left_pressed and !left_pressed
+    {
+    draw_sprite_ext(spr_playertwo,0,x+random(10)-5,y+random(2)-1, 1 + max(0,(own_speed-6)/100), max(0.3, 1 - (own_speed-6)/100), image_angle, c_white,1);
+    } 
+
 //Hud creation Timer
 if hudTimer &lt; maxTimer
     then
@@ -498,9 +476,11 @@ if selectMode
        draw_sprite_ext(spr_block_select,2,x,y,1*hudTimer,1*hudTimer,mousedir,color,1);
     }
     
+/*
 draw_text (x,y+33,place_meeting(x,y,all));
 draw_text (x,y+48,un_left_pressed);
 
+draw_text (x,y+58,left_pressed);
 </string>
           </argument>
         </arguments>

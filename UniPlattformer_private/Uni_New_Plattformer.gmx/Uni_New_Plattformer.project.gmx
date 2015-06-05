@@ -16,6 +16,7 @@
       <sound>sound\snd_build_blocks</sound>
       <sound>sound\snd_jump_blocks</sound>
       <sound>sound\snd_jump</sound>
+      <sound>sound\snd_unlocked</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">

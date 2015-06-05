@@ -1000,7 +1000,6 @@ draw_set_colour (c_black);
 /*
 draw_text (x,y+25,"h_speed: "+string(obj_player.h_speed));
 
-*/
 draw_text (x,y+40,"grav: "+string(obj_player.grav));
 draw_text (x,y-5,"v_speed: "+string(obj_player.v_speed));
 
