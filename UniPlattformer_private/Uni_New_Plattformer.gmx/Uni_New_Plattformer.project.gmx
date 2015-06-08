@@ -11,6 +11,7 @@
         <sound>sound\snd_select</sound>
       </sounds>
       <sound>sound\snd_level_select_music</sound>
+      <sound>sound\snd_oberschenkelmuskenl</sound>
     </sounds>
     <sounds name="group_level_sounds">
       <sound>sound\snd_build_blocks</sound>
@@ -92,7 +93,7 @@
     <background>background\background_tutorial_jump</background>
     <backgrounds name="group_tiles">
       <background>background\bg_temple_tiles</background>
-      <background>background\background23</background>
+      <background>background\bg_grass_dark</background>
       <background>background\bg_temple_pillar</background>
       <background>background\background_tileset</background>
       <background>background\bg_grass_tile</background>
@@ -221,6 +222,7 @@
               <objects name="group_level_select_buttons">
                 <object>objects\obj_exit_level_select_button</object>
                 <object>objects\obj_level_navigation_button</object>
+                <object>objects\obj_secret</object>
               </objects>
             </objects>
           </objects>
