@@ -15,4 +15,3 @@ part_type_blend(global.particle_block,1);
 part_type_life(global.particle_block,30,30);
 }
 
-

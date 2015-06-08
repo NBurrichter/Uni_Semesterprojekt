@@ -58,8 +58,6 @@ un_time = 0;
 /// select mode
 xfactor = screen_width/1600;
 yfactor = screen_height/900;
-select_mode_x = x;
-select_mode_y = y;
 
 // custom speed variables
 /*
@@ -123,16 +121,22 @@ image_angle = lerp(image_angle, direction, max(0.1,min(1,0.1*own_speed)));
           <argument>
             <kind>1</kind>
             <string>///Selectmode: Wechsel zwische Auswahlrad und normaler bewegung
+if selectMode = false
+then
+{
+x = mouse_x;
+y = mouse_y;
 if mouse_check_button_pressed(mb_right)
     then
     {
     selectMode = true;
     hudTimer = 0;
     mouseArea = 0;
-    y++;
+
     select_mode_x = x;
     select_mode_y = y;
     }
+}
 
 //Bestimmen der Position der Mouse in relation zum zweiten Spieler sprite
 if selectMode{
@@ -162,13 +166,6 @@ if mousePointer &gt;= 135 and mousePointer &lt; 255 and unlocked4
     mouseArea = 3;
     }    
 }
- 
-///mouse_position in grid - moves only if not in select mode    
-if !selectMode then
-    {
-    x = mouse_x//floor(mouse_x/32)*32;
-    y = mouse_y//floor(mouse_y/32)*32;
-    }
 
 if time &gt; 0
     {
@@ -185,13 +182,17 @@ if un_time &gt; 0
     }
 
 //Beenden des select Modes 
-if mouse_check_button_released(mb_right)
+if selectMode = true
     then
-    {    
-    window_mouse_set((select_mode_x-view_xview[0])*xfactor,(select_mode_y-view_yview[0])*yfactor);
-    selectMode = false;
+    {
+    if mouse_check_button_released(mb_right)
+        then
+        {
+        window_mouse_set((select_mode_x-view_xview[0])*xfactor,(select_mode_y-view_yview[0])*yfactor);
+        selectMode = false;
+        }
     }
-         
+
 
 </string>
           </argument>
@@ -387,22 +388,22 @@ if instance_number (obj_second_player_block1) &gt; 9
           <argument>
             <kind>1</kind>
             <string>//draw trail according to chosen block
-
-switch (mouseArea)
-    {
-    case 0:
-    scr_draw_trail(8,sprite_width,c_aqua,-1,true,0.3);
-    scr_draw_trail(8,sprite_width/2,c_blue,-1,true,0.5); break;
-    case 1:
-    scr_draw_trail(8,sprite_width,c_fuchsia,-1,true,0.3);
-    scr_draw_trail(8,sprite_width/2,c_purple,-1,true,0.5); break;
-    case 2:
-    scr_draw_trail(8,sprite_width,c_yellow,-1,true,0.3);
-    scr_draw_trail(8,sprite_width/2,c_orange,-1,true,0.5); break;
-    case 3:
-    scr_draw_trail(8,sprite_width,c_lime,-1,true,0.3);
-    scr_draw_trail(8,sprite_width/2,c_green,-1,true,0.5); break;
-    }
+    switch (mouseArea)
+        {
+        case 0:
+        scr_draw_trail(8,sprite_width,c_aqua,-1,true,0.3);
+        scr_draw_trail(8,sprite_width/2,c_blue,-1,true,0.5); break;
+        case 1:
+        scr_draw_trail(8,sprite_width,c_fuchsia,-1,true,0.3);
+        scr_draw_trail(8,sprite_width/2,c_purple,-1,true,0.5); break;
+        case 2:
+        scr_draw_trail(8,sprite_width,c_yellow,-1,true,0.3);
+        scr_draw_trail(8,sprite_width/2,c_orange,-1,true,0.5); break;
+        case 3:
+        scr_draw_trail(8,sprite_width,c_lime,-1,true,0.3);
+        scr_draw_trail(8,sprite_width/2,c_green,-1,true,0.5); break;
+        }
+    
 
 //draw squashed and stretched depending on speed
 
@@ -476,7 +477,7 @@ if selectMode
        draw_sprite_ext(spr_block_select,2,x,y,1*hudTimer,1*hudTimer,mousedir,color,1);
     }
     
-/*
+
 draw_text (x,y+33,place_meeting(x,y,all));
 draw_text (x,y+48,un_left_pressed);
 
