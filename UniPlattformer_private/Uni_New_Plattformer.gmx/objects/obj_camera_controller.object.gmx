@@ -65,23 +65,24 @@ scrolling_border = 300;
             <kind>1</kind>
             <string>///moving camera with mouse
 
-x = point_of_interest.x;
-y = point_of_interest.y;
+if instance_exists(point_of_interest){
+    x = point_of_interest.x;
+    y = point_of_interest.y;
 
-if view_xview+scrolling_border &gt; mouse_x 
-or mouse_x &gt; view_xview+view_wview-scrolling_border
-    then
-    {
-    view_xview += lerp(0,lengthdir_x (min(point_distance(x,y,mouse_x,mouse_y),200),point_direction(x, y, mouse_x, mouse_y)),0.1);
+    if view_xview+scrolling_border &gt; mouse_x 
+    or mouse_x &gt; view_xview+view_wview-scrolling_border
+        then
+       {
+       view_xview += lerp(0,lengthdir_x (min(point_distance(x,y,mouse_x,mouse_y),200),point_direction(x, y, mouse_x, mouse_y)),0.1);
+       }
+
+    if view_yview+scrolling_border &gt; mouse_y
+    or mouse_y &gt; view_yview+view_hview-scrolling_border
+      then
+       {
+       view_yview += lerp(0,lengthdir_y (min(point_distance(x,y,mouse_x,mouse_y),200),point_direction(x, y, mouse_x, mouse_y)),0.1);
+       }
     }
-
-if view_yview+scrolling_border &gt; mouse_y
-or mouse_y &gt; view_yview+view_hview-scrolling_border
-    then
-    {
-    view_yview += lerp(0,lengthdir_y (min(point_distance(x,y,mouse_x,mouse_y),200),point_direction(x, y, mouse_x, mouse_y)),0.1);
-    }
-
 </string>
           </argument>
         </arguments>

@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>999999999</depth>
+  <depth>-2</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -126,6 +126,7 @@ draw_set_alpha (1);
 surface_reset_target();
 
 instance_deactivate_all(true); //deactivate all other instances
+instance_activate_object(obj_camera_controller)
 audio_pause_all ();
 global.pause = true;
 </string>

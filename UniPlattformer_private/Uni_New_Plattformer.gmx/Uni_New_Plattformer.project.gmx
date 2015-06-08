@@ -92,6 +92,7 @@
     <background>background\background_tutorial_jump</background>
     <backgrounds name="group_tiles">
       <background>background\bg_temple_tiles</background>
+      <background>background\background23</background>
       <background>background\bg_temple_pillar</background>
       <background>background\background_tileset</background>
       <background>background\bg_grass_tile</background>
@@ -109,6 +110,8 @@
       </backgrounds>
       <backgrounds name="mountain">
         <background>background\bg_mountain_1</background>
+        <background>background\bg_mountain_2</background>
+        <background>background\bg_mountain_3</background>
       </backgrounds>
     </backgrounds>
     <backgrounds name="menu">
