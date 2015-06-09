@@ -263,6 +263,7 @@
     <objects name="group_blocks">
       <object>objects\obj_wall_block</object>
     </objects>
+    <object>objects\object_room_transition</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_loading</room>
