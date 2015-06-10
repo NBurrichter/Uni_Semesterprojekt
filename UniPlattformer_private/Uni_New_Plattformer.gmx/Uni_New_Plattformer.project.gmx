@@ -192,6 +192,7 @@
       <object>objects\obj_particle_controller</object>
       <object>objects\obj_shader_controller</object>
       <object>objects\obj_pause</object>
+      <object>objects\obj_room_transition</object>
       <objects name="group_menu_objects">
         <objects name="group_buttons">
           <objects name="group_start_screen_buttons">
@@ -264,7 +265,6 @@
     <objects name="group_blocks">
       <object>objects\obj_wall_block</object>
     </objects>
-    <object>objects\object_room_transition</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_loading</room>
