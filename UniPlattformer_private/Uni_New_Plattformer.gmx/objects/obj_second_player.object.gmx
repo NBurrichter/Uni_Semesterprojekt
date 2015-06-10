@@ -188,7 +188,7 @@ if selectMode = true
     if mouse_check_button_released(mb_right)
         then
         {
-        window_mouse_set((select_mode_x-view_xview[1])*xfactor,(select_mode_y-view_yview[1])*yfactor);
+        window_mouse_set((select_mode_x-view_xview[0])*xfactor,(select_mode_y-view_yview[0])*yfactor);
         selectMode = false;
         }
     }
