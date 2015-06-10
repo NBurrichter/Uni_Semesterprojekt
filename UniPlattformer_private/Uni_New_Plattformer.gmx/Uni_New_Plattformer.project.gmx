@@ -57,6 +57,7 @@
       </sprites>
       <sprites name="group_moving_enemies">
         <sprite>sprites\spr_flapping_enemy</sprite>
+        <sprite>sprites\spr_flapping_enemy_up</sprite>
       </sprites>
     </sprites>
     <sprites name="group_game_objects">
@@ -93,6 +94,7 @@
     <background>background\background_tutorial_jump</background>
     <backgrounds name="group_tiles">
       <background>background\bg_temple_tiles</background>
+      <background>background\bg_temple_dark</background>
       <background>background\bg_grass_dark</background>
       <background>background\bg_temple_pillar</background>
       <background>background\background_tileset</background>

@@ -25,13 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.current_level_number &gt; global.level_save
+            <string>if global.current_level_number = global.level_save
     then
     {
     ini_open("settings.ini");
-    ini_write_real("save", "levelsave", global.current_level_number);
+    ini_write_real("save", "levelsave", global.current_level_number++);
     ini_close();
-    global.level_save = global.current_level_number;
+    global.level_save = global.current_level_number++;
     }
 
 room_goto_next ();

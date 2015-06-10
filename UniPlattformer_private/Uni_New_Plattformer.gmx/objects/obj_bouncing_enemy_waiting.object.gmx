@@ -3,7 +3,7 @@
   <spriteName>spr_flapping_enemy</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1</depth>
+  <depth>-5</depth>
   <persistent>0</persistent>
   <parentName>obj_parent_enemies</parentName>
   <maskName>&lt;undefined&gt;</maskName>

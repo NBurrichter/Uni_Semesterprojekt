@@ -3,7 +3,7 @@
   <spriteName>spr_flapping_enemy</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1</depth>
+  <depth>-5</depth>
   <persistent>0</persistent>
   <parentName>obj_parent_enemies</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -107,7 +107,15 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(spr_flapping_enemy,-1,x,y,dir,1,0,-1,1);
+            <string>if image_angle = 90 or image_angle = 270
+    then
+    {
+    draw_sprite_ext(spr_flapping_enemy_up,-1,x,y,dir,1,0,-1,1);
+    }
+    else
+    {
+    draw_sprite_ext(spr_flapping_enemy,-1,x,y,dir,1,0,-1,1);
+    }
 </string>
           </argument>
         </arguments>
