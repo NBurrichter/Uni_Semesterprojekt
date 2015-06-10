@@ -130,7 +130,7 @@ else
 draw_set_valign(fa_middle);
 draw_set_halign(fa_center); 
 draw_set_font (V5_Prophit);   
-draw_text_transformed_colour(screen_width/2, 430, "PRESS START", 1, 1, 0, c_white, c_white, c_white, c_white, 1);
+draw_text_transformed_colour(view_wview[0]/2, 430, "PRESS START", 1, 1, 0, c_white, c_white, c_white, c_white, 1);
 
 
 </string>

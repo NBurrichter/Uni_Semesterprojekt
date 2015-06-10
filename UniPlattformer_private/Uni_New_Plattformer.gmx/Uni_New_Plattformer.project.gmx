@@ -132,15 +132,10 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_with_all_in_radius_do_something.gml</script>
     <script>scripts\scr_distance_find.gml</script>
     <script>scripts\scr_sleep.gml</script>
+    <script>scripts\scr_approach.gml</script>
     <script>scripts\scr_lose.gml</script>
-    <scripts name="enemy_behaviours">
-      <script>scripts\scr_rotating_around.gml</script>
-      <script>scripts\scr_staring_at.gml</script>
-      <script>scripts\scr_rotating_self.gml</script>
-    </scripts>
     <scripts name="group_gamepad">
       <script>scripts\scr_gamepad_key_id_converter.gml</script>
       <script>scripts\scr_gamepad_get_first_connected.gml</script>
@@ -201,6 +196,7 @@
       <object>objects\obj_music_controller</object>
       <object>objects\obj_particle_controller</object>
       <object>objects\obj_shader_controller</object>
+      <object>objects\obj_shader_controller_start_screen</object>
       <object>objects\obj_pause</object>
       <object>objects\obj_room_transition</object>
       <objects name="group_menu_objects">
