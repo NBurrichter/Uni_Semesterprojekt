@@ -44,7 +44,7 @@ global.current_level_number = 7;
   </backgrounds>
   <views>
     <view visible="-1" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1600" hview="900" xport="0" yport="0" wport="1600" hport="900" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
-    <view visible="-1" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1600" hview="900" xport="0" yport="0" wport="1600" hport="900" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1600" hview="900" xport="0" yport="0" wport="1600" hport="900" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -536,7 +536,6 @@ global.current_level_number = 7;
     <instance objName="obj_wall_block" x="2912" y="832" name="inst_DC3D389C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="2912" y="224" name="inst_1B2B7648" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="2912" y="256" name="inst_93AD8138" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_shader_controller" x="160" y="64" name="inst_A4529790" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

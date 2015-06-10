@@ -3,8 +3,8 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-999999999</depth>
-  <persistent>-1</persistent>
+  <depth>-2147483647</depth>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,18 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>_screen = -1;
+            <string>
+alpha = 0;
+chosen = false;
 
-_pixelScale = 1.0;
-_roundnessScale = 0.12;
-_roundnessExtraScale = 0.6;
-_toonLevels = 25.6;
+level = 0;
+
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="1" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -53,31 +53,16 @@ _toonLevels = 25.6;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if( surface_exists( _screen ) )
-    surface_free( _screen );
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="5">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>instance_destroy();
+            <string>        if alpha &lt; 1
+            then
+            {
+            alpha += 0.05;
+            }
+        else
+            {
+            room_goto(level);
+            }
+        
 </string>
           </argument>
         </arguments>
@@ -100,32 +85,13 @@ _toonLevels = 25.6;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///create surface 
+            <string>///fade to black
 
-if(!surface_exists( _screen ))
-    {
-    _screen = surface_create( view_wview[ 0 ], view_hview[ 0 ] );
-    view_surface_id[ 0 ] = _screen;
-    }
 
-var fx8bitChillout = fx8bitChilloutColor;
-
-var uRoundnessScale = shader_get_uniform( fx8bitChillout, "uRoundnessScale" );
-var uSize = shader_get_uniform( fx8bitChillout, "uSize" );
-var uToonLevels = shader_get_uniform( fx8bitChillout, "uToonLevels" );
-
-shader_set( fx8bitChillout );
-shader_set_uniform_f( uRoundnessScale, _roundnessScale, _roundnessExtraScale, _roundnessScale * _roundnessExtraScale );
-shader_set_uniform_f( uSize,
-    _pixelScale / surface_get_width( _screen ),
-    _pixelScale / surface_get_height( _screen ),
-    surface_get_width( _screen ) / _pixelScale,
-    surface_get_height( _screen ) / _pixelScale
-);
-shader_set_uniform_f( uToonLevels, _toonLevels, 1.0 / _toonLevels );
-draw_surface( _screen, 0, 0 );
-shader_reset();
-
+    draw_set_alpha(alpha);
+    draw_rectangle(0, 0, screen_width, screen_height, false);
+    draw_set_alpha(1);
+    
 </string>
           </argument>
         </arguments>

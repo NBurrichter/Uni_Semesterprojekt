@@ -34,11 +34,10 @@ point_of_interest = obj_player;
 x = point_of_interest.x;
 y = point_of_interest.y;
 
-view_object = obj_camera_controller;
+view_object [0]= obj_camera_controller;
 
-view_hborder = view_wview/3;
-view_vborder = view_hview/3;
-
+view_hborder [0] = view_wview/3;
+view_vborder [0] = view_hview/3;
 
 scrolling_border = 300;
 </string>
@@ -65,23 +64,29 @@ scrolling_border = 300;
             <kind>1</kind>
             <string>///moving camera with mouse
 
-if instance_exists(point_of_interest){
-    x = point_of_interest.x;
-    y = point_of_interest.y;
-
+if instance_exists(point_of_interest)
+    then
+    {
+    x = point_of_interest.x - (point_of_interest.x - mouse_x)/4;
+    y = point_of_interest.y - (point_of_interest.y - mouse_y)/4;
+    
+    /*
     if view_xview+scrolling_border &gt; mouse_x 
     or mouse_x &gt; view_xview+view_wview-scrolling_border
         then
-       {
-       view_xview += lerp(0,lengthdir_x (min(point_distance(x,y,mouse_x,mouse_y),200),point_direction(x, y, mouse_x, mouse_y)),0.1);
-       }
+        {
+        view_xview[0] += lerp(0,lengthdir_x (min(point_distance(x,y,mouse_x,mouse_y),200),point_direction(x, y, mouse_x, mouse_y)),0.1);
+        //view_xview[1] += lerp(0,lengthdir_x (min(point_distance(x,y,mouse_x,mouse_y),200),point_direction(x, y, mouse_x, mouse_y)),0.1);
+        }
 
     if view_yview+scrolling_border &gt; mouse_y
     or mouse_y &gt; view_yview+view_hview-scrolling_border
-      then
-       {
-       view_yview += lerp(0,lengthdir_y (min(point_distance(x,y,mouse_x,mouse_y),200),point_direction(x, y, mouse_x, mouse_y)),0.1);
-       }
+        then
+        {
+        view_yview[0] += lerp(0,lengthdir_y (min(point_distance(x,y,mouse_x,mouse_y),200),point_direction(x, y, mouse_x, mouse_y)),0.1);
+        //view_xview[1] += lerp(0,lengthdir_x (min(point_distance(x,y,mouse_x,mouse_y),200),point_direction(x, y, mouse_x, mouse_y)),0.1);
+        }
+    */
     }
 </string>
           </argument>
@@ -107,7 +112,8 @@ if instance_exists(point_of_interest){
     if global.screen_shake &gt; 0
         then
         {
-        view_angle = ((random_range(-global.screen_shake,global.screen_shake)));
+        view_angle[0] = ((random_range(-global.screen_shake,global.screen_shake)));
+        //view_angle[1] = ((random_range(-global.screen_shake,global.screen_shake)));
         global.screen_shake = lerp(global.screen_shake, 0, 0.1);
         } 
 </string>
