@@ -29,10 +29,10 @@
 
 _screen = -1;
 
-_pixelScale = 1.0;
-_roundnessScale = 0.12;
-_roundnessExtraScale = 0.6;
-_toonLevels = 25.6;
+_pixelScale = 57.0;
+_roundnessScale = 2.7;
+_roundnessExtraScale = 50;
+_toonLevels = 27;
 </string>
           </argument>
         </arguments>
@@ -57,6 +57,32 @@ _toonLevels = 25.6;
             <kind>1</kind>
             <string>if( surface_exists( _screen ) )
     surface_free( _screen );
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>_pixelScale = lerp(_pixelScale, 1.0, 0.2); 
+_roundnessScale = scr_approach(_roundnessScale, 0.12, 0.1);
+_roundnessExtraScale = scr_approach(_roundnessExtraScale, 0.6, 0.9);
+_toonLevels = scr_approach(_toonLevels, 25.6, 0.1);
 </string>
           </argument>
         </arguments>
@@ -220,13 +246,6 @@ shader_set_uniform_f( uSize,
 shader_set_uniform_f( uToonLevels, _toonLevels, 1.0 / _toonLevels );
 draw_surface( _screen, 0, 0 );
 shader_reset();
-
-draw_set_color (c_white);
-draw_text (x,y,string(_pixelScale));
-draw_text (x,y+44,string(_roundnessScale));
-draw_text (x,y+88,string(_roundnessExtraScale));
-draw_text (x,y+132,string(_toonLevels));
-
 
 </string>
           </argument>
