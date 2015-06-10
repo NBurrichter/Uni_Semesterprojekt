@@ -67,10 +67,9 @@ scrolling_border = 300;
 if instance_exists(point_of_interest)
     then
     {
-    x = point_of_interest.x - (point_of_interest.x - mouse_x)/4;
-    y = point_of_interest.y - (point_of_interest.y - mouse_y)/4;
+    x = point_of_interest.x;
+    y = point_of_interest.y;
     
-    /*
     if view_xview+scrolling_border &gt; mouse_x 
     or mouse_x &gt; view_xview+view_wview-scrolling_border
         then
@@ -86,7 +85,6 @@ if instance_exists(point_of_interest)
         view_yview[0] += lerp(0,lengthdir_y (min(point_distance(x,y,mouse_x,mouse_y),200),point_direction(x, y, mouse_x, mouse_y)),0.1);
         //view_xview[1] += lerp(0,lengthdir_x (min(point_distance(x,y,mouse_x,mouse_y),200),point_direction(x, y, mouse_x, mouse_y)),0.1);
         }
-    */
     }
 </string>
           </argument>
