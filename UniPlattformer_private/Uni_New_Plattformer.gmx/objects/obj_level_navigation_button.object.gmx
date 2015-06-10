@@ -100,7 +100,7 @@ if mouse_over = true
         {
         level = other.level;
         }  
-    //audio_play_sound (snd_confirm,1,false);
+    audio_play_sound (snd_levelclick,1,false);
     }
 </string>
           </argument>

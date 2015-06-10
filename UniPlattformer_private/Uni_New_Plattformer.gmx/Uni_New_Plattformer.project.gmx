@@ -8,7 +8,10 @@
   <sounds name="sound">
     <sounds name="group_menu_sounds">
       <sounds name="group_button">
+        <sound>sound\snd_click</sound>
         <sound>sound\snd_select</sound>
+        <sound>sound\snd_cancel</sound>
+        <sound>sound\snd_levelclick</sound>
       </sounds>
       <sound>sound\snd_level_select_music</sound>
       <sound>sound\snd_oberschenkelmuskenl</sound>
@@ -18,6 +21,8 @@
       <sound>sound\snd_jump_blocks</sound>
       <sound>sound\snd_jump</sound>
       <sound>sound\snd_unlocked</sound>
+      <sound>sound\snd_powerup</sound>
+      <sound>sound\snd_level_theme1</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">

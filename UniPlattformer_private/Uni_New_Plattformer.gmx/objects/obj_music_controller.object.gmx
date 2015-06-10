@@ -29,8 +29,9 @@
 
 switch (room)
     {
-    case room_level_select: audio_stop_sound (snd_level_select_music);
-    default: 
+    case room_level_select: audio_stop_sound (snd_level_select_music); break;
+    
+    default: audio_stop_sound (snd_level_theme1);
     }
 
 </string>
@@ -59,8 +60,9 @@ switch (room)
 
 switch (room)
     {
-    case room_level_select: audio_play_sound (snd_level_select_music,1,true);
-    default: 
+    case room_level_select: audio_play_sound (snd_level_select_music,1,true); break;
+    
+    default: audio_play_sound (snd_level_theme1,1,true);
     }
 </string>
           </argument>
