@@ -11,6 +11,7 @@
   <colour>8421504</colour>
   <showcolour>-1</showcolour>
   <code>global.menuRoom = false;
+global.current_level_number = 3;
 //Flapping - Hard</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>

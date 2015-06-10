@@ -56,7 +56,13 @@ levelnumber = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if keyboard_check_pressed(global.key_up){
+            <string>if global.level_save &lt; levelnumber
+    then
+    {
+    instance_destroy();
+    }
+
+if keyboard_check_pressed(global.key_up){
     if obj_first_player_gui.moveto = levelnumber
     then
         {    
@@ -78,7 +84,6 @@ levelnumber = 0;
             room_goto(level);
             }
         }
-    
 </string>
           </argument>
         </arguments>
@@ -107,6 +112,7 @@ if mouse_over = true
     then
     {
     chosen = true;
+    
     //audio_play_sound (snd_confirm,1,false);
     }
 </string>
@@ -159,10 +165,14 @@ obj_first_player_gui.mouse_over = false;
             <kind>1</kind>
             <string>///Mouse over
 
-mouse_over = true;
-obj_first_player_gui.mouse_over = true;
+if global.level_save &gt;= levelnumber
+    then
+    {
+    mouse_over = true;
+    obj_first_player_gui.mouse_over = true;
 
-obj_first_player_gui.moveto = levelnumber;
+    obj_first_player_gui.moveto = levelnumber;
+    }
 </string>
           </argument>
         </arguments>
@@ -235,6 +245,7 @@ if obj_first_player_gui.moveto = levelnumber
     
 draw_set_halign(fa_center);    
 draw_text(x,y,string(levelnumber));
+draw_text(x+20,y+20,string(global.level_save));
 </string>
           </argument>
         </arguments>

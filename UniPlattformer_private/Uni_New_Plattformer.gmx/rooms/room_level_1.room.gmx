@@ -11,6 +11,7 @@
   <colour>16777215</colour>
   <showcolour>0</showcolour>
   <code>global.menuRoom = false;
+global.current_level_number = 1;
 
 //Tutorial</code>
   <enableViews>-1</enableViews>

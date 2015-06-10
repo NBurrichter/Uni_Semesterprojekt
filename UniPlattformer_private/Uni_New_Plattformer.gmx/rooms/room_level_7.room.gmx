@@ -11,6 +11,7 @@
   <colour>4194432</colour>
   <showcolour>-1</showcolour>
   <code>global.menuRoom = false;
+global.current_level_number = 7;
 //Rockets - Tutorial</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>

@@ -11,6 +11,7 @@
   <colour>33023</colour>
   <showcolour>-1</showcolour>
   <code>global.menuRoom = false;
+global.current_level_number = 9;
 //Rockets - Heat seaking</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>

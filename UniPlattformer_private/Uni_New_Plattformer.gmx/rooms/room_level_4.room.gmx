@@ -11,6 +11,7 @@
   <colour>8454143</colour>
   <showcolour>-1</showcolour>
   <code>global.menuRoom = false;
+global.current_level_number = 4;
 //Laser - Tutorail</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>
