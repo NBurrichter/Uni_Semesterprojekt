@@ -113,6 +113,7 @@
         <background>background\bg_mountain_1</background>
         <background>background\bg_mountain_2</background>
         <background>background\bg_mountain_3</background>
+        <background>background\bg_mountain_4</background>
       </backgrounds>
     </backgrounds>
     <backgrounds name="menu">

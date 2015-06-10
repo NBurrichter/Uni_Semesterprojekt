@@ -477,11 +477,12 @@ if selectMode
        draw_sprite_ext(spr_block_select,2,x,y,1*hudTimer,1*hudTimer,mousedir,color,1);
     }
     
-
+/*
 draw_text (x,y+33,place_meeting(x,y,all));
 draw_text (x,y+48,un_left_pressed);
 
 draw_text (x,y+58,left_pressed);
+*/
 </string>
           </argument>
         </arguments>

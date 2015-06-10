@@ -13,7 +13,7 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>128</width>
+  <width>224</width>
   <height>288</height>
   <data>images\bg_temple_tiles.png</data>
 </background>

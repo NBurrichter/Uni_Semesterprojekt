@@ -155,6 +155,7 @@ background_y[5] = view_yview[0]/6;
 background_x[6] = view_xview[0]/7;
 background_y[6] = view_yview[0]/7;
 
+/*
 background_x[7] = view_xview[0]/8;
 background_y[7] = view_yview[0]/8;
 </string>
