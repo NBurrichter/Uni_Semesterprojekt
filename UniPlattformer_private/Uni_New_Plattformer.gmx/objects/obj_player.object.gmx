@@ -399,11 +399,7 @@ if sticking_to_the_wall_timer &gt; 0
     max_drop_speed = 0;
     }           
      
-if v_speed &gt; max_drop_speed                             
-    then
-    {
-    v_speed = max_drop_speed;
-    }          
+v_speed = min(v_speed, max_drop_speed);                                        
 
 //if on block4    
 if place_meeting(x,y+1,obj_second_player_block4)
