@@ -3,7 +3,7 @@
   <spriteName>spr_playertwo</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-100000</depth>
+  <depth>-10000000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -54,6 +54,8 @@ time = 0;
 un_maxtime = 1;
 un_decay = 0.1;
 un_time = 0;
+
+pitch = 1;
 
 /// select mode
 xfactor = screen_width/1600;
@@ -235,6 +237,7 @@ if !place_meeting (x,y,all)
     part_particles_create_colour(global.particle_system, x, y, global.particle_block, c_purple, 1);
     left_pressed = true;
     time = maxtime;
+    audio_play_sound (snd_build_blocks,1,false);
     }
 else
     {   
@@ -262,6 +265,7 @@ if !place_meeting (x,y,all)
     part_particles_create_colour(global.particle_system, x, y, global.particle_block, c_orange, 1);
     left_pressed = true;
     time = maxtime;
+    audio_play_sound (snd_build_blocks,1,false);
     }
 else
     {   
@@ -288,6 +292,7 @@ if !place_meeting (x,y,all)
     part_particles_create_colour(global.particle_system, x, y, global.particle_block, c_green, 1);
     left_pressed = true;
     time = maxtime;
+    audio_play_sound (snd_build_blocks,1,false);
     }
 else
     {   
@@ -312,7 +317,9 @@ if instance_number (obj_second_player_block4) &gt; 3
 
     
 //play sound
+//audio_sound_pitch(snd_build_blocks,pitch);
 audio_play_sound (snd_build_blocks,1,false);
+//pitch += 0.1;
 </string>
           </argument>
         </arguments>
@@ -345,6 +352,7 @@ if mouseArea = 0
         part_particles_create_colour(global.particle_system, x, y, global.particle_block, c_blue, 1);
         left_pressed = true;
         time = maxtime;
+        audio_play_sound (snd_build_blocks,1,false);
         }
     else
         {
@@ -364,6 +372,29 @@ if instance_number (obj_second_player_block1) &gt; 9
         instance_destroy();
         }
     }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>pitch = 1;
 </string>
           </argument>
         </arguments>
