@@ -36,7 +36,7 @@ if obj_second_player.unlocked4 = true
             }
             else
             {
-            scr_sleep (100);
+            //scr_sleep (100);
             room_restart();
             }
         }

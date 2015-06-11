@@ -15,6 +15,8 @@
       </sounds>
       <sound>sound\snd_level_select_music</sound>
       <sound>sound\snd_oberschenkelmuskenl</sound>
+      <sound>sound\snd_title_menu_sound</sound>
+      <sound>sound\snd_tv_sound</sound>
     </sounds>
     <sounds name="group_level_sounds">
       <sound>sound\snd_build_blocks</sound>
@@ -23,6 +25,8 @@
       <sound>sound\snd_unlocked</sound>
       <sound>sound\snd_powerup</sound>
       <sound>sound\snd_level_theme1</sound>
+      <sound>sound\snd_flappig_bounce</sound>
+      <sound>sound\snd_laser_damage</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -231,6 +235,7 @@
                 <object>objects\obj_exit_level_select_button</object>
                 <object>objects\obj_level_navigation_button</object>
                 <object>objects\obj_secret</object>
+                <object>objects\obj_level_title</object>
               </objects>
             </objects>
           </objects>

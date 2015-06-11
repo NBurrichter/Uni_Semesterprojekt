@@ -59,12 +59,15 @@ levelnumber = 0;
     instance_destroy();
     }
 
-if keyboard_check_pressed(global.key_up){
-    if obj_first_player_gui.moveto = levelnumber
+if keyboard_check_pressed(global.key_up) and obj_first_player_gui.moveto = levelnumber
     then
-        {    
-        chosen = true
-        }
+    {
+    room_transition = instance_create (x,y,obj_room_transition);
+    with (room_transition)
+        {
+        level = other.level;
+        }  
+    audio_play_sound (snd_levelclick,1,false);
     }
 </string>
           </argument>
@@ -200,7 +203,9 @@ if obj_first_player_gui.moveto = levelnumber
     }
     
 draw_set_halign(fa_center);    
-draw_text(x,y,string(levelnumber));
+draw_set_color(c_black);
+//draw_text(x,y,string(levelnumber));
+/*
 draw_text(x+20,y+20,string(global.level_save));
 </string>
           </argument>

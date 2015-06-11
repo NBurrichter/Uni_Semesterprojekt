@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//Speed mit der er sich bewegt
-movespeed = 7;
+movespeed = 10;
 speed = movespeed;
 
 //Speichert die X und Y pos der einzelnen Level in diesem Array
@@ -106,8 +106,14 @@ if keyboard_check_pressed(global.key_right) and !mouse_over
     then
     {
     if moveto &lt; 10
-    moveto++;
+        if moveto &lt; global.level_save
+        then
+        {
+            moveto++;
+        }
     }
+    
+
     
 if vspeed &lt; 0{
     sprite_index = spr_player_gui_back;

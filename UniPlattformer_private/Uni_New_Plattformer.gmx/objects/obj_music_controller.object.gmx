@@ -29,7 +29,20 @@
 
 switch (room)
     {
-    case room_level_select: audio_stop_sound (snd_level_select_music); break;
+    case room_level_select: audio_stop_sound (snd_level_select_music); 
+                            audio_play_sound (snd_title_menu_sound,1,true);break;
+    //case room_main_menu: audio_stop_sound(snd_title_menu_sound); break;
+    
+    case room_level_1: audio_stop_sound(snd_level_theme1); break;   
+    case room_level_2: audio_stop_sound(snd_level_theme1); break;  
+    case room_level_3: audio_stop_sound(snd_level_theme1); break;   
+    case room_level_4: audio_stop_sound(snd_level_theme1); break;   
+    case room_level_5: audio_stop_sound(snd_level_theme1); break;   
+    case room_level_6: audio_stop_sound(snd_level_theme1); break;   
+    case room_level_7: audio_stop_sound(snd_level_theme1); break;   
+    case room_level_8: audio_stop_sound(snd_level_theme1); break;   
+    case room_level_9: audio_stop_sound(snd_level_theme1); break;   
+    case room_level_10: audio_stop_sound(snd_level_theme1); break;     
     
     default: audio_stop_sound (snd_level_theme1);
     }
@@ -60,9 +73,34 @@ switch (room)
 
 switch (room)
     {
-    case room_level_select: audio_play_sound (snd_level_select_music,1,true); break;
+    case room_level_select: audio_play_sound (snd_level_select_music,1,true); 
+                            audio_stop_sound(snd_title_menu_sound); break;
+    case room_start_screen: audio_stop_sound(snd_title_menu_sound);
+                            audio_play_sound(snd_tv_sound,2,false);
+                            audio_play_sound (snd_title_menu_sound,1,true)break;
     
-    default: audio_play_sound (snd_level_theme1,1,true);
+    case room_level_1: audio_play_sound(snd_title_menu_sound,1,true); 
+                        audio_stop_sound (snd_title_menu_sound);break;                        
+    case room_level_2: audio_play_sound(snd_level_theme1,1,true); 
+                        audio_stop_sound (snd_title_menu_sound);break;    
+    case room_level_3: audio_play_sound(snd_level_theme1,1,true); 
+                        audio_stop_sound (snd_title_menu_sound);break;    
+    case room_level_4: audio_play_sound(snd_level_theme1,1,true); 
+                        audio_stop_sound (snd_title_menu_sound);break;    
+    case room_level_5: audio_play_sound(snd_level_theme1,1,true); 
+                        audio_stop_sound (snd_title_menu_sound);break;    
+    case room_level_6: audio_play_sound(snd_level_theme1,1,true); 
+                        audio_stop_sound (snd_title_menu_sound);break;    
+    case room_level_7: audio_play_sound(snd_level_theme1,1,true); 
+                        audio_stop_sound (snd_title_menu_sound);break;    
+    case room_level_8: audio_play_sound(snd_level_theme1,1,true); 
+                        audio_stop_sound (snd_title_menu_sound);break;    
+    case room_level_9: audio_play_sound(snd_level_theme1,1,true); 
+                        audio_stop_sound (snd_title_menu_sound);break;    
+    case room_level_10: audio_play_sound(snd_level_theme1,1,true); 
+                        audio_stop_sound (snd_title_menu_sound);break;    
+                            
+    default: //audio_play_sound (snd_level_theme1,1,true);
     }
 </string>
           </argument>

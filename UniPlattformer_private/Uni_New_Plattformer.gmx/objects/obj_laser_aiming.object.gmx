@@ -78,6 +78,7 @@ if collision_line(x, y, x+lengthdir_x(dist,image_angle), y+lengthdir_y(dist,imag
     if !obj_player.invincible
         then
         {
+        audio_play_sound(snd_laser_damage,2,false);
         obj_player.alarm[0] = 20;
         scr_lose ();
         obj_player.invincible = true;

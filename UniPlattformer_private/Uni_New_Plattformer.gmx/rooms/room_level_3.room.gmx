@@ -1302,6 +1302,9 @@ global.current_level_number = 3;
     <instance objName="obj_wall_block" x="528" y="1168" name="inst_AF1157A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="528" y="1200" name="inst_14180865" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_patrolling_enemy" x="880" y="1168" name="inst_DD9F4F4C" locked="0" code="distance = 300;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_block" x="384" y="2944" name="inst_910FD84D" locked="0" code="" scaleX="27" scaleY="6" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_block" x="1184" y="2976" name="inst_4BAC10CA" locked="0" code="" scaleX="28" scaleY="8" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_block" x="1792" y="2848" name="inst_32F1BE69" locked="0" code="" scaleX="30" scaleY="24" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_grass_dark" x="704" y="512" w="32" h="32" xo="32" yo="64" id="10006798" name="inst_97557215" depth="0" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
