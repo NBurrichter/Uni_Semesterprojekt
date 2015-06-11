@@ -304,7 +304,6 @@ if instance_number (obj_second_player_block4) &gt; 3
         }
     }
     
-///stumble when space is occupied
 
 
 
@@ -404,6 +403,22 @@ if instance_number (obj_second_player_block1) &gt; 9
         scr_draw_trail(8,sprite_width/2,c_green,-1,true,0.5); break;
         }
     
+//draw preview block shilouette
+
+if !place_meeting (x,y,all)
+    {
+        switch(mouseArea)
+        {
+        case 0:
+        draw_sprite_ext(spr_block_1, 0, x,y,1,1,0,c_white,0.3); break;
+        case 1:
+        draw_sprite_ext(spr_block_2, 0, x,y,1,1,0,c_white,0.3); break;
+        case 2:
+        draw_sprite_ext(spr_block_3, 0, x,y,1,1,0,c_white,0.3); break;
+        case 3:
+        draw_sprite_ext(spr_block_4, 0, x,y,1,1,0,c_white,0.3); break;
+        }
+    }
 
 //draw squashed and stretched depending on speed
 
@@ -422,6 +437,7 @@ if un_left_pressed and !left_pressed
     {
     draw_sprite_ext(spr_playertwo,0,x+random(10)-5,y+random(2)-1, 1 + max(0,(own_speed-6)/100), max(0.3, 1 - (own_speed-6)/100), image_angle, c_white,1);
     } 
+    
 
 //Hud creation Timer
 if hudTimer &lt; maxTimer

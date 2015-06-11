@@ -29,7 +29,8 @@ global.volume = ini_read_real("audio", "volume", 1);
 global.mute = ini_read_real("audio", "mute", 1);
 audio_master_gain (global.volume*global.mute);
 
-window_set_fullscreen (ini_read_real("video", "fullscreen", 1));
+global.full_screen = ini_read_real("video", "fullscreen", 1);
+window_set_fullscreen (global.full_screen);
 
 ini_close();
 

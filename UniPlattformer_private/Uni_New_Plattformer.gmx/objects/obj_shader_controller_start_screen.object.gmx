@@ -31,6 +31,13 @@ _screen = -1;
 
 _pixelScale = 57.0;
 _roundnessScale = 2.7;
+_roundnessExtraScale = 4.20;
+_toonLevels = 27;
+
+
+/*
+_pixelScale = 57.0;
+_roundnessScale = 2.7;
 _roundnessExtraScale = 50;
 _toonLevels = 27;
 </string>
@@ -79,10 +86,10 @@ _toonLevels = 27;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>_pixelScale = lerp(_pixelScale, 1.0, 0.2); 
-_roundnessScale = scr_approach(_roundnessScale, 0.12, 0.1);
+            <string>_pixelScale = lerp(_pixelScale, 1.0, 0.6); 
+_roundnessScale = scr_approach(_roundnessScale, 0.12, 0.3);
 _roundnessExtraScale = scr_approach(_roundnessExtraScale, 0.6, 0.9);
-_toonLevels = scr_approach(_toonLevels, 25.6, 0.1);
+_toonLevels = scr_approach(_toonLevels, 25.6, 0.3);
 </string>
           </argument>
         </arguments>
