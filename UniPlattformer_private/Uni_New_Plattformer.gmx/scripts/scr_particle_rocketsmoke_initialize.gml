@@ -14,4 +14,3 @@ part_type_orientation(global.particle_rocketsmoke,0,359,5,0,1);
 part_type_blend(global.particle_rocketsmoke,0);
 part_type_life(global.particle_rocketsmoke,5,15);
 }
-

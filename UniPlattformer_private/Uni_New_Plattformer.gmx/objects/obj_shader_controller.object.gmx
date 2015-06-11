@@ -221,6 +221,7 @@ shader_set_uniform_f( uToonLevels, _toonLevels, 1.0 / _toonLevels );
 draw_surface( _screen, 0, 0 );
 shader_reset();
 
+/*
 draw_set_color (c_white);
 draw_text (x,y,string(_pixelScale));
 draw_text (x,y+44,string(_roundnessScale));
