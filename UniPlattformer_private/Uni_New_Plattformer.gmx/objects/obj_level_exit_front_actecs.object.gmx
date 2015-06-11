@@ -34,6 +34,7 @@
     global.level_save = global.current_level_number++;
     }
 
+audio_stop_all();
 room_goto_next ();
 </string>
           </argument>

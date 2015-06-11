@@ -2152,6 +2152,7 @@ global.current_level_number = 2;
     <tile bgName="bg_temple_dark" x="2176" y="544" w="32" h="32" xo="32" yo="32" id="10015009" name="inst_77305DA6" depth="0" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_temple_dark" x="2208" y="544" w="32" h="32" xo="32" yo="32" id="10015010" name="inst_9F0DA063" depth="0" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_temple_dark" x="2592" y="320" w="64" h="32" xo="128" yo="64" id="10015011" name="inst_BCD38239" depth="0" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_temple_dark" x="1632" y="480" w="32" h="32" xo="32" yo="32" id="10015162" name="inst_D81B7CD5" depth="0" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_temple_tiles" x="1280" y="352" w="32" h="32" xo="0" yo="0" id="10000220" name="inst_10B4661F" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_temple_tiles" x="1280" y="416" w="32" h="32" xo="0" yo="64" id="10000221" name="inst_6F21A873" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_temple_tiles" x="1280" y="384" w="32" h="32" xo="0" yo="32" id="10000222" name="inst_14535D4C" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -3056,7 +3057,6 @@ global.current_level_number = 2;
     <tile bgName="bg_temple_tiles" x="1568" y="448" w="32" h="32" xo="64" yo="128" id="10011547" name="inst_B6A932FB" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_temple_tiles" x="1568" y="576" w="32" h="32" xo="64" yo="160" id="10011548" name="inst_40C0D3DA" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_temple_tiles" x="1888" y="576" w="32" h="32" xo="96" yo="160" id="10011549" name="inst_FACD2026" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bg_temple_dark" x="1632" y="480" w="32" h="32" xo="32" yo="32" id="10012482" name="inst_AC818B68" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_temple_tiles" x="2208" y="864" w="32" h="32" xo="32" yo="0" id="10012483" name="inst_2A2E3427" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_temple_tiles" x="2240" y="864" w="32" h="32" xo="32" yo="0" id="10012484" name="inst_2936D43C" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_temple_tiles" x="2272" y="864" w="32" h="32" xo="32" yo="0" id="10012485" name="inst_39ABF15A" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

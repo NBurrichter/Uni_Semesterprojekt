@@ -24,9 +24,12 @@
       <sound>sound\snd_jump</sound>
       <sound>sound\snd_unlocked</sound>
       <sound>sound\snd_powerup</sound>
-      <sound>sound\snd_level_theme1</sound>
       <sound>sound\snd_flappig_bounce</sound>
       <sound>sound\snd_laser_damage</sound>
+      <sounds name="group_level_backgroundmusic">
+        <sound>sound\snd_level_theme1</sound>
+        <sound>sound\snd_level_theme2</sound>
+      </sounds>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -75,6 +78,7 @@
         <sprite>sprites\spr_menu_button</sprite>
         <sprite>sprites\spr_key_button</sprite>
         <sprite>sprites\spr_level_button</sprite>
+        <sprite>sprites\spr_level_title_box</sprite>
       </sprites>
       <sprites name="group_level_exits">
         <sprite>sprites\spr_level_exit_actecs</sprite>
