@@ -9,7 +9,7 @@
   <speed>30</speed>
   <persistent>0</persistent>
   <colour>8454143</colour>
-  <showcolour>-1</showcolour>
+  <showcolour>0</showcolour>
   <code>global.menuRoom = false;
 global.current_level_number = 5;
 //LAser - Hard</code>
