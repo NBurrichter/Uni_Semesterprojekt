@@ -29,7 +29,10 @@
       <sounds name="group_level_backgroundmusic">
         <sound>sound\snd_level_theme1</sound>
         <sound>sound\snd_level_theme2</sound>
+        <sound>sound\snd_level_theme3</sound>
+        <sound>sound\snd_level_theme4</sound>
       </sounds>
+      <sound>sound\snd_damage</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">

@@ -76,6 +76,8 @@ switch (room)
     case room_level_select: audio_play_sound (snd_level_select_music,1,true);
                             audio_stop_sound (snd_level_theme1);
                             audio_stop_sound (snd_level_theme2);
+                            audio_stop_sound (snd_level_theme3);
+                            audio_stop_sound (snd_level_theme4);
                             audio_stop_sound(snd_title_menu_sound); break;
     case room_start_screen: audio_stop_sound(snd_title_menu_sound);
                             audio_play_sound(snd_tv_sound,2,false);
@@ -87,19 +89,19 @@ switch (room)
                         audio_stop_sound (snd_title_menu_sound);break;    
     case room_level_3: if !audio_is_playing(snd_level_theme1) audio_play_sound(snd_level_theme1,1,true); 
                         audio_stop_sound (snd_title_menu_sound);break;    
-    case room_level_4: if !audio_is_playing(snd_level_theme1) audio_play_sound(snd_level_theme1,1,true); 
+    case room_level_4: if !audio_is_playing(snd_level_theme3) audio_play_sound(snd_level_theme3,1,true); 
                         audio_stop_sound (snd_title_menu_sound);break;    
-    case room_level_5: if !audio_is_playing(snd_level_theme1) audio_play_sound(snd_level_theme1,1,true); 
+    case room_level_5: if !audio_is_playing(snd_level_theme3) audio_play_sound(snd_level_theme3,1,true); 
                         audio_stop_sound (snd_title_menu_sound);break;    
-    case room_level_6: if !audio_is_playing(snd_level_theme1) audio_play_sound(snd_level_theme1,1,true); 
+    case room_level_6: if !audio_is_playing(snd_level_theme3) audio_play_sound(snd_level_theme3,1,true); 
                         audio_stop_sound (snd_title_menu_sound);break;    
-    case room_level_7: if !audio_is_playing(snd_level_theme1) audio_play_sound(snd_level_theme1,1,true); 
+    case room_level_7: if !audio_is_playing(snd_level_theme4) audio_play_sound(snd_level_theme4,1,true); 
                         audio_stop_sound (snd_title_menu_sound);break;    
-    case room_level_8: if !audio_is_playing(snd_level_theme1) audio_play_sound(snd_level_theme1,1,true); 
+    case room_level_8: if !audio_is_playing(snd_level_theme4) audio_play_sound(snd_level_theme4,1,true); 
                         audio_stop_sound (snd_title_menu_sound);break;    
-    case room_level_9: if !audio_is_playing(snd_level_theme1) audio_play_sound(snd_level_theme1,1,true); 
+    case room_level_9: if !audio_is_playing(snd_level_theme4) audio_play_sound(snd_level_theme4,1,true); 
                         audio_stop_sound (snd_title_menu_sound);break;    
-    case room_level_10: if !audio_is_playing(snd_level_theme1) audio_play_sound(snd_level_theme1,1,true); 
+    case room_level_10: if !audio_is_playing (snd_level_theme4) audio_play_sound(snd_level_theme4,1,true); 
                         audio_stop_sound (snd_title_menu_sound);break;    
                             
     default: //audio_play_sound (snd_level_theme1,1,true);

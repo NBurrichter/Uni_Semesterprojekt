@@ -25,7 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.current_level_number = global.level_save
+            <string>audio_stop_sound(snd_level_theme1);
+audio_stop_sound(snd_level_theme2);
+audio_stop_sound(snd_level_theme3);
+audio_stop_sound(snd_level_theme4);
+
+if global.current_level_number = global.level_save
     then
     {
     ini_open("settings.ini");
@@ -34,7 +39,6 @@
     global.level_save = global.current_level_number++;
     }
 
-audio_stop_all(); 
 room_goto_next ();
 </string>
           </argument>

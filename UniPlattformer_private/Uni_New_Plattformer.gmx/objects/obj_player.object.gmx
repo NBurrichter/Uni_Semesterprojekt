@@ -814,6 +814,7 @@ if sprite_index = spr_player
 if !invincible
     then
     {
+    audio_play_sound(snd_damage,1,false);
     alarm[0] = 20;
     scr_lose ();
     invincible = true;
