@@ -52,10 +52,10 @@
   </views>
   <instances>
     <instance objName="obj_game_controller" x="64" y="64" name="inst_E86EC8E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_option_video_button" x="320" y="128" name="inst_F0CB863D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_option_audio_button" x="320" y="256" name="inst_A25E518C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_option_controls_button" x="320" y="384" name="inst_E1B4E520" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_exit_option_menu_button" x="320" y="512" name="inst_FA35E40F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_option_video_button" x="832" y="192" name="inst_F0CB863D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_option_audio_button" x="832" y="352" name="inst_A25E518C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_option_controls_button" x="832" y="512" name="inst_E1B4E520" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_exit_option_menu_button" x="832" y="672" name="inst_FA35E40F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_second_player_gui" x="64" y="160" name="inst_0EBB2B12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_shader_controller" x="96" y="64" name="inst_B0CADD40" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>

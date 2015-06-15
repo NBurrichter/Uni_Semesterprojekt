@@ -99,7 +99,17 @@ own_speed = point_distance (xprevious, yprevious, x, y);
 
 direction = point_direction(xprevious, yprevious, x, y);
 
-image_angle = lerp(image_angle, direction, max(0.1,min(1,0.1*own_speed)));
+if own_speed &gt; 16
+    then
+    {
+    image_angle = lerp(image_angle, direction, max(0.6,min(1,0.1*own_speed)));
+    }
+else
+    {
+    image_angle = lerp(image_angle, 0, max(0.6,min(1,0.1*own_speed)));
+    }
+
+
 </string>
           </argument>
         </arguments>
@@ -461,12 +471,12 @@ if !left_pressed and !un_left_pressed
 
 if left_pressed
     {
-    draw_sprite_ext(spr_playertwo,0,x,y, (1+(time/1.5)) + max(0,(own_speed-6)/100), max((1+(time/1.5))*0.1, (1+(time/1.5)) - (own_speed-6)/100) , image_angle, c_white, 1);  
+    draw_sprite_ext(spr_playertwo,0,x,y, (1+(time/1.5)) + max(0,(own_speed-6)/100), max((1+(time/1.5))*0.1, (1+(time/1.5)) - (own_speed-6)/100) , 0, c_white, 1);  
     }
     
 if un_left_pressed and !left_pressed
     {
-    draw_sprite_ext(spr_playertwo,0,x+random(10)-5,y+random(2)-1, 1 + max(0,(own_speed-6)/100), max(0.3, 1 - (own_speed-6)/100), image_angle, c_white,1);
+    draw_sprite_ext(spr_playertwo,0,x+random(10)-5,y+random(2)-1, 1 + max(0,(own_speed-6)/100), max(0.3, 1 - (own_speed-6)/100), 0, c_white,1);
     } 
     
 
