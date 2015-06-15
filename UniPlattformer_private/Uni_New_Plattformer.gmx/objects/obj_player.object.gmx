@@ -184,10 +184,12 @@ if y &gt; room_height{
 
 //key_variables
 
-var left_key = keyboard_check(global.key_up);          
-var right_key = keyboard_check(global.key_right);        
+var left_key = keyboard_check(global.key_left);          
+var right_key = keyboard_check(global.key_right); 
 
-if keyboard_check_pressed(vk_space) 
+var jump_key_just_pressed = keyboard_check_pressed(global.key_up);        
+
+if jump_key_just_pressed
     then
     {
     jump_frames = jump_frames_duration;
@@ -197,14 +199,9 @@ if jump_frames &gt; 0
     then
     {
     jump_frames -= 1;
-    var jump_key_just_pressed = true;
-    }
-else
-    {
-    var jump_key_just_pressed = false;
     }
     
-var jump_key_not_pressed = !keyboard_check(vk_space);
+var jump_key_not_pressed = !keyboard_check(global.key_up);
 
 // var jump_key_just_pressed = gamepad_button_check_pressed(scr_gamepad_get_first_connected(),gp_face1);
 
@@ -256,7 +253,7 @@ if right_key
     
 //jumping //double_jumping //wall_jumping
 
-if (jump_key_just_pressed) or jumpBlock     // jumping and jumping if on Jumpblock
+if jump_frames &gt; 0 or jumpBlock     // jumping and jumping if on Jumpblock
     then
     {
     if on_ground = true
