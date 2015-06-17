@@ -47,7 +47,7 @@
       <sprite>sprites\spr_player_wall_down</sprite>
       <sprite>sprites\spr_player_gui</sprite>
       <sprite>sprites\spr_player_gui_back</sprite>
-      <sprite>sprites\spr_player_lazer</sprite>
+      <sprite>sprites\spr_player_damage</sprite>
     </sprites>
     <sprites name="group_second_player">
       <sprite>sprites\spr_playertwo</sprite>

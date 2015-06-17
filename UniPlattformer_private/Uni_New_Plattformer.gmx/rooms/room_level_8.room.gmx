@@ -8,7 +8,7 @@
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
-  <colour>33023</colour>
+  <colour>16711680</colour>
   <showcolour>-1</showcolour>
   <code>global.menuRoom = false;
 global.current_level_number = 8;

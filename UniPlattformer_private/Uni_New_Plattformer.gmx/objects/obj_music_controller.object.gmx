@@ -87,7 +87,7 @@ switch (room)
                         audio_stop_sound (snd_title_menu_sound);break;                        
     case room_level_2: if !audio_is_playing(snd_level_theme2) audio_play_sound(snd_level_theme2,1,true); 
                         audio_stop_sound (snd_title_menu_sound);break;    
-    case room_level_3: if !audio_is_playing(snd_level_theme1) audio_play_sound(snd_level_theme1,1,true); 
+    case room_level_3: if !audio_is_playing(snd_level_theme2) audio_play_sound(snd_level_theme2,1,true); 
                         audio_stop_sound (snd_title_menu_sound);break;    
     case room_level_4: if !audio_is_playing(snd_level_theme3) audio_play_sound(snd_level_theme3,1,true); 
                         audio_stop_sound (snd_title_menu_sound);break;    
