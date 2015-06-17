@@ -97,6 +97,33 @@ if global.checkpoint = true
     x = obj_checkpoint.x;
     y = obj_checkpoint.y-32;
     }
+    
+//damage sprite
+in_damage = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Damage pose
+in_damage = false;
 </string>
           </argument>
         </arguments>
@@ -900,6 +927,8 @@ if !invincible
     {
     audio_play_sound(snd_damage,1,false);
     alarm[0] = 20;
+    alarm[1] = 5;
+    in_damage = true;
     scr_lose ();
     invincible = true;
     if h_speed &lt; 0
@@ -1074,8 +1103,16 @@ if !invincible
     }
 else
     {
-    draw_sprite_ext(spr_player_lazer,image_index,x,y,dir,1,0,-1,flicker);
-    flicker *= -1;
+    if in_damage
+        then
+        {
+        draw_sprite_ext(spr_player_damage,1,x,y,dir,1,0,-1,1);
+        }
+        else
+        {
+        draw_sprite_ext(sprite_index,image_index,x,y,dir,1,0,-1,flicker);
+        flicker *= -1;
+        }
     }
 
 

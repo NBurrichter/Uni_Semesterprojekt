@@ -108,7 +108,7 @@ if keyboard_check_pressed(global.key_left) and !mouse_over
 if keyboard_check_pressed(global.key_right) and !mouse_over
     then
     {
-    if moveto &lt; 10
+    if moveto &lt; 9
         if moveto &lt; global.level_save
         then
         {

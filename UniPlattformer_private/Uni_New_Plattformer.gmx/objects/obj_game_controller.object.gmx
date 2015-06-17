@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>//////////////Debug
 
-show_debug_overlay(true);
+//show_debug_overlay(true);
 </string>
           </argument>
         </arguments>
@@ -161,7 +161,8 @@ draw_text(50, 450, "Effect: " + string(global.effectSound));
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto_next();
+            <string>global.checkpoint = false;
+room_goto_next();
 </string>
           </argument>
         </arguments>
