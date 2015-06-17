@@ -88,7 +88,12 @@ hit = false;
 
 on_block4 = false;
 
-
+if global.checkpoint = true
+    then
+    {
+    x = obj_checkpoint.x;
+    y = obj_checkpoint.y-32;
+    }
 </string>
           </argument>
         </arguments>
@@ -987,7 +992,7 @@ if !invincible
     }
 else
     {
-    draw_sprite_ext(sprite_index,image_index,x,y,dir,1,0,-1,flicker);
+    draw_sprite_ext(spr_player_lazer,image_index,x,y,dir,1,0,-1,flicker);
     flicker *= -1;
     }
 

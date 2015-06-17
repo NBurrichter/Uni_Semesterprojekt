@@ -35,9 +35,12 @@ movey[0] = 0;
 
 
 //Das level zu dem man sich bewegen soll
-moveto = 1;
+moveto = global.level_current;
 //Das LEvel zu dem er sich grad bewegt
-onthemoveto = 1;
+onthemoveto = global.level_current;
+
+x = movex[global.level_current];
+y = movey[global.level_current];
 
 image_speed = 0.25
 

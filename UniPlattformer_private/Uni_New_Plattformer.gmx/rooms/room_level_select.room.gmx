@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>0</showcolour>
-  <code>global.menuRoom = true;</code>
+  <code>global.menuRoom = true;
+global.checkpoint = false;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>
   <clearDisplayBuffer>0</clearDisplayBuffer>
@@ -57,7 +58,6 @@
     <instance objName="obj_level_navigation_button" x="998" y="705" name="inst_2DF9FDAA" locked="0" code="level = room_level_4;&#xA;levelnumber = 4;&#xA;&#xA;obj_first_player_gui.movex[levelnumber] = x;&#xA;obj_first_player_gui.movey[levelnumber] = y;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_game_controller" x="32" y="32" name="inst_1390AD07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_second_player_gui" x="800" y="512" name="inst_D7097626" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_first_player_gui" x="64" y="512" name="inst_DC7960D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_exit_level_select_button" x="288" y="128" name="inst_E8B75E7B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_level_navigation_button" x="1160" y="701" name="inst_4E10E7BF" locked="0" code="level = room_level_5;&#xA;levelnumber = 5;&#xA;&#xA;obj_first_player_gui.movex[levelnumber] = x;&#xA;obj_first_player_gui.movey[levelnumber] = y;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_level_navigation_button" x="1321" y="708" name="inst_0750FF03" locked="0" code="level = room_level_6;&#xA;levelnumber = 6;&#xA;&#xA;obj_first_player_gui.movex[levelnumber] = x;&#xA;obj_first_player_gui.movey[levelnumber] = y;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -68,6 +68,7 @@
     <instance objName="obj_secret" x="1344" y="382" name="inst_27342EED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_shader_controller" x="73" y="34" name="inst_EFD1E42F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_level_title" x="1358" y="805" name="inst_8C2143B6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_first_player_gui" x="64" y="512" name="inst_DC7960D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

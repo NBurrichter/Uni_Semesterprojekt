@@ -47,6 +47,7 @@
       <sprite>sprites\spr_player_wall_down</sprite>
       <sprite>sprites\spr_player_gui</sprite>
       <sprite>sprites\spr_player_gui_back</sprite>
+      <sprite>sprites\spr_player_lazer</sprite>
     </sprites>
     <sprites name="group_second_player">
       <sprite>sprites\spr_playertwo</sprite>
@@ -72,7 +73,11 @@
       </sprites>
       <sprites name="group_moving_enemies">
         <sprite>sprites\spr_flapping_enemy</sprite>
+        <sprite>sprites\spr_giga_flapping</sprite>
         <sprite>sprites\spr_flapping_enemy_up</sprite>
+      </sprites>
+      <sprites name="group_effects">
+        <sprite>sprites\spr_rocket_explosion</sprite>
       </sprites>
     </sprites>
     <sprites name="group_game_objects">
@@ -90,6 +95,9 @@
         <sprite>sprites\spr_level_exit</sprite>
         <sprite>sprites\spr_level_exit_front</sprite>
         <sprite>sprites\spr_level_exit_front_actecs</sprite>
+      </sprites>
+      <sprites name="group_checkpoint">
+        <sprite>sprites\spr_checkpoint</sprite>
       </sprites>
     </sprites>
     <sprites name="group_blocks">
@@ -119,13 +127,13 @@
     <backgrounds name="group_backgrounds">
       <backgrounds name="city">
         <background>background\background_city_sky</background>
-        <background>background\background_city_layer_two</background>
         <background>background\background_city_layer_one</background>
+        <background>background\background_city_layer_two</background>
         <background>background\background_city_layer_three</background>
+        <background>background\background_city_layer_four</background>
         <background>background\background_city_layer_five</background>
         <background>background\background_city_layer_six</background>
         <background>background\background_city_layer_seven</background>
-        <background>background\background_city_layer_four</background>
       </backgrounds>
       <backgrounds name="mountain">
         <background>background\bg_mountain_1</background>
@@ -254,6 +262,9 @@
         <object>objects\obj_level_exit_front</object>
         <object>objects\obj_level_exit</object>
       </objects>
+      <objects name="checkpoint">
+        <object>objects\obj_checkpoint</object>
+      </objects>
     </objects>
     <objects name="group_parent_objects">
       <object>objects\obj_parent_collision</object>
@@ -276,9 +287,11 @@
       </objects>
       <objects name="moving_enemies">
         <object>objects\obj_patrolling_enemy</object>
+        <object>objects\obj_giga_flapping_enemy</object>
         <object>objects\obj_bouncing_enemy</object>
         <object>objects\obj_bouncing_enemy_waiting</object>
       </objects>
+      <object>objects\obj_rocket_explosion</object>
     </objects>
     <objects name="group_blocks">
       <object>objects\obj_wall_block</object>
