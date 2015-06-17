@@ -37,7 +37,6 @@ double_jump = 0;
 
 running_jump_height = 0.0;
 
-
 ///jumping
 jump_frames = 0;
 jump_frames_duration = 4;
@@ -46,7 +45,8 @@ normal_jump_height = 14;
 wall_jump_distance = 8;
 
 sticking = false;
-wall_jump_delay = 6;
+wall_jump_delay_amount = 14;
+wall_jump_delay = wall_jump_delay_amount;
 
 max_drop_speed = 20;
 
@@ -306,13 +306,13 @@ if right_key
         }
     } 
 
-if wall_jump_delay &lt; 8 
+if wall_jump_delay &lt; wall_jump_delay_amount 
     then
     {    
     if !left_key &amp;&amp; !right_key or on_ground or !place_meeting(x+(dir),y,obj_parent_collision) &amp;&amp; !place_meeting(x-(dir),y,obj_parent_collision)
         then
         {
-        wall_jump_delay = 6;
+        wall_jump_delay = wall_jump_delay_amount;
         }
     }
      
@@ -1084,7 +1084,7 @@ else
 draw_set_colour (c_black);
 
 //scr_gamepad_debug_message();
-/*
+
 
 draw_text (x,y+25,"wall_jump_delay: "+string(obj_player.wall_jump_delay));
 /*
