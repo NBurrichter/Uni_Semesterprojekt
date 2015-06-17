@@ -138,30 +138,29 @@ if instance_exists(point_of_interest)
             <kind>1</kind>
             <string>///Parallax scrolling
 
-//background_x[0] = view_xview[0];
-//background_y[0] = view_yview[0];
+background_x[0] = view_xview[0]/2;
+background_y[0] = view_yview[0];
 
 background_x[1] = view_xview[0]/2;
-background_y[1] = view_yview[0]/2;
+background_y[1] = view_yview[0];
 
 background_x[2] = view_xview[0]/3;
-background_y[2] = view_yview[0]/3;
+background_y[2] = view_yview[0];
 
 background_x[3] = view_xview[0]/4;
-background_y[3] = view_yview[0]/4;
+background_y[3] = view_yview[0];
 
 background_x[4] = view_xview[0]/5;
-background_y[4] = view_yview[0]/5;
+background_y[4] = view_yview[0];
 
 background_x[5] = view_xview[0]/6;
-background_y[5] = view_yview[0]/6;
+background_y[5] = view_yview[0];
 
 background_x[6] = view_xview[0]/7;
-background_y[6] = view_yview[0]/7;
+background_y[6] = view_yview[0];
 
-/*
-background_x[7] = view_xview[0]/8;
-background_y[7] = view_yview[0]/8;
+//background_x[7] = view_xview[0]/8;
+background_y[7] = view_yview[0];
 </string>
           </argument>
         </arguments>

@@ -13,7 +13,7 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>480</width>
-  <height>270</height>
+  <width>3200</width>
+  <height>900</height>
   <data>images\background_city_sky.png</data>
 </background>

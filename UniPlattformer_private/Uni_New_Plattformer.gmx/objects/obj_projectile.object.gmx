@@ -104,6 +104,8 @@ part_particles_create(global.particle_system, x, y, global.particle_rocketsmoke,
             <kind>1</kind>
             <string>///Destroy projectile
 
+instance_create(x,y,obj_rocket_explosion);
+
 instance_destroy();
 
 </string>
@@ -129,6 +131,8 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>///Destroy projectile &amp; block
+
+instance_create(x,y,obj_rocket_explosion);
 
 with(other)
     {

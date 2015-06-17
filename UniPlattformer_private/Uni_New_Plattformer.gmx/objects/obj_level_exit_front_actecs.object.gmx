@@ -30,6 +30,8 @@ audio_stop_sound(snd_level_theme2);
 audio_stop_sound(snd_level_theme3);
 audio_stop_sound(snd_level_theme4);
 
+global.checkpoint = false;
+
 if global.current_level_number = global.level_save
     then
     {
