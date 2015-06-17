@@ -29,7 +29,7 @@
 
 sprite_index = choose(spr_block_particle, spr_block_particle_2nd);
 image_angle = direction;
-speed = 12;
+speed = 10;
 
 getting_smaller = random_range(0.1, 0.03);
 gravity_direction = 270;
@@ -125,7 +125,7 @@ if scale &lt; 0
             <kind>1</kind>
             <string>///Draw
 
-scr_draw_trail(55, 6, c_orange, -1, true, 0.6);
+scr_draw_trail(8, 4, c_orange, -1, true, 0.6);
 draw_sprite_ext (sprite_index, image_index, x, y, scale, scale, image_angle, c_white, image_alpha);  
 </string>
           </argument>
