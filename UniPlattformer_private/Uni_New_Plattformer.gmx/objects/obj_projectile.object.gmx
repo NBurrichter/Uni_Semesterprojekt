@@ -144,9 +144,8 @@ for (i= 0; i &lt; number_of_shrapnels; i++)
     shrapnel = instance_create(x, y, obj_explosion_particle);
     with (shrapnel)
         {
-        direction = 360/other.number_of_shrapnels*other.i + random_range (-15, 15);
-        motion_add(other.direction,other.speed/2);
-        scale = random_range (0.3, 1.2);
+        direction = other.direction + random_range(-100,100)
+        scale = random_range (0.5, 1);
         image_xscale = scale;
         image_yscale = scale;
         }

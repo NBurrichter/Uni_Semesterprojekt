@@ -29,11 +29,13 @@
 
 sprite_index = choose(spr_block_particle, spr_block_particle_2nd);
 image_angle = direction;
-speed = 10;
+speed = 9;
 
 getting_smaller = random_range(0.1, 0.03);
 gravity_direction = 270;
-gravity = 0.7;
+gravity = 0.5;
+
+color = make_colour_hsv(random_range(220,255), random_range(100,255), 255);
 </string>
           </argument>
         </arguments>
@@ -58,7 +60,13 @@ gravity = 0.7;
             <kind>1</kind>
             <string>///Create Particles
 
-part_particles_create(global.particle_system, x, y, global.particle_rocketsmoke, 1);
+particle = instance_create(x, y, obj_explosion_particle_particle);
+with (particle)
+    {
+    image_xscale = other.scale;
+    image_yscale = other.scale;
+    image_angle = random(359);
+    }
 </string>
           </argument>
         </arguments>
@@ -83,18 +91,8 @@ part_particles_create(global.particle_system, x, y, global.particle_rocketsmoke,
 
 image_angle += hspeed;
 
-if vspeed &gt; 0
-    then
-    {
-    scale -= getting_smaller;
-    }
-
-if scale &lt; 1
-    then
-    {
-    image_alpha = scale;
-    }
-        
+scale -= getting_smaller;
+    
 if scale &lt; 0
     then
     {
@@ -125,8 +123,7 @@ if scale &lt; 0
             <kind>1</kind>
             <string>///Draw
 
-scr_draw_trail(8, 4, c_orange, -1, true, 0.6);
-draw_sprite_ext (sprite_index, image_index, x, y, scale, scale, image_angle, c_white, image_alpha);  
+draw_sprite_ext (sprite_index, image_index, x, y, scale, scale, image_angle, color, image_alpha);  
 </string>
           </argument>
         </arguments>
