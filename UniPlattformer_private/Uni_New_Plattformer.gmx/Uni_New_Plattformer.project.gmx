@@ -110,6 +110,10 @@
         <sprite>sprites\spr_unlock_2</sprite>
       </sprites>
     </sprites>
+    <sprites name="group_block_particle">
+      <sprite>sprites\spr_block_particle</sprite>
+      <sprite>sprites\spr_block_particle_2nd</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background_arrow</background>
@@ -162,6 +166,8 @@
       <script>scripts\scr_gamepad_move_mouse.gml</script>
       <script>scripts\scr_gamepad_debug_message.gml</script>
       <script>scripts\scr_gamepad_key_listener.gml</script>
+      <script>scripts\scr_get_input_keyboard.gml</script>
+      <script>scripts\scr_get_input_gamepad.gml</script>
     </scripts>
     <scripts name="graphical_stuff">
       <scripts name="group_particles">
@@ -244,6 +250,7 @@
                   <object>objects\obj_key_left</object>
                   <object>objects\obj_key_down</object>
                   <object>objects\obj_key_right</object>
+                  <object>objects\obj_key_controller_enable</object>
                 </objects>
               </objects>
               <objects name="group_level_select_buttons">
@@ -283,6 +290,8 @@
         <objects name="cannon_munition">
           <object>objects\obj_heat_seeking_missle</object>
           <object>objects\obj_projectile</object>
+          <object>objects\obj_rocket_explosion</object>
+          <object>objects\obj_explosion_particle</object>
         </objects>
       </objects>
       <objects name="moving_enemies">
@@ -291,7 +300,6 @@
         <object>objects\obj_bouncing_enemy</object>
         <object>objects\obj_bouncing_enemy_waiting</object>
       </objects>
-      <object>objects\obj_rocket_explosion</object>
     </objects>
     <objects name="group_blocks">
       <object>objects\obj_wall_block</object>

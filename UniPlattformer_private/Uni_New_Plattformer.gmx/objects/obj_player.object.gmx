@@ -37,7 +37,6 @@ double_jump = 0;
 
 running_jump_height = 0.0;
 
-
 ///jumping
 jump_frames = 0;
 jump_frames_duration = 4;
@@ -46,7 +45,8 @@ normal_jump_height = 14;
 wall_jump_distance = 8;
 
 sticking = false;
-wall_jump_delay = 6;
+wall_jump_delay_amount = 14;
+wall_jump_delay = wall_jump_delay_amount;
 
 max_drop_speed = 20;
 
@@ -219,11 +219,16 @@ if y &gt; room_height{
 
 //key_variables
 
-var left_key = keyboard_check(global.key_left);          
-var right_key = keyboard_check(global.key_right); 
-
-var jump_key_just_pressed = keyboard_check_pressed(global.key_up);        
-
+if global.player_controls = 1
+    then
+    {
+    scr_get_input_keyboard();
+    }
+else
+    {
+    scr_get_input_gamepad();
+    }
+   
 if jump_key_just_pressed
     then
     {
@@ -235,10 +240,6 @@ if jump_frames &gt; 0
     {
     jump_frames -= 1;
     }
-    
-var jump_key_not_pressed = !keyboard_check(global.key_up);
-
-// var jump_key_just_pressed = gamepad_button_check_pressed(scr_gamepad_get_first_connected(),gp_face1);
 
 //cancel each if left right pressed
 
@@ -271,7 +272,7 @@ double_jump = 0;
 }   
 
 //acceleration &amp;&amp; stay stuck to the wall until he falls away from it
-
+/*
 if left_key
     then
     {
@@ -338,16 +339,31 @@ if right_key
         }
     } 
 
-if wall_jump_delay &lt; 8 
+if wall_jump_delay &lt; wall_jump_delay_amount 
     then
     {    
     if !left_key &amp;&amp; !right_key or on_ground or !place_meeting(x+(dir),y,obj_parent_collision) &amp;&amp; !place_meeting(x-(dir),y,obj_parent_collision)
         then
         {
-        wall_jump_delay = 6;
+        wall_jump_delay = wall_jump_delay_amount;
         }
     }
-     
+*/
+
+if left_key
+    then
+    {
+    h_speed -= acceleration;
+    dir = -1;
+    }
+    
+if right_key
+    then
+    {
+    h_speed += acceleration;
+    dir = +1;
+    } 
+   
 //jumping //double_jumping //wall_jumping
 
 if jump_frames &gt; 0 or jumpBlock     // jumping and jumping if on Jumpblock
@@ -1126,7 +1142,7 @@ else
 draw_set_colour (c_black);
 
 //scr_gamepad_debug_message();
-/*
+
 
 draw_text (x,y+25,"wall_jump_delay: "+string(obj_player.wall_jump_delay));
 /*

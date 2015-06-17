@@ -32,6 +32,44 @@ choosing_key = false;
 
 chosen_key = global.key_right;
 
+switch (chosen_key)
+    {
+    case vk_control:name="Ctrl";break;
+    case vk_tab:name="Tab";break;
+    case vk_space:  name="Space";break;
+            
+    //ARROW KEYS
+    case vk_left:   name="Left"; break; 
+    case vk_right:  name="Right"; break;
+    case vk_up: name="Up"; break;
+    case vk_down:   name="Down"; break;
+            
+    //NUMPAD
+    case vk_numpad0:name="Num0";break;  case vk_numpad1:name="Num1";break;
+    case vk_numpad2:name="Num2";break;  case vk_numpad3:name="Num3";break;
+    case vk_numpad4:name="Num4";break;  case vk_numpad5:name="Num5";break;
+    case vk_numpad6:name="Num6";break;  case vk_numpad7:name="Num7";break;
+    case vk_numpad8:name="Num8";break;  case vk_numpad9:name="Num9";break;
+            
+    //LETTERS
+    case ord('A'):  name="A";break; case ord('B'):  name="B";break;
+    case ord('C'):  name="C";break; case ord('D'):  name="D";break;
+    case ord('E'):  name="E";break; case ord('F'):  name="F";break;
+    case ord('G'):  name="G";break; case ord('H'):  name="H";break;
+    case ord('I'):  name="I";break; case ord('J'):  name="J";break;
+    case ord('K'):  name="K";break; case ord('L'):  name="L";break;
+    case ord('M'):  name="M";break; case ord('N'):  name="N";break;
+    case ord('O'):  name="O";break; case ord('P'):  name="P";break;
+    case ord('Q'):  name="Q";break; case ord('R'):  name="R";break;
+    case ord('S'):  name="S";break; case ord('T'):  name="T";break;
+    case ord('U'):  name="U";break; case ord('V'):  name="V";break;
+    case ord('W'):  name="W";break; case ord('X'):  name="X";break;
+    case ord('Y'):  name="Y";break; case ord('Z'):  name="Z";break;
+            
+    //UNCHARTED KEY
+    default: break;
+    }
+
 </string>
           </argument>
         </arguments>
@@ -63,6 +101,43 @@ if choosing_key = true
         then
         {
         chosen_key = keyboard_get_map(keyboard_lastkey);
+        switch (chosen_key)
+            {
+            case vk_control:name="Ctrl";break;
+            case vk_tab:name="Tab";break;
+            case vk_space:  name="Space";break;
+            
+            //ARROW KEYS
+            case vk_left:   name="Left"; break; 
+            case vk_right:  name="Right"; break;
+            case vk_up: name="Up"; break;
+            case vk_down:   name="Down"; break;
+            
+            //NUMPAD
+            case vk_numpad0:name="Num0";break;  case vk_numpad1:name="Num1";break;
+            case vk_numpad2:name="Num2";break;  case vk_numpad3:name="Num3";break;
+            case vk_numpad4:name="Num4";break;  case vk_numpad5:name="Num5";break;
+            case vk_numpad6:name="Num6";break;  case vk_numpad7:name="Num7";break;
+            case vk_numpad8:name="Num8";break;  case vk_numpad9:name="Num9";break;
+            
+            //LETTERS
+            case ord('A'):  name="A";break; case ord('B'):  name="B";break;
+            case ord('C'):  name="C";break; case ord('D'):  name="D";break;
+            case ord('E'):  name="E";break; case ord('F'):  name="F";break;
+            case ord('G'):  name="G";break; case ord('H'):  name="H";break;
+            case ord('I'):  name="I";break; case ord('J'):  name="J";break;
+            case ord('K'):  name="K";break; case ord('L'):  name="L";break;
+            case ord('M'):  name="M";break; case ord('N'):  name="N";break;
+            case ord('O'):  name="O";break; case ord('P'):  name="P";break;
+            case ord('Q'):  name="Q";break; case ord('R'):  name="R";break;
+            case ord('S'):  name="S";break; case ord('T'):  name="T";break;
+            case ord('U'):  name="U";break; case ord('V'):  name="V";break;
+            case ord('W'):  name="W";break; case ord('X'):  name="X";break;
+            case ord('Y'):  name="Y";break; case ord('Z'):  name="Z";break;
+            
+            //UNCHARTED KEY
+            default: break;
+            }
         keyboard_lastkey = -1;
         choosing_key = false;
         instance_activate_all();
@@ -186,9 +261,9 @@ else
     draw_sprite (sprite_index,1,x,y);
     }
 
-draw_set_halign(fa_center);    
-
-draw_text (x,y,string(chr(chosen_key)));
+draw_set_halign(fa_center);
+    
+draw_text (x,y,string(name));
 
 if choosing_key = true
     then

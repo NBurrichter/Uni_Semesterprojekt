@@ -65,7 +65,11 @@ if mouse_over = true
         global.key_left = keyboard_get_map(obj_key_left.chosen_key);
         global.key_right = keyboard_get_map(obj_key_right.chosen_key);
         
+        global.player_controls = obj_key_controller_enable.controller_is_enabled;
+        
         ini_open("settings.ini");
+        ini_write_real("controls", "player_controls", global.player_controls);
+        
         ini_write_real("controls", "up", keyboard_get_map(global.key_up));
         ini_write_real("controls", "down", keyboard_get_map(global.key_down));
         ini_write_real("controls", "left", keyboard_get_map(global.key_left));
