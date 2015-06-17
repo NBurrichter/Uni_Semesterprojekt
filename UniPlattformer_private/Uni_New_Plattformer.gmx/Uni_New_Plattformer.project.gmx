@@ -69,6 +69,7 @@
           <sprite>sprites\spr_laser_cannon</sprite>
           <sprite>sprites\spr_laser_cannon_down</sprite>
           <sprite>sprites\spr_laser_cannon_up</sprite>
+          <sprite>sprites\spr_laser_rotating</sprite>
         </sprites>
       </sprites>
       <sprites name="group_moving_enemies">
@@ -128,6 +129,7 @@
       <background>background\bg_temple_pillar</background>
       <background>background\background_tileset</background>
       <background>background\bg_grass_tile</background>
+      <background>background\bg_city_tiles</background>
     </backgrounds>
     <backgrounds name="group_backgrounds">
       <backgrounds name="city">
