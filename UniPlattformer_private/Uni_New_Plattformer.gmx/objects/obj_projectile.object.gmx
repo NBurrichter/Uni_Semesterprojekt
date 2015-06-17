@@ -25,7 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>counter = 0;
+            <string>///Initialize Variables
+
+counter = 0;
+
+i = 0;
+
+number_of_shrapnels = 9;
 
 </string>
           </argument>
@@ -104,10 +110,11 @@ part_particles_create(global.particle_system, x, y, global.particle_rocketsmoke,
             <kind>1</kind>
             <string>///Destroy projectile
 
-instance_create(x,y,obj_rocket_explosion);
+instance_create(x + lengthdir_x(sprite_width/2, direction), y + lengthdir_y(sprite_width/2, direction), obj_rocket_explosion);
 
 instance_destroy();
 
+//lengthdir_x(sprite_width, direction)
 </string>
           </argument>
         </arguments>
@@ -132,7 +139,20 @@ instance_destroy();
             <kind>1</kind>
             <string>///Destroy projectile &amp; block
 
-instance_create(x,y,obj_rocket_explosion);
+for (i= 0; i &lt; number_of_shrapnels; i++)
+    {
+    shrapnel = instance_create(x, y, obj_explosion_particle);
+    with (shrapnel)
+        {
+        direction = 360/other.number_of_shrapnels*other.i + random_range (-15, 15);
+        motion_add(other.direction,other.speed/2);
+        scale = random_range (0.3, 1.6);
+        image_xscale = scale;
+        image_yscale = scale;
+        }
+    }
+
+instance_create(x + lengthdir_x(sprite_width/2, direction), y + lengthdir_y(sprite_width/2, direction), obj_rocket_explosion);
 
 with(other)
     {

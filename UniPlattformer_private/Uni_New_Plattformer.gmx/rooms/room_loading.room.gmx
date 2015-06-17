@@ -23,6 +23,8 @@ global.key_down = ini_read_real("controls", "down", keyboard_get_map("S"));
 global.key_left = ini_read_real("controls", "left", keyboard_get_map("A"));
 global.key_right = ini_read_real("controls", "right", keyboard_get_map("D"));
 
+global.player_controls = ini_read_real("controls", "player_controls", 1);
+
 global.level_save = ini_read_real("save", "levelsave", 1);
 global.level_current = ini_read_real("save", "levelcurrent", 1);
 
