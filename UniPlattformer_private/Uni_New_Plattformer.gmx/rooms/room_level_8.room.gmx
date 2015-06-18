@@ -398,7 +398,6 @@ global.current_level_number = 8;
     <instance objName="obj_wall_block" x="5568" y="256" name="inst_1199983F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="5536" y="256" name="inst_535569BD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkpoint" x="2816" y="736" name="inst_325CF8F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-<<<<<<< HEAD
     <instance objName="obj_wall_block" x="608" y="256" name="inst_E9602573" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="576" y="256" name="inst_5243D888" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="544" y="256" name="inst_C6AED4FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -534,9 +533,7 @@ global.current_level_number = 8;
     <instance objName="obj_wall_block" x="4224" y="864" name="inst_521FF6D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="4224" y="896" name="inst_1C540656" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="4224" y="928" name="inst_9921AF09" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-=======
     <instance objName="obj_fade_in" x="160" y="64" name="inst_0A09AB75" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
->>>>>>> ddfb96ae12491db9846b32831c4470249ec5460e
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

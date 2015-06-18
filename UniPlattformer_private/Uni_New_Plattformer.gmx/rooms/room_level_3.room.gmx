@@ -1297,14 +1297,11 @@ global.current_level_number = 3;
     <instance objName="obj_wall_block" x="1392" y="2512" name="inst_DA4EBFFA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="1488" y="2032" name="inst_24D11639" locked="0" code="" scaleX="12" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="1552" y="2256" name="inst_D80EB77C" locked="0" code="" scaleX="8" scaleY="14" colour="4294967295" rotation="0"/>
-<<<<<<< HEAD
     <instance objName="obj_wall_block" x="1744" y="2224" name="inst_CDCAB43B" locked="0" code="" scaleX="14" scaleY="12" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="1744" y="1648" name="inst_1683651A" locked="0" code="" scaleX="18" scaleY="20" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="1712" y="1040" name="inst_C3069D07" locked="0" code="" scaleX="26" scaleY="22" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="-176" y="1360" name="inst_F93DF3AE" locked="0" code="" scaleX="32" scaleY="40" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="-16" y="656" name="inst_061919B0" locked="0" code="" scaleX="22" scaleY="22" colour="4294967295" rotation="0"/>
-=======
->>>>>>> ddfb96ae12491db9846b32831c4470249ec5460e
     <instance objName="obj_wall_block" x="48" y="2160" name="inst_0C7C6C4A" locked="0" code="" scaleX="12" scaleY="24" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="272" y="2288" name="inst_3D430181" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="304" y="2288" name="inst_DEF3EB96" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1333,7 +1330,6 @@ global.current_level_number = 3;
     <instance objName="obj_wall_block" x="240" y="2480" name="inst_B831611A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="240" y="2512" name="inst_E05A05C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="240" y="1968" name="inst_E338C13C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-<<<<<<< HEAD
     <instance objName="obj_wall_block" x="1296" y="1840" name="inst_1EB9CE76" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="1296" y="1808" name="inst_B2950B83" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="1296" y="1776" name="inst_F18CBECD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1412,9 +1408,7 @@ global.current_level_number = 3;
     <instance objName="obj_wall_block" x="1360" y="1776" name="inst_024A3957" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="1328" y="1776" name="inst_080C299E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="1328" y="1744" name="inst_8AEFFB00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-=======
     <instance objName="obj_fade_in" x="160" y="32" name="inst_204CF8AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
->>>>>>> ddfb96ae12491db9846b32831c4470249ec5460e
   </instances>
   <tiles>
     <tile bgName="bg_grass_dark" x="1184" y="2784" w="32" h="32" xo="32" yo="64" id="10015897" name="inst_7FF53C53" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
