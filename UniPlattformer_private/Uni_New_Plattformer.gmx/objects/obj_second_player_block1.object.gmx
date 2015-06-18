@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///initialize variables
 crumbling = false;
-decay_time = 0.1;
+decay_time = 0.09;
 
 //Changeable variables
 
@@ -72,7 +72,7 @@ if crumbling = true
     transparency -= decay_time;
     }
     
-if transparency = 0
+if transparency &lt;= 0
     then
     {
     instance_destroy ();

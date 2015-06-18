@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///initialize variables
 crumbling = false;
-decay_time = 0.1;
+decay_time = 0.09;
 
 //Changeable variables
 
