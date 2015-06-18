@@ -129,7 +129,7 @@
       <background>background\bg_temple_pillar</background>
       <background>background\background_tileset</background>
       <background>background\bg_grass_tile</background>
-      <background>background\bg_city_tiles</background>
+      <background>background\bg_construction_tiles</background>
     </backgrounds>
     <backgrounds name="group_backgrounds">
       <backgrounds name="city">

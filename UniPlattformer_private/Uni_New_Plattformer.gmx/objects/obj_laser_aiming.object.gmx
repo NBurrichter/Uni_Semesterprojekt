@@ -3,7 +3,7 @@
   <spriteName>spr_laser_cannon</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-4</depth>
   <persistent>0</persistent>
   <parentName>obj_parent_stopping_rockets</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -82,6 +82,7 @@ if collision_line(x, y, x+lengthdir_x(dist,image_angle), y+lengthdir_y(dist,imag
         obj_player.alarm[0] = 20;
         obj_player.alarm[1] = 5;
         obj_player.in_damage = true;
+        obj_player.max_speed = 3;
         scr_lose ();
         obj_player.invincible = true;
         //obj_player.h_speed *= -1;

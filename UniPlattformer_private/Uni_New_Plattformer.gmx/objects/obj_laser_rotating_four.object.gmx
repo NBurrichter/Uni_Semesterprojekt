@@ -3,7 +3,7 @@
   <spriteName>spr_laser_rotating</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-4</depth>
   <persistent>0</persistent>
   <parentName>obj_parent_stopping_rockets</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -28,6 +28,7 @@
             <string>///Defining variables
 
 shooting_range = 3000;
+rot_speed = 1;
 
 //distance array for 4 lasers
 
@@ -60,7 +61,7 @@ for (var i = 0; i &lt; 4; i ++)
             <kind>1</kind>
             <string> ///Rotation &amp; Laser Collision
 
-image_angle += 1;
+image_angle += rot_speed;
 
 for (var i = 0; i &lt; 4; i ++)
     {
@@ -84,6 +85,7 @@ for (var i = 0; i &lt; 4; i ++)
             obj_player.invincible = true;
             obj_player.alarm[1] = 5;
             obj_player.in_damage = true;
+            obj_player.max_speed = 3;
             //obj_player.h_speed *= -1;
             //obj_player.v_speed *= -1;
             instance_create(obj_player.x,obj_player.y,obj_damage_unlock)

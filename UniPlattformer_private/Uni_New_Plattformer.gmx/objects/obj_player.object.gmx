@@ -56,7 +56,8 @@ sticking_to_the_wall_timer = frames_stuck_to_wall;
 
 acceleration = 1;
 fric = 0.1;
-max_speed = 8;
+max_max_speed =8;
+max_speed = max_max_speed;
 
 h_speed = 0;
 v_speed = 0;
@@ -148,6 +149,7 @@ in_damage = false;
             <kind>1</kind>
             <string>///invincibility frames
 invincible = false;
+max_speed = max_max_speed;
 </string>
           </argument>
         </arguments>
