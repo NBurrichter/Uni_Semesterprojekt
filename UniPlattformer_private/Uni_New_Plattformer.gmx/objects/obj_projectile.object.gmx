@@ -31,7 +31,7 @@ counter = 0;
 
 i = 0;
 
-number_of_shrapnels = 9;
+number_of_shrapnels = irandom_range(3,12);
 
 </string>
           </argument>
@@ -109,6 +109,19 @@ part_particles_create(global.particle_system, x, y, global.particle_rocketsmoke,
           <argument>
             <kind>1</kind>
             <string>///Destroy projectile
+
+for (i= 0; i &lt; number_of_shrapnels/2; i++)
+    {
+    shrapnel = instance_create(x, y, obj_explosion_particle);
+    with (shrapnel)
+        {
+        direction = other.direction + random_range(-100,100)
+        scale = random_range (0.5, 1);
+        getting_smaller = 0.12;   //(0.1, 0.03);
+        image_xscale = scale+0.2;
+        image_yscale = scale+0.2;
+        }
+    }
 
 instance_create(x + lengthdir_x(sprite_width/2, direction), y + lengthdir_y(sprite_width/2, direction), obj_rocket_explosion);
 

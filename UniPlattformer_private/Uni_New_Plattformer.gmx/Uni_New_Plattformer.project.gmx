@@ -227,6 +227,8 @@
       <object>objects\obj_shader_controller_start_screen</object>
       <object>objects\obj_pause</object>
       <object>objects\obj_room_transition</object>
+      <object>objects\obj_room_exit_transition</object>
+      <object>objects\obj_fade_in</object>
       <objects name="group_menu_objects">
         <objects name="group_buttons">
           <objects name="group_start_screen_buttons">

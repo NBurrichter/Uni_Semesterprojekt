@@ -880,6 +880,7 @@ global.current_level_number = 6;
     <instance objName="obj_wall_block" x="3840" y="992" name="inst_756D7A2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="3712" y="1248" name="inst_1F0465C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_laser_cannon" x="3296" y="448" name="inst_00AB0DC8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fade_in" x="224" y="64" name="inst_6D484E8B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

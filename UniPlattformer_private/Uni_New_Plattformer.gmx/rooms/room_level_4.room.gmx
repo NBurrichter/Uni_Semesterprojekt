@@ -757,6 +757,7 @@ global.current_level_number = 4;
     <instance objName="obj_wall_block" x="1024" y="352" name="inst_73D3D810" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="1024" y="384" name="inst_BCF4556A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="1024" y="416" name="inst_51C3D03D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fade_in" x="160" y="64" name="inst_5D9D52D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background_tutorial_2" x="2656" y="544" w="1280" h="960" xo="0" yo="0" id="10010199" name="inst_0A565BAB" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

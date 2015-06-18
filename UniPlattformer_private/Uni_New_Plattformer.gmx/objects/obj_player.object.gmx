@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-1000000</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -45,7 +45,7 @@ normal_jump_height = 14;
 wall_jump_distance = 8;
 
 sticking = false;
-wall_jump_delay_amount = 14;
+wall_jump_delay_amount = 8;
 wall_jump_delay = wall_jump_delay_amount;
 
 max_drop_speed = 20;
@@ -272,7 +272,7 @@ double_jump = 0;
 }   
 
 //acceleration &amp;&amp; stay stuck to the wall until he falls away from it
-/*
+
 if left_key
     then
     {
@@ -342,28 +342,13 @@ if right_key
 if wall_jump_delay &lt; wall_jump_delay_amount 
     then
     {    
-    if !left_key &amp;&amp; !right_key or on_ground or !place_meeting(x+(dir),y,obj_parent_collision) &amp;&amp; !place_meeting(x-(dir),y,obj_parent_collision)
+    if /*!left_key &amp;&amp; !right_key or*/ on_ground or !place_meeting(x+(dir),y,obj_parent_collision) &amp;&amp; !place_meeting(x-(dir),y,obj_parent_collision)
         then
         {
         wall_jump_delay = wall_jump_delay_amount;
         }
     }
-*/
 
-if left_key
-    then
-    {
-    h_speed -= acceleration;
-    dir = -1;
-    }
-    
-if right_key
-    then
-    {
-    h_speed += acceleration;
-    dir = +1;
-    } 
-   
 //jumping //double_jumping //wall_jumping
 
 if jump_frames &gt; 0 or jumpBlock     // jumping and jumping if on Jumpblock
