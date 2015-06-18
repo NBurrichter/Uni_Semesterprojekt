@@ -23,9 +23,9 @@
     <glyph character="61" x="435" y="253" w="21" h="33" shift="27" offset="0"/>
     <glyph character="77" x="2" y="2" w="53" h="44" shift="59" offset="0"/>
     <glyph character="122" x="41" y="207" w="37" h="44" shift="43" offset="0"/>
+    <glyph character="115" x="470" y="161" w="37" h="44" shift="43" offset="0"/>
     <glyph character="56" x="431" y="161" w="37" h="44" shift="43" offset="0"/>
     <glyph character="35" x="413" y="2" w="43" h="44" shift="48" offset="0"/>
-    <glyph character="115" x="470" y="161" w="37" h="44" shift="43" offset="0"/>
     <glyph character="105" x="41" y="310" w="11" h="44" shift="16" offset="0"/>
     <glyph character="47" x="80" y="207" w="32" h="44" shift="37" offset="0"/>
     <glyph character="80" x="470" y="115" w="37" h="44" shift="43" offset="0"/>
@@ -34,12 +34,12 @@
     <glyph character="48" x="323" y="2" w="43" h="44" shift="48" offset="0"/>
     <glyph character="32" x="203" y="253" w="16" h="53" shift="16" offset="0"/>
     <glyph character="91" x="381" y="253" w="16" h="44" shift="21" offset="0"/>
+    <glyph character="79" x="236" y="161" w="37" h="44" shift="43" offset="0"/>
+    <glyph character="97" x="158" y="161" w="37" h="44" shift="43" offset="0"/>
     <glyph character="114" x="70" y="253" w="27" h="44" shift="32" offset="0"/>
     <glyph character="57" x="197" y="161" w="37" h="44" shift="43" offset="0"/>
-    <glyph character="98" x="119" y="161" w="37" h="44" shift="43" offset="0"/>
-    <glyph character="79" x="236" y="161" w="37" h="44" shift="43" offset="0"/>
     <glyph character="107" x="2" y="253" w="32" h="44" shift="37" offset="0"/>
-    <glyph character="97" x="158" y="161" w="37" h="44" shift="43" offset="0"/>
+    <glyph character="98" x="119" y="161" w="37" h="44" shift="43" offset="0"/>
     <glyph character="46" x="54" y="310" w="11" h="44" shift="16" offset="0"/>
     <glyph character="38" x="431" y="115" w="37" h="44" shift="43" offset="0"/>
     <glyph character="100" x="41" y="161" w="37" h="44" shift="43" offset="0"/>
