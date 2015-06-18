@@ -42,7 +42,7 @@ if global.current_level_number = global.level_save
     }
 
 //audio_stop_all();
-room_goto_next ();
+instance_create(x, y, obj_room_exit_transition);
 </string>
           </argument>
         </arguments>
