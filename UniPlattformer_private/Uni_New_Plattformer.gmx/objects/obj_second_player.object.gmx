@@ -229,7 +229,7 @@ if selectMode = true
           <argument>
             <kind>1</kind>
             <string>///create the different blocks  
- if place_meeting(x,y,obj_parent_collision) &amp;&amp; !place_meeting (x,y,obj_player)
+ if place_meeting(x,y,obj_parent_collision) or place_meeting (x,y,obj_player) or place_meeting(x,y,obj_parent_damage_player)
         then
         {
         if !place_meeting(x,y,obj_second_player_block1){
@@ -240,7 +240,7 @@ if selectMode = true
 //1 jumping 3
 if mouseArea = 1
     {
-if !place_meeting (x,y,obj_parent_collision) &amp;&amp; !place_meeting (x,y,obj_player)
+if !place_meeting (x,y,obj_parent_collision) &amp;&amp; !place_meeting (x,y,obj_player) &amp;&amp; !place_meeting(x,y,obj_parent_damage_player)
     then
     {
     block = instance_create (x,y,obj_second_player_block2);
@@ -268,7 +268,7 @@ if instance_number (obj_second_player_block2) &gt; 3
 //3
 if mouseArea = 2
 {
-if !place_meeting (x,y,obj_parent_collision) &amp;&amp; !place_meeting (x,y,obj_player)
+if !place_meeting (x,y,obj_parent_collision) &amp;&amp; !place_meeting (x,y,obj_player) &amp;&amp; !place_meeting(x,y,obj_parent_damage_player)
     then
     {
     block = instance_create (x,y,obj_second_player_block3);
@@ -295,7 +295,7 @@ if instance_number (obj_second_player_block3) &gt; 1
 //4 
 if mouseArea = 3
 {
-if !place_meeting (x,y,obj_parent_collision) &amp;&amp; !place_meeting (x,y,obj_player)
+if !place_meeting (x,y,obj_parent_collision) &amp;&amp; !place_meeting (x,y,obj_player) &amp;&amp; !place_meeting(x,y,obj_parent_damage_player)
     then
     {
     block = instance_create (x,y,obj_second_player_block4);
@@ -350,7 +350,7 @@ audio_play_sound (snd_build_blocks,1,false);
             <string>//0 fadeing 9
 if mouseArea = 0
     {
-    if !place_meeting (x,y,obj_parent_collision) &amp;&amp; !place_meeting (x,y,obj_player)
+    if !place_meeting (x,y,obj_parent_collision) &amp;&amp; !place_meeting (x,y,obj_player) &amp;&amp; !place_meeting(x,y,obj_parent_damage_player)
         then
         {
         block = instance_create (x,y,obj_second_player_block1);
