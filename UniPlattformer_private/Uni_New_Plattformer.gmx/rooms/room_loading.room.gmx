@@ -18,6 +18,21 @@ global.checkpoint = false;
 
 ini_open("settings.ini");
 
+if !ini_key_exists("controls","up")
+    then
+    {
+    ini_write_real("controls", "up", 32);
+    ini_write_real("controls", "down", 32);
+    ini_write_real("controls", "left", 65);
+    ini_write_real("controls", "right", 68);
+    }
+    
+if !ini_key_exists("save","levelsave")
+    then
+    {
+    ini_write_real("save", "levelcurrent", 1);
+    }
+
 global.key_up = ini_read_real("controls", "up", keyboard_get_map("W"));
 global.key_down = ini_read_real("controls", "down", keyboard_get_map("S"));
 global.key_left = ini_read_real("controls", "left", keyboard_get_map("A"));
