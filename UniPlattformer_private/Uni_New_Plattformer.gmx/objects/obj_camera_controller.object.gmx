@@ -40,6 +40,24 @@ view_hborder [0] = view_wview/3;
 view_vborder [0] = view_hview/3;
 
 scrolling_border = 300;
+
+///positioning the backgrounds
+
+background_y[0] = room_height - background_height[0]
+
+background_y[1] = room_height - background_height[1]
+
+background_y[2] = room_height - background_height[2]
+
+background_y[3] = room_height - background_height[3]
+
+background_y[4] = room_height - background_height[4]
+
+background_y[5] = room_height - background_height[5]
+
+background_y[6] = room_height - background_height[6]
+
+background_y[7] = room_height - background_height[7]
 </string>
           </argument>
         </arguments>
@@ -139,28 +157,28 @@ if instance_exists(point_of_interest)
             <string>///Parallax scrolling
 
 background_x[0] = view_xview[0]/2;
-background_y[0] = view_yview[0];
+//background_y[0] = view_yview[0];
 
 background_x[1] = view_xview[0]/2;
-background_y[1] = view_yview[0];
+//background_y[1] = view_yview[0];
 
 background_x[2] = view_xview[0]/3;
-background_y[2] = view_yview[0];
+//background_y[2] = view_yview[0];
 
 background_x[3] = view_xview[0]/4;
-background_y[3] = view_yview[0];
+//background_y[3] = view_yview[0];
 
 background_x[4] = view_xview[0]/5;
-background_y[4] = view_yview[0];
+//background_y[4] = view_yview[0];
 
 background_x[5] = view_xview[0]/6;
-background_y[5] = view_yview[0];
+//background_y[5] = view_yview[0];
 
 background_x[6] = view_xview[0]/7;
-background_y[6] = view_yview[0];
+//background_y[6] = view_yview[0];
 
 //background_x[7] = view_xview[0]/8;
-background_y[7] = view_yview[0];
+//background_y[7] = view_yview[0];
 </string>
           </argument>
         </arguments>

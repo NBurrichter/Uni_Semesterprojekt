@@ -132,7 +132,7 @@
       <background>background\bg_construction_tiles</background>
     </backgrounds>
     <backgrounds name="group_backgrounds">
-      <backgrounds name="city">
+      <backgrounds name="construction_zone">
         <background>background\background_city_sky</background>
         <background>background\background_city_layer_one</background>
         <background>background\background_city_layer_two</background>
@@ -147,6 +147,19 @@
         <background>background\bg_mountain_2</background>
         <background>background\bg_mountain_3</background>
         <background>background\bg_mountain_4</background>
+      </backgrounds>
+      <backgrounds name="City_backgrounds">
+        <background>background\background_city_horizon</background>
+        <background>background\background_citylayer_1</background>
+        <background>background\background_citylayer_2</background>
+        <background>background\background_citylayer_3</background>
+        <background>background\background_citylayer_4</background>
+        <background>background\background_citylayer_5</background>
+        <background>background\background_citylayer_6</background>
+        <background>background\background_citylayer_7</background>
+        <background>background\background_citylayer_8</background>
+        <background>background\background_citylayer_9</background>
+        <background>background\background_citylayer_10</background>
       </backgrounds>
     </backgrounds>
     <backgrounds name="menu">
