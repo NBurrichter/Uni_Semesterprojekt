@@ -271,8 +271,8 @@ if mouseArea = 2
 if !place_meeting (x,y,obj_parent_collision) &amp;&amp; !place_meeting (x,y,obj_player) &amp;&amp; !place_meeting(x,y,obj_parent_damage_player)
     then
     {
-    block = instance_create (x,y,obj_second_player_block3);
-    part_particles_create_colour(global.particle_system, x, y, global.particle_block, c_orange, 1);
+    block = instance_create (x,y,obj_second_player_block4);
+    part_particles_create_colour(global.particle_system, x, y, global.particle_block, c_green, 1);
     left_pressed = true;
     time = maxtime;
     audio_play_sound (snd_build_blocks,1,false);
@@ -283,10 +283,10 @@ else
     }
 }
 
-if instance_number (obj_second_player_block3) &gt; 1
+if instance_number (obj_second_player_block4) &gt; 3
     then
     {
-    with (instance_find(obj_second_player_block3, 0))
+    with (instance_find(obj_second_player_block4, 0))
         {
         instance_destroy();
         }
@@ -298,8 +298,8 @@ if mouseArea = 3
 if !place_meeting (x,y,obj_parent_collision) &amp;&amp; !place_meeting (x,y,obj_player) &amp;&amp; !place_meeting(x,y,obj_parent_damage_player)
     then
     {
-    block = instance_create (x,y,obj_second_player_block4);
-    part_particles_create_colour(global.particle_system, x, y, global.particle_block, c_green, 1);
+    block = instance_create (x,y,obj_second_player_block3);
+    part_particles_create_colour(global.particle_system, x, y, global.particle_block, c_yellow, 1);
     left_pressed = true;
     time = maxtime;
     audio_play_sound (snd_build_blocks,1,false);
@@ -310,10 +310,10 @@ else
     }
     }
 
-if instance_number (obj_second_player_block4) &gt; 3
+if instance_number (obj_second_player_block3) &gt; 1
     then
     {
-    with (instance_find(obj_second_player_block4, 0))
+    with (instance_find(obj_second_player_block3, 0))
         {
         instance_destroy();
         }
@@ -432,11 +432,11 @@ if instance_number (obj_second_player_block1) &gt; 9
         scr_draw_trail(8,sprite_width,c_fuchsia,-1,true,0.3);
         scr_draw_trail(8,sprite_width/2,c_purple,-1,true,0.5); break;
         case 2:
-        scr_draw_trail(8,sprite_width,c_yellow,-1,true,0.3);
-        scr_draw_trail(8,sprite_width/2,c_orange,-1,true,0.5); break;
-        case 3:
         scr_draw_trail(8,sprite_width,c_lime,-1,true,0.3);
         scr_draw_trail(8,sprite_width/2,c_green,-1,true,0.5); break;
+        case 3:
+        scr_draw_trail(8,sprite_width,c_yellow,-1,true,0.3);
+        scr_draw_trail(8,sprite_width/2,c_orange,-1,true,0.5); break;
         }
     
 //draw preview block shilouette
@@ -450,9 +450,9 @@ if !place_meeting (x,y,all)
         case 1:
         draw_sprite_ext(spr_block_2, 0, x,y,1,1,0,c_white,0.3); break;
         case 2:
-        draw_sprite_ext(spr_block_3, 0, x,y,1,1,0,c_white,0.3); break;
-        case 3:
         draw_sprite_ext(spr_block_4, 0, x,y,1,1,0,c_white,0.3); break;
+        case 3:
+        draw_sprite_ext(spr_block_3, 0, x,y,1,1,0,c_white,0.3); break;
         }
     }
 
@@ -502,8 +502,8 @@ if selectMode
        //Drawing der Blöcke
        if unlocked1 then draw_sprite_ext(spr_block_1,0,x,y-margin*(hudTimer/maxTimer),1*(hudTimer/maxTimer),1*(hudTimer/maxTimer),0,-1,1);
        if unlocked2 then draw_sprite_ext(spr_block_2,0,x+margin*(hudTimer/maxTimer),y,1*(hudTimer/maxTimer),1*(hudTimer/maxTimer),0,-1,1);
-       if unlocked3 then draw_sprite_ext(spr_block_3,0,x,y+margin*(hudTimer/maxTimer),1*(hudTimer/maxTimer),1*(hudTimer/maxTimer),0,-1,1);
-       if unlocked4 then draw_sprite_ext(spr_block_4,0,x-margin*(hudTimer/maxTimer),y,1*(hudTimer/maxTimer),1*(hudTimer/maxTimer),0,-1,1);
+       if unlocked3 then draw_sprite_ext(spr_block_4,0,x,y+margin*(hudTimer/maxTimer),1*(hudTimer/maxTimer),1*(hudTimer/maxTimer),0,-1,1);
+       if unlocked4 then draw_sprite_ext(spr_block_3,0,x-margin*(hudTimer/maxTimer),y,1*(hudTimer/maxTimer),1*(hudTimer/maxTimer),0,-1,1);
        
        //Drawing des ausgewählten blockes   
        /*
@@ -520,8 +520,8 @@ if selectMode
            {
            case 0: if unlocked1 then color = make_color_rgb(0,255,255); break;
            case 1: if unlocked2 then color = make_color_rgb(255,100,100) break;
-           case 2: if unlocked3 then color = make_color_rgb(255,255,100) break;
-           case 3: if unlocked4 then color = make_color_rgb(61,255,77) break;
+           case 2: if unlocked3 then color = make_color_rgb(61,255,77) break;
+           case 3: if unlocked4 then color = make_color_rgb(255,255,100) break;
            default : color = c_white;
            }
        
