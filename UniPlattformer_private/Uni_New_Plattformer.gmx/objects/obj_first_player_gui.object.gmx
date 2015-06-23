@@ -152,6 +152,8 @@ draw_set_colour (c_black);
 draw_text (x,y+10,"moveto "+string(obj_first_player_gui.moveto));
 draw_text (x,y+20,"onthemoveto "+string(obj_first_player_gui.onthemoveto));
 draw_text (x,y+30,"speed "+string(speed));
+*/
+draw_text(x,y,global.level_current);
 </string>
           </argument>
         </arguments>

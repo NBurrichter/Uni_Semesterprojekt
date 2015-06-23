@@ -72,7 +72,7 @@ if crumbling = true
     transparency -= decay_time;
     }
     
-if transparency = 0
+if transparency &lt;= 0
     then
     {
     instance_destroy ();

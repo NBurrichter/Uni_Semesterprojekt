@@ -10,7 +10,51 @@
   <persistent>0</persistent>
   <colour>4194368</colour>
   <showcolour>-1</showcolour>
-  <code>global.menuRoom = true;</code>
+  <code>global.menuRoom = true;
+
+if global.level_current &gt; 3
+    then
+    {
+    background_index[0] = bg_cz_sky;
+    background_y[0] = room_height - background_height[0]
+    background_index[1] = bg_cz_1;
+    background_index[2] = bg_cz_2;
+    background_hspeed[2] = 0;
+    background_index[3] = bg_cz_3;
+    background_index[4] = bg_cz_4;
+    background_index[5] = bg_cz_5;
+    background_index[6] = bg_cz_6;
+    background_index[7] = bg_cz_7;
+    }
+
+if global.level_current &gt; 6
+    then
+    {
+    background_index[0] = bg_city_sky
+    background_index[1] = bg_city_1
+    background_index[2] = bg_city_2
+    background_hspeed[2] = 0;
+    background_index[3] = bg_city_3
+    background_index[4] = bg_city_4
+    background_index[5] = bg_city_5
+    background_index[6] = bg_city_6
+    background_index[7] = bg_cz_7;
+    background_y[0] = room_height - background_height[0]
+
+    background_y[1] = room_height - background_height[1]
+
+    background_y[2] = room_height - background_height[2]
+    
+    background_y[3] = room_height - background_height[3]
+    
+    background_y[4] = room_height - background_height[4]
+
+    background_y[5] = room_height - background_height[5]
+
+    background_y[6] = room_height - background_height[6]
+
+    background_y[7] = room_height - background_height[7]
+    }</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>
   <clearDisplayBuffer>0</clearDisplayBuffer>
@@ -35,10 +79,10 @@
     <background visible="-1" foreground="0" name="bg_mountain_2" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="-1" foreground="0" name="bg_mountain_4" x="0" y="0" htiled="-1" vtiled="-1" hspeed="1" vspeed="0" stretch="0"/>
     <background visible="-1" foreground="0" name="bg_mountain_3" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
-    <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
-    <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
-    <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
-    <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
     <view visible="-1" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1600" hview="900" xport="0" yport="0" wport="1600" hport="900" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
