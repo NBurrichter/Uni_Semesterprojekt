@@ -104,9 +104,13 @@
     <sprites name="group_blocks">
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_block_1</sprite>
+      <sprite>sprites\spr_block_1_part</sprite>
       <sprite>sprites\spr_block_2</sprite>
+      <sprite>sprites\spr_block_2_part</sprite>
       <sprite>sprites\spr_block_3</sprite>
+      <sprite>sprites\spr_block_3_part</sprite>
       <sprite>sprites\spr_block_4</sprite>
+      <sprite>sprites\spr_block_4_part</sprite>
       <sprites name="group_block_unlocks">
         <sprite>sprites\spr_unlock_2</sprite>
       </sprites>
@@ -212,6 +216,7 @@
         <objects name="blocks">
           <objects name="player_blocks">
             <object>objects\obj_second_player_block1</object>
+            <object>objects\obj_second_player_block_particle</object>
             <object>objects\obj_second_player_block4</object>
             <object>objects\obj_second_player_block3</object>
             <object>objects\obj_second_player_block2</object>

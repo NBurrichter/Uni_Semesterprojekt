@@ -76,6 +76,29 @@ if transparency = 0
     {
     instance_destroy ();
     }
+    
+///Mario block destruction
+
+if place_meeting(x,y+1,obj_player) 
+    then
+    {  
+    for(var i = 0; i &lt; 4; i++)
+        {
+        particle = instance_create(x, y, obj_second_player_block_particle);
+        with (particle)
+            {
+            sprite_index = spr_block_3_part;
+            direction = 45 + i*90;
+            speed = abs(obj_player.v_speed);
+            }
+        }
+    if obj_player.v_speed &lt; 0
+        then
+        {
+        obj_player.v_speed = 0;
+        }                                
+    instance_destroy ();    
+    }
 </string>
           </argument>
         </arguments>
