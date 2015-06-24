@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>draw_self()
-draw_set_color(c_black)
+draw_set_color(c_purple)
 draw_text(x,y, "Level " + string(obj_first_player_gui.moveto))
 
 </string>

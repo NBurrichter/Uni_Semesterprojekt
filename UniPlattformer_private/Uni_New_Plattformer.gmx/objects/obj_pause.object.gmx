@@ -397,11 +397,11 @@ draw_text (pause_menu_x_position, pause_menu_y_position, "PAUSE MENU")
 if pause_menu_selected = 1
     then
     {
-    draw_sprite (spr_button, 0, resume_x_position, resume_y_position);
+    draw_sprite (spr_button, 1, resume_x_position, resume_y_position);
     }
 else
     {
-    draw_sprite (spr_button, 1, resume_x_position, resume_y_position);
+    draw_sprite (spr_button, 0, resume_x_position, resume_y_position);
     }
     
 draw_text (resume_x_position, resume_y_position, "RESUME")
@@ -410,11 +410,11 @@ draw_text (resume_x_position, resume_y_position, "RESUME")
 if pause_menu_selected = 2
     then
     {
-    draw_sprite (spr_button, 0, restart_x_position, restart_y_position);
+    draw_sprite (spr_button, 1, restart_x_position, restart_y_position);
     }
 else
     {
-    draw_sprite (spr_button, 1, restart_x_position, restart_y_position);
+    draw_sprite (spr_button, 0, restart_x_position, restart_y_position);
     }
     
 draw_text (restart_x_position, restart_y_position, "RESTART")
@@ -423,11 +423,11 @@ draw_text (restart_x_position, restart_y_position, "RESTART")
 if pause_menu_selected = 3
     then
     {
-    draw_sprite (spr_button, 0, exit_x_position, exit_y_position);
+    draw_sprite (spr_button, 1, exit_x_position, exit_y_position);
     }
 else
     {
-    draw_sprite (spr_button, 1, exit_x_position, exit_y_position);
+    draw_sprite (spr_button, 0, exit_x_position, exit_y_position);
     }
     
 draw_text (exit_x_position, exit_y_position, "EXIT")

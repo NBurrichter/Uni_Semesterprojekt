@@ -11,7 +11,9 @@
   <colour>12632256</colour>
   <showcolour>0</showcolour>
   <code>global.menuRoom = true;
-global.checkpoint = false;</code>
+global.checkpoint = false;
+
+draw_set_color(c_purple);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>
   <clearDisplayBuffer>0</clearDisplayBuffer>

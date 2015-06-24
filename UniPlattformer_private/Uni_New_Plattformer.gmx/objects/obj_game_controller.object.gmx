@@ -96,17 +96,26 @@ if global.menuRoom = false
     <event eventtype="5" enumb="82">
       <action>
         <libid>1</libid>
-        <id>223</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_current_room</functionname>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if global.debug{
+    room_restart();
+}
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="8" enumb="64">
@@ -144,6 +153,29 @@ draw_text(50, 450, "Effect: " + string(global.effectSound));
         </arguments>
       </action>
     </event>
+    <event eventtype="9" enumb="123">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.debug = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="9" enumb="78">
       <action>
         <libid>1</libid>
@@ -161,8 +193,10 @@ draw_text(50, 450, "Effect: " + string(global.effectSound));
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.checkpoint = false;
-room_goto_next();
+            <string>if global.debug{
+    global.checkpoint = false;
+    room_goto_next();
+}
 </string>
           </argument>
         </arguments>
@@ -185,10 +219,12 @@ room_goto_next();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ini_open("settings.ini");
-ini_write_real("save", "levelsave", global.level_save++);
-ini_close();
-global.level_save = global.level_save++;
+            <string>if global.debug{
+    ini_open("settings.ini");
+    ini_write_real("save", "levelsave", global.level_save++);
+    ini_close();
+    global.level_save = global.level_save++;
+}
 </string>
           </argument>
         </arguments>
@@ -211,10 +247,12 @@ global.level_save = global.level_save++;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ini_open("settings.ini");
-ini_write_real("save", "levelsave", global.level_save--);
-ini_close();
-global.level_save = global.level_save--;
+            <string>if global.debug{
+    ini_open("settings.ini");
+    ini_write_real("save", "levelsave", global.level_save--);
+    ini_close();
+    global.level_save = global.level_save--;
+}
 </string>
           </argument>
         </arguments>
@@ -237,7 +275,9 @@ global.level_save = global.level_save--;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.checkpoint = true;
+            <string>if global.debug{
+    global.checkpoint = true;
+}
 </string>
           </argument>
         </arguments>
@@ -261,14 +301,16 @@ global.level_save = global.level_save--;
           <argument>
             <kind>1</kind>
             <string>///Game_end oder zurück zum Level Select
-if global.menuRoom
-    then
-    {
-    game_end();
-    }
-    else
-    {
-    room_goto(room_level_select);
+if global.debug {
+    if global.menuRoom 
+        then
+        {
+        game_end();
+        }   
+        else
+        {
+        room_goto(room_level_select);
+        }
     }
 </string>
           </argument>
@@ -293,17 +335,18 @@ if global.menuRoom
           <argument>
             <kind>1</kind>
             <string>///Set shader
-
-if !instance_exists(obj_shader_controller)
-    then
-    {
-    instance_create (x,y,obj_shader_controller);
-    }
-else
-    {
-    with (obj_shader_controller)
+if global.debug{
+    if !instance_exists(obj_shader_controller)
+        then
         {
-        instance_destroy();
+        instance_create (x,y,obj_shader_controller);
+        }
+    else
+        {
+        with (obj_shader_controller)
+            {
+            instance_destroy();
+            }
         }
     }
 </string>

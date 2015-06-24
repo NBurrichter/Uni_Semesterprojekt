@@ -58,7 +58,9 @@ if global.level_current &gt; 6
     background_y[6] = room_height - background_height[6]
 
     background_y[7] = room_height - background_height[7]
-    }</code>
+    }
+    
+draw_set_color(c_purple);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>
   <clearDisplayBuffer>0</clearDisplayBuffer>

@@ -15,6 +15,7 @@
 global.menuRoom = true;
 global.current_level_number = 0;
 global.checkpoint = false;
+global.debug = false;
 
 ini_open("settings.ini");
 

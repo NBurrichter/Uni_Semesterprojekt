@@ -56,7 +56,8 @@ mouse_over = false;
 if mouse_over = true
     then
     {
-    room_goto(room_start_screen);
+    //room_goto(room_start_screen);
+    game_end();
     audio_play_sound (snd_cancel,1,false);
     }
 
@@ -145,7 +146,7 @@ else
     }
 
 draw_set_halign(fa_center);    
-draw_text(x,y,string("EXIT"));
+draw_text(x,y,string("EXIT GAME"));
 </string>
           </argument>
         </arguments>
