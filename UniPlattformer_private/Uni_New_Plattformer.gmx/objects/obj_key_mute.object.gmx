@@ -148,21 +148,19 @@ mouse_over = true;
             <kind>1</kind>
             <string>///draw button
 
-draw_set_halign(fa_right);
+draw_set_halign(fa_center);
 
 if is_muted = 0
     then
     {
     draw_sprite (sprite_index,0,x,y);
-    draw_text (x,y,string("MUTE: TRUE"))
+    draw_text (x,y-64,string("MUSIC: OFF"))
     }
 else
     {
     draw_sprite (sprite_index,1,x,y);
-    draw_text (x,y,string("MUTE: FALSE"))
+    draw_text (x,y-64,string("MUSIC: ON"))
     }
-    
-    
 
 </string>
           </argument>

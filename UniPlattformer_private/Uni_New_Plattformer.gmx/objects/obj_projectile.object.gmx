@@ -166,6 +166,14 @@ for (i= 0; i &lt; number_of_shrapnels; i++)
 
 instance_create(x + lengthdir_x(sprite_width/2, direction), y + lengthdir_y(sprite_width/2, direction), obj_rocket_explosion);
 
+sound = irandom(2);
+switch sound 
+{
+    case 0 :audio_play_sound(snd_rocket_1,10,false); break;
+    case 1 :audio_play_sound(snd_rocket_2,10,false); break;
+    case 2 :audio_play_sound(snd_rocket_3,10,false); break;
+}
+
 with(other)
     {
     instance_destroy ();
@@ -197,6 +205,13 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>instance_create(x,y,obj_rocket_explosion);
+sound = irandom(2);
+switch sound 
+{
+    case 0 :audio_play_sound(snd_rocket_1,10,false); break;
+    case 1 :audio_play_sound(snd_rocket_2,10,false); break;
+    case 2 :audio_play_sound(snd_rocket_3,10,false); break;
+}
 instance_destroy();
 </string>
           </argument>

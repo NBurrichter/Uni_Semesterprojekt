@@ -33,6 +33,11 @@
         <sound>sound\snd_level_theme4</sound>
       </sounds>
       <sound>sound\snd_damage</sound>
+      <sounds name="group_rocket_sounds">
+        <sound>sound\snd_rocket_1</sound>
+        <sound>sound\snd_rocket_2</sound>
+        <sound>sound\snd_rocket_3</sound>
+      </sounds>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -85,6 +90,7 @@
       <sprites name="group_buttons">
         <sprite>sprites\spr_button</sprite>
         <sprite>sprites\spr_menu_button</sprite>
+        <sprite>sprites\spr_menu_text</sprite>
         <sprite>sprites\spr_key_button</sprite>
         <sprite>sprites\spr_level_button</sprite>
         <sprite>sprites\spr_level_title_box</sprite>
@@ -263,13 +269,17 @@
                 <object>objects\obj_exit_option_menu_button</object>
                 <object>objects\obj_save_back_button</object>
                 <object>objects\obj_back_button</object>
+                <object>objects\obj_option_title</object>
                 <objects name="group_video_buttons">
+                  <object>objects\obj_video_title</object>
                   <object>objects\obj_key_fullscreen</object>
                 </objects>
                 <objects name="group_audio_buttons">
+                  <object>objects\obj_audio_title</object>
                   <object>objects\obj_key_mute</object>
                 </objects>
                 <objects name="group_control_buttons">
+                  <object>objects\obj_control_title</object>
                   <object>objects\obj_key_up</object>
                   <object>objects\obj_key_left</object>
                   <object>objects\obj_key_down</object>

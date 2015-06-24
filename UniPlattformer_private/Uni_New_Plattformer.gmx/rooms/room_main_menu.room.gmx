@@ -27,7 +27,9 @@ if global.level_current &gt; 3
     background_index[4] = bg_cz_4;
     background_index[5] = bg_cz_5;
     background_index[6] = bg_cz_6;
+    background_x[6] = random(3200);
     background_index[7] = bg_cz_7;
+    background_hspeed[7] = 1;
     }
 
 if global.level_current &gt; 6
@@ -42,6 +44,7 @@ if global.level_current &gt; 6
     background_index[4] = bg_city_4
     background_index[5] = bg_city_5
     background_index[6] = bg_city_6
+    background_x[6] = random(3200);
     background_index[7] = bg_cz_7;
     background_y[0] = room_height - background_height[0]
 
@@ -102,9 +105,9 @@ draw_set_color(c_purple);</code>
   </views>
   <instances>
     <instance objName="obj_game_controller" x="32" y="64" name="inst_62177971" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_level_select_button" x="768" y="480" name="inst_5014F00E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_option_menu_button" x="768" y="608" name="inst_A1654390" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_exit_main_menu_button" x="768" y="736" name="inst_879460B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_level_select_button" x="800" y="448" name="inst_5014F00E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_option_menu_button" x="800" y="608" name="inst_A1654390" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_exit_main_menu_button" x="800" y="768" name="inst_879460B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_second_player_gui" x="96" y="192" name="inst_B65FC7F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_particle_controller" x="96" y="64" name="inst_CD3FD096" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_shader_controller" x="160" y="64" name="inst_0BFFBE3B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

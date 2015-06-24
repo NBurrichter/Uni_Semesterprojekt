@@ -12,6 +12,8 @@
   <showcolour>-1</showcolour>
   <code>//Load ini files
 
+randomize();
+
 global.menuRoom = true;
 global.current_level_number = 0;
 global.checkpoint = false;

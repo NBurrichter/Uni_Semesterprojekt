@@ -156,8 +156,8 @@ else
     }
     
     
-draw_set_halign(fa_right);    
-draw_text (x,y,string("FULLSCREEN"))
+draw_set_halign(fa_center);    
+draw_text (x,y-64,string("FULLSCREEN"))
 </string>
           </argument>
         </arguments>
