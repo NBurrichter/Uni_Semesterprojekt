@@ -29,6 +29,7 @@
 touchtimer = 0;
 oldx= 0;
 newx= 0;
+image_speed = 0.5;
 </string>
           </argument>
         </arguments>

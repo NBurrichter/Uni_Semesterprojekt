@@ -76,12 +76,12 @@ global.pause = false;
             <kind>1</kind>
             <string>///press pause
 
-var pause_button = keyboard_check_pressed(ord('P')); 
+var pause_button = keyboard_check_pressed(ord('P'));
 
 if global.menuRoom = false
     then
     {
-    if pause_button
+    if pause_button or keyboard_check_pressed(vk_escape)
         then
         {
         instance_create (x,y,obj_pause);

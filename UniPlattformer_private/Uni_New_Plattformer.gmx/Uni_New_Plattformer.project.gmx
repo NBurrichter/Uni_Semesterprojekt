@@ -59,6 +59,7 @@
       <sprite>sprites\spr_second_player</sprite>
       <sprite>sprites\spr_second_player_block</sprite>
       <sprite>sprites\spr_block_select</sprite>
+      <sprite>sprites\spr_player_two_rotating</sprite>
     </sprites>
     <sprites name="group_enemies">
       <sprites name="group_static_enemies">
@@ -141,6 +142,7 @@
       <background>background\bg_grass_tile</background>
       <background>background\bg_construction_tiles</background>
       <background>background\bg_cz_buildings</background>
+      <background>background\bg_cz_buldilgs_dark</background>
     </backgrounds>
     <backgrounds name="group_backgrounds">
       <backgrounds name="construction_zone">
