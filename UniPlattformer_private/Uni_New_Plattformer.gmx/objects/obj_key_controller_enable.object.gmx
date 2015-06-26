@@ -136,19 +136,19 @@ mouse_over = true;
           <argument>
             <kind>1</kind>
             <string>///draw button
-
-draw_set_halign(fa_right);
+draw_set_color(c_black);
+draw_set_halign(fa_center);
 
 if controller_is_enabled = 1
     then
     {
     draw_sprite (sprite_index,0,x,y);
-    draw_text (x,y,string("CONTROLS: KEYBOARD"))
+    draw_text (x,y-32,string("CONTROLS: KEYBOARD"))
     }
 else
     {
     draw_sprite (sprite_index,1,x,y);
-    draw_text (x,y,string("CONTROLS: GAMEPAD"))
+    draw_text (x,y-32,string("CONTROLS: GAMEPAD"))
     }
     
     

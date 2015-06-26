@@ -148,6 +148,7 @@ mouse_over = true;
             <kind>1</kind>
             <string>///draw button
 
+draw_set_color(c_black);
 draw_set_halign(fa_center);
 
 if is_muted = 0
