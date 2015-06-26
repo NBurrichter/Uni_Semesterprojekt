@@ -29,6 +29,8 @@
 
 global.particle_system = part_system_create ();
 
+part_system_depth(global.particle_system, -15);
+
 scr_particle_laser_initialize ();
 scr_particle_dust_initialize ();
 scr_particle_rocketsmoke_initialize ();
