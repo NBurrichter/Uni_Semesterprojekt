@@ -561,6 +561,7 @@ global.current_level_number = 7;
     <instance objName="obj_wall_block" x="2624" y="32" name="inst_F41BA0E1" locked="0" code="" scaleX="24" scaleY="6" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="3008" y="352" name="inst_AB439F10" locked="0" code="" scaleX="6" scaleY="26" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="3072" y="928" name="inst_F58931CA" locked="0" code="" scaleX="10" scaleY="26" colour="4294967295" rotation="0"/>
+    <instance objName="obj_checkpoint" x="2464" y="352" name="inst_D2E0EAF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

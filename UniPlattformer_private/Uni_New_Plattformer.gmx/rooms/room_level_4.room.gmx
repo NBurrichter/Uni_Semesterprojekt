@@ -886,6 +886,7 @@ global.current_level_number = 4;
     <instance objName="obj_wall_block" x="4464" y="560" name="inst_D6259150" locked="0" code="" scaleX="8" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="2928" y="1168" name="inst_4319B8D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="2960" y="1168" name="inst_2F11CD6D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_checkpoint" x="2267" y="1744" name="inst_CCC98112" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_cz_buldilgs_dark" x="576" y="1472" w="32" h="128" xo="256" yo="192" id="10023138" name="inst_AFF3CCBF" depth="0" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

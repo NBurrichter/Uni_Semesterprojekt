@@ -470,12 +470,8 @@ global.current_level_number = 1;
     <instance objName="obj_disappearing_block" x="1920" y="672" name="inst_84DCA56B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_disappearing_block" x="1952" y="672" name="inst_3D7CE700" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_disappearing_block" x="1984" y="672" name="inst_EB31F0E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_second_player_block1" x="3328" y="224" name="inst_6E7EF69A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_second_player_block1" x="3264" y="256" name="inst_6F66152D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_second_player_block1" x="3296" y="256" name="inst_A49BD081" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_second_player_block1" x="3328" y="256" name="inst_00342D4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_second_player_block1" x="3360" y="256" name="inst_B786D0FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_second_player_block1" x="3392" y="288" name="inst_087630A4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_second_player_block1" x="3360" y="288" name="inst_C9F2C66E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_second_player_block1" x="3328" y="288" name="inst_82F2209C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_second_player_block1" x="3296" y="288" name="inst_9D91F7C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -497,6 +493,7 @@ global.current_level_number = 1;
     <instance objName="obj_wall_block" x="4320" y="800" name="inst_464C2107" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_block" x="4320" y="832" name="inst_7DFAD06C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fade_in" x="160" y="64" name="inst_C4AE5A68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_checkpoint" x="3424" y="288" name="inst_10E07F30" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_grass_dark" x="2448" y="752" w="32" h="32" xo="32" yo="64" id="10006368" name="inst_D1D74651" depth="0" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

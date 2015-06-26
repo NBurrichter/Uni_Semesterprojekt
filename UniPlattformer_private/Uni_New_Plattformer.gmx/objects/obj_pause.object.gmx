@@ -128,6 +128,7 @@ surface_reset_target();
 instance_deactivate_all(true); //deactivate all other instances
 instance_activate_object(obj_camera_controller)
 audio_pause_all ();
+audio_play_sound (snd_click,1,false);
 global.pause = true;
 </string>
           </argument>
@@ -195,35 +196,51 @@ var jump_key_just_pressed = keyboard_check_pressed(vk_space)
 
 //control pause_menu_selected via mouse
 
-if point_in_rectangle(mouse_x, mouse_y, resume_x_position-(sprite_get_width(spr_button)/2), resume_y_position-(sprite_get_height(spr_button)/2),
+if pause_menu_selected != 1
+&amp;&amp; point_in_rectangle(mouse_x, mouse_y, resume_x_position-(sprite_get_width(spr_button)/2), resume_y_position-(sprite_get_height(spr_button)/2),
                                         resume_x_position+(sprite_get_width(spr_button)/2), resume_y_position+(sprite_get_height(spr_button)/2))
     then
     {
     pause_menu_selected = 1;
+    audio_play_sound (snd_levelclick,1,false);
     }
 else
     {
-    if point_in_rectangle(mouse_x, mouse_y,     restart_x_position-(sprite_get_width(spr_button)/2), restart_y_position-(sprite_get_height(spr_button)/2),
+    if pause_menu_selected != 2
+    &amp;&amp; point_in_rectangle(mouse_x, mouse_y,     restart_x_position-(sprite_get_width(spr_button)/2), restart_y_position-(sprite_get_height(spr_button)/2),
                                                 restart_x_position+(sprite_get_width(spr_button)/2), restart_y_position+(sprite_get_height(spr_button)/2))
         then
         {
         pause_menu_selected = 2;
+        audio_play_sound (snd_levelclick,1,false);
         }
     else
         {
-        if point_in_rectangle(mouse_x, mouse_y, exit_x_position-(sprite_get_width(spr_button)/2), exit_y_position-(sprite_get_height(spr_button)/2),
+        if pause_menu_selected != 3
+        &amp;&amp; point_in_rectangle(mouse_x, mouse_y, exit_x_position-(sprite_get_width(spr_button)/2), exit_y_position-(sprite_get_height(spr_button)/2),
                                                 exit_x_position+(sprite_get_width(spr_button)/2), exit_y_position+(sprite_get_height(spr_button)/2))
             then
             {
             pause_menu_selected = 3;
+            audio_play_sound (snd_levelclick,1,false);
             }
         }
     }
 
 //control pause_menu_selected via buttons
 
-if left_key &amp;&amp; pause_menu_selected &gt; 1 then pause_menu_selected -= 1;
-if right_key &amp;&amp; pause_menu_selected &lt; 3 then pause_menu_selected += 1;
+if left_key &amp;&amp; pause_menu_selected &gt; 1 
+    then 
+    {
+    pause_menu_selected -= 1;
+    audio_play_sound (snd_levelclick,1,false);
+    }
+if right_key &amp;&amp; pause_menu_selected &lt; 3 
+    then 
+    {
+    pause_menu_selected += 1;
+    audio_play_sound (snd_levelclick,1,false);
+    }
     
 //unpause
 
@@ -238,18 +255,22 @@ if jump_key_just_pressed or mouse_check_button_pressed(mb_left)
             global.pause = false;
             instance_activate_all(); //Activate all the objects
             audio_resume_all ();
+            audio_play_sound (snd_click,1,false);
             instance_create (mouse_x, mouse_y, obj_second_player);
             instance_create (mouse_x, mouse_y, obj_game_controller);
             instance_destroy();
             break;
             
         case 2:
-            audio_stop_all();
+            instance_activate_all(); //Activate all the objects
+            audio_resume_all();
+            audio_play_sound (snd_click,1,false);
             room_restart();
             break;
   
         case 3:
-            audio_stop_all();
+            instance_activate_all(); //Activate all the objects
+            audio_play_sound (snd_cancel,1,false);
             room_goto (room_level_select);
             break;
         }
