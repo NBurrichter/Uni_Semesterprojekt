@@ -1785,6 +1785,7 @@ background_y[1] = 0;</code>
     <tile bgName="bg_grass_dark" x="1120" y="2784" w="32" h="32" xo="32" yo="64" id="10019124" name="inst_26A8E2A1" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_grass_dark" x="1088" y="2784" w="32" h="32" xo="32" yo="64" id="10019125" name="inst_CC2BCD59" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_grass_dark" x="1056" y="2784" w="32" h="32" xo="32" yo="64" id="10019126" name="inst_D3F834B3" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_grass_dark" x="1056" y="2240" w="32" h="32" xo="32" yo="64" id="10026754" name="inst_4AD11CEF" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_grass_dark" x="704" y="512" w="32" h="32" xo="32" yo="64" id="10006798" name="inst_97557215" depth="0" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_grass_dark" x="672" y="512" w="32" h="32" xo="32" yo="64" id="10006799" name="inst_1D5AA62F" depth="0" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_grass_dark" x="640" y="512" w="32" h="32" xo="32" yo="64" id="10006800" name="inst_D6C9C2FA" depth="0" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

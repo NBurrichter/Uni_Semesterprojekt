@@ -317,6 +317,7 @@
       <objects name="checkpoint">
         <object>objects\obj_checkpoint</object>
       </objects>
+      <object>objects\obj_credits</object>
     </objects>
     <objects name="group_parent_objects">
       <object>objects\obj_parent_collision</object>

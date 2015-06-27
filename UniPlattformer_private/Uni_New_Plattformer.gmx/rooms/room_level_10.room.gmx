@@ -54,9 +54,9 @@ global.current_level_number = 10;
   </views>
   <instances>
     <instance objName="obj_game_controller" x="64" y="64" name="inst_EA1516B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_camera_controller" x="96" y="64" name="inst_D60F8C58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_particle_controller" x="128" y="64" name="inst_6975C510" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fade_in" x="128" y="0" name="inst_2820C860" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_credits" x="192" y="64" name="inst_09E4F624" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
