@@ -142,7 +142,10 @@
       <background>background\bg_grass_tile</background>
       <background>background\bg_construction_tiles</background>
       <background>background\bg_cz_buildings</background>
+      <background>background\bg_city_tiles</background>
+      <background>background\bg_city_tiles_dark</background>
       <background>background\bg_cz_buldilgs_dark</background>
+      <background>background\bg_city_window</background>
     </backgrounds>
     <backgrounds name="group_backgrounds">
       <backgrounds name="construction_zone">
