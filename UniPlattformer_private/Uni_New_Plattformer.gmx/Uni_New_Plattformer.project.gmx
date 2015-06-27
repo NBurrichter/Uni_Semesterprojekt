@@ -53,6 +53,8 @@
       <sprite>sprites\spr_player_gui</sprite>
       <sprite>sprites\spr_player_gui_back</sprite>
       <sprite>sprites\spr_player_damage</sprite>
+      <sprite>sprites\spr_player_extremity</sprite>
+      <sprite>sprites\spr_player_head</sprite>
     </sprites>
     <sprites name="group_second_player">
       <sprite>sprites\spr_playertwo</sprite>
@@ -218,6 +220,10 @@
     <objects name="group_players">
       <objects name="first_player">
         <object>objects\obj_player</object>
+        <object>objects\obj_player_death</object>
+        <object>objects\obj_player_head_shrapnel</object>
+        <object>objects\obj_player_extremities_shrapnel</object>
+        <object>objects\obj_player_explosion_particle</object>
       </objects>
       <objects name="second_player">
         <object>objects\obj_second_player</object>

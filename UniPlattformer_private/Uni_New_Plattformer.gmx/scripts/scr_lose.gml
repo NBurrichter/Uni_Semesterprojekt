@@ -1,48 +1,46 @@
-if instance_exists(obj_second_player){
-
-if obj_second_player.unlocked4 = true
-    then
+if instance_exists(obj_second_player)
     {
-    obj_second_player.unlocked4 = false;
-    if obj_second_player.mouseArea = 3
+    if obj_second_player.unlocked4 = true
         then
         {
-        obj_second_player.mouseArea = 2
-        }
-    }
-    else
-    {
-    if obj_second_player.unlocked3 = true
-        then
-        {
-        obj_second_player.unlocked3 = false;
-        if obj_second_player.mouseArea = 2
+        obj_second_player.unlocked4 = false;
+        instance_create(x,y,obj_damage_unlock);
+        if obj_second_player.mouseArea = 3
             then
             {
-            obj_second_player.mouseArea = 1
+            obj_second_player.mouseArea = 2
             }
         }
         else
         {
-        if obj_second_player.unlocked2 = true
+        if obj_second_player.unlocked3 = true
             then
             {
-            obj_second_player.unlocked2 = false;
-            if obj_second_player.mouseArea = 1
+            obj_second_player.unlocked3 = false;
+            instance_create(x,y,obj_damage_unlock);
+            if obj_second_player.mouseArea = 2
                 then
                 {
-                obj_second_player.mouseArea = 0
+                obj_second_player.mouseArea = 1
                 }
             }
             else
             {
-            //scr_sleep (100); 
-            room_restart();
+            if obj_second_player.unlocked2 = true
+                then
+                {
+                obj_second_player.unlocked2 = false;
+                instance_create(x,y,obj_damage_unlock);
+                if obj_second_player.mouseArea = 1
+                    then
+                    {
+                    obj_second_player.mouseArea = 0
+                    }
+                }
+                else
+                {
+                instance_create(obj_player.x,obj_player.y,obj_player_death);
+                }
             }
         }
     }
-    }
-else
-{
-room_restart();
-}
