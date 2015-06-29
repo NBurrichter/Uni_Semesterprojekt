@@ -853,7 +853,6 @@ global.current_level_number = 9;
     <tile bgName="bg_city_window" x="2848" y="352" w="64" h="32" xo="32" yo="0" id="10026742" name="inst_89FECBF5" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_city_window" x="2784" y="352" w="64" h="32" xo="0" yo="0" id="10026743" name="inst_B0F11E27" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_city_window" x="2784" y="96" w="64" h="32" xo="0" yo="0" id="10026744" name="inst_1B1DBB39" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bg_city_window" x="2848" y="96" w="96" h="32" xo="32" yo="0" id="10026745" name="inst_A02470F4" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_city_window" x="2784" y="128" w="64" h="32" xo="0" yo="64" id="10026746" name="inst_57A0CE78" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_city_window" x="2848" y="128" w="64" h="32" xo="32" yo="64" id="10026747" name="inst_8175271B" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_city_window" x="2848" y="384" w="64" h="32" xo="32" yo="64" id="10026748" name="inst_916472CA" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -862,6 +861,8 @@ global.current_level_number = 9;
     <tile bgName="bg_city_window" x="3488" y="704" w="32" h="96" xo="64" yo="0" id="10026751" name="inst_A84E5E18" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_city_window" x="3808" y="704" w="32" h="96" xo="64" yo="0" id="10026752" name="inst_82934387" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_city_window" x="3776" y="704" w="32" h="96" xo="0" yo="0" id="10026753" name="inst_01C2D012" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_city_window" x="2880" y="96" w="32" h="32" xo="64" yo="0" id="10026819" name="inst_20C9C778" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_city_window" x="2848" y="96" w="32" h="32" xo="32" yo="0" id="10026820" name="inst_00201F26" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
