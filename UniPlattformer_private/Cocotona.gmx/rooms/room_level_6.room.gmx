@@ -1849,15 +1849,11 @@ global.current_level_number = 6;
     <tile bgName="bg_construction_tiles" x="864" y="1888" w="32" h="32" xo="224" yo="96" id="10023905" name="inst_63AF7041" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="768" y="1728" w="32" h="32" xo="448" yo="0" id="10023906" name="inst_830752BB" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="736" y="1888" w="32" h="32" xo="480" yo="32" id="10023907" name="inst_3E6365D2" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bg_construction_tiles" x="992" y="1824" w="32" h="32" xo="416" yo="64" id="10023908" name="inst_789F48EE" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bg_construction_tiles" x="1024" y="1824" w="32" h="32" xo="320" yo="32" id="10023909" name="inst_37BA860E" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="992" y="1856" w="32" h="32" xo="352" yo="64" id="10023910" name="inst_D357E3E3" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="992" y="1888" w="32" h="32" xo="352" yo="64" id="10023911" name="inst_62C67A01" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="992" y="1920" w="32" h="32" xo="352" yo="64" id="10023912" name="inst_9858AD98" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="992" y="1984" w="32" h="32" xo="352" yo="64" id="10023913" name="inst_91BB71DF" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="992" y="1952" w="32" h="32" xo="352" yo="64" id="10023914" name="inst_8D38A47F" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bg_construction_tiles" x="1056" y="1824" w="32" h="32" xo="320" yo="32" id="10023915" name="inst_217EC349" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bg_construction_tiles" x="1088" y="1824" w="32" h="32" xo="320" yo="32" id="10023916" name="inst_893F71FE" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="1120" y="1824" w="32" h="32" xo="320" yo="32" id="10023917" name="inst_1624529B" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="1152" y="1824" w="32" h="32" xo="320" yo="32" id="10023918" name="inst_A429DE61" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="1184" y="1824" w="32" h="32" xo="320" yo="32" id="10023919" name="inst_351BC690" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -1870,7 +1866,6 @@ global.current_level_number = 6;
     <tile bgName="bg_construction_tiles" x="1440" y="1920" w="32" h="32" xo="320" yo="32" id="10023926" name="inst_B82476A9" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="1504" y="1920" w="32" h="32" xo="320" yo="32" id="10023927" name="inst_FD2380D7" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="1472" y="1920" w="32" h="32" xo="320" yo="32" id="10023928" name="inst_42CA9B24" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bg_construction_tiles" x="1536" y="1920" w="32" h="32" xo="320" yo="32" id="10023929" name="inst_2030F191" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="1568" y="1920" w="32" h="32" xo="320" yo="32" id="10023930" name="inst_7CB1D9A7" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="1600" y="1920" w="32" h="32" xo="320" yo="32" id="10023931" name="inst_FCF7E7DA" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="1664" y="1920" w="32" h="32" xo="320" yo="32" id="10023932" name="inst_17EAAB1F" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -2053,6 +2048,15 @@ global.current_level_number = 6;
     <tile bgName="bg_construction_tiles" x="3232" y="1344" w="32" h="32" xo="352" yo="64" id="10025001" name="inst_323AC75E" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="3232" y="1440" w="32" h="32" xo="352" yo="64" id="10025002" name="inst_B55FFF7F" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="3232" y="1408" w="32" h="32" xo="352" yo="64" id="10025003" name="inst_93F9FE30" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_construction_tiles" x="992" y="1824" w="32" h="32" xo="320" yo="0" id="10026840" name="inst_A6B9AE3F" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_construction_tiles" x="1024" y="1824" w="32" h="32" xo="480" yo="32" id="10026841" name="inst_5BF4135C" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_construction_tiles" x="992" y="1760" w="32" h="32" xo="352" yo="64" id="10026842" name="inst_E36EAB82" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_construction_tiles" x="992" y="1792" w="32" h="32" xo="352" yo="64" id="10026843" name="inst_C1348462" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_construction_tiles" x="1088" y="1824" w="32" h="32" xo="448" yo="0" id="10026844" name="inst_08BA7862" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_construction_tiles" x="1056" y="1824" w="32" h="32" xo="320" yo="32" id="10026845" name="inst_97F16CD4" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_construction_tiles" x="1536" y="1920" w="32" h="32" xo="352" yo="32" id="10026846" name="inst_71A72F41" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_construction_tiles" x="1536" y="1952" w="32" h="32" xo="352" yo="64" id="10026847" name="inst_C0309F00" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bg_construction_tiles" x="1536" y="1984" w="32" h="32" xo="352" yo="64" id="10026848" name="inst_2D6EB8E1" depth="-21" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="1984" y="1504" w="32" h="32" xo="352" yo="96" id="10023958" name="inst_D9538831" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="1984" y="1472" w="32" h="32" xo="352" yo="96" id="10023960" name="inst_1DBF9212" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="2048" y="1344" w="32" h="32" xo="352" yo="96" id="10023961" name="inst_FD6F8EA5" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -2356,7 +2360,6 @@ global.current_level_number = 6;
     <tile bgName="bg_construction_tiles" x="3232" y="640" w="32" h="32" xo="256" yo="128" id="10024690" name="inst_F72A7B0E" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="2432" y="1824" w="96" h="96" xo="736" yo="416" id="10024746" name="inst_E97E7C00" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="1472" y="1376" w="32" h="32" xo="352" yo="32" id="10024765" name="inst_C361B5E8" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bg_construction_tiles" x="1088" y="1824" w="32" h="32" xo="352" yo="0" id="10024766" name="inst_E6712440" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="992" y="1728" w="32" h="32" xo="352" yo="32" id="10024767" name="inst_786CEA61" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="3712" y="2080" w="32" h="32" xo="352" yo="64" id="10024773" name="inst_A11F2AF9" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bg_construction_tiles" x="3712" y="2048" w="32" h="32" xo="352" yo="64" id="10024774" name="inst_4FECF678" depth="-22" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
