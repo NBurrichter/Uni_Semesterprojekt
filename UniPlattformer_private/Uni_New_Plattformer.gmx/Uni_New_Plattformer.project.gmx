@@ -58,19 +58,14 @@
     </sprites>
     <sprites name="group_second_player">
       <sprite>sprites\spr_playertwo</sprite>
-      <sprite>sprites\spr_second_player</sprite>
-      <sprite>sprites\spr_second_player_block</sprite>
       <sprite>sprites\spr_block_select</sprite>
-      <sprite>sprites\spr_player_two_rotating</sprite>
     </sprites>
     <sprites name="group_enemies">
       <sprites name="group_static_enemies">
         <sprite>sprites\spr_cannon</sprite>
         <sprites name="group_munition">
           <sprite>sprites\spr_laser</sprite>
-          <sprite>sprites\spr_projectile</sprite>
           <sprite>sprites\spr_projectile2</sprite>
-          <sprite>sprites\spr_heat_seeking_missle</sprite>
           <sprite>sprites\spr_lazorss</sprite>
         </sprites>
         <sprites name="lasers">
@@ -132,9 +127,6 @@
   </sprites>
   <backgrounds name="background">
     <background>background\background_arrow</background>
-    <background>background\background_tutorial_1</background>
-    <background>background\background_tutorial_2</background>
-    <background>background\background_tutorial_jump</background>
     <backgrounds name="group_tiles">
       <background>background\bg_temple_tiles</background>
       <background>background\bg_temple_dark</background>
@@ -181,8 +173,6 @@
       </backgrounds>
     </backgrounds>
     <backgrounds name="menu">
-      <background>background\back_splash</background>
-      <background>background\back_main_menu</background>
       <background>background\back_map</background>
       <background>background\background_title</background>
     </backgrounds>
