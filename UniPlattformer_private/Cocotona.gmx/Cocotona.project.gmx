@@ -170,6 +170,7 @@
         <background>background\bg_city_7_3</background>
         <background>background\background_citylayer_10</background>
       </backgrounds>
+      <background>background\bg_tutorial</background>
     </backgrounds>
     <backgrounds name="menu">
       <background>background\back_map</background>
