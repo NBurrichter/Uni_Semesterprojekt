@@ -4,7 +4,7 @@ if instance_exists(obj_second_player)
         then
         {
         obj_second_player.unlocked4 = false;
-        instance_create(x,y,obj_damage_unlock);
+        instance_create(obj_player.x,obj_player.y,obj_damage_unlock);
         if obj_second_player.mouseArea = 3
             then
             {
@@ -17,7 +17,7 @@ if instance_exists(obj_second_player)
             then
             {
             obj_second_player.unlocked3 = false;
-            instance_create(x,y,obj_damage_unlock);
+            instance_create(obj_player.x,obj_player.y,obj_damage_unlock);
             if obj_second_player.mouseArea = 2
                 then
                 {
@@ -30,7 +30,7 @@ if instance_exists(obj_second_player)
                 then
                 {
                 obj_second_player.unlocked2 = false;
-                instance_create(x,y,obj_damage_unlock);
+                instance_create(obj_player.x,obj_player.y,obj_damage_unlock);
                 if obj_second_player.mouseArea = 1
                     then
                     {
