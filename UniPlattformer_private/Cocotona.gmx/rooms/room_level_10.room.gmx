@@ -58,7 +58,12 @@ global.current_level_number = 10;
     <instance objName="obj_fade_in" x="128" y="0" name="inst_2820C860" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_credits" x="192" y="64" name="inst_09E4F624" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
-  <tiles/>
+  <tiles>
+    <tile bgName="bg_NiklasW" x="224" y="544" w="96" h="64" xo="0" yo="0" id="10026857" name="inst_C60FFAD9" depth="1000000" locked="0" colour="4294967295" scaleX="3" scaleY="3"/>
+    <tile bgName="bg_Daniel" x="352" y="544" w="64" h="64" xo="0" yo="0" id="10026860" name="inst_FDDCFC94" depth="1000000" locked="0" colour="4294967295" scaleX="3" scaleY="3"/>
+    <tile bgName="bg_Eliot" x="480" y="544" w="64" h="64" xo="0" yo="0" id="10026861" name="inst_C0BFDF95" depth="1000000" locked="0" colour="4294967295" scaleX="3" scaleY="3"/>
+    <tile bgName="bg_NiklasB" x="608" y="544" w="64" h="64" xo="0" yo="0" id="10026862" name="inst_75C0C04C" depth="1000000" locked="0" colour="4294967295" scaleX="3" scaleY="3"/>
+  </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
   <PhysicsWorldLeft>0</PhysicsWorldLeft>

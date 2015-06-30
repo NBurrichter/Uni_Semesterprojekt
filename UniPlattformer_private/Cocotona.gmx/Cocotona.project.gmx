@@ -176,6 +176,12 @@
       <background>background\back_map</background>
       <background>background\background_title</background>
     </backgrounds>
+    <backgrounds name="group_pixelguys">
+      <background>background\bg_NiklasW</background>
+      <background>background\bg_NiklasB</background>
+      <background>background\bg_Eliot</background>
+      <background>background\bg_Daniel</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
