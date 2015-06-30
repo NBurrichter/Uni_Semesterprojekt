@@ -127,7 +127,7 @@ mouse_over = false;
           <argument>
             <kind>1</kind>
             <string>///Mouse over
-
+audio_play_sound (snd_levelclick,1,false);
 mouse_over = true;
 </string>
           </argument>
